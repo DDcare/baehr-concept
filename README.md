@@ -19,6 +19,12 @@ npm run preview   # de gebouwde versie lokaal bekijken
 - `src/pages/index.astro`: de home met de productfilm en de rij met de vijf producten.
 - `src/pages/productos/crema-en-espuma-orange-lemongras.astro`: voorbeeld van een productpagina, met een 3D-model om rond te draaien (`src/scripts/visor.js`).
 - `src/pages/la-marca.astro`: de merkpagina.
+- `src/pages/tienda.astro`: de winkel met filter per productsoort (ook via de adresregel, bijvoorbeeld `/tienda/?tipo=crema`).
+- `src/pages/profesionales.astro`: voordelen, demo van snel bestellen, aanmelden of inloggen (`/profesionales/#acceso` opent inloggen), FAQ.
+- `src/pages/contacto.astro` en `src/pages/404.astro`.
+- `src/components/Alta.astro`: het aanmeldformulier met de professionele pas (home en professionals).
+- `src/data/productos.ts`: de zes producten van het concept; `src/scripts/cart.js`: de cesta (schuiflade, bewaard in de browser).
+- Links naar een stap in de film vanaf andere pagina's: `/#protocolo` of `/#paso-1` tot en met `/#paso-5`.
 - `src/scripts/film.js`: de 3D-studio (licht, camera, de vijf stappen, de letters) en de koppeling met het scrollen.
 - `src/scripts/productos.js`: de vijf verpakkingen en het sachet. `shapes.js` en `letras.js` zijn gegenereerd (zie `tools/`).
 - `src/scripts/ui.js`: schakelaar professional of particulier, menu, voorbeeldformulier, verschijnen bij scrollen.
@@ -51,10 +57,17 @@ Werk op de tak `ontwerp`; `main` is de openbare link en blijft staan tot D akkoo
 
 Nieuw in deze ronde:
 
-- Snelheid: schaduwen met PCF in plaats van VSM (VSM tekende elke frame ook de hele vloer in de schaduwkaart), lichtere letters en goedkope reflecties van de letters, CSS-variabelen alleen schrijven als ze veranderen, geen korrel of wazige achtergrond over het 3D-beeld, resolutie hooguit 1,5 en zakt vanzelf als het apparaat het niet bijhoudt, 30 beelden per seconde in rust, film korter (820vh).
-- Mobiel: de camera draait minder zodat de letters recht staan, het slotbeeld toont het woord van voren, de feiten staan in een rechte lijst.
-- Merkelementen: de ribbelrand als zegel boven elk blok, letters die uitrekken (breedte-as van Archivo), een professionele pas die meeschrijft in het aanmeldformulier, een groot BAEHR onderaan dat uitrekt, zachte overgangen tussen pagina's.
-- Productpagina en merkpagina, met een gedeelde opmaak.
+- Snelheid: schaduwen met PCF in plaats van VSM (VSM tekende elke frame ook de hele vloer in de schaduwkaart), lichtere letters en goedkope reflecties van de letters, CSS-variabelen alleen schrijven als ze veranderen, geen korrel of wazige achtergrond over het 3D-beeld, resolutie hooguit 1,5 en zakt vanzelf als het apparaat het niet bijhoudt, 30 beelden per seconde in rust, film korter (820vh). Op de productpagina laadt three.js pas als de viewer in beeld komt.
+- Mobiel: de camera draait minder zodat de letters recht staan, het slotbeeld toont het woord van voren, feiten en stappen staan in rechte lijsten.
+- Merkelementen: de ribbelrand als zegel boven elk blok, letters die uitrekken (breedte-as van Archivo), een professionele pas die meeschrijft in het aanmeldformulier, een groot BAEHR onderaan dat uitrekt, zachte overgangen tussen pagina's, een deelafbeelding (`public/og.jpg`).
+- Pagina's: home, productpagina met 3D-viewer, merkpagina, winkel, professionals, contact, 404, en een cesta die op elke pagina werkt.
+
+Open voor de ontwerpronde van morgen:
+
+- Het slotbeeld op de telefoon is recht maar klein.
+- De 3D kan eliter (D, 21-11); ontwerp alleen op Fable.
+- Spaanse eindredactie van winkel, professionals, contact, cesta en 404 (zie `docs/`).
+- Prijzen ontbreken bewust: die staan niet in de bron.
 
 ## Stand op 21 november 2026 (avond)
 
