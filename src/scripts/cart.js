@@ -61,6 +61,7 @@ function render() {
   }
   if (empty) empty.hidden = items.length > 0;
   if (foot) foot.hidden = items.length === 0;
+  window.dispatchEvent(new CustomEvent('baehr:cesta', { detail: items.map((i) => ({ ...i, ...byId[i.id] })) }));
 }
 
 function set(id, qty) {
@@ -108,5 +109,5 @@ drawer?.querySelector('.drawer__checkout')?.addEventListener('click', () => {
   if (ok) ok.hidden = false;
 });
 
-window.baehrCesta = { add, set, open, items: () => items.slice() };
+window.baehrCesta = { add, set, open, items: () => items.slice(), emit: render };
 render();

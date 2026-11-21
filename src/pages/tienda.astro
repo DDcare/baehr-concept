@@ -1,22 +1,24 @@
 ---
-// Tienda: los productos del concepto, con filtro por tipo. Sin precios: no están en la fuente.
+// Tienda: los productos del concepto, con filtro por tipo. Tekst: redactor-es (21-11). Sin precios: no están en la fuente.
 import Base from '../layouts/Base.astro';
-import { PRODUCTOS, enlace } from '../data/productos';
+import { PRODUCTOS } from '../data/productos';
 
-const title = 'Tienda de cosmética para pies | BAEHR España';
+const title = 'Tienda online de cosmética profesional | BAEHR España';
 const description =
-  'Cosmética profesional BAEHR para el cuidado de los pies: baños de pies, exfoliantes, mascarillas, cremas y cremas en espuma. Distribuidor oficial en España.';
+  'Compra cosmética profesional BAEHR: baño de pies, exfoliante, mascarilla, crema, crema en espuma y una crema con un 10 % de urea.';
 
 const filtros = [
-  { k: 'todo', t: 'Todo' },
+  { k: 'todo', t: 'Todos' },
   { k: 'bano', t: 'Baños de pies' },
   { k: 'exfoliante', t: 'Exfoliantes' },
   { k: 'mascarilla', t: 'Mascarillas' },
   { k: 'crema', t: 'Cremas' },
   { k: 'espuma', t: 'Cremas en espuma' },
 ];
-// La Schutzcreme también es una crema
+// La Schutzcreme aparece en "Cremas"
 const grupo = (kind: string) => (kind === 'proteccion' ? 'crema' : kind);
+const go = (p: (typeof PRODUCTOS)[number]) =>
+  p.href ? { href: p.href, t: 'Ver la ficha' } : p.step !== undefined ? { href: `/#paso-${p.step + 1}`, t: 'Ver en el protocolo' } : null;
 
 const jsonld = [
   {
@@ -30,44 +32,63 @@ const jsonld = [
 
 <Base title={title} description={description} page="tienda" jsonld={jsonld}>
   <section class="shop-hero">
-    <h1 class="shop-hero__h"><span class="stretch is-in">Tienda</span></h1>
-    <p class="lead">Cosmética profesional para el cuidado de los pies. Los mismos productos que usan los salones, para tu cabina o para casa.</p>
+    <h1 class="shop-hero__h">
+      <span class="stretch is-in">Tienda</span>
+      <span class="shop-hero__soft">para la cabina y para&nbsp;casa</span>
+    </h1>
+    <p class="lead">Los cinco productos del protocolo y una crema con un 10&nbsp;% de urea.</p>
   </section>
 
   <section class="catalog" aria-label="Productos">
     <div class="catalog__bar">
-      <div class="filters" role="group" aria-label="Filtrar por tipo de producto">
+      <div class="filters" role="group" aria-label="Filtrar por tipo">
         {filtros.map((f, i) => <button type="button" data-filter={f.k} aria-pressed={i === 0 ? 'true' : 'false'}>{f.t}</button>)}
       </div>
-      <p class="catalog__note" data-when="pro">Precios profesionales al iniciar sesión.</p>
-      <p class="catalog__note" data-when="home">Envío gratis a partir de 60&nbsp;€.</p>
+      <p class="catalog__note" data-when="pro">Inicia sesión para ver tus precios profesionales. <a class="textlink" href="/profesionales/#acceso">Iniciar sesión</a></p>
+      <p class="catalog__note" data-when="home">Los precios se muestran al conectar la tienda.</p>
     </div>
 
     <ul class="catalog__grid">
       {
-        PRODUCTOS.map((p) => (
-          <li class="card" data-kind={grupo(p.kind)}>
-            <a class="card__link" href={enlace(p)}>
-              <span class={`card__img${p.href ? ' card__img--red' : ''}`}>
-                <img src={`/img/productos/${p.img}.webp`} width="600" height="900" alt="" loading="lazy" decoding="async" />
-              </span>
-              <span class="card__name" set:html={p.name} />
-              <span class="card__type" set:html={p.type} />
-              <span class="card__go">{p.href ? 'Ver producto' : 'Ver en el protocolo'}</span>
-            </a>
-            <button class="card__add" type="button" data-add={p.id}>Añadir a la cesta</button>
-          </li>
-        ))
+        PRODUCTOS.map((p) => {
+          const g = go(p);
+          return (
+            <li class="card" data-kind={grupo(p.kind)}>
+              {g ? (
+                <a class="card__link" href={g.href}>
+                  <span class={`card__img${p.href ? ' card__img--red' : ''}`}>
+                    <img src={`/img/productos/${p.img}.webp`} width="600" height="900" alt="" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="card__name" lang="de" set:html={p.name} />
+                  <span class="card__type" set:html={p.type} />
+                  <span class="card__go">{g.t}</span>
+                </a>
+              ) : (
+                <div class="card__link">
+                  <span class="card__img">
+                    <img src={`/img/productos/${p.img}.webp`} width="600" height="900" alt="" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="card__name" lang="de" set:html={p.name} />
+                  <span class="card__type" set:html={p.type} />
+                </div>
+              )}
+              <button class="card__add" type="button" data-add={p.id}>Añadir a la cesta</button>
+            </li>
+          );
+        })
       }
     </ul>
-    <p class="catalog__empty" hidden>No hay productos de este tipo en el concepto.</p>
+    <div class="catalog__empty" hidden>
+      <p>No hay productos de este tipo.</p>
+      <button class="textlink" type="button" data-filter-reset>Ver todos los productos</button>
+    </div>
   </section>
 
   <section class="cta">
-    <h2 class="cta__h">¿Tienes un salón?</h2>
-    <p class="cta__t">Date de alta como profesional y compra a precio profesional.</p>
+    <h2 class="cta__h">¿Compras para tu&nbsp;negocio?</h2>
+    <p class="cta__t">Date de alta y compra a precio profesional: la solicitud te lleva dos minutos.</p>
     <div class="cta__b">
-      <a class="pill pill--white" href="/profesionales/#alta">Solicitar el alta</a>
+      <a class="pill pill--white" href="/profesionales/#alta">Darme de alta</a>
     </div>
   </section>
 </Base>
@@ -76,22 +97,21 @@ const jsonld = [
   const buttons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
   const cards = document.querySelectorAll<HTMLElement>('.catalog__grid .card');
   const empty = document.querySelector<HTMLElement>('.catalog__empty');
-  buttons.forEach((b) =>
-    b.addEventListener('click', () => {
-      const k = b.dataset.filter;
-      buttons.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
-      let shown = 0;
-      cards.forEach((c) => {
-        const on = k === 'todo' || c.dataset.kind === k;
-        c.hidden = !on;
-        if (on) shown++;
-      });
-      if (empty) empty.hidden = shown > 0;
-    })
-  );
+  function filter(k: string) {
+    buttons.forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.filter === k)));
+    let shown = 0;
+    cards.forEach((c) => {
+      const on = k === 'todo' || c.dataset.kind === k;
+      c.hidden = !on;
+      if (on) shown++;
+    });
+    if (empty) empty.hidden = shown > 0;
+  }
+  buttons.forEach((b) => b.addEventListener('click', () => filter(b.dataset.filter || 'todo')));
+  document.querySelector('[data-filter-reset]')?.addEventListener('click', () => filter('todo'));
   // Filtro desde la URL, por ejemplo /tienda/?tipo=crema (los botones de la película de la home llegan así)
   const tipo = new URLSearchParams(location.search).get('tipo');
-  if (tipo) document.querySelector<HTMLButtonElement>(`[data-filter="${tipo}"]`)?.click();
+  if (tipo && document.querySelector(`[data-filter="${tipo}"]`)) filter(tipo);
   document.querySelectorAll<HTMLButtonElement>('[data-add]').forEach((b) =>
     b.addEventListener('click', () => {
       (window as any).baehrCesta?.add(b.dataset.add, 1);

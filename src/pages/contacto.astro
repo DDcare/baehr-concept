@@ -2,22 +2,22 @@
 // Contacto: canales que ya existen en el pie, dirección y un formulario de demostración.
 import Base from '../layouts/Base.astro';
 
-const title = 'Contacto | BAEHR España, distribuidor oficial en Barcelona';
+const title = 'Contacto y dirección en Barcelona | BAEHR España';
 const description =
-  'Contacta con BAEHR España, distribuidor oficial de BAEHR en España: WhatsApp, Telegram, Instagram y Facebook. Calle Perelló, 34, 08005 Barcelona.';
+  'Contacta con BAEHR España por WhatsApp, Telegram, Instagram, Facebook o el formulario. Calle Perelló, 34, 08005 Barcelona.';
 
 const canales = [
-  { n: 'WhatsApp', t: 'Para dudas sobre productos y pedidos.', href: 'https://wa.me/34616458742' },
-  { n: 'Telegram', t: 'Novedades y seminarios.', href: 'https://t.me/baehr_spain' },
-  { n: 'Instagram', t: 'Productos y protocolos en imágenes.', href: 'https://www.instagram.com/baehr.espana/' },
-  { n: 'Facebook', t: 'Noticias de BAEHR España.', href: 'https://www.facebook.com/baehr.espana' },
+  { n: 'WhatsApp', t: 'Para tus consultas por mensaje.', href: 'https://wa.me/34616458742' },
+  { n: 'Telegram', t: 'Para escribirnos si usas Telegram.', href: 'https://t.me/baehr_spain' },
+  { n: 'Instagram', t: 'Para seguir nuestras novedades.', href: 'https://www.instagram.com/baehr.espana/' },
+  { n: 'Facebook', t: 'Para estar al día.', href: 'https://www.facebook.com/baehr.espana' },
 ];
 ---
 
 <Base title={title} description={description} page="contacto">
   <section class="contact-hero">
-    <h1 class="contact-hero__h"><span class="stretch is-in">Hablemos</span></h1>
-    <p class="lead">Escríbenos por el canal que prefieras o déjanos un mensaje.</p>
+    <h1 class="contact-hero__h"><span class="stretch is-in">Escríbenos</span></h1>
+    <p class="lead">¿Una duda sobre un producto, un pedido o tu alta profesional? Usa el canal que prefieras. Atendemos a profesionales y particulares.</p>
   </section>
 
   <section class="contact">
@@ -36,8 +36,8 @@ const canales = [
 
     <div class="contact__side">
       <div class="addr">
-        <h2 class="addr__h">BAEHR España</h2>
-        <p>Proxy Beauty Spain, S.L.<br />Calle Perelló, 34<br />08005 Barcelona</p>
+        <h2 class="addr__h">Dirección</h2>
+        <p>BAEHR España<br />Proxy Beauty Spain, S.L.<br />Calle Perelló, 34<br />08005 Barcelona</p>
       </div>
 
       <form class="cform" novalidate>
@@ -49,8 +49,8 @@ const canales = [
           <label><input type="radio" name="soy" value="home" /><span>Particular</span></label>
         </fieldset>
         <label><span>Mensaje</span><textarea name="mensaje" rows="4" required></textarea></label>
-        <button class="pill pill--red" type="submit">Enviar</button>
-        <p class="cform__ok" role="status" hidden>Mensaje enviado. Gracias.</p>
+        <button class="pill pill--red" type="submit">Enviar mensaje</button>
+        <p class="cform__ok" role="status" hidden>Mensaje enviado. Gracias por escribirnos.</p>
         <p class="signup__note">Demostración de diseño: no se envía ningún dato.</p>
       </form>
     </div>

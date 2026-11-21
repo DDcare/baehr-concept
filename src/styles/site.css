@@ -1873,6 +1873,36 @@ h1 {
   text-transform: uppercase;
   color: var(--red);
 }
+.shop-hero__soft {
+  display: block;
+  margin-top: 0.35em;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 3vw, 2.9rem);
+  line-height: 1.1;
+}
+.catalog__empty {
+  display: grid;
+  justify-items: start;
+  gap: 0.6rem;
+}
+.catalog__empty[hidden] {
+  display: none;
+}
+.catalog__empty .textlink {
+  border: 0;
+  background: none;
+  padding: 0.3rem 0;
+  font-weight: 600;
+  color: var(--red);
+  cursor: pointer;
+}
+.catalog__note .textlink {
+  margin-left: 0.4rem;
+  font-weight: 600;
+  color: var(--red);
+}
 .shop-hero .lead,
 .contact-hero .lead,
 .lost .lead {
@@ -2109,6 +2139,37 @@ h1 {
 .qline__add.is-done {
   animation: cart-pop 0.45s cubic-bezier(0.3, 1.8, 0.5, 1);
   background: var(--red);
+}
+.quick__none {
+  padding: 0.8rem 0.2rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.quick__order {
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1.5px solid var(--ink);
+}
+.quick__label {
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+.quick__lines li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+.quick__empty {
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.quick__empty[hidden],
+.quick__none[hidden] {
+  display: none;
 }
 .quick__sum {
   display: flex;

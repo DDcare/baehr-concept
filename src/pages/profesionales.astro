@@ -4,26 +4,35 @@ import Base from '../layouts/Base.astro';
 import Alta from '../components/Alta.astro';
 import { PRODUCTOS } from '../data/productos';
 
-const title = 'Alta profesional para salones y podólogos | BAEHR España';
+const title = 'Alta profesional: precios y pedido rápido | BAEHR España';
 const description =
-  'Date de alta como profesional en BAEHR España: precios profesionales, pedido rápido por referencia, repetición de pedidos y facturas en tu cuenta.';
+  'Envía tu solicitud de alta en dos minutos; la revisamos en un día laborable. Precios profesionales, pedido rápido por referencia y facturas en tu cuenta.';
 
 const ventajas = [
-  { h: 'Precios profesionales', t: 'Tus precios aparecen en cuanto activamos tu cuenta.' },
-  { h: 'Pedido rápido', t: 'Busca por nombre o referencia y añade varios productos de una vez.' },
-  { h: 'Repite tu pedido', t: 'Tu último pedido, otra vez, con un clic.' },
-  { h: 'Facturas a mano', t: 'Facturas e historial de pedidos en tu cuenta.' },
+  { h: 'Precio profesional', t: 'Activamos tus precios al aprobar tu alta y los ves al iniciar sesión.' },
+  { h: 'Pedido rápido', t: 'Busca por nombre o referencia y añade productos sin recorrer la tienda.' },
+  { h: 'Lo de siempre', t: 'Repite tu último pedido con un clic.' },
+  { h: 'Tus facturas', t: 'En tu cuenta, junto con tu historial de pedidos.' },
 ];
 const pasos = [
-  { h: 'Solicitas el alta', t: 'Nombre comercial, NIF o CIF y correo electrónico. Dos minutos.' },
-  { h: 'La revisamos', t: 'Te respondemos en un día laborable.' },
-  { h: 'Compras a precio profesional', t: 'Entras con tu cuenta y pides cuando lo necesites.' },
+  { h: 'Solicita', t: 'Rellena los datos de tu negocio en dos minutos.' },
+  { h: 'Revisamos', t: 'Comprobamos tu solicitud en un día laborable.' },
+  { h: 'Compra', t: 'Inicia sesión y haz tu pedido a precio profesional.' },
 ];
 const faq = [
-  { q: '¿Quién puede darse de alta?', a: 'Salones, profesionales de manicura y pedicura y podólogos.' },
-  { q: '¿Qué datos necesito?', a: 'Tu nombre comercial, tu NIF o CIF y un correo electrónico.' },
-  { q: '¿Cuánto tarda la activación?', a: 'Revisamos cada solicitud en un día laborable.' },
-  { q: '¿Puedo repetir un pedido anterior?', a: 'Sí. Desde tu cuenta repites tu último pedido con un clic.' },
+  {
+    q: '¿Qué necesito para darme de alta?',
+    a: 'Tu nombre comercial, tu NIF o CIF y un correo electrónico. Rellenar la solicitud te lleva unos dos minutos.',
+  },
+  {
+    q: '¿Cuándo podré comprar a precio profesional?',
+    a: 'Revisamos tu solicitud en un día laborable. Cuando la aprobemos, inicia sesión y verás tus precios profesionales.',
+  },
+  {
+    q: '¿Puedo pedir por referencia?',
+    a: 'Sí. Con el pedido rápido buscas por nombre o referencia y añades los productos sin recorrer la tienda. También puedes repetir tu último pedido con un clic.',
+  },
+  { q: '¿Dónde encuentro mis facturas?', a: 'En tu cuenta, junto con tu historial de pedidos.' },
 ];
 const jsonld = [
   {
@@ -37,11 +46,11 @@ const jsonld = [
 <Base title={title} description={description} page="profesionales" jsonld={jsonld}>
   <section class="pro-hero">
     <h1 class="pro-hero__h">
-      <span class="stretch is-in">Para</span>
-      <span class="stretch is-in">profesionales</span>
+      <span class="stretch is-in">Compra</span>
+      <span class="stretch is-in">como&nbsp;profesional</span>
     </h1>
     <div class="pro-hero__side">
-      <p class="lead">Para salones, profesionales de manicura y pedicura y podólogos. Date de alta en dos minutos y compra BAEHR a precio profesional.</p>
+      <p class="lead">Para salones, podólogos y profesionales de manicura y pedicura. Solicita tu alta en dos minutos: revisamos la solicitud en un día laborable y activamos tus precios profesionales.</p>
       <a class="pill pill--red" href="#alta">Solicitar el alta</a>
     </div>
   </section>
@@ -52,7 +61,7 @@ const jsonld = [
         ventajas.map((v) => (
           <li class="perk rv">
             <span class="perk__ribs" aria-hidden="true" />
-            <h2 class="perk__h">{v.h}</h2>
+            <h2 class="perk__h" set:html={v.h} />
             <p class="perk__t">{v.t}</p>
           </li>
         ))
@@ -62,14 +71,14 @@ const jsonld = [
 
   <section class="quick" id="pedido-rapido">
     <div class="quick__text">
-      <h2 class="h2 rv">Pedido rápido</h2>
-      <p class="lead rv">Así pides en el portal profesional: escribe, añade y listo. Pruébalo.</p>
-      <p class="quick__note">Demostración de diseño: no se tramita ningún pedido.</p>
+      <h2 class="h2 rv">Prueba el pedido&nbsp;rápido</h2>
+      <p class="lead rv">Escribe un nombre o una referencia y añade el producto a tu pedido.</p>
+      <p class="quick__note">Demostración de diseño: no se envía ningún pedido.</p>
     </div>
     <div class="quick__box">
       <label class="quick__search">
         <span class="sr">Buscar producto</span>
-        <input type="search" placeholder="Busca por nombre o referencia" autocomplete="off" />
+        <input type="search" placeholder="Busca por nombre" autocomplete="off" />
       </label>
       <ul class="quick__results">
         {
@@ -80,20 +89,25 @@ const jsonld = [
                 <span class="qline__name" set:html={p.name} />
                 <span class="qline__type" set:html={p.type} />
               </span>
-              <button class="qline__add" type="button" data-add={p.id}>Añadir</button>
+              <button class="qline__add" type="button" data-add={p.id} data-done="Añadido">Añadir</button>
             </li>
           ))
         }
       </ul>
+      <p class="quick__none" hidden>No encontramos ningún producto con ese nombre o referencia.</p>
+      <div class="quick__order">
+        <p class="quick__label">Tu pedido</p>
+        <ul class="quick__lines"></ul>
+        <p class="quick__empty">Aún no has añadido ningún producto.</p>
+      </div>
       <div class="quick__sum">
-        <span class="quick__count"><b data-cart-count>0</b> unidades en tu pedido</span>
-        <button class="pill pill--red" type="button" data-open-cart>Ver el pedido</button>
+        <button class="pill pill--red" type="button" data-open-cart>Ver la cesta</button>
       </div>
     </div>
   </section>
 
   <section class="steps3">
-    <h2 class="h2 rv">Así funciona</h2>
+    <h2 class="h2 rv">Así&nbsp;funciona</h2>
     <ol class="steps3__row">
       {
         pasos.map((s) => (
@@ -108,11 +122,11 @@ const jsonld = [
 
   <section class="dark dark--alta" id="alta">
     <div class="dark__text">
-      <h2 class="h2 rv">Solicita tu alta profesional</h2>
-      <p class="lead rv">Rellena los datos de tu negocio. Revisamos la solicitud en un día laborable y activamos tus precios profesionales.</p>
+      <h2 class="h2 rv">Solicita tu&nbsp;alta</h2>
+      <p class="lead rv">Solo te pedimos tres datos de tu negocio.</p>
       <div class="switch" role="tablist" aria-label="Alta o acceso">
         <button type="button" role="tab" id="tab-alta" aria-controls="panel-alta" aria-selected="true">Solicitar el alta</button>
-        <button type="button" role="tab" id="tab-acceso" aria-controls="panel-acceso" aria-selected="false" tabindex="-1">Ya tengo cuenta</button>
+        <button type="button" role="tab" id="tab-acceso" aria-controls="panel-acceso" aria-selected="false" tabindex="-1">Iniciar sesión</button>
       </div>
     </div>
     <div class="panel" id="panel-alta" role="tabpanel" aria-labelledby="tab-alta">
@@ -129,7 +143,7 @@ const jsonld = [
           <input type="password" name="clave" autocomplete="current-password" required />
         </label>
         <a class="login__forgot" href="#acceso">¿Has olvidado tu contraseña?</a>
-        <button class="pill pill--red" type="submit">Acceder</button>
+        <button class="pill pill--red" type="submit">Iniciar sesión</button>
         <p class="signup__ok" role="status" hidden>Demostración de diseño: no se inicia ninguna sesión.</p>
         <p class="signup__note">Demostración de diseño: no se envía ningún dato.</p>
       </form>
@@ -137,7 +151,7 @@ const jsonld = [
   </section>
 
   <section class="faq">
-    <h2 class="h2 rv">Preguntas frecuentes</h2>
+    <h2 class="h2 rv">Lo que más nos&nbsp;preguntan</h2>
     <div class="faq__list">
       {
         faq.map((f) => (
@@ -186,16 +200,47 @@ const jsonld = [
 
   const input = document.querySelector<HTMLInputElement>('.quick__search input');
   const lines = document.querySelectorAll<HTMLElement>('.qline');
+  const none = document.querySelector<HTMLElement>('.quick__none');
   input?.addEventListener('input', () => {
     const q = input.value.trim().toLowerCase();
-    lines.forEach((l) => (l.hidden = !!q && !(l.dataset.q || '').includes(q)));
+    let shown = 0;
+    lines.forEach((l) => {
+      const on = !q || (l.dataset.q || '').includes(q);
+      l.hidden = !on;
+      if (on) shown++;
+    });
+    if (none) none.hidden = shown > 0;
   });
+  // Tu pedido: las líneas de la cesta, en directo
+  const orderList = document.querySelector<HTMLElement>('.quick__lines');
+  const orderEmpty = document.querySelector<HTMLElement>('.quick__empty');
+  window.addEventListener('baehr:cesta', (e) => {
+    const items = (e as CustomEvent).detail as { name: string; qty: number }[];
+    if (!orderList) return;
+    orderList.textContent = '';
+    items.forEach((i) => {
+      const li = document.createElement('li');
+      const name = document.createElement('span');
+      name.lang = 'de';
+      name.textContent = i.name;
+      const qty = document.createElement('b');
+      qty.textContent = `× ${i.qty}`;
+      li.append(name, qty);
+      orderList.append(li);
+    });
+    if (orderEmpty) orderEmpty.hidden = items.length > 0;
+  });
+  // si la cesta ya se cargó antes que esta página, que vuelva a avisar
+  (window as any).baehrCesta?.emit?.();
   document.querySelectorAll<HTMLButtonElement>('.qline__add').forEach((b) =>
     b.addEventListener('click', () => {
       (window as any).baehrCesta?.add(b.dataset.add, 1);
       b.classList.remove('is-done');
       void b.offsetWidth;
       b.classList.add('is-done');
+      const label = b.textContent;
+      b.textContent = b.dataset.done || label;
+      setTimeout(() => (b.textContent = label), 1200);
     })
   );
 </script>
