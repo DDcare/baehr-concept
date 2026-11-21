@@ -20,6 +20,25 @@
   box-sizing: border-box;
 }
 
+/* Foco visible para el teclado y selección en el rojo de la marca */
+:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
+.dark :focus-visible,
+.foot :focus-visible,
+.proto :focus-visible,
+.quick :focus-visible,
+.statement :focus-visible,
+.cta :focus-visible,
+.film :focus-visible {
+  outline-color: #fff;
+}
+::selection {
+  background: var(--red);
+  color: #fff;
+}
+
 /* Paso suave entre páginas (navegadores que lo admiten); el logotipo se queda en su sitio */
 @view-transition {
   navigation: auto;
