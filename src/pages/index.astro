@@ -1,0 +1,317 @@
+---
+import '@fontsource-variable/archivo/wdth.css';
+import '@fontsource-variable/newsreader/wght-italic.css';
+import '../styles/site.css';
+
+const title = 'BAEHR España | Cosmética profesional para pies, manos y uñas';
+const description =
+  'BAEHR España, distribuidor oficial de la marca alemana BAEHR. Cosmética profesional para pies, manos y uñas: para salones, profesionales de manicura y pedicura, podólogos y particulares.';
+
+const org = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'BAEHR España',
+  legalName: 'Proxy Beauty Spain, S.L.',
+  url: 'https://baehr.com.es/',
+  description:
+    'BAEHR España es el distribuidor oficial en España de la marca alemana BAEHR, fundada en 1949 en Waiblingen.',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Calle Perelló, 34',
+    postalCode: '08005',
+    addressLocality: 'Barcelona',
+    addressCountry: 'ES',
+  },
+  sameAs: [
+    'https://www.instagram.com/baehr.espana/',
+    'https://www.facebook.com/baehr.espana',
+    'https://t.me/baehr_spain',
+  ],
+};
+---
+
+<!doctype html>
+<html lang="es" data-mode="pro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#F2EEE7" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script is:inline>
+      document.documentElement.classList.add('js');
+      try {
+        var m = localStorage.getItem('baehr-modo');
+        if (m === 'pro' || m === 'home') document.documentElement.dataset.mode = m;
+      } catch (e) {}
+    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(org)} />
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+
+    <header class="top" data-theme="light">
+      <p class="promo">
+        <span class="promo__long">5 + 1 gratis en productos BAEHR del mismo tamaño. Hasta el 30 de noviembre.</span>
+        <span class="promo__short">5 + 1 gratis hasta el 30 de noviembre.</span>
+      </p>
+      <div class="bar">
+        <a class="logo" href="#inicio" aria-label="BAEHR España, inicio">BAEHR</a>
+        <nav class="nav" aria-label="Principal">
+          <a href="#inicio">Tienda</a>
+          <a href="#protocolo">Protocolo</a>
+          <a href="#profesionales">Profesionales</a>
+          <a href="#seminarios">Seminarios</a>
+          <a href="#marca">La marca</a>
+        </nav>
+        <div class="mode" role="group" aria-label="Tipo de cliente">
+          <button type="button" data-set-mode="pro" aria-pressed="true">Profesional</button>
+          <button type="button" data-set-mode="home" aria-pressed="false">Particular</button>
+        </div>
+        <a class="bar__link" href="#profesionales">Acceder</a>
+        <a class="cart" href="#inicio" aria-label="Cesta: 0 productos">Cesta <b>0</b></a>
+        <button class="menu" type="button" aria-expanded="false" aria-controls="menu-movil">Menú</button>
+      </div>
+      <nav class="sheet" id="menu-movil" aria-label="Menú" hidden>
+        <a href="#inicio">Tienda</a>
+        <a href="#protocolo">Protocolo</a>
+        <a href="#profesionales">Profesionales</a>
+        <a href="#seminarios">Seminarios</a>
+        <a href="#marca">La marca</a>
+        <a href="#profesionales">Acceder</a>
+        <a href="#inicio">Cesta (0)</a>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="film" id="inicio" aria-label="Presentación de producto">
+        <div class="film__sticky">
+          <div class="hero">
+            <h1>
+              <span class="h1__big">Cosmética</span>
+              <span class="h1__big">profesional</span>
+              <span class="h1__soft">para pies, manos y uñas</span>
+            </h1>
+            <p class="hero__lead">
+              Marca alemana fundada en 1949. BAEHR España es su distribuidor oficial.{' '}
+              <span data-when="pro">Date de alta y compra a precio profesional.</span>
+              <span data-when="home">Envío gratuito en pedidos a partir de 60&nbsp;€.</span>
+            </p>
+            <div class="hero__cta">
+              <a class="pill pill--red" href="#profesionales" data-when="pro">Darme de alta</a>
+              <a class="pill pill--line" href="#protocolo" data-when="pro">Ver la tienda</a>
+              <a class="pill pill--red" href="#protocolo" data-when="home">Ver la tienda</a>
+              <a class="pill pill--line" href="#profesionales" data-when="home">Soy profesional</a>
+            </div>
+          </div>
+
+          <figure class="still">
+            <img src="/posters/tubo.webp" width="900" height="1320" alt="Tubo de crema para pies PEDIBAEHR con un 10 % de urea" loading="lazy" decoding="async" />
+          </figure>
+
+          <div class="stagebg" aria-hidden="true"></div>
+          <canvas id="stage" aria-hidden="true"></canvas>
+          <div class="grain" aria-hidden="true"></div>
+
+          <div class="beat beat--a">
+            <div class="beat__box">
+              <h2 class="beat__h">Crema para pies con un 10&nbsp;% de urea</h2>
+              <p class="chip" data-when="pro">Precio profesional tras el alta</p>
+              <p class="chip" data-when="home">Disponible en la tienda</p>
+            </div>
+            <ul class="calls">
+              <li class="call call--1">Urea al 10&nbsp;%</li>
+              <li class="call call--2">BAEHR, en Waiblingen (Alemania) desde&nbsp;1949</li>
+              <li class="call call--3">PEDIBAEHR: productos creados por y para especialistas en el cuidado de los pies</li>
+            </ul>
+          </div>
+
+          <div class="beat beat--b">
+            <h2 class="beat__h">Dos texturas, una sola marca</h2>
+            <p class="duo duo--a">Crema</p>
+            <p class="duo duo--b">Crema en espuma</p>
+            <img class="still__img" src="/posters/duo.webp" width="1400" height="900" alt="Tubo de crema y bote de crema en espuma PEDIBAEHR" loading="lazy" decoding="async" />
+          </div>
+
+          <div class="beat beat--c">
+            <div class="beat__box">
+              <h2 class="beat__h">Crema en espuma</h2>
+              <p class="beat__soft">Espuma de textura ligera y rápida absorción.</p>
+              <ul class="facts">
+                <li>Orange-Lemongrass</li>
+                <li>Con un 5&nbsp;% de urea</li>
+                <li>Vegana</li>
+              </ul>
+              <a class="pill pill--white" href="#protocolo">Ver cremas en espuma</a>
+            </div>
+            <img class="still__img" src="/posters/espuma.webp" width="1400" height="900" alt="Bote de crema en espuma PEDIBAEHR Orange-Lemongrass" loading="lazy" decoding="async" />
+          </div>
+
+          <p class="hint" aria-hidden="true">Arrastra para girar</p>
+          <div class="flash" aria-hidden="true"></div>
+          <div class="ribs" aria-hidden="true"></div>
+          <p class="cue" aria-hidden="true">Desliza</p>
+        </div>
+      </section>
+
+      <section class="protocol" id="protocolo">
+        <div class="protocol__head">
+          <h2 class="h2 rv">El protocolo en cabina</h2>
+          <p class="lead rv">Cuatro pasos y un producto para cada uno. Todo de la misma marca.</p>
+          <a class="pill pill--line rv" href="#protocolo">Ver los productos de cada paso</a>
+        </div>
+        <ol class="steps">
+          <li class="step rv">
+            <a href="#protocolo">
+              <span class="step__name">Baño de pies</span>
+              <span class="step__text">Prepara la piel antes de empezar.</span>
+            </a>
+          </li>
+          <li class="step rv">
+            <a href="#protocolo">
+              <span class="step__name">Exfoliación</span>
+              <span class="step__text">Retira la piel seca.</span>
+            </a>
+          </li>
+          <li class="step rv">
+            <a href="#protocolo">
+              <span class="step__name">Mascarilla</span>
+              <span class="step__text">Cuidado intensivo durante el servicio.</span>
+            </a>
+          </li>
+          <li class="step rv">
+            <a href="#protocolo">
+              <span class="step__name">Crema en espuma</span>
+              <span class="step__text">El cierre de cada servicio.</span>
+            </a>
+          </li>
+        </ol>
+      </section>
+
+      <section class="dark" id="profesionales">
+        <div class="dark__text" data-when="pro">
+          <h2 class="h2 rv">Solicita tu alta profesional en dos minutos</h2>
+          <p class="lead rv">
+            Rellena los datos de tu negocio. Revisamos la solicitud en un día laborable y activamos tus precios
+            profesionales.
+          </p>
+          <ul class="ticks rv">
+            <li>Precios profesionales</li>
+            <li>Pedido rápido por referencia</li>
+            <li>Repite tu último pedido con un clic</li>
+            <li>Facturas e historial de pedidos en tu cuenta</li>
+          </ul>
+        </div>
+        <form class="signup rv" data-when="pro" novalidate>
+          <label>
+            <span>Nombre comercial</span>
+            <input type="text" name="salon" autocomplete="organization" required />
+          </label>
+          <label>
+            <span>NIF o CIF</span>
+            <input type="text" name="nif" autocomplete="off" required />
+          </label>
+          <label>
+            <span>Correo electrónico</span>
+            <input type="email" name="correo" autocomplete="email" required />
+          </label>
+          <button class="pill pill--red" type="submit">Solicitar el alta</button>
+          <p class="signup__ok" role="status" hidden>Solicitud enviada. Te respondemos en un día laborable.</p>
+          <p class="signup__note">Demostración de diseño: no se envía ningún dato.</p>
+        </form>
+
+        <div class="dark__text dark__text--wide" data-when="home">
+          <h2 class="h2 rv">Lo que usan los profesionales, también en casa</h2>
+          <p class="lead rv">
+            Compra los mismos productos para el cuidado diario. Envío gratuito en pedidos a partir de 60&nbsp;€.
+          </p>
+          <a class="pill pill--red rv" href="#protocolo">Ir a la tienda</a>
+        </div>
+      </section>
+
+      <section class="seminars" id="seminarios">
+        <h2 class="h2 rv">Seminarios para profesionales</h2>
+        <article class="seminar rv">
+          <p class="seminar__date"><b>26</b> nov</p>
+          <div class="seminar__body">
+            <h3>Beauty Expert: maratón formativo online</h3>
+            <p>
+              Onicólisis y cuidado profesional BAEHR. Online, de 10:00 a 12:00 (hora peninsular). En ruso con
+              traducción al español.
+            </p>
+          </div>
+          <a class="pill pill--red" href="#seminarios">Inscribirme</a>
+        </article>
+        <a class="textlink rv" href="#seminarios">Ver todos los seminarios</a>
+      </section>
+
+      <section class="brand" id="marca">
+        <h2 class="h2 rv">Una marca alemana con oficio</h2>
+        <div class="brand__grid">
+          <p class="lead rv">
+            BAEHR nació en 1949 en Waiblingen, cerca de Stuttgart, y sigue siendo una empresa familiar. BAEHR
+            España distribuye sus productos a salones, profesionales de manicura y pedicura, podólogos y
+            particulares.
+          </p>
+          <dl class="stats">
+            <div class="stat rv">
+              <dt>1949</dt>
+              <dd>año de fundación</dd>
+            </div>
+            <div class="stat rv">
+              <dt>+40</dt>
+              <dd>países con distribuidor oficial</dd>
+            </div>
+            <div class="stat rv">
+              <dt>7</dt>
+              <dd>tipos de piel en el sistema PEDIBAEHR</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="foot__ribs" aria-hidden="true"></div>
+      <div class="foot__grid">
+        <div>
+          <span class="logo">BAEHR</span>
+          <p class="foot__lead">
+            BAEHR España es el distribuidor oficial de BAEHR en España.
+          </p>
+          <p class="foot__small">Proxy Beauty Spain, S.L. Calle Perelló, 34, 08005 Barcelona.</p>
+        </div>
+        <nav aria-label="Secciones">
+          <a href="#inicio">Tienda</a>
+          <a href="#protocolo">Protocolo</a>
+          <a href="#profesionales">Profesionales</a>
+          <a href="#seminarios">Seminarios</a>
+          <a href="#marca">La marca</a>
+        </nav>
+        <nav aria-label="Redes sociales">
+          <a href="https://www.instagram.com/baehr.espana/" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/baehr.espana" rel="noopener">Facebook</a>
+          <a href="https://t.me/baehr_spain" rel="noopener">Telegram</a>
+          <a href="https://wa.me/34616458742" rel="noopener">WhatsApp</a>
+        </nav>
+        <nav aria-label="Legal">
+          <a href="#inicio">Aviso legal</a>
+          <a href="#inicio">Política de privacidad</a>
+          <a href="#inicio">Política de cookies</a>
+        </nav>
+      </div>
+      <p class="foot__end">Concepto de diseño, noviembre de 2026.</p>
+    </footer>
+
+    <script>
+      import '../scripts/ui.js';
+      import '../scripts/film.js';
+    </script>
+  </body>
+</html>
