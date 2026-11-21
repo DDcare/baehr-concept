@@ -22,6 +22,7 @@ npm run preview   # de gebouwde versie lokaal bekijken
 - `src/pages/tienda.astro`: de winkel met filter per productsoort (ook via de adresregel, bijvoorbeeld `/tienda/?tipo=crema`).
 - `src/pages/profesionales.astro`: voordelen, demo van snel bestellen, aanmelden of inloggen (`/profesionales/#acceso` opent inloggen), FAQ.
 - `src/pages/contacto.astro` en `src/pages/404.astro`.
+- `src/pages/cuenta.astro`: demo van de professionele account (het B2B-portaal): eigen pas met de naam uit het aanmeldformulier, laatste bestelling herhalen, bestelgeschiedenis, facturen, gegevens. Voorbeeldgegevens, geen prijzen. Inloggen op `/profesionales/#acceso` leidt hierheen.
 - `src/components/Alta.astro`: het aanmeldformulier met de professionele pas (home en professionals).
 - `src/data/productos.ts`: de zes producten van het concept; `src/scripts/cart.js`: de cesta (schuiflade, bewaard in de browser).
 - Links naar een stap in de film vanaf andere pagina's: `/#protocolo` of `/#paso-1` tot en met `/#paso-5`.
@@ -61,7 +62,9 @@ Nieuw in deze ronde:
 - Snelheid: schaduwen met PCF in plaats van VSM (VSM tekende elke frame ook de hele vloer in de schaduwkaart), lichtere letters en goedkope reflecties van de letters, CSS-variabelen alleen schrijven als ze veranderen, geen korrel of wazige achtergrond over het 3D-beeld, resolutie hooguit 1,5 en zakt vanzelf als het apparaat het niet bijhoudt, 30 beelden per seconde in rust, film korter (820vh). Op de productpagina laadt three.js pas als de viewer in beeld komt.
 - Mobiel: de camera draait minder zodat de letters recht staan, het slotbeeld toont het woord van voren, feiten en stappen staan in rechte lijsten.
 - Merkelementen: de ribbelrand als zegel boven elk blok, letters die uitrekken (breedte-as van Archivo), een professionele pas die meeschrijft in het aanmeldformulier, een groot BAEHR onderaan dat uitrekt, zachte overgangen tussen pagina's, een deelafbeelding (`public/og.jpg`).
-- Pagina's: home, productpagina met 3D-viewer, merkpagina, winkel, professionals, contact, 404, en een cesta die op elke pagina werkt.
+- Pagina's: home, productpagina met 3D-viewer, merkpagina, winkel, professionals, accountdemo, contact, 404, en een cesta die op elke pagina werkt.
+- Snelheid gemeten (testbrowser zonder grafische kaart, zelfde resolutie): de film is per beeld 2,1 tot 3 keer sneller dan de versie van 21-11 middag.
+- Gecontroleerd: koppen en tekst passen op 360, 390, 820, 1024 en 1440 breed (`tools/overflow-check.cjs`), alle interne links bestaan, toegankelijkheid met axe-core.
 
 Open voor de ontwerpronde van morgen:
 
