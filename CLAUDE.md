@@ -37,6 +37,6 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 
 - Letterlijk: "voor 1e ontwerp oke, maar ben niet helemaal content", "ziet er te simpel basic uit", "ik wil elite, uniek, eigen identiteit, speels maar professioneel".
 - De site reageert traag op zijn laptop. Eerst de snelheid oplossen, dan pas meer effecten toevoegen.
-- Verdeling van D: ontwerp en 3D alleen op Fable, Opus alleen voor tekst (het voorstel in het Spaans en Engels).
+- Verdeling van D: ontwerp en 3D in principe op Fable. Op 21-11 's avonds liet D Opus wel aan de site werken (snelheid, mobiel, nieuwe pagina's, merkelementen); de laatste ontwerpronde doet Fable. Het voorstel in het Spaans en Engels volgt op 22-11.
 - Voorstel van Claude, nog niet bevestigd door D: de volgende ontwerpronde begint met twee of drie stijlbeelden van één stap waaruit D kiest, daarna pas de hele film ombouwen.
 - Lat voor "elite" volgens D (21-11): skincomplete.eu, een eigen site van het bureau. De nieuwe site mag daar niet op lijken. Bekijk die site aan het begin van de volgende ontwerpronde om het niveau te begrijpen, en kies bewust een andere vormtaal.
