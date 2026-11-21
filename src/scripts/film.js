@@ -1274,6 +1274,7 @@ function init() {
     target = total > 0 ? clamp01(-r.top / total) : 0;
   }
 
+  const hasPoster = !!sticky.querySelector('.stage-poster');
   let last = 0;
   let idleFlip = false;
   const perf = { sum: 0, n: 0, skip: 90 };
@@ -1321,7 +1322,8 @@ function init() {
         introStart = now;
         html.classList.add('film-ready');
       }
-      if (introT < 1) introT = Math.min(1, (now - introStart) / 1800);
+      // con imagen fija en la cápsula, el 3D aparece encima sin animación de entrada
+      if (introT < 1) introT = hasPoster ? 1 : Math.min(1, (now - introStart) / 1800);
     }
     apply(p, (now - t0) / 1000, introT);
     renderer.render(scene, camera);

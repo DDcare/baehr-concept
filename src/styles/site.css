@@ -506,6 +506,25 @@ h1 {
 .film__sticky.is-white .stagebg {
   background: #fff;
 }
+/* Mientras carga el 3D, la cápsula ya muestra la imagen fija de los cinco productos */
+.stage-poster {
+  position: absolute;
+  z-index: 1;
+  top: var(--n-top);
+  right: var(--n-right);
+  bottom: var(--n-bottom);
+  left: var(--n-left);
+  width: calc(100% - var(--n-left) - var(--n-right));
+  height: calc(100% - var(--n-top) - var(--n-bottom));
+  object-fit: cover;
+  border-radius: 999px;
+  opacity: calc(1 - (1 - var(--k, 1)) * 4);
+  pointer-events: none;
+  transition: visibility 0s 0.9s;
+}
+.film-ready .stage-poster {
+  visibility: hidden;
+}
 #stage {
   position: absolute;
   inset: 0;
@@ -3014,6 +3033,7 @@ html.has-drawer {
   object-fit: cover;
 }
 .film-static .stagebg,
+.film-static .stage-poster,
 .film-static .grain,
 .film-static .vig,
 .film-static #stage,
