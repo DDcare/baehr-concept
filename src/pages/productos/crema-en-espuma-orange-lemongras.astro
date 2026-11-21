@@ -13,8 +13,8 @@ const faq = [
     a: 'Lleva un 5 % de urea. Sus otros principios activos son el pantenol y los extractos de ginkgo, ginseng y limón.',
   },
   {
-    q: '¿En qué se diferencia de la crema de pies Orange-Lemongras?',
-    a: 'Las dos llevan urea, pero difieren en la textura y en el resto de los activos. La crema de pies Orange-Lemongras lleva aceites de naranja y de lemongrass; la crema en espuma, un 5 % de urea, pantenol y extractos de ginkgo, ginseng y limón, en una espuma ligera de rápida absorción.',
+    q: '¿En qué se diferencia de la crema para pies Orange-Lemongras?',
+    a: 'Las dos llevan urea, pero difieren en la textura y en el resto de los activos. La crema para pies Orange-Lemongras lleva aceites de naranja y de lemongrass; la crema en espuma, un 5 % de urea, pantenol y extractos de ginkgo, ginseng y limón, en una espuma ligera de rápida absorción.',
   },
   {
     q: '¿Qué es el sello de cinco estrellas?',
@@ -57,9 +57,9 @@ const jsonld = [
 const steps = ['Baño de pies', 'Exfoliación', 'Mascarilla', 'Crema', 'Crema en espuma'];
 const pairs = [
   { img: 'bano', name: 'SPA Wellness Fußbad', type: 'Baño de pies con hibisco y loto', size: '500 ml', step: 0, aria: 'Ver el baño de pies en el protocolo' },
-  { img: 'exfoliante', name: 'fresh feet Fußpeeling', type: 'Exfoliante de pies con sal marina', size: '125 y 450 ml', step: 1, aria: 'Ver el exfoliante en el protocolo' },
+  { img: 'exfoliante', name: 'fresh feet Fußpeeling', type: 'Exfoliante para pies con sal marina', size: '125 y 450 ml', step: 1, aria: 'Ver el exfoliante en el protocolo' },
   { img: 'mascarilla', name: 'Fuß-Vliesmaske Orange-Lemongras', type: 'Mascarilla de tejido para pies muy secos', size: 'Caja de 5 pares', step: 2, aria: 'Ver la mascarilla en el protocolo' },
-  { img: 'crema', name: 'Fußcreme Orange-Lemongras', type: 'Crema de pies con aceites de naranja y de lemongrass', size: '30, 125 y 500 ml', step: 3, aria: 'Ver la crema de pies en el protocolo' },
+  { img: 'crema', name: 'Fußcreme Orange-Lemongras', type: 'Crema para pies con aceites de naranja y de lemongrass', size: '30, 125 y 500 ml', step: 3, aria: 'Ver la crema para pies en el protocolo' },
 ];
 ---
 
@@ -115,9 +115,9 @@ const pairs = [
 
       <form class="addcart" novalidate>
         <div class="qty" role="group" aria-label="Cantidad">
-          <button type="button" data-qty="-1" aria-label="Uno menos">−</button>
+          <button type="button" data-qty="-1" aria-label="Reducir cantidad">−</button>
           <output aria-live="polite">1</output>
-          <button type="button" data-qty="1" aria-label="Uno más">+</button>
+          <button type="button" data-qty="1" aria-label="Aumentar cantidad">+</button>
         </div>
         <button class="pill pill--red addcart__btn" type="submit">Añadir a la cesta</button>
         <p class="addcart__ok" role="status" hidden>Añadido a la cesta. <a class="textlink" href="/tienda/" data-open-cart>Ver la cesta</a></p>

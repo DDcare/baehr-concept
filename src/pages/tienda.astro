@@ -3,9 +3,9 @@
 import Base from '../layouts/Base.astro';
 import { PRODUCTOS } from '../data/productos';
 
-const title = 'Tienda online de cosmética profesional | BAEHR España';
+const title = 'Tienda online de cosmética profesional para pies | BAEHR España';
 const description =
-  'Compra cosmética profesional BAEHR: baño de pies, exfoliante, mascarilla, crema, crema en espuma y una crema con un 10 % de urea.';
+  'Compra cosmética profesional BAEHR para el cuidado de los pies: baño, exfoliante, mascarilla, crema, crema en espuma y crema con un 10 % de urea.';
 
 const filtros = [
   { k: 'todo', t: 'Todos' },
@@ -44,8 +44,8 @@ const jsonld = [
       <div class="filters" role="group" aria-label="Filtrar por tipo">
         {filtros.map((f, i) => <button type="button" data-filter={f.k} aria-pressed={i === 0 ? 'true' : 'false'}>{f.t}</button>)}
       </div>
-      <p class="catalog__note" data-when="pro">Inicia sesión para ver tus precios profesionales. <a class="textlink" href="/profesionales/#acceso">Iniciar sesión</a></p>
-      <p class="catalog__note" data-when="home">Los precios se muestran al conectar la tienda.</p>
+      <p class="catalog__note" data-when="pro"><a class="textlink" href="/profesionales/#acceso">Inicia sesión</a> para ver tus precios profesionales.</p>
+      <p class="catalog__note" data-when="home">Precios pendientes de publicar.</p>
     </div>
 
     <ul class="catalog__grid">

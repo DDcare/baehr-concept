@@ -152,8 +152,8 @@ const org = {
           <a class="pill pill--red" href="/tienda/">Seguir comprando</a>
         </div>
         <div class="drawer__foot" hidden>
-          <p class="drawer__price" data-when="pro">Inicia sesión para ver tus precios profesionales.</p>
-          <p class="drawer__price" data-when="home">Los precios se muestran al conectar la tienda.</p>
+          <p class="drawer__price" data-when="pro"><a class="textlink" href="/profesionales/#acceso">Inicia sesión</a> para ver tus precios profesionales.</p>
+          <p class="drawer__price" data-when="home">Precios pendientes de publicar.</p>
           <button class="pill pill--red drawer__checkout" type="button">Tramitar pedido</button>
           <p class="drawer__ok" role="status" hidden>Demostración de diseño: no se envía ningún pedido.</p>
         </div>
@@ -161,13 +161,13 @@ const org = {
           <li class="line">
             <span class="line__img"><img src="" width="600" height="900" alt="" /></span>
             <span class="line__text">
-              <span class="line__name"></span>
+              <span class="line__name" lang="de"></span>
               <span class="line__type"></span>
               <span class="line__row">
                 <span class="qty qty--s" role="group" aria-label="Cantidad">
-                  <button type="button" data-step="-1" aria-label="Uno menos">−</button>
+                  <button type="button" data-step="-1" aria-label="Reducir cantidad">−</button>
                   <output>1</output>
-                  <button type="button" data-step="1" aria-label="Uno más">+</button>
+                  <button type="button" data-step="1" aria-label="Aumentar cantidad">+</button>
                 </span>
                 <button class="line__remove" type="button" data-remove>Eliminar</button>
               </span>

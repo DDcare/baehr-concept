@@ -68,6 +68,9 @@ Open voor de ontwerpronde van morgen:
 - De 3D kan eliter (D, 21-11); ontwerp alleen op Fable.
 - Spaanse eindredactie van winkel, professionals, contact, cesta en 404 (zie `docs/`).
 - Prijzen ontbreken bewust: die staan niet in de bron.
+- Termijn voor de controle van een professionele aanmelding: bewust weggelaten, want de klant heeft geen termijn genoemd. Een vaste belofte (bijvoorbeeld binnen één werkdag) werkt sterk voor conversie: voorleggen aan de klant en dan terugzetten op home, professionals en in het formulier.
+- Woordkeus winkelmand: overal "cesta" (El Corte Inglés, Fresco Podología); grote beautywinkels zeggen "carrito". Beide goed; niet mengen.
+- Privacy: het vakje "He leído y acepto la política de privacidad" staat erin; de basisinformatie van de AEPD bij het formulier moet van de jurist van de klant komen.
 
 ## Stand op 21 november 2026 (avond)
 

@@ -4,19 +4,22 @@ import Base from '../layouts/Base.astro';
 import Alta from '../components/Alta.astro';
 import { PRODUCTOS } from '../data/productos';
 
+// búsqueda sin acentos ni mayúsculas, y con espacios normales
+const norm = (t: string) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\u00a0/g, ' ').toLowerCase();
+
 const title = 'Alta profesional: precios y pedido rápido | BAEHR España';
 const description =
-  'Envía tu solicitud de alta en dos minutos; la revisamos en un día laborable. Precios profesionales, pedido rápido por referencia y facturas en tu cuenta.';
+  'Envía tu solicitud de alta en dos minutos. Precios profesionales, pedido rápido por referencia y facturas en tu cuenta.';
 
 const ventajas = [
-  { h: 'Precio profesional', t: 'Activamos tus precios al aprobar tu alta y los ves al iniciar sesión.' },
+  { h: 'Precio profesional', t: 'Activamos tus precios al aprobar tu alta y los verás al iniciar sesión.' },
   { h: 'Pedido rápido', t: 'Busca por nombre o referencia y añade productos sin recorrer la tienda.' },
   { h: 'Lo de siempre', t: 'Repite tu último pedido con un clic.' },
   { h: 'Tus facturas', t: 'En tu cuenta, junto con tu historial de pedidos.' },
 ];
 const pasos = [
   { h: 'Solicita', t: 'Rellena los datos de tu negocio en dos minutos.' },
-  { h: 'Revisamos', t: 'Comprobamos tu solicitud en un día laborable.' },
+  { h: 'Revisamos', t: 'Comprobamos tus datos y aprobamos tu alta.' },
   { h: 'Compra', t: 'Inicia sesión y haz tu pedido a precio profesional.' },
 ];
 const faq = [
@@ -26,7 +29,7 @@ const faq = [
   },
   {
     q: '¿Cuándo podré comprar a precio profesional?',
-    a: 'Revisamos tu solicitud en un día laborable. Cuando la aprobemos, inicia sesión y verás tus precios profesionales.',
+    a: 'En cuanto aprobemos tu solicitud: inicia sesión y verás tus precios profesionales.',
   },
   {
     q: '¿Puedo pedir por referencia?',
@@ -50,7 +53,7 @@ const jsonld = [
       <span class="stretch is-in">como&nbsp;profesional</span>
     </h1>
     <div class="pro-hero__side">
-      <p class="lead">Para salones, podólogos y profesionales de manicura y pedicura. Solicita tu alta en dos minutos: revisamos la solicitud en un día laborable y activamos tus precios profesionales.</p>
+      <p class="lead">Para salones, podólogos y profesionales de manicura y pedicura. Solicita tu alta en dos minutos: revisamos la solicitud y activamos tus precios profesionales.</p>
       <a class="pill pill--red" href="#alta">Solicitar el alta</a>
     </div>
   </section>
@@ -72,7 +75,7 @@ const jsonld = [
   <section class="quick" id="pedido-rapido">
     <div class="quick__text">
       <h2 class="h2 rv">Prueba el pedido&nbsp;rápido</h2>
-      <p class="lead rv">Escribe un nombre o una referencia y añade el producto a tu pedido.</p>
+      <p class="lead rv">Escribe un nombre o una referencia y añade el producto a la cesta.</p>
       <p class="quick__note">Demostración de diseño: no se envía ningún pedido.</p>
     </div>
     <div class="quick__box">
@@ -83,10 +86,10 @@ const jsonld = [
       <ul class="quick__results">
         {
           PRODUCTOS.map((p) => (
-            <li class="qline" data-q={`${p.name} ${p.type}`.toLowerCase()}>
+            <li class="qline" data-q={norm(`${p.name} ${p.type} ${p.ref ?? ''}`)}>
               <span class="qline__img"><img src={`/img/productos/${p.img}.webp`} width="600" height="900" alt="" loading="lazy" /></span>
               <span class="qline__text">
-                <span class="qline__name" set:html={p.name} />
+                <span class="qline__name" lang="de" set:html={p.name} />
                 <span class="qline__type" set:html={p.type} />
               </span>
               <button class="qline__add" type="button" data-add={p.id} data-done="Añadido">Añadir</button>
@@ -94,9 +97,9 @@ const jsonld = [
           ))
         }
       </ul>
-      <p class="quick__none" hidden>No encontramos ningún producto con ese nombre o referencia.</p>
+      <p class="quick__none" hidden>No hay ningún producto con ese nombre o referencia.</p>
       <div class="quick__order">
-        <p class="quick__label">Tu pedido</p>
+        <p class="quick__label">Tu cesta</p>
         <ul class="quick__lines"></ul>
         <p class="quick__empty">Aún no has añadido ningún producto.</p>
       </div>
@@ -122,8 +125,8 @@ const jsonld = [
 
   <section class="dark dark--alta" id="alta">
     <div class="dark__text">
-      <h2 class="h2 rv">Solicita tu&nbsp;alta</h2>
-      <p class="lead rv">Solo te pedimos tres datos de tu negocio.</p>
+      <h2 class="h2 rv">Tu cuenta&nbsp;profesional</h2>
+      <p class="lead rv">Solicita el alta con tres datos de tu negocio o inicia sesión si ya tienes cuenta.</p>
       <div class="switch" role="tablist" aria-label="Alta o acceso">
         <button type="button" role="tab" id="tab-alta" aria-controls="panel-alta" aria-selected="true">Solicitar el alta</button>
         <button type="button" role="tab" id="tab-acceso" aria-controls="panel-acceso" aria-selected="false" tabindex="-1">Iniciar sesión</button>
@@ -144,7 +147,7 @@ const jsonld = [
         </label>
         <a class="login__forgot" href="#acceso">¿Has olvidado tu contraseña?</a>
         <button class="pill pill--red" type="submit">Iniciar sesión</button>
-        <p class="signup__ok" role="status" hidden>Demostración de diseño: no se inicia ninguna sesión.</p>
+        <p class="signup__ok" role="status" hidden>No se ha iniciado ninguna sesión.</p>
         <p class="signup__note">Demostración de diseño: no se envía ningún dato.</p>
       </form>
     </div>
@@ -202,7 +205,7 @@ const jsonld = [
   const lines = document.querySelectorAll<HTMLElement>('.qline');
   const none = document.querySelector<HTMLElement>('.quick__none');
   input?.addEventListener('input', () => {
-    const q = input.value.trim().toLowerCase();
+    const q = input.value.trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\u00a0/g, ' ').toLowerCase();
     let shown = 0;
     lines.forEach((l) => {
       const on = !q || (l.dataset.q || '').includes(q);

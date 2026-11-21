@@ -9,6 +9,7 @@ Onafhankelijke eindredactie Spaans, 21 november 2026. Beoordeeld: `src/pages/tie
 Werkwijze en voorbehoud:
 
 - Ik heb niets gewijzigd behalve dit rapport. baehr.com.es is niet bezocht.
+- Stand van de bestanden: tijdens mijn werk kwam in `Alta.astro` en `contacto.astro` een toestemmingsvakje bij ("He leído y acepto la política de privacidad."). Dat is meegenomen. De andere bestanden heb ik aan het eind opnieuw gelezen; ze waren niet veranderd.
 - `docs/es-referencias-tiendas.md` bestond tijdens mijn werk niet. Ik heb zelf gezocht bij Spaanse winkels en vakleveranciers.
 - Oordelen: goed is correct en natuurlijk. Kan beter is correct, maar kan natuurlijker, duidelijker of beter vindbaar; optioneel. Fout moet anders: een taalfout, een zin die een Spanjaard niet zo schrijft, een tegenstrijdigheid waar om een keuze is gevraagd, of een bewering die niet aan de feiten of de claimregels voldoet.
 - In de tabellen staat de zichtbare tekst. Waar in de code `&nbsp;` of de harde spatie U+00A0 staat, staat hier een gewone spatie. Zoek bij het doorvoeren op de exacte tekst, niet op regelnummer.
@@ -97,7 +98,7 @@ Tabel professionals (`src/pages/profesionales.astro` en `src/components/Alta.ast
 | Stap | Revisamos: Comprobamos tu solicitud en un día laborable. | We controleren: we controleren je aanvraag binnen één werkdag. | goed, met besluit | Taal goed. Werkdag: zie het besluit. |
 | Stap | Compra: Inicia sesión y haz tu pedido a precio profesional. | Koop: log in en plaats je bestelling tegen professionele prijs. | goed | |
 | Kop aanmeldblok | Solicita tu alta | Vraag je aanmelding aan | goed | Taal goed. Feit: na een klik op "Acceder" opent de tab Iniciar sesión en blijft deze kop boven het inlogformulier staan. Zie de eerste aanbeveling. |
-| Intro aanmeldblok | Solo te pedimos tres datos de tu negocio. | We vragen je maar drie gegevens van je zaak. | goed | Zelfde opmerking als bij de kop. |
+| Intro aanmeldblok | Solo te pedimos tres datos de tu negocio. | We vragen je maar drie gegevens van je zaak. | goed | Zelfde opmerking als bij de kop. Klopt nog met het nieuwe toestemmingsvakje: dat is geen gegeven. |
 | Schakelaar, aria-label | Alta o acceso | Aanmelding of toegang | goed | |
 | Tab (toegevoegd door D) | Solicitar el alta | De aanmelding aanvragen | goed | Infinitief zoals in tabs en knoppen gebruikelijk; "el alta" is juist. |
 | Tab (toegevoegd door D) | Iniciar sesión | Inloggen | goed | De vorm van Spanje. |
@@ -105,6 +106,7 @@ Tabel professionals (`src/pages/profesionales.astro` en `src/components/Alta.ast
 | Aanmelden, label | Nombre comercial | Handelsnaam | goed | |
 | Aanmelden, label | NIF o CIF | NIF of CIF (Spaans fiscaal nummer) | goed | Officieel heet het sinds 2008 NIF; "CIF" helpt de invuller. |
 | Aanmelden, label | Correo electrónico | E-mailadres | goed | |
+| Aanmelden, toestemming (nieuw) | He leído y acepto la política de privacidad. | Ik heb het privacybeleid gelezen en ga ermee akkoord. | goed | De gangbare Spaanse formule. De link gaat in het concept naar de startpagina. Zie de aanbeveling over privacy. |
 | Aanmelden, knop | Solicitar el alta | De aanmelding aanvragen | goed | |
 | Aanmelden, melding | Solicitud enviada. Te respondemos en un día laborable. | Aanvraag verzonden. We antwoorden je binnen één werkdag. | goed, met besluit | Tegenwoordige tijd voor de nabije toekomst is gewoon Spaans. Werkdag: zie het besluit. Dit onderdeel staat ook op de home. |
 | Aanmelden, noot | Demostración de diseño: no se envía ningún dato. | Ontwerpdemonstratie: er worden geen gegevens verzonden. | goed | |
@@ -124,7 +126,7 @@ Tabel professionals (`src/pages/profesionales.astro` en `src/components/Alta.ast
 | Vraag | ¿Dónde encuentro mis facturas? | Waar vind ik mijn facturen? | goed | |
 | Antwoord | En tu cuenta, junto con tu historial de pedidos. | In je account, samen met je bestelgeschiedenis. | goed | |
 
-Het inlog- en het aanmeldformulier tonen geen foutmelding in tekst als een veld leeg of ongeldig is. Er is dus geen Spaanse foutmelding om te beoordelen; voorstellen staan bij de aanbevelingen.
+Het inlog- en het aanmeldformulier tonen geen foutmelding in tekst als een veld leeg of ongeldig is of het vakje niet is aangevinkt. Er is dus geen Spaanse foutmelding om te beoordelen; voorstellen staan bij de aanbevelingen.
 
 Tabel contact (`src/pages/contacto.astro`):
 
@@ -144,6 +146,7 @@ Tabel contact (`src/pages/contacto.astro`):
 | Label | Correo electrónico | E-mailadres | goed | |
 | Keuze | Soy: Profesional, Particular | Ik ben: professional, particulier | goed | |
 | Label | Mensaje | Bericht | goed | |
+| Toestemming (nieuw) | He leído y acepto la política de privacidad. | Ik heb het privacybeleid gelezen en ga ermee akkoord. | goed | Zelfde formule als bij aanmelden. |
 | Knop | Enviar mensaje | Bericht versturen | goed | |
 | Melding | Mensaje enviado. Gracias por escribirnos. | Bericht verzonden. Bedankt voor je bericht. | goed | |
 | Noot | Demostración de diseño: no se envía ningún dato. | Ontwerpdemonstratie: er worden geen gegevens verzonden. | goed | |
@@ -255,8 +258,8 @@ Aanbevolen, niet verplicht (in volgorde van belang):
 - Labels van de min- en plusknop in de winkelmand. Bestand `src/layouts/Base.astro`; daarna ook op de productpagina.
   - Oud: `aria-label="Uno menos"` Nieuw: `aria-label="Reducir cantidad"`
   - Oud: `aria-label="Uno más"` Nieuw: `aria-label="Aumentar cantidad"`
-- Foutmeldingen, voor als de formulieren ze krijgen. In Spanje is het werkwoord "Introduce"; "Ingresa" en "Ingrese" zijn Latijns-Amerikaans. Leeg verplicht veld: `Este campo es obligatorio.` Ongeldig e-mailadres: `Introduce un correo electrónico válido.` Leeg wachtwoord: `Introduce tu contraseña.` Inloggen mislukt (echte site): `El correo electrónico o la contraseña no son correctos.`
-- Privacy bij de drie formulieren, vóór livegang. Volgens de AEPD hoort de basisinformatie (verantwoordelijke, doel, rechtsgrond, ontvangers, rechten, link naar het privacybeleid) bij het formulier zelf te staan. De tekst moet van de juridisch adviseur van de klant komen; ik schrijf hem niet zonder die gegevens.
+- Foutmeldingen, voor als de formulieren ze krijgen. In Spanje is het werkwoord "Introduce"; "Ingresa" en "Ingrese" zijn Latijns-Amerikaans. Leeg verplicht veld: `Este campo es obligatorio.` Ongeldig e-mailadres: `Introduce un correo electrónico válido.` Leeg wachtwoord: `Introduce tu contraseña.` Vakje niet aangevinkt: `Acepta la política de privacidad para continuar.` Inloggen mislukt (echte site): `El correo electrónico o la contraseña no son correctos.`
+- Privacy, vóór livegang. Het nieuwe vakje bij aanmelden en contact is goed Spaans. Volgens de AEPD hoort daarnaast de basisinformatie (verantwoordelijke, doel, rechtsgrond, ontvangers, rechten, link naar het volledige beleid) bij het formulier zelf te staan, en is alleen "het beleid accepteren" niet altijd genoeg. Die tekst moet van de juridisch adviseur van de klant komen; ik schrijf hem niet zonder die gegevens.
 - Demo van snel bestellen: de intro nodigt uit een artikelnummer te typen, maar de zoekdata hebben er geen. Voeg de artikelnummers van de fabrikant toe aan de zoekdata (deel A noemt er alleen één: 11328 voor fresh feet Fußpeeling 125 ml), of laat het zo en weet dat een test van de klant met een nummer "geen product" geeft.
 - Na een klik op Iniciar sesión staan twee regels met "Demostración de diseño" onder elkaar. Wie dat rustiger wil: melding `No se ha iniciado ninguna sesión.` (Er is niet ingelogd.) en de vaste noot eronder laten staan.
 - Technisch, geen tekstwijziging: zet `lang="de"` op de Duitse productnaam in de resultaten van snel bestellen (`qline__name`) en in de regel van de winkelmand (`line__name`), zoals op de winkelkaarten. Laat het zoeken accentongevoelig werken ("bano" vindt nu geen "baño") en behandel de harde spatie als spatie ("125 ml" met een gewone spatie vindt nu niets). In de JSON-LD van de winkel staan Products zonder prijs; Google vraagt voor productresultaten offers, review of aggregateRating. Voeg offers toe zodra er prijzen zijn.
@@ -279,6 +282,7 @@ Wat ik niet kon verifiëren:
 - "No hay" boven "No encontramos", "Reducir cantidad" boven "Uno menos" en "Lo de siempre" als kop: oordelen. Voor de laatste vond ik alleen een verwante formule van Repsol ("tu bombona de siempre"), geen winkel die het als kop gebruikt.
 - Niet in deel A en niet door mij te controleren: de termijn van één werkdag; de functies van het portaal (wel in het voorstel aan de klant, nog niet gebouwd); het WhatsApp-nummer en de adressen van Telegram, Instagram en Facebook; "Atendemos a profesionales y particulares".
 - Dat de Schutzcreme een voetcrème is, leid ik af uit de PEDIBAEHR-lijn CARE & PROTECT. Deel A zegt niet waartegen de crème beschermt. De Spaanse tekst noemt alleen het ureumgehalte en loopt daardoor geen risico.
+- De juridische toereikendheid van het toestemmingsvakje: niet beoordeeld, alleen de taal.
 - De weergave in een browser: regelafbreking, de vier korte koppen van de voordelen (zonder harde spatie) en de opmaak van een link in de winkelmand heb ik niet bekeken. Dat is ontwerp.
 - `docs/es-referencias-tiendas.md` bestond niet toen ik werkte. Verschijnt het later en wijkt het af van dit rapport, dan gaat het onderzoek met bronnen voor.
 
@@ -302,6 +306,7 @@ Bronnen:
 - Google, wijziging FAQ-resultaten augustus 2023: https://developers.google.com/search/blog/2023/08/howto-faq-changes
 - Google, productresultaten: https://developers.google.com/search/docs/appearance/structured-data/product-snippet
 - AEPD, welke informatie bij het verzamelen van gegevens: https://www.aepd.es/preguntas-frecuentes/2-tus-obligaciones-como-responsable-del-tratamiento/6-el-deber-de-informacion/FAQ-0217-que-informacion-debe-facilitarse-cuando-los-datos-se-obtengan-directamente-del-afectado
+- AEPD, decálogo over privacybeleid (aanvaarding van het beleid als geheel is niet genoeg): https://www.aepd.es/documento/decalogo-politicas-de-privacidad-adaptacion-RGPD.pdf
 - Vakcertificaat IMPP0108 ("cabinas de belleza"), via de woordenlijst: https://web.lanbide.eus/descargas/egailancas/certificados/catalogo/IMPP0108_FIC.pdf
 
 De webpagina's zijn gelezen via een hulpmiddel dat pagina's samenvat en citaten teruggeeft, niet rechtstreeks.
