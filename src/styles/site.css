@@ -2557,7 +2557,8 @@ h1 {
   line-height: 0.95;
   color: var(--ink);
   text-wrap: balance;
-  overflow-wrap: anywhere;
+  /* solo como último recurso, para una sola palabra que no cabe */
+  overflow-wrap: break-word;
 }
 .acct-hero .lead {
   margin-top: 1.2rem;

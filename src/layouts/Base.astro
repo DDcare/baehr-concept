@@ -99,7 +99,11 @@ const org = {
         <a href={to('#seminarios')}>Seminarios</a>
         <a href="/la-marca/">La marca</a>
         <a href="/contacto/">Contacto</a>
-        <a href="/profesionales/#acceso">Acceder</a>
+        {page === 'cuenta' ? (
+          <a href="/mi-cuenta/" aria-current="page">Mi cuenta</a>
+        ) : (
+          <a href="/profesionales/#acceso">Acceder</a>
+        )}
         <a href="/tienda/" data-open-cart>Cesta</a>
       </nav>
     </header>

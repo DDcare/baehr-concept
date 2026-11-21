@@ -26,9 +26,9 @@ const T = {
   actions: 'Acciones',
   estado: { entregado: 'Entregado', camino: 'En camino', preparacion: 'En preparación' } as Record<string, string>,
   again: 'Repetir pedido',
-  againAria: (n: string) => `Repetir el pedido ${n}`,
+  againAria: (n: string) => `Repetir pedido ${n}`,
   invoice: 'Descargar factura',
-  invoiceAria: (n: string) => `Descargar la factura del pedido ${n}`,
+  invoiceAria: (n: string) => `Descargar factura del pedido ${n}`,
   invoiceMsg: 'Demostración de diseño: no se descarga ninguna factura.',
   sample: 'Datos de ejemplo.',
   invoicesH: 'Tus facturas',
@@ -184,7 +184,7 @@ const last = pedidos[0];
         if (!v) return;
         if (key === 'nif') el.textContent = v.slice(0, 2).toUpperCase() + '·'.repeat(Math.max(0, Math.min(7, v.length - 2)));
         // harde spatie voor het laatste woord: de kop eindigt nooit op één los woord
-        else el.textContent = v.replace(/\s+(\S+)$/, '\u00a0$1');
+        else el.textContent = v.split(/\s+/).length > 2 ? v.replace(/\s+(\S+)$/, '\u00a0$1') : v;
       });
     }
   } catch (e) {}
