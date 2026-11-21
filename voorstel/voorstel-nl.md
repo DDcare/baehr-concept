@@ -17,7 +17,7 @@ We hebben de site van buitenaf bekeken, zoals elke bezoeker, zonder in te loggen
 De basis is goed: BAEHR España heeft een heel duidelijke niche, een aparte registratie voor professionals, seminars en kanalen op Instagram, YouTube, WhatsApp en Telegram. Wat ontbreekt, is dat het merk beter zichtbaar is en dat kopen makkelijker gaat, en daarvoor moet eerst het volgende opgelost worden.
 
 - Wie in Google zoekt naar de officiële BAEHR-winkel in Spanje, krijgt Duitse winkels. Toen we het controleerden, zei de AI-samenvatting die Google bovenaan toonde dat er geen distributeur in Spanje te vinden was.
-- De server blokkeert bots, ook die van ChatGPT en vergelijkbare diensten. In plaats van de winkel krijgen ze een controlepagina. Omdat ze de site niet kunnen lezen, kunnen ze hem ook niet noemen in hun antwoorden.
+- De server blokkeert bots, ook die van ChatGPT en vergelijkbare diensten. In plaats van de winkel krijgen ze een controlepagina. Als ze de site niet kunnen lezen, zullen ze hem in hun antwoorden waarschijnlijk niet aanraden.
 - In de catalogus staan vertaalfouten en tikfouten zoals "FRES FEET" (de serie heet "fresh feet"), "Pies seca" en "Serie alovera", en een categorie met de URL "uncategorized-es". Wie zoekt met de vaktermen, vindt het product niet.
 - Er zijn drie verschillende minimumbedragen voor gratis verzending: 60 euro op de site, en 100 en 150 euro op oude pagina's die Google nog toont.
 - Eén pagina laadt 43 scripts en 44 stylesheets. Op de telefoon betekent dat seconden wachten bij elke stap van een bestelling.
@@ -37,7 +37,7 @@ De snelste winst zit in zoekopdrachten als "BAEHR" of "distribuidor BAEHR Españ
 
 ### Meer professionele klanten
 
-- Pagina's per dienst, zoals pedicure of manicure, en per huidtype, geschreven in de woorden waarmee professionals zoeken: kloven, eelt, zweten, zeer droge huid. Altijd als cosmetische verzorging, nooit als behandeling van een aandoening.
+- Pagina's per dienst, zoals pedicure of manicure, en per behoefte van de huid, geschreven in de woorden waarmee professionals zoeken: kloven, eelt, zweten, zeer droge huid. Altijd als cosmetische verzorging, nooit als behandeling van een aandoening.
 - Het seminar als ingang. Elke stad krijgt een eigen pagina met inschrijving, en na afloop krijgen de deelnemers een mail met toegang tot het portaal en een welkomstaanbod.
 - Voor de eerste bestelling een proefset per dienst. PEDIBAEHR heeft een proefmaat van 35 ml die goed bij dat idee past. (Feit: deel A van de merkfeiten. Niet geverifieerd: of BAEHR España die maat verkoopt.)
 - Advertenties per doelgroep: in Google gekoppeld aan zoekopdrachten uit de branche, op Instagram en Facebook gericht op schoonheidsspecialisten, manicures en pedicures.
@@ -79,9 +79,9 @@ Winkel en portaal hebben samen een waarde van 1.500 euro. Bij "Winkel en SEO" bo
 
 Wat je aan advertenties uitgeeft, zit niet in het maandbedrag. Je betaalt het rechtstreeks aan Google en Meta, en de advertentieaccounts zijn van jou.
 
-Omdat er nu geen vast advertentiebudget is, stellen we voor te beginnen met minimaal 1.000 euro per maand, verdeeld over 600 euro voor Google en 400 euro voor Meta. Daarna stellen we het bij op basis van de resultaten in je accounts. [Aanname: deze bedragen.]
+Omdat er nu geen vast advertentiebudget is, stellen we voor te beginnen met minimaal 600 euro per maand voor Google, vanaf "Met Google Ads". Bij "Met social" komt daar minimaal 400 euro per maand voor Meta bij, samen 1.000 euro. Daarna stellen we het bij op basis van de resultaten in je accounts. [Aanname: deze bedragen.]
 
-De campagnes starten zodra het portaal werkt. Eerder zouden advertenties mensen naar het huidige formulier sturen en zou je betalen voor klikken die onderweg blijven hangen. Tot dat moment betaal je 480 euro per maand, welk pakket je ook kiest. [Aanname: dit geldt voor elk pakket, ook "Met portaal".]
+De campagnes en social media starten zodra het portaal werkt, in de tweede of derde maand. Eerder zouden advertenties mensen naar het huidige formulier sturen en zou je betalen voor klikken die onderweg blijven hangen. Tot dat moment betaal je 480 euro per maand, welk pakket je ook kiest. [Aanname: dit geldt voor elk pakket, ook "Met portaal".]
 
 ## We hebben dit al gedaan voor Skin Complete
 
@@ -93,14 +93,14 @@ Met de site en het portaal kregen ze er 80 nieuwe zakelijke klanten bij, kliniek
 
 In de eerste maand zetten we de metingen op, openen we de site voor zoekmachines en AI-bots en ontwerpen we de nieuwe winkel. Het maandrapport begint diezelfde maand.
 
-In de tweede en derde maand gaan de winkel en het portaal live, met de herziene catalogus en de seminarpagina's.
+In de tweede en derde maand gaan de winkel en het portaal live, met de herziene catalogus en de seminarpagina's. Zodra het portaal werkt, starten, afhankelijk van je pakket, de advertenties en social media.
 
-Vanaf de vierde maand publiceren we de pagina's per dienst en starten, afhankelijk van je pakket, de advertenties en social media. [Aanname: planning uit het oude voorstel.]
+Vanaf de vierde maand publiceren we de pagina's per dienst. [Aanname: planning uit het oude voorstel, aangepast door Claude zodat campagnes starten zodra het portaal live is.]
 
 ## Voorwaarden en wat we van je nodig hebben
 
 - Prijzen exclusief btw.
-- De verbintenis is 12 maanden; daardoor kunnen we de winkel en het portaal gratis bouwen. Daarna maandelijks, met een maand opzegtermijn. [Aanname: opzegtermijn.]
+- Geen vaste looptijd. Je kunt opzeggen wanneer je wilt, met een maand opzegtermijn. Stop je vóór 12 maanden, dan geldt alleen wat hierboven staat: 125 euro voor elke maand die nog over is. [Aanname: geen vaste looptijd en een maand opzegtermijn; besluit van Claude op basis van de afspraak "125 euro per resterende maand bij eerder opzeggen".]
 - Het maandrapport bevat deze cijfers: aanmeldingen, eerste bestellingen, herhaalbestellingen en kosten per nieuwe klant.
 - We garanderen geen posities in Google en geen bepaald aantal bezoekers.
 
@@ -108,7 +108,7 @@ Om goed te meten hebben we drie cijfers nodig: hoeveel aanmeldingen je per maand
 
 ## Laten we een halfuur praten
 
-We stellen een gesprek van 30 minuten voor met jou en je partners, om het plan door te nemen en samen naar het prototype te kijken. Laat ons weten welke dag en welk tijdstip jullie uitkomt, dan passen wij ons aan.
+We stellen een gesprek van 30 minuten voor met jou en je partners, om het plan door te nemen, vragen te beantwoorden en samen naar het prototype te kijken. Laat ons weten welke dag en welk tijdstip jullie uitkomt, dan passen wij ons aan.
 
 Groet,
 
@@ -122,11 +122,11 @@ Denis
 
 - Naam van het bureau als afzender.
 - Hoe Valeria het prototype kan openen (de preview zit achter de Vercel-login).
-- Advertentiebudget: minimaal 1.000 euro, waarvan 600 Google en 400 Meta.
+- Advertentiebudget: minimaal 600 euro voor Google vanaf "Met Google Ads", plus minimaal 400 euro voor Meta bij "Met social" (samen 1.000 euro). Het oude voorstel noemde 1.000 euro voor iedereen, maar het aanbevolen pakket heeft geen Meta.
 - Wie de campagnes beheert (eigen team of uitbesteed) en wat "wij beheren het portaal" inhoudt.
-- Btw: prijzen exclusief. Opzegtermijn: een maand na de eerste 12 maanden.
+- Btw: prijzen exclusief. Looptijd: geen vaste looptijd, opzegtermijn een maand, terugbetaling 125 euro per resterende maand vóór 12 maanden.
 - Wat eerder stoppen kost bij "Winkel en SEO" (alleen winkel, geen portaal).
-- 480 euro tot het portaal live is, voor elk pakket, ook "Met portaal".
+- 480 euro tot het portaal live is (maand twee of drie), voor elk pakket, ook "Met portaal". Campagnes en social media starten op dat moment, niet in maand vier zoals het oude voorstel zei.
 - Maandrapport vanaf de eerste maand (besluit van Claude: het zit in elk pakket; het oude voorstel noemde de vierde maand).
 - Periode van de 80 nieuwe afnemers bij Skin Complete (staat er nu bewust niet in).
 - De bevindingen over de huidige site (Duitse winkels in Google, AI-samenvatting, geblokkeerde bots, vertaalfouten, drie verzenddrempels, 43 scripts en 44 stylesheets, 14 velden): uit het oude voorstel en jouw schermafbeeldingen, niet opnieuw gecontroleerd. Klopt er één niet meer, dan schaadt dat het hele stuk.
