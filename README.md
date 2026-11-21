@@ -63,6 +63,7 @@ Nieuw in deze ronde:
 - Mobiel: de camera draait minder zodat de letters recht staan, het slotbeeld toont het woord van voren, feiten en stappen staan in rechte lijsten.
 - Merkelementen: de ribbelrand als zegel boven elk blok, letters die uitrekken (breedte-as van Archivo), een professionele pas die meeschrijft in het aanmeldformulier, een groot BAEHR onderaan dat uitrekt, zachte overgangen tussen pagina's, een deelafbeelding (`public/og.jpg`).
 - Pagina's: home, productpagina met 3D-viewer, merkpagina, winkel, professionals, accountdemo, contact, 404, en een cesta die op elke pagina werkt.
+- Trage apparaten: de film schaalt zichzelf terug als hij het niet bijhoudt (mediaan over 30 beelden): eerst de resolutie tot 0,75, dan de spiegelingen in de vloer, dan de schaduwen. Alle shaders worden bij het laden vooraf gecompileerd, zodat er geen hapering is bij aankomst in een nieuwe stap.
 - Snelheid gemeten (testbrowser zonder grafische kaart, zelfde resolutie): de film is per beeld 2,1 tot 3 keer sneller dan de versie van 21-11 middag.
 - Gecontroleerd: koppen en tekst passen op 360, 390, 820, 1024 en 1440 breed (`tools/overflow-check.cjs`), alle interne links bestaan, toegankelijkheid met axe-core.
 

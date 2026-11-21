@@ -1277,7 +1277,7 @@ function init() {
   const hasPoster = !!sticky.querySelector('.stage-poster');
   let last = 0;
   let idleFlip = false;
-  const perf = { sum: 0, n: 0, skip: 90 };
+  const perf = { win: [], skip: 20 };
   function frame(now) {
     if (!running) return;
     const dt = last ? Math.min(0.1, (now - last) / 1000) : 1 / 60;
@@ -1299,20 +1299,28 @@ function init() {
         return;
       }
     }
-    // Si el equipo va lento mientras se mueve, se baja la resolución un paso (nunca por debajo de 0,75)
+    // Si el equipo va lento mientras se mueve, se rebaja la calidad paso a paso:
+    // primero la resolución (nunca por debajo de 0,75), después los reflejos del suelo, por último las sombras
     if (!idle && !dprFixed && introT >= 1) {
       if (perf.skip > 0) perf.skip--;
       else {
-        perf.sum += dt;
-        perf.n++;
-        if (perf.n >= 45) {
-          const avg = (perf.sum / perf.n) * 1000;
-          perf.sum = 0;
-          perf.n = 0;
+        perf.win.push(dt);
+        if (perf.win.length >= 30) {
+          // mediana: un tirón suelto (por ejemplo al cargar un paso) no rebaja la calidad
+          const sorted = perf.win.slice().sort((x, y) => x - y);
+          const avg = sorted[sorted.length >> 1] * 1000;
+          perf.win.length = 0;
           if (avg > 24 && dpr > 0.75) {
             dpr = Math.max(0.75, dpr - 0.25);
             resize();
             perf.skip = 30;
+          } else if (avg > 28 && mirror.visible) {
+            mirror.visible = false;
+            perf.skip = 30;
+          } else if (avg > 32 && key.castShadow) {
+            key.castShadow = false;
+            renderer.shadowMap.enabled = false;
+            perf.skip = 60;
           }
         }
       }
@@ -1321,6 +1329,7 @@ function init() {
       if (!introStart) {
         introStart = now;
         html.classList.add('film-ready');
+        warmUp();
       }
       // con imagen fija en la cápsula, el 3D aparece encima sin animación de entrada
       if (introT < 1) introT = hasPoster ? 1 : Math.min(1, (now - introStart) / 1800);
@@ -1328,6 +1337,26 @@ function init() {
     apply(p, (now - t0) / 1000, introT);
     renderer.render(scene, camera);
     requestAnimationFrame(frame);
+  }
+
+  // Compilar de antemano los materiales de los cinco pasos: así no hay tirones al llegar a cada uno
+  let warmed = false;
+  function warmUp() {
+    if (warmed) return;
+    warmed = true;
+    const hidden = [];
+    scene.traverse((o) => {
+      if (!o.visible) {
+        hidden.push(o);
+        o.visible = true;
+      }
+    });
+    const done = () => hidden.forEach((o) => (o.visible = false));
+    if (renderer.compileAsync) renderer.compileAsync(scene, camera).then(done, done);
+    else {
+      renderer.compile(scene, camera);
+      done();
+    }
   }
 
   function start() {
@@ -1393,6 +1422,7 @@ function init() {
       dpr = v;
       resize();
     },
+    quality: () => ({ dpr, reflections: mirror.visible, shadows: key.castShadow }),
     dpr: () => dpr,
     range: RANGE,
     set(v) {
