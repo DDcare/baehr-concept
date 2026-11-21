@@ -1365,6 +1365,12 @@ function init() {
     const total = film.offsetHeight - window.innerHeight;
     const at = RANGE[i][0] + (RANGE[i][1] - RANGE[i][0]) * 0.55;
     window.scrollTo({ top: film.offsetTop + total * at, behavior: jump ? 'auto' : 'smooth' });
+    // al llegar desde otra página, la cámara salta directamente al paso en vez de recorrer el camino
+    if (jump) {
+      readScroll();
+      p = target;
+      introT = 1;
+    }
   }
   const deep = location.hash.match(/^#(?:protocolo|paso-([1-5]))$/);
   if (deep) setTimeout(() => goStep(deep[1] ? Number(deep[1]) - 1 : 0, true), 60);
