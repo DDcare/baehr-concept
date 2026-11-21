@@ -13,7 +13,7 @@ Hemos mirado la web desde fuera, como cualquier visitante, sin entrar en ninguna
 La base es buena: BAEHR España tiene un nicho muy claro, un registro aparte para profesionales, seminarios y canales en Instagram, YouTube, WhatsApp y Telegram. Lo que falta es que la marca se vea más y que comprar sea más fácil, y para eso primero hay que resolver lo siguiente.
 
 - Si buscas en Google la tienda oficial de BAEHR en España, salen tiendas alemanas. Cuando lo comprobamos, el resumen creado con IA que Google mostraba arriba decía que no encontraba ningún distribuidor en España.
-- El servidor bloquea a los bots, incluidos los de ChatGPT y otros servicios parecidos. En lugar de la tienda, les sale una página de verificación. Como no pueden leer la web, tampoco pueden mencionarla en sus respuestas.
+- El servidor bloquea a los bots, incluidos los de ChatGPT y otros servicios parecidos. En lugar de la tienda, les sale una página de verificación. Si no pueden leer la web, es difícil que la recomienden en sus respuestas.
 - En el catálogo hay errores de traducción y erratas como «FRES FEET» (la línea se llama «fresh feet»), «Pies seca» o «Serie alovera», y una categoría con la URL «uncategorized-es». Quien busca con los términos del sector no da con el producto.
 - Hay tres importes mínimos distintos para el envío gratuito. En la web pone 60 €, y en páginas antiguas que Google sigue mostrando, 100 € y 150 €.
 - Una sola página carga 43 scripts y 44 hojas de estilo. En el móvil, eso son segundos de espera en cada paso del pedido.
@@ -33,7 +33,7 @@ Donde más rápido se puede ganar terreno es en búsquedas como «BAEHR» o «di
 
 ### Más clientes profesionales
 
-- Páginas por servicio, como la pedicura o la manicura, y por tipo de piel, escritas con las palabras con las que buscan los profesionales: grietas, durezas, sudoración, piel muy seca. Siempre como cuidado cosmético, nunca como tratamiento de una afección.
+- Páginas por servicio, como la pedicura o la manicura, y por necesidad de la piel, escritas con las palabras con las que buscan los profesionales: grietas, durezas, sudoración, piel muy seca. Siempre como cuidado cosmético, nunca como tratamiento de una afección.
 - El seminario como puerta de entrada. Cada ciudad tendrá su página con inscripción y, al terminar, los asistentes recibirán un correo con acceso al portal y una oferta de bienvenida.
 - Para el primer pedido, un kit de prueba por servicio. PEDIBAEHR tiene un formato de prueba de 35 ml que encaja bien con la idea.
 - Anuncios para cada perfil. En Google, ligados a las búsquedas del sector; en Instagram y Facebook, dirigidos a esteticistas, manicuras y pedicuros.
@@ -75,9 +75,9 @@ La tienda y el portal suman un valor de 1.500 €. En «Tienda y SEO» construi
 
 Lo que se invierte en anuncios no forma parte de la cuota mensual. Lo pagas directamente a Google y a Meta, y las cuentas publicitarias son tuyas.
 
-Como ahora no hay un presupuesto fijo de publicidad, proponemos empezar con un mínimo de 1.000 € al mes, repartidos entre 600 € para Google y 400 € para Meta. Luego lo ajustaremos según los resultados de tus cuentas.
+Como ahora no hay un presupuesto fijo de publicidad, proponemos empezar con un mínimo de 600 € al mes para Google, a partir de «Con Google Ads». En «Con redes» se añaden como mínimo 400 € al mes para Meta, con lo que el total llega a 1.000 €. Luego lo ajustaremos según los resultados de tus cuentas.
 
-Las campañas arrancarán cuando el portal funcione. Antes, los anuncios llevarían a la gente al formulario actual y estarías pagando clics que se quedan por el camino. Hasta ese momento pagas 480 € al mes, sea cual sea el paquete que elijas.
+Las campañas y las redes arrancarán cuando el portal funcione, en el segundo o el tercer mes. Antes, los anuncios llevarían a la gente al formulario actual y estarías pagando clics que se quedan por el camino. Hasta ese momento pagas 480 € al mes, sea cual sea el paquete que elijas.
 
 ## Ya lo hemos hecho con Skin Complete
 
@@ -89,14 +89,14 @@ Con la web y el portal han sumado 80 clientes nuevos, entre clínicas y centros 
 
 El primer mes dejaremos montada la analítica, abriremos la web a los buscadores y a los bots de IA y diseñaremos la tienda nueva. El informe mensual empezará ese mismo mes.
 
-Entre el segundo y el tercer mes pondremos en marcha la tienda y el portal, con el catálogo revisado y las páginas de los seminarios.
+Entre el segundo y el tercer mes pondremos en marcha la tienda y el portal, con el catálogo revisado y las páginas de los seminarios. En cuanto el portal funcione, y según el paquete que elijas, empezarán los anuncios y las redes.
 
-A partir del cuarto mes publicaremos las páginas por servicio y, según el paquete que elijas, empezarán los anuncios y las redes.
+A partir del cuarto mes publicaremos las páginas por servicio.
 
 ## Condiciones y lo que necesitamos de ti
 
 - Precios sin IVA.
-- El compromiso es de 12 meses, que es lo que nos permite no cobrarte la tienda ni el portal. Después, mes a mes, con un mes de preaviso.
+- Sin permanencia. Puedes darte de baja cuando quieras, con un mes de preaviso. Si lo haces antes de los 12 meses, solo se aplica lo que explicamos arriba: 125 € por cada mes que falte.
 - El informe mensual recoge estas cifras: altas, primeros pedidos, recompras y coste por cliente nuevo.
 - No garantizamos posiciones en Google ni un número concreto de visitas.
 
@@ -104,7 +104,7 @@ Para medir bien necesitamos tres cifras: cuántas altas recibes al mes, cuántas
 
 ## Hablemos media hora
 
-Te proponemos una reunión de 30 minutos contigo y con tus socios para repasar el plan y ver juntos el prototipo. Dinos qué día y hora os viene bien y nos adaptamos.
+Te proponemos una reunión de 30 minutos contigo y con tus socios para repasar el plan, resolver dudas y ver juntos el prototipo. Dinos qué día y hora os viene bien y nos adaptamos.
 
 Un saludo,
 
