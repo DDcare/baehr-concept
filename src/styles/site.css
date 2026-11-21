@@ -2164,6 +2164,39 @@ h1 {
   align-items: start;
 }
 
+.switch {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  margin-top: 0.4rem;
+  padding: 3px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+}
+.switch button {
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: #fff;
+  padding: 0.6rem 1.1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+}
+.switch button[aria-selected='true'] {
+  background: #fff;
+  color: var(--ink);
+}
+.panel[hidden] {
+  display: none;
+}
+.login__forgot {
+  justify-self: start;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--red);
+}
+
 /* Contacto */
 .contact {
   display: grid;
@@ -2444,11 +2477,25 @@ html.has-drawer {
   color: var(--red);
   cursor: pointer;
 }
+.drawer__list:empty {
+  flex: 0;
+}
 .drawer__empty {
+  flex: 1;
   display: grid;
+  align-content: start;
   justify-items: start;
-  gap: 1rem;
-  padding: 1.6rem 0;
+  gap: 1.2rem;
+  padding: 1.8rem 0;
+}
+.drawer__empty p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.6rem;
+  line-height: 1.15;
+}
+.drawer__empty[hidden] {
+  display: none;
 }
 .drawer__list:not(:empty) + .drawer__empty[hidden] {
   display: none;

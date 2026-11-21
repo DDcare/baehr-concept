@@ -110,8 +110,30 @@ const jsonld = [
     <div class="dark__text">
       <h2 class="h2 rv">Solicita tu alta profesional</h2>
       <p class="lead rv">Rellena los datos de tu negocio. Revisamos la solicitud en un día laborable y activamos tus precios profesionales.</p>
+      <div class="switch" role="tablist" aria-label="Alta o acceso">
+        <button type="button" role="tab" id="tab-alta" aria-controls="panel-alta" aria-selected="true">Solicitar el alta</button>
+        <button type="button" role="tab" id="tab-acceso" aria-controls="panel-acceso" aria-selected="false" tabindex="-1">Ya tengo cuenta</button>
+      </div>
     </div>
-    <Alta when={false} />
+    <div class="panel" id="panel-alta" role="tabpanel" aria-labelledby="tab-alta">
+      <Alta when={false} />
+    </div>
+    <div class="panel" id="panel-acceso" role="tabpanel" aria-labelledby="tab-acceso" hidden>
+      <form class="signup login" novalidate>
+        <label>
+          <span>Correo electrónico</span>
+          <input type="email" name="correo" autocomplete="email" required />
+        </label>
+        <label>
+          <span>Contraseña</span>
+          <input type="password" name="clave" autocomplete="current-password" required />
+        </label>
+        <a class="login__forgot" href="#acceso">¿Has olvidado tu contraseña?</a>
+        <button class="pill pill--red" type="submit">Acceder</button>
+        <p class="signup__ok" role="status" hidden>Demostración de diseño: no se inicia ninguna sesión.</p>
+        <p class="signup__note">Demostración de diseño: no se envía ningún dato.</p>
+      </form>
+    </div>
   </section>
 
   <section class="faq">
@@ -130,6 +152,38 @@ const jsonld = [
 </Base>
 
 <script>
+  // Alta o acceso: dos pestañas sobre el mismo bloque
+  const tabs = document.querySelectorAll<HTMLButtonElement>('.switch [role="tab"]');
+  function show(id: string) {
+    tabs.forEach((t) => {
+      const on = t.getAttribute('aria-controls') === id;
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+      const panel = document.getElementById(t.getAttribute('aria-controls') || '');
+      if (panel) panel.hidden = !on;
+    });
+  }
+  tabs.forEach((t) => t.addEventListener('click', () => show(t.getAttribute('aria-controls') || 'panel-alta')));
+  if (location.hash === '#acceso') {
+    show('panel-acceso');
+    document.getElementById('alta')?.scrollIntoView();
+  }
+  document.querySelector<HTMLFormElement>('.login')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const f = e.currentTarget as HTMLFormElement;
+    let ok = true;
+    f.querySelectorAll<HTMLInputElement>('input').forEach((i) => {
+      const v = i.checkValidity();
+      i.setAttribute('aria-invalid', String(!v));
+      if (!v && ok) {
+        i.focus();
+        ok = false;
+      }
+    });
+    const msg = f.querySelector<HTMLElement>('.signup__ok');
+    if (msg) msg.hidden = !ok;
+  });
+
   const input = document.querySelector<HTMLInputElement>('.quick__search input');
   const lines = document.querySelectorAll<HTMLElement>('.qline');
   input?.addEventListener('input', () => {
