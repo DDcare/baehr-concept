@@ -15,12 +15,16 @@ npm run preview   # de gebouwde versie lokaal bekijken
 
 ## Opbouw
 
-- `src/pages/index.astro`: de home, met alle Spaanse teksten.
+- `src/layouts/Base.astro`: kop, voet en gegevens die op elke pagina staan.
+- `src/pages/index.astro`: de home met de productfilm en de rij met de vijf producten.
+- `src/pages/productos/crema-en-espuma-orange-lemongras.astro`: voorbeeld van een productpagina, met een 3D-model om rond te draaien (`src/scripts/visor.js`).
+- `src/pages/la-marca.astro`: de merkpagina.
 - `src/scripts/film.js`: de 3D-studio (licht, camera, de vijf stappen, de letters) en de koppeling met het scrollen.
 - `src/scripts/productos.js`: de vijf verpakkingen en het sachet. `shapes.js` en `letras.js` zijn gegenereerd (zie `tools/`).
 - `src/scripts/ui.js`: schakelaar professional of particulier, menu, voorbeeldformulier, verschijnen bij scrollen.
 - `src/styles/site.css`: alle opmaak.
-- `public/posters/`: stilstaande beelden voor bezoekers met "minder beweging" of zonder WebGL.
+- `public/posters/`: stilstaande beelden voor bezoekers met "minder beweging" of zonder WebGL (`tools/posters.cjs`).
+- `public/img/productos/`: productfoto's met doorzichtige achtergrond, gemaakt uit de foto's van de fabrikant.
 - `docs/merk-en-woordenlijst.md`: geverifieerde merkfeiten, Spaanse vakwoordenlijst met bronnen en regels voor cosmeticaclaims.
 - `docs/eindredactie-home-es.md`: rapport van de Spaanse eindredactie, met Nederlandse terugvertaling per zin.
 - `tools/`: schermopnamen en stilstaande beelden maken met Playwright; `texturas.py` maakt texturen en omtrekken uit de productfoto's, `letras.py` haalt de letteromtrekken uit het lettertype.
@@ -40,6 +44,17 @@ node tools/posters.cjs http://127.0.0.1:4321/ public/posters   # na wijzigingen 
 ```
 
 De getallen na de schermmaat zijn momenten in de productfilm, van 0 (bovenaan) tot 1 (einde).
+
+## Stand op 21 november 2026, laat
+
+Werk op de tak `ontwerp`; `main` is de openbare link en blijft staan tot D akkoord geeft.
+
+Nieuw in deze ronde:
+
+- Snelheid: schaduwen met PCF in plaats van VSM (VSM tekende elke frame ook de hele vloer in de schaduwkaart), lichtere letters en goedkope reflecties van de letters, CSS-variabelen alleen schrijven als ze veranderen, geen korrel of wazige achtergrond over het 3D-beeld, resolutie hooguit 1,5 en zakt vanzelf als het apparaat het niet bijhoudt, 30 beelden per seconde in rust, film korter (820vh).
+- Mobiel: de camera draait minder zodat de letters recht staan, het slotbeeld toont het woord van voren, de feiten staan in een rechte lijst.
+- Merkelementen: de ribbelrand als zegel boven elk blok, letters die uitrekken (breedte-as van Archivo), een professionele pas die meeschrijft in het aanmeldformulier, een groot BAEHR onderaan dat uitrekt, zachte overgangen tussen pagina's.
+- Productpagina en merkpagina, met een gedeelde opmaak.
 
 ## Stand op 21 november 2026 (avond)
 
