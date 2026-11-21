@@ -46,6 +46,7 @@ npm run build && npm run preview
 node tools/film-shots.cjs http://127.0.0.1:4321/ shots d 1440 900 0,0.3,0.56,0.84 1
 node tools/film-shots.cjs http://127.0.0.1:4321/ shots m 390 844 0,0.3,0.56,0.84 2
 node tools/static-check.cjs http://127.0.0.1:4321/ shots
+node tools/overflow-check.cjs http://127.0.0.1:4321   # koppen en tekst die niet in hun vak passen
 node tools/posters.cjs http://127.0.0.1:4321/ public/posters   # na wijzigingen in de 3D
 ```
 
