@@ -70,6 +70,7 @@ Open voor de ontwerpronde van morgen:
 - Prijzen ontbreken bewust: die staan niet in de bron.
 - Termijn voor de controle van een professionele aanmelding: bewust weggelaten, want de klant heeft geen termijn genoemd. Een vaste belofte (bijvoorbeeld binnen één werkdag) werkt sterk voor conversie: voorleggen aan de klant en dan terugzetten op home, professionals en in het formulier.
 - Woordkeus winkelmand: overal "cesta" (El Corte Inglés, Fresco Podología); grote beautywinkels zeggen "carrito". Beide goed; niet mengen.
+- Toegankelijkheid (axe-core, WCAG 2.1 A en AA, alle pagina's): geen fouten, op één na. Het grote BAEHR in de voet haalt het contrast niet (2,3 tegen 3,0). Dat is bewust: WCAG stelt geen contrasteis aan een logo of merknaam, en het element is verborgen voor schermlezers.
 - Privacy: het vakje "He leído y acepto la política de privacidad" staat erin; de basisinformatie van de AEPD bij het formulier moet van de jurist van de klant komen.
 
 ## Stand op 21 november 2026 (avond)
