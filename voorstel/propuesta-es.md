@@ -1,128 +1,117 @@
 # Propuesta para BAEHR España
 
-## Más salones y profesionales que compran en tu tienda
+Hola, Valeria:
 
-Propuesta para Proxy Beauty Spain, S.L. (BAEHR España). Noviembre de 2026.
+Como quedamos por correo, aquí tienes la propuesta. Querías saber qué haríamos con el posicionamiento, tanto en Google como en las respuestas de ChatGPT y otros asistentes de IA, y cómo plantearíamos tres objetivos: que BAEHR España se conozca más, que lleguen profesionales nuevos y que entren más pedidos. También nos pediste paquetes con precio. Todo eso está aquí.
 
-Nos pediste tres cosas: más notoriedad en España, más clientes profesionales nuevos y más pedidos de quienes ya se registran. En esta propuesta te explicamos, para cada objetivo, qué hacemos, qué construimos, cuánto cuesta y qué puedes esperar de forma realista.
+Con el documento va también el enlace a un prototipo que hemos preparado para BAEHR España. No es la web definitiva, pero enseña por dónde iríamos. Ábrelo en el móvil y fíjate sobre todo en el alta de profesionales.
 
-## En resumen
+Lo hemos escrito para que también lo puedan leer tus socios.
 
-- Una tienda online nueva y un portal para profesionales, sin coste si trabajamos juntos 12 meses.
-- Cuatro paquetes, de 480 € a 1.480 € al mes. Cada paquete incluye el anterior.
-- Nuestra recomendación: el paquete Con campañas, 1.140 € al mes, con un presupuesto de publicidad desde 1.000 € al mes que va directamente a Google y Meta.
-- No garantizamos posiciones ni visitas. Lo que sí tendrás es un informe con cifras cada mes.
+## Lo que hemos visto
 
-## Tu punto de partida
+Hemos mirado la web desde fuera, como cualquier visitante, sin entrar en ninguna cuenta y sin conocer tus cifras. Esto es lo que más nos ha llamado la atención.
 
-Esto es lo que vimos desde fuera, sin acceso a tu cuenta y sin tus cifras.
+- Si buscas en Google la tienda oficial de BAEHR en España, salen tiendas alemanas. Y el resumen con IA que Google muestra en esa búsqueda decía que no se encontraba ningún distribuidor en España.
+- El servidor no deja pasar a los visitantes automáticos, tampoco a los robots de ChatGPT y servicios parecidos. En lugar de la web, les sale una página de verificación. Y lo que no pueden leer, no lo pueden mencionar.
+- En el catálogo hay errores de traducción como «FRES FEET» (la línea se llama «fresh feet»), «Pies seca» o «Serie alovera», y una categoría con la URL «uncategorized-es». Un profesional busca con las palabras de su oficio, y con esos nombres no llega al producto.
+- Hay tres importes distintos para el envío gratuito. En la web pone 60 €, y en páginas antiguas que Google sigue mostrando, 100 € y 150 €.
+- Una sola página carga 43 scripts y 44 hojas de estilo. En el móvil, eso son segundos de espera en cada paso del pedido.
+- El formulario de alta para profesionales tiene 14 campos. Creemos que es lo que más frena la llegada de clientes profesionales nuevos.
 
-- Quien busca en Google la tienda oficial de BAEHR en España llega a tiendas alemanas. El resumen con IA que aparecía junto a esos resultados decía que no se encontraba ningún distribuidor en España.
-- El servidor de tu web no deja pasar las visitas automáticas. Los robots de ChatGPT y de servicios parecidos también ven una página de verificación en lugar de tu web.
-- El catálogo tiene errores de traducción: «FRES FEET» (la serie se llama «fresh feet»), «Pies seca», «Serie alovera» y una categoría con la dirección «uncategorized-es». Un profesional busca con sus propias palabras y así no encuentra el producto.
-- Hay tres umbrales distintos de envío gratuito: 60 € en la web, y 100 € y 150 € en páginas antiguas que siguen apareciendo en Google.
-- Una página carga 43 scripts y 44 hojas de estilo. En el móvil, eso supone segundos de espera en cada paso de un pedido.
-- El formulario de registro para profesionales tiene 14 campos. En nuestra opinión, es lo que más frena la llegada de clientes profesionales nuevos.
+Y hay cosas que funcionan bien. BAEHR España tiene un nicho muy claro, un registro aparte para profesionales, seminarios y canales en Instagram, YouTube, WhatsApp y Telegram. Es una buena base. Lo que falta es que se vea y que comprar resulte fácil.
 
-Lo que ya funciona bien: un nicho claro, un registro propio para profesionales, los seminarios y tus canales en Instagram, YouTube, WhatsApp y Telegram.
+## Qué haríamos para cada objetivo
 
-## El plan por objetivo
+### Que en España se sepa quién vende BAEHR
 
-### Notoriedad en España
+Ahora mismo Google no relaciona BAEHR con una tienda en España, y ChatGPT y compañía ni siquiera pueden leer la web. Para cambiarlo, empezaríamos por aquí.
 
-- Una misma descripción en todas partes, en tu web, en tu Perfil de Empresa en Google y en redes sociales: Proxy Beauty Spain, S.L., Barcelona, distribuidor oficial de BAEHR en España.
-- Que tu ficha en la página de socios del fabricante coincida con esos mismos datos. La página de socios de exportación de Gustav Baehr GmbH ya menciona a Proxy Beauty Spain SL con baehr.com.es.
-- Abrir tu web a los buscadores y a los robots de IA, y presentar los datos de tu empresa y de tus productos de forma que Google y los servicios de IA puedan leerlos.
-- Hoy, las búsquedas de «BAEHR» y de «distribuidor BAEHR España» llevan a tiendas alemanas. Ahí es donde antes se puede ganar terreno.
+- La misma presentación en todas partes (la web, el Perfil de Empresa de Google y las redes): «Proxy Beauty Spain, S.L., Barcelona, distribuidor oficial de BAEHR en España».
+- Que la lista de distribuidores en la web del fabricante diga exactamente lo mismo. Ya menciona a Proxy Beauty Spain SL con baehr.com.es, así que solo hay que alinear los datos.
+- Dejar entrar a los buscadores y a los robots de IA, y describir la empresa y cada producto con datos estructurados, un formato que Google y los asistentes de IA saben leer.
 
-### Nuevos clientes profesionales
+Las búsquedas «BAEHR» y «distribuidor BAEHR España» llevan hoy a tiendas alemanas. Ahí es donde antes se puede ganar terreno, porque quien busca eso ya conoce la marca y solo quiere saber dónde comprarla.
 
-- Páginas por servicio y por tipo de piel, con las palabras que usan los profesionales al buscar: grietas, durezas, pies que sudan, piel muy seca. Siempre como cuidado cosmético, nunca como tratamiento de una afección.
-- El seminario como puerta de entrada: una página por ciudad con inscripción y, después del seminario, un correo con acceso al portal y una oferta de bienvenida.
-- Un kit de prueba por servicio como primer pedido. PEDIBAEHR tiene un formato de prueba de 35 ml.
-- Anuncios por profesión: en Google, para las búsquedas de profesionales; en Instagram y Facebook, para profesionales de la manicura y la pedicura y para esteticistas.
-- Con realismo: posicionarte en el nicho profesional (pedicura, podología) es posible en un plazo de tres a seis meses. En búsquedas amplias de consumidores, como «crema de pies», no lo es, y no lo prometemos.
-- Por tu canal de Telegram y por el seminario en ruso con traducción al español, nos parece que buena parte de tus clientes profesionales actuales habla ruso. ¿Es así? Si lo es, mantenemos a ese grupo con los canales que ya funcionan y, a su lado, abrimos una vía de entrada para clientes que hablan español. Lo hablamos con gusto en la reunión.
+### Más clientes profesionales
 
-### Del contacto al pedido
+- Páginas por servicio de cabina y por tipo de piel, escritas con las palabras que usan los profesionales cuando buscan: grietas, durezas, pies que sudan, piel muy seca. Siempre como cuidado cosmético, nunca como tratamiento de una afección.
+- El seminario como puerta de entrada. Cada ciudad tiene su página con inscripción y, después del seminario, los asistentes reciben un correo con acceso al portal y una oferta de bienvenida.
+- Para el primer pedido, un kit de prueba por servicio. PEDIBAEHR tiene un formato de prueba de 35 ml que encaja bien con la idea.
+- Anuncios pensados para cada oficio. En Google, sobre lo que buscan los profesionales; en Instagram y Facebook, dirigidos a profesionales de manicura y pedicura y a esteticistas.
 
-- Dos entradas en la página de inicio: una para profesionales y otra para particulares.
-- Registro en dos minutos, en lugar de un formulario de 14 campos. El prototipo de la web muestra cómo funciona.
-- Precios profesionales en cuanto se aprueba la cuenta.
-- Pedido rápido desde una lista de productos, repetir un pedido anterior con un solo botón y un aviso al salón cuando un producto está a punto de acabarse.
-- Una calculadora para el salón: el coste por servicio y el precio para el cliente.
+Sobre los plazos, mejor dejarlo claro desde el principio. En el nicho profesional (pedicura, podología) es realista ganar visibilidad en un plazo de entre tres y seis meses. En búsquedas generales como «crema de pies», no lo es, y no te lo vamos a prometer.
 
-## Lo que construimos
+Y una pregunta que preferimos hacerte antes de dar nada por hecho. Por el canal de Telegram y por el seminario en ruso con traducción al español, tenemos la impresión de que buena parte de tus clientes profesionales habla ruso. ¿Es así? Si lo es, cuidaríamos a ese grupo con los canales que ya te funcionan y, en paralelo, abriríamos una vía nueva para llegar a profesionales de habla hispana. Nos gustaría hablarlo en la reunión.
 
-El fabricante no te impone requisitos estrictos de diseño ni de estructura. Por eso podemos construir la tienda en torno a tu cliente más importante: el salón y el profesional.
+### Del primer clic al pedido
 
-### Tienda online nueva
+La misma web tiene que servir a salones, especialistas en manicura y pedicura, podólogos y clínicas, y también a particulares. Por eso la página de inicio tendrá dos entradas, una para profesionales y otra para particulares.
 
-- Sustituye a la web actual. Los productos, los pedidos y los clientes pasan a la nueva.
-- Un diseño propio, sin plantilla.
-- Un catálogo en un español correcto, con los términos que usan los profesionales.
-- Rápida en el móvil.
-- Un único umbral de envío gratuito y plazos de entrega claros.
-- Páginas de seminarios por ciudad, con inscripción.
+Darse de alta como profesional llevará dos minutos, en lugar de un formulario de 14 campos. En el prototipo puedes ver cómo. Una vez aprobada la cuenta, ya ve los precios profesionales.
 
-### Portal para profesionales
+A partir de ahí, lo que importa es que vuelva a pedir. Podrá hacer un pedido rápido desde una lista de productos, repetir uno anterior con un clic y recibir un aviso cuando, por su ritmo de compra, sea probable que le toque reponer. Y tendrá una calculadora para el salón, con el coste de cada servicio y el precio para el cliente.
 
-- Solicitud de alta de un salón en dos minutos.
-- Precios profesionales en cuanto se aprueba la cuenta.
-- Pedido rápido desde una lista y repetición de pedidos anteriores.
-- Facturas e historial de pedidos en una cuenta propia.
+## La tienda y el portal
 
-## Paquetes
+La tienda nueva sustituye a la web actual, y a ella pasan los productos, los pedidos y los clientes. Como nos contaste que el fabricante no exige nada estricto en diseño ni en estructura, podemos hacer un diseño propio, sin plantilla. El catálogo va en un español correcto y con el vocabulario de los profesionales, y la tienda carga rápido en el móvil. Tendrá un solo importe para el envío gratuito, plazos de entrega claros y páginas de seminarios por ciudad con inscripción.
 
-Cada paquete incluye el anterior. Precios mensuales.
+El portal es la parte reservada a los profesionales. Un salón pide la cuenta en dos minutos y, una vez aprobada, compra a precio profesional, hace pedidos rápidos desde una lista y repite pedidos anteriores. En su cuenta tiene las facturas y el historial de pedidos.
 
-### Web y Google, 480 € al mes
+## Cuatro paquetes que van sumando
 
-Web nueva con tienda online, posicionamiento en Google y en las respuestas de IA, textos, alojamiento, mantenimiento e informe mensual.
+Cada paquete incluye todo lo del anterior. Los precios son mensuales y sin IVA.
 
-### Con portal, 680 € al mes
+- Tienda y SEO, 480 € al mes. La web nueva con la tienda, el posicionamiento en Google y en las respuestas de IA, los textos, el hosting, el mantenimiento y un informe mensual.
+- Con portal, 680 € al mes. Lo anterior más el portal para profesionales, que gestionamos nosotros.
+- Con Google Ads, 1.140 € al mes. Montamos y llevamos las campañas de Google Ads.
+- Con redes, 1.480 € al mes. Incluye también la gestión de redes sociales y los anuncios en Instagram y Facebook.
 
-Todo lo del paquete Web y Google, más el portal en el que salones y profesionales se dan de alta y compran directamente a precio profesional.
+Te recomendamos «Con Google Ads». El posicionamiento necesita meses. Los anuncios en Google llegan antes a los profesionales que ya están buscando producto, y con el portal en marcha, darse de alta les lleva dos minutos.
 
-### Con campañas, 1.140 € al mes. Nuestra recomendación
+### La tienda y el portal, sin coste a 12 meses
 
-Todo lo del paquete Con portal, más la configuración y la gestión de los anuncios en Google.
+La tienda y el portal suman un valor de 1.500 €. Si trabajamos juntos 12 meses, no pagas nada por ellos. Si decides terminar antes, pagas 125 € por cada mes que falte hasta los 12. Si lo dejas a los 4 meses, por ejemplo, serían 8 × 125 € = 1.000 €.
 
-### Con redes, 1.480 € al mes
+En «Tienda y SEO» construimos solo la tienda. El portal entra a partir de «Con portal».
 
-Todo lo del paquete Con campañas, más redes sociales y anuncios en Instagram y Facebook.
+### El presupuesto de anuncios va aparte
 
-### Sin coste con un compromiso de 12 meses
+Lo que se invierte en anuncios no forma parte de la cuota mensual. Lo pagas directamente a Google y a Meta, y las cuentas publicitarias son tuyas.
 
-La tienda online y el portal tienen, juntos, un valor de 1.500 €. Si trabajamos juntos 12 meses, no pagas nada por ellos. Si lo dejas antes, pagas 125 € por cada mes que falte. Por ejemplo, si lo dejas a los 4 meses, pagas 1.000 €. Con el paquete Web y Google construimos solo la tienda online; el portal se incluye a partir del paquete Con portal.
+Como ahora no hay un presupuesto fijo de publicidad, proponemos empezar a partir de 1.000 € al mes, con 600 € para Google y 400 € para Meta. Luego lo ajustamos según lo que digan las cifras de tus propias cuentas.
 
-### Presupuesto de publicidad, aparte
+Las campañas empiezan cuando el portal esté en marcha. Antes, los anuncios llevarían a la gente al formulario actual de 14 campos y estarías pagando clics que se quedan por el camino. Hasta ese momento pagas 480 € al mes, sea cual sea el paquete que elijas.
 
-El presupuesto de publicidad no forma parte de la cuota mensual. Lo pagas directamente a Google y a Meta, y las cuentas publicitarias siguen siendo tuyas. Nuestra propuesta para empezar: desde 1.000 € al mes, 600 € para Google y 400 € para Meta. Lo ajustamos según las cifras de tu propia cuenta publicitaria.
+## Ya lo hemos hecho con Skin Complete
 
-Las campañas empiezan cuando el portal ya está en marcha. Antes, los anuncios llevarían a la gente a un registro que hoy da poco resultado. Hasta entonces pagas 480 € al mes.
+Skin Complete (skincomplete.eu) es una marca neerlandesa de mascarillas LED y cuidado de la piel que vende a través de clínicas y salones. Les hicimos la web y el portal B2B. Un salón solicita una cuenta y pasa a tener su propia tienda B2B, con precios para partners, protocolos y formación.
 
-## Un caso comparable
+Con la web y el portal han sumado 80 clientes profesionales nuevos, entre clínicas y salones. Hoy la marca trabaja con centros de los Países Bajos, Bélgica y Curazao. Es un modelo muy parecido al que te proponemos.
 
-Skin Complete (Países Bajos) es una marca de mascarillas LED y cuidado de la piel que vende a través de clínicas y salones. Hicimos su web y su portal B2B: un salón solicita una cuenta y recibe su propia tienda B2B con precios para centros asociados, protocolos y formación. Resultado: 80 nuevos clientes profesionales, entre clínicas y salones. Hoy la marca trabaja con clínicas y salones en los Países Bajos, Bélgica y Curazao. skincomplete.eu
+## Cómo serían los primeros meses
 
-## Calendario
+El primer mes dejamos montada la analítica, abrimos la web a los robots de búsqueda y de IA y diseñamos la tienda nueva. El informe mensual empieza ese mismo mes.
 
-- Primer mes: medición, acceso para los robots de búsqueda y de IA, y diseño de la nueva tienda.
-- Segundo y tercer mes: puesta en marcha de la tienda y del portal, catálogo y páginas de seminarios.
-- A partir del cuarto mes: anuncios, redes sociales, páginas por servicio y un informe cada mes.
+En el segundo y el tercer mes ponemos en marcha la tienda y el portal, con el catálogo revisado y las páginas de los seminarios.
 
-## Condiciones
+Desde el cuarto mes llegan las páginas por servicio y, según el paquete que elijas, los anuncios y las redes.
+
+## Condiciones y lo que necesitamos de ti
 
 - Precios sin IVA.
-- Duración: 12 meses para la tienda online y el portal sin coste. Después, contrato mensual con un mes de preaviso para darlo de baja.
-- Informe: una vez al mes, con cifras: registros de profesionales, primeros pedidos, pedidos repetidos y coste por cliente nuevo.
-- Lo que necesitamos de ti: tres cifras (cuántos profesionales se registran al mes, cuántos de ellos hacen un pedido y el importe medio por pedido), acceso de lectura a Google Search Console y a tus estadísticas y, si eliges un paquete con campañas, acceso de gestión a tus cuentas publicitarias. Las cuentas y las credenciales siguen siendo tuyas.
+- El compromiso es de 12 meses, que es lo que nos permite no cobrarte la tienda ni el portal. Después, mes a mes, con un mes de preaviso.
+- El informe mensual va en cifras: altas de profesionales, primeros pedidos, recompras y coste por cliente nuevo.
+- No garantizamos posiciones en Google ni un número de visitas.
 
-## Siguiente paso
+Para medir bien necesitamos tres cifras: cuántos profesionales se dan de alta al mes, cuántos de ellos acaban haciendo un pedido y el importe medio por pedido. También acceso de lectura a Google Search Console y a las estadísticas de la web y, si eliges un paquete con campañas, acceso de administrador a las cuentas publicitarias. Las cuentas y las contraseñas siguen siendo tuyas.
 
-Una reunión de 30 minutos contigo y con tus socios. Repasamos el plan, respondemos a tus preguntas y te enseñamos el prototipo de la web. Dinos qué día te va bien.
+## Hablemos media hora
 
-Denis, [nombre de la agencia].
+Te proponemos una reunión de 30 minutos contigo y con tus socios. Repasamos el plan, resolvemos dudas y vemos juntos el prototipo. Tú eliges el día y la hora, y nos adaptamos.
 
-Prototipo de la web: [enlace]
+Un saludo,
+
+Denis
+
+[nombre de la agencia]
