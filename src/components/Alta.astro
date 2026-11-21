@@ -29,6 +29,7 @@ const { when = true } = Astro.props;
     <span>Correo electrónico</span>
     <input type="email" name="correo" autocomplete="email" required />
   </label>
+  <label class="consent"><input type="checkbox" name="privacidad" required /><span>He leído y acepto la <a href="/">política de privacidad</a>.</span></label>
   <button class="pill pill--red" type="submit">Solicitar el alta</button>
   <p class="signup__ok" role="status" hidden>Solicitud enviada. Te respondemos en un día laborable.</p>
   <p class="signup__note">Demostración de diseño: no se envía ningún dato.</p>

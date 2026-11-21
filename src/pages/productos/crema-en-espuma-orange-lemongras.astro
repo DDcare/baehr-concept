@@ -3,27 +3,27 @@
 // Feiten: docs/merk-en-woordenlijst.md, deel A. Geen prijs: die staat niet in de bron.
 import Base from '../../layouts/Base.astro';
 
-const title = 'Crema en espuma para pies Orange-Lemongras | BAEHR España';
+const title = 'Crema en espuma para pies PEDIBAEHR Orange-Lemongras | BAEHR España';
 const description =
   'Crema en espuma PEDIBAEHR con un 5 % de urea, pantenol y extractos de ginkgo, ginseng y limón. Ligera y de rápida absorción. Vegana. En 125 y 300 ml.';
 
 const faq = [
   {
     q: '¿Cuánta urea lleva?',
-    a: 'La crema en espuma Cremeschaum Orange-Lemongras lleva un 5 % de urea. Sus otros principios activos son el pantenol y los extractos de ginkgo, ginseng y limón.',
+    a: 'Lleva un 5 % de urea. Sus otros principios activos son el pantenol y los extractos de ginkgo, ginseng y limón.',
   },
   {
     q: '¿En qué se diferencia de la crema de pies Orange-Lemongras?',
     a: 'Las dos llevan urea, pero difieren en la textura y en el resto de los activos. La crema de pies Orange-Lemongras lleva aceites de naranja y de lemongrass; la crema en espuma, un 5 % de urea, pantenol y extractos de ginkgo, ginseng y limón, en una espuma ligera de rápida absorción.',
   },
   {
-    q: '¿Qué indica el sello de cinco estrellas?',
-    a: 'Es el sello de tolerancia cutánea de Dermatest GmbH. El de la crema en espuma Cremeschaum Orange-Lemongras es de septiembre de 2025 y se basa en una prueba clínica de 4 semanas con 20 voluntarios.',
+    q: '¿Qué es el sello de cinco estrellas?',
+    a: 'Es el sello de tolerancia cutánea de Dermatest GmbH. El de esta crema en espuma es de septiembre de 2025 y se basa en una prueba clínica de 4 semanas con 20 voluntarios.',
   },
-  { q: '¿Es vegana?', a: 'Sí. La crema en espuma Cremeschaum Orange-Lemongras es vegana.' },
+  { q: '¿Es vegana?', a: 'Sí, es vegana.' },
   {
     q: '¿Quién es el fabricante?',
-    a: 'Gustav Baehr GmbH, una empresa familiar con sede en Waiblingen (Alemania). En España la distribuye BAEHR España, distribuidor oficial de la marca.',
+    a: 'Gustav Baehr GmbH, una empresa familiar con sede en Waiblingen (Alemania). En España, este producto lo vende BAEHR España, distribuidor oficial de la marca.',
   },
 ];
 
@@ -33,9 +33,9 @@ const jsonld = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://baehr.com.es/' },
-      { '@type': 'ListItem', position: 2, name: 'Tienda', item: 'https://baehr.com.es/#tienda' },
+      { '@type': 'ListItem', position: 2, name: 'Tienda', item: 'https://baehr.com.es/tienda/' },
       { '@type': 'ListItem', position: 3, name: 'Cremas en espuma', item: 'https://baehr.com.es/tienda/' },
-      { '@type': 'ListItem', position: 4, name: 'Orange-Lemongras' },
+      { '@type': 'ListItem', position: 4, name: 'Crema en espuma Orange-Lemongras' },
     ],
   },
   {
@@ -68,7 +68,7 @@ const pairs = [
     <a href="/">Inicio</a>
     <a href="/tienda/">Tienda</a>
     <a href="/tienda/">Cremas en espuma</a>
-    <span aria-current="page">Orange-Lemongras</span>
+    <span aria-current="page">Crema en espuma Orange-Lemongras</span>
   </nav>
 
   <section class="pdp">
@@ -102,10 +102,10 @@ const pairs = [
 
       <div class="price" data-when="pro">
         <p class="price__label">Precio profesional</p>
-        <p class="price__text">Lo verás al acceder a tu cuenta.</p>
+        <p class="price__text">Lo verás al iniciar sesión.</p>
         <p class="price__links">
-          <a class="textlink" href="/profesionales/#alta">Acceder</a>
-          <span>¿Aún no tienes cuenta? <a class="textlink" href="/profesionales/#alta">Solicitar el alta</a></span>
+          <a class="textlink" href="/profesionales/#acceso">Iniciar sesión</a>
+          <span>¿Aún no tienes cuenta? <a class="textlink" href="/profesionales/#alta">Solicita el alta</a></span>
         </p>
       </div>
       <div class="price" data-when="home">
@@ -124,7 +124,7 @@ const pairs = [
       </form>
 
       <ul class="service">
-        <li data-when="home">Envío gratuito en pedidos a partir de 60&nbsp;€.</li>
+        <li data-when="home">Envío gratis en pedidos a partir de 60&nbsp;€.</li>
         <li>Fabricante: Gustav Baehr GmbH, Waiblingen (Alemania).</li>
         <li>Vendido por BAEHR España, distribuidor oficial de la marca.</li>
       </ul>
@@ -146,7 +146,7 @@ const pairs = [
   </section>
 
   <section class="inside">
-    <h2 class="h2 rv">Sus&nbsp;activos</h2>
+    <h2 class="h2 rv">Activos&nbsp;clave</h2>
     <ul class="inside__list">
       <li class="stretch"><span aria-hidden="true">Urea</span><small>Urea al 5&nbsp;%</small></li>
       <li class="stretch"><span aria-hidden="true">Pantenol</span><small class="sr">Pantenol</small></li>
@@ -167,7 +167,7 @@ const pairs = [
   <section class="proto">
     <div class="proto__text">
       <h2 class="h2 rv">El último&nbsp;paso</h2>
-      <p class="lead rv">Cierra el protocolo de cinco pasos que te proponemos en la página de inicio.</p>
+      <p class="lead rv">Esta espuma cierra el protocolo de cinco pasos que te proponemos en la página de inicio.</p>
       <a class="pill pill--white rv" href="/#protocolo">Ver el protocolo</a>
     </div>
     <ol class="proto__steps rv" aria-label="Pasos del protocolo">
@@ -199,7 +199,7 @@ const pairs = [
   </section>
 
   <section class="faq">
-    <h2 class="h2 rv">Preguntas y&nbsp;respuestas</h2>
+    <h2 class="h2 rv">Preguntas&nbsp;frecuentes</h2>
     <div class="faq__list">
       {
         faq.map((f) => (
