@@ -1704,10 +1704,12 @@ h1 {
 }
 .texture {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-  gap: clamp(1rem, 4vw, 4rem);
-  align-items: start;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(1rem, 3vh, 2rem);
   padding: 0 var(--pad) clamp(4rem, 11vh, 8rem);
+}
+.texture .texture__body {
+  max-width: 54rem;
 }
 .texture__quote {
   font-family: var(--serif);
@@ -2601,11 +2603,13 @@ html.has-drawer {
   border-bottom: 1px solid var(--line);
 }
 .worlds__n {
+  --stretch-to: 108;
   font-weight: 800;
-  font-size: clamp(1.4rem, 3vw, 3.2rem);
-  line-height: 1;
+  font-size: clamp(1.25rem, 2.4vw, 2.6rem);
+  line-height: 1.02;
   letter-spacing: -0.015em;
   text-transform: uppercase;
+  text-wrap: balance;
 }
 .worlds__item:hover .worlds__n {
   color: var(--red);

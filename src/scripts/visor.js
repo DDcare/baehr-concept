@@ -1,14 +1,23 @@
 // Visor 360 de un solo envase para la ficha de producto.
 // Ligero a propósito: sin sombras calculadas ni reflejos, y solo dibuja cuando algo se mueve.
-import * as THREE from 'three';
-import { createProducts, SIZE } from './productos.js';
+// three.js se descarga solo cuando el visor entra en pantalla: hasta entonces se ve la foto del producto
+let THREE;
+let createProducts;
+let SIZE;
 
 const box = document.querySelector('[data-visor]');
 if (box) {
   const io = new IntersectionObserver(
-    (entries) => {
+    async (entries) => {
       if (!entries[0].isIntersecting) return;
       io.disconnect();
+      try {
+        THREE = await import('three');
+        ({ createProducts, SIZE } = await import('./productos.js'));
+      } catch (e) {
+        box.classList.add('is-static');
+        return;
+      }
       init(box);
     },
     { rootMargin: '200px 0px' }
