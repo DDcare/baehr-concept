@@ -517,7 +517,7 @@ h1 {
   width: calc(100% - var(--n-left) - var(--n-right));
   height: calc(100% - var(--n-top) - var(--n-bottom));
   object-fit: cover;
-  border-radius: 999px;
+  border-radius: var(--n-rad);
   opacity: calc(1 - (1 - var(--k, 1)) * 4);
   pointer-events: none;
   transition: visibility 0s 0.9s;
@@ -2743,6 +2743,10 @@ html[data-mode='home'] .acct-hero {
 }
 .acct-out .textlink {
   font-weight: 600;
+}
+.textlink--light {
+  font-weight: 600;
+  color: #fff;
 }
 .quick__acct {
   margin-top: 1.4rem;
