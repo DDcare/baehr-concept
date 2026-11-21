@@ -1,0 +1,219 @@
+---
+// Ficha de producto de ejemplo: Cremeschaum Orange-Lemongras (PEDIBAEHR, línea WELLNESS).
+// Feiten: docs/merk-en-woordenlijst.md, deel A. Geen prijs: die staat niet in de bron.
+import Base from '../../layouts/Base.astro';
+
+const title = 'Crema en espuma Orange-Lemongras, 125 ml | BAEHR España';
+const description =
+  'Cremeschaum Orange-Lemongras de PEDIBAEHR: crema en espuma para pies con un 5 % de urea, pantenol y extractos de ginkgo, ginseng y limón. Vegana. 125 y 300 ml.';
+
+const faq = [
+  { q: '¿Cuánta urea contiene?', a: 'Un 5 % de urea, junto con pantenol y extractos de ginkgo, ginseng y limón.' },
+  { q: '¿Es vegana?', a: 'Sí. El fabricante la indica como vegana.' },
+  { q: '¿En qué tamaños está disponible?', a: 'En 125 ml y en 300 ml.' },
+  {
+    q: '¿Quién la fabrica?',
+    a: 'Gustav Baehr GmbH, en Waiblingen (Alemania). BAEHR España es el distribuidor oficial de BAEHR en España.',
+  },
+  {
+    q: '¿Tiene algún test de tolerancia cutánea?',
+    a: 'Sí: el sello de 5 estrellas de dermatest, de septiembre de 2025, con 20 personas durante 4 semanas.',
+  },
+];
+
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://baehr.com.es/' },
+      { '@type': 'ListItem', position: 2, name: 'Tienda', item: 'https://baehr.com.es/#tienda' },
+      { '@type': 'ListItem', position: 3, name: 'Crema en espuma Orange-Lemongras' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'Cremeschaum Orange-Lemongras, 125 ml',
+    description,
+    image: 'https://baehr.com.es/img/productos/espuma.webp',
+    brand: { '@type': 'Brand', name: 'PEDIBAEHR' },
+    manufacturer: { '@type': 'Organization', name: 'Gustav Baehr GmbH' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+];
+
+const steps = ['Baño', 'Exfoliación', 'Mascarilla', 'Crema', 'Espuma'];
+const pairs = [
+  { img: 'bano', name: 'SPA Wellness Fußbad', type: 'Baño de pies, 500 ml', step: 0, tint: 'aqua' },
+  { img: 'exfoliante', name: 'fresh feet Fußpeeling', type: 'Exfoliante, 125 ml', step: 1, tint: 'aqua' },
+  { img: 'mascarilla', name: 'Fuß-Vliesmaske Orange-Lemongras', type: 'Mascarilla, caja de 5 pares', step: 2, tint: 'sun' },
+  { img: 'crema', name: 'Fußcreme Orange-Lemongras', type: 'Crema, 125 ml', step: 3, tint: 'sun' },
+];
+---
+
+<Base title={title} description={description} page="producto" jsonld={jsonld}>
+  <nav class="crumbs" aria-label="Ruta">
+    <a href="/">Inicio</a>
+    <a href="/#tienda">Tienda</a>
+    <span aria-current="page">Crema en espuma Orange-Lemongras</span>
+  </nav>
+
+  <section class="pdp">
+    <div class="pdp__stage" data-visor tabindex="0" role="img" aria-label="Bote de Cremeschaum Orange-Lemongras en 3D. Arrastra o usa las flechas para girarlo.">
+      <img class="pdp__still" src="/img/productos/espuma.webp" width="600" height="900" alt="" decoding="async" />
+      <canvas class="pdp__canvas" aria-hidden="true"></canvas>
+      <div class="pdp__hint" aria-hidden="true"><span class="pdp__ribs"></span>Arrastra para girar</div>
+      <button class="pdp__pause" type="button" data-visor-pause data-pause="Pausar el giro" data-play="Reanudar el giro" aria-pressed="false">Pausar el giro</button>
+    </div>
+
+    <div class="pdp__buy">
+      <h1 class="pdp__h">
+        <span class="pdp__big">Crema en&nbsp;espuma</span>
+        <span class="pdp__soft">Cremeschaum Orange-Lemongras, 125&nbsp;ml</span>
+      </h1>
+      <p class="pdp__lead">
+        Espuma de textura ligera y rápida absorción para el cuidado de los pies. Con un 5&nbsp;% de urea, pantenol y
+        extractos de ginkgo, ginseng y limón.
+      </p>
+      <ul class="chips">
+        <li>PEDIBAEHR</li>
+        <li>Línea WELLNESS</li>
+        <li>Serie Orange-Lemongras</li>
+      </ul>
+
+      <fieldset class="sizes">
+        <legend>Tamaño</legend>
+        <label><input type="radio" name="tam" value="125" checked /><span>125&nbsp;ml</span></label>
+        <label><input type="radio" name="tam" value="300" /><span>300&nbsp;ml</span></label>
+      </fieldset>
+
+      <div class="price" data-when="pro">
+        <p class="price__label">Precio profesional</p>
+        <p class="price__text">Inicia sesión para ver tu precio.</p>
+        <a class="textlink" href="/#profesionales">Iniciar sesión</a>
+      </div>
+      <div class="price" data-when="home">
+        <p class="price__label">Precio</p>
+        <p class="price__text">Se muestra al conectar la tienda.</p>
+      </div>
+
+      <form class="addcart" novalidate>
+        <div class="qty" role="group" aria-label="Cantidad">
+          <button type="button" data-qty="-1" aria-label="Uno menos">−</button>
+          <output aria-live="polite">1</output>
+          <button type="button" data-qty="1" aria-label="Uno más">+</button>
+        </div>
+        <button class="pill pill--red addcart__btn" type="submit">Añadir a la cesta</button>
+        <p class="addcart__ok" role="status" hidden>Añadido a la cesta.</p>
+      </form>
+
+      <ul class="service">
+        <li>Envío gratuito en pedidos a partir de 60&nbsp;€</li>
+        <li>Fabricado por Gustav Baehr GmbH, Waiblingen (Alemania)</li>
+        <li>Distribuidor oficial de BAEHR en España</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band" aria-label="Datos del producto">
+    <dl class="band__row">
+      <div class="band__item rv"><dt>5&nbsp;%</dt><dd>de urea</dd></div>
+      <div class="band__item rv"><dt>Vegana</dt><dd>según el fabricante</dd></div>
+      <div class="band__item rv"><dt>125 y 300</dt><dd>mililitros</dd></div>
+      <div class="band__item rv"><dt>5 estrellas</dt><dd>tolerancia cutánea, dermatest 09/2025</dd></div>
+    </dl>
+  </section>
+
+  <section class="inside">
+    <h2 class="h2 rv">Lo que contiene</h2>
+    <ul class="inside__list">
+      <li class="stretch"><span>Urea</span><small>5&nbsp;%</small></li>
+      <li class="stretch"><span>Pantenol</span></li>
+      <li class="stretch"><span>Ginkgo</span><small>extracto</small></li>
+      <li class="stretch"><span>Ginseng</span><small>extracto</small></li>
+      <li class="stretch"><span>Limón</span><small>extracto</small></li>
+    </ul>
+  </section>
+
+  <section class="texture">
+    <h2 class="h2 rv">Textura</h2>
+    <p class="texture__quote rv">Una espuma ligera que se absorbe rápido y deja la piel suave como el terciopelo.</p>
+  </section>
+
+  <section class="proto">
+    <div class="proto__text">
+      <h2 class="h2 rv">El último paso del&nbsp;protocolo</h2>
+      <p class="lead rv">Cierra el protocolo de la home, después del baño, la exfoliación, la mascarilla y la crema.</p>
+      <a class="pill pill--white rv" href="/#protocolo">Ver el protocolo en 3D</a>
+    </div>
+    <ol class="proto__steps rv" aria-label="Pasos del protocolo">
+      {steps.map((s, i) => <li aria-current={i === 4 ? 'step' : undefined}>{s}</li>)}
+    </ol>
+  </section>
+
+  <section class="shop shop--pairs">
+    <div class="shop__head">
+      <h2 class="h2 rv">Combínala con</h2>
+    </div>
+    <ul class="shop__row shop__row--four">
+      {
+        pairs.map((p) => (
+          <li class="card rv">
+            <a class="card__link" href={`/#paso-${p.step + 1}`}>
+              <span class={`card__img card__img--${p.tint}`}>
+                <img src={`/img/productos/${p.img}.webp`} width="600" height="900" alt="" loading="lazy" decoding="async" />
+              </span>
+              <span class="card__name">{p.name}</span>
+              <span class="card__type" set:html={p.type} />
+              <span class="card__go">Ver en el protocolo</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="faq">
+    <h2 class="h2 rv">Preguntas frecuentes</h2>
+    <div class="faq__list">
+      {
+        faq.map((f) => (
+          <details class="faq__item">
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))
+      }
+    </div>
+  </section>
+</Base>
+
+<script>
+  import '../../scripts/visor.js';
+  // Cantidad y cesta: demostración, no envía nada
+  const form = document.querySelector('.addcart');
+  const out = form?.querySelector('output');
+  let n = 1;
+  form?.querySelectorAll('[data-qty]').forEach((b) =>
+    b.addEventListener('click', () => {
+      n = Math.max(1, Math.min(99, n + Number(b.dataset.qty)));
+      if (out) out.textContent = String(n);
+    })
+  );
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const ok = form.querySelector('.addcart__ok');
+    if (ok) ok.hidden = false;
+    document.querySelectorAll('[data-cart-count]').forEach((el) => {
+      el.textContent = String(Number(el.textContent) + n);
+      el.classList.remove('is-pop');
+      void el.offsetWidth;
+      el.classList.add('is-pop');
+    });
+  });
+</script>

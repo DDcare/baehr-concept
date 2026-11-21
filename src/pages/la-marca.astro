@@ -1,0 +1,100 @@
+---
+// Página "La marca". Feiten alleen uit docs/merk-en-woordenlijst.md, deel A.
+import Base from '../layouts/Base.astro';
+
+const title = 'La marca BAEHR: desde 1949 en Waiblingen | BAEHR España';
+const description =
+  'BAEHR nació en 1949 en Waiblingen (Alemania) y sigue siendo una empresa familiar. BAEHR España, en Barcelona, es su distribuidor oficial en España.';
+
+const years = [
+  { y: '1949', t: 'Gustav Baehr, comerciante de Hamburgo, funda Technik Baehr en Waiblingen. Sus primeros clientes son orfebres y dentistas.' },
+  { y: '1969', t: 'La empresa pasa a llamarse Gustav Baehr GmbH.' },
+  { y: '1977', t: 'Dos hijos del fundador toman el relevo.' },
+  { y: 'Hoy', t: 'Una empresa familiar con cerca de 135 personas, sede y sala de exposición en Waiblingen.' },
+];
+
+const worlds = [
+  { n: 'PEDIBAEHR', t: 'Cosmética para el cuidado profesional de los pies.' },
+  { n: 'BAEHR BEAUTY CONCEPT', t: 'Series de cuidado para el salón de belleza.' },
+  { n: 'BEAUTY CONCEPT NAILS', t: 'Para manicura y uñas.' },
+  { n: 'Instrumentos y fresas', t: 'Instrumental de acero y fresas rotatorias.' },
+  { n: 'Higiene', t: 'Productos de higiene para la cabina.' },
+  { n: 'Equipamiento', t: 'Aparatos y mobiliario para el gabinete.' },
+];
+---
+
+<Base title={title} description={description} page="marca">
+  <section class="about-hero">
+    <h1 class="about-hero__h">
+      <span class="stretch is-in">Desde 1949</span>
+      <span class="about-hero__soft">en Waiblingen, Alemania</span>
+    </h1>
+    <p class="lead">
+      BAEHR empezó como un pequeño negocio técnico y hoy es una empresa familiar dedicada al cuidado profesional de pies,
+      manos y uñas. BAEHR España, en Barcelona, es su distribuidor oficial.
+    </p>
+  </section>
+
+  <section class="years" aria-label="Historia">
+    <ol class="years__row">
+      {
+        years.map((e) => (
+          <li class="years__item rv">
+            <p class="years__y">{e.y}</p>
+            <p class="years__t">{e.t}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <section class="band band--ink" aria-label="BAEHR en cifras">
+    <dl class="band__row">
+      <div class="band__item rv"><dt>1949</dt><dd>año de fundación</dd></div>
+      <div class="band__item rv"><dt>135</dt><dd>personas, aproximadamente</dd></div>
+      <div class="band__item rv"><dt>+40</dt><dd>países con distribuidor oficial</dd></div>
+      <div class="band__item rv"><dt>+70</dt><dd>años de experiencia en sus productos</dd></div>
+    </dl>
+  </section>
+
+  <section class="worlds">
+    <h2 class="h2 rv">Seis mundos BAEHR</h2>
+    <ul class="worlds__list">
+      {
+        worlds.map((w) => (
+          <li class="worlds__item">
+            <span class="worlds__n stretch">{w.n}</span>
+            <span class="worlds__t">{w.t}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="statement">
+    <p class="statement__es rv">Productos creados por y para especialistas en el cuidado de los pies.</p>
+    <p class="statement__de rv" lang="de">„Produkte für und von Fußpflegespezialisten“, PEDIBAEHR</p>
+  </section>
+
+  <section class="split">
+    <div class="split__col rv">
+      <h2 class="h2">Saber compartido</h2>
+      <p class="lead">BAEHR forma a profesionales con seminarios y asesoramiento. En España, BAEHR España organiza seminarios online y presenciales.</p>
+      <a class="textlink" href="/#seminarios">Ver los seminarios</a>
+    </div>
+    <div class="split__col rv">
+      <h2 class="h2">BAEHR en España</h2>
+      <p class="lead">Proxy Beauty Spain, S.L. distribuye BAEHR a salones, profesionales de manicura y pedicura, podólogos y particulares.</p>
+      <p class="split__addr">Calle Perelló, 34<br />08005 Barcelona</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2 class="cta__h">Trabaja con BAEHR</h2>
+    <p class="cta__t">Date de alta como profesional y compra a precio profesional.</p>
+    <div class="cta__b">
+      <a class="pill pill--white" href="/#profesionales">Darme de alta</a>
+      <a class="pill pill--line-white" href="/#protocolo">Ver el protocolo</a>
+    </div>
+  </section>
+</Base>
