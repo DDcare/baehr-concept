@@ -120,6 +120,11 @@ const pairs = [
     </div>
   </section>
 
+  <div class="buybar" aria-hidden="true">
+    <span class="buybar__name">Cremeschaum Orange-Lemongras, 125&nbsp;ml</span>
+    <button class="pill pill--red" type="button" tabindex="-1" data-buybar>Añadir a la cesta</button>
+  </div>
+
   <section class="band" aria-label="Datos del producto">
     <dl class="band__row">
       <div class="band__item rv"><dt>5&nbsp;%</dt><dd>de urea</dd></div>
@@ -205,6 +210,16 @@ const pairs = [
       if (out) out.textContent = String(n);
     })
   );
+  // Barra de compra en el móvil: aparece cuando el botón principal sale de la pantalla
+  const bar = document.querySelector('.buybar');
+  const mainBtn = form?.querySelector('.addcart__btn');
+  if (bar && mainBtn && 'IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => {
+      const below = entries[0].boundingClientRect.top < 0;
+      bar.classList.toggle('is-on', !entries[0].isIntersecting && below);
+    }).observe(mainBtn);
+    bar.querySelector('[data-buybar]')?.addEventListener('click', () => form?.requestSubmit());
+  }
   form?.addEventListener('submit', (e) => {
     e.preventDefault();
     const ok = form.querySelector('.addcart__ok');
