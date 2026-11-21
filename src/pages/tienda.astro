@@ -89,6 +89,9 @@ const jsonld = [
       if (empty) empty.hidden = shown > 0;
     })
   );
+  // Filtro desde la URL, por ejemplo /tienda/?tipo=crema (los botones de la película de la home llegan así)
+  const tipo = new URLSearchParams(location.search).get('tipo');
+  if (tipo) document.querySelector<HTMLButtonElement>(`[data-filter="${tipo}"]`)?.click();
   document.querySelectorAll<HTMLButtonElement>('[data-add]').forEach((b) =>
     b.addEventListener('click', () => {
       (window as any).baehrCesta?.add(b.dataset.add, 1);

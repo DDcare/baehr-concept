@@ -2470,6 +2470,58 @@ html.has-drawer {
   color: var(--red);
 }
 
+.price__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  margin-top: 0.4rem;
+  font-size: 0.92rem;
+}
+.price__links .textlink {
+  margin-top: 0;
+}
+.addcart__ok .textlink {
+  margin-left: 0.4rem;
+  color: var(--ink);
+}
+.texture__body {
+  display: grid;
+  gap: 1.2rem;
+}
+.texture__note {
+  max-width: 34rem;
+  color: var(--muted);
+}
+.inside__list li > span {
+  flex: none;
+}
+.story {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: clamp(1.5rem, 5vw, 5rem);
+  padding: clamp(1rem, 4vh, 3rem) var(--pad) clamp(4rem, 10vh, 7rem);
+}
+.story__text {
+  display: grid;
+  gap: 1.2rem;
+  max-width: 40rem;
+  font-size: clamp(1.05rem, 1.3vw, 1.3rem);
+  line-height: 1.5;
+}
+.worlds__lead {
+  margin-top: 1rem;
+}
+.statement__p {
+  max-width: 44rem;
+  margin: 1.6rem auto 0;
+  font-size: clamp(1.02rem, 1.25vw, 1.2rem);
+  line-height: 1.55;
+  opacity: 0.92;
+}
+.about-hero__h .stretch + .stretch {
+  color: var(--ink);
+}
+
 /* ---------- La marca ---------- */
 .about-hero {
   padding: clamp(7.5rem, 17vh, 10.5rem) var(--pad) clamp(3rem, 8vh, 5.5rem);
@@ -2722,7 +2774,8 @@ html.has-drawer {
   }
   .texture,
   .faq,
-  .split {
+  .split,
+  .story {
     grid-template-columns: minmax(0, 1fr);
   }
   .worlds__item {

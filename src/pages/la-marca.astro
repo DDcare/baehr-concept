@@ -1,64 +1,59 @@
 ---
-// Página "La marca". Feiten alleen uit docs/merk-en-woordenlijst.md, deel A.
+// Página "La marca". Tekst: redactor-es (21-11). Feiten alleen uit docs/merk-en-woordenlijst.md, deel A.
 import Base from '../layouts/Base.astro';
 
-const title = 'La marca BAEHR: desde 1949 en Waiblingen | BAEHR España';
+const title = 'La marca BAEHR, empresa familiar desde 1949 | BAEHR España';
 const description =
-  'BAEHR nació en 1949 en Waiblingen (Alemania) y sigue siendo una empresa familiar. BAEHR España, en Barcelona, es su distribuidor oficial en España.';
-
-const years = [
-  { y: '1949', t: 'Gustav Baehr, comerciante de Hamburgo, funda Technik Baehr en Waiblingen. Sus primeros clientes son orfebres y dentistas.' },
-  { y: '1969', t: 'La empresa pasa a llamarse Gustav Baehr GmbH.' },
-  { y: '1977', t: 'Dos hijos del fundador toman el relevo.' },
-  { y: 'Hoy', t: 'Una empresa familiar con cerca de 135 personas, sede y sala de exposición en Waiblingen.' },
-];
+  'BAEHR, empresa familiar alemana fundada en 1949 en Waiblingen: su historia, sus seis marcas y su distribuidor oficial en España.';
 
 const worlds = [
-  { n: 'PEDIBAEHR', t: 'Cosmética para el cuidado profesional de los pies.' },
-  { n: 'BAEHR BEAUTY CONCEPT', t: 'Series de cuidado para el salón de belleza.' },
-  { n: 'BEAUTY CONCEPT NAILS', t: 'Para manicura y uñas.' },
-  { n: 'Instrumentos y fresas', t: 'Instrumental de acero y fresas rotatorias.' },
-  { n: 'Higiene', t: 'Productos de higiene para la cabina.' },
-  { n: 'Equipamiento', t: 'Aparatos y mobiliario para el gabinete.' },
+  { n: 'PEDIBAEHR', t: 'El cuidado de los pies: cremas, espumas, exfoliantes, baños y mascarillas.' },
+  { n: 'BAEHR BEAUTY CONCEPT', t: 'Un sistema de cuidado para el salón de belleza, con series como Aloe Vera, Detox o Time Expert.' },
+  { n: 'BAEHR BEAUTY CONCEPT NAILS', t: 'Para el diseño de uñas.' },
+  { n: 'BAEHR Instrumental y Fresas', t: 'Instrumental de las líneas PODOLINE y ECO, además de fresas.' },
+  { n: 'BAEHR Equipamiento y Tecnología', t: 'Aparatos con aspiración o con spray para el cuidado de los pies, como BAEHR TEC A2000 y BAEHR PUR.' },
+  { n: 'BAEHR Higiene', t: 'La higiene, también con marca propia.' },
 ];
 ---
 
 <Base title={title} description={description} page="marca">
   <section class="about-hero">
     <h1 class="about-hero__h">
-      <span class="stretch is-in">Desde 1949</span>
-      <span class="about-hero__soft">en Waiblingen, Alemania</span>
+      <span class="stretch is-in">BAEHR,</span>
+      <span class="stretch is-in">de&nbsp;cerca</span>
     </h1>
     <p class="lead">
-      BAEHR empezó como un pequeño negocio técnico y hoy es una empresa familiar dedicada al cuidado profesional de pies,
-      manos y uñas. BAEHR España, en Barcelona, es su distribuidor oficial.
+      BAEHR nació en 1949 en Waiblingen (Alemania) y sigue siendo una empresa familiar. Fabrica y distribuye productos para
+      la podología, el cuidado de los pies, la cosmética y el diseño de uñas. BAEHR España es distribuidor oficial de la marca.
     </p>
   </section>
 
-  <section class="years" aria-label="Historia">
-    <ol class="years__row">
-      {
-        years.map((e) => (
-          <li class="years__item rv">
-            <p class="years__y">{e.y}</p>
-            <p class="years__t">{e.t}</p>
-          </li>
-        ))
-      }
-    </ol>
+  <section class="story">
+    <h2 class="h2 rv">De 1949 a&nbsp;hoy</h2>
+    <div class="story__text">
+      <p class="rv">
+        Gustav Baehr, comerciante de Hamburgo, fundó en 1949 en Waiblingen la empresa Technik Baehr. Sus primeros clientes fueron
+        orfebres y dentistas; los profesionales de la pedicura y la estética llegaron después.
+      </p>
+      <p class="rv">
+        En 1969 se convirtió en sociedad limitada, Gustav Baehr GmbH, y en 1977 tomaron el relevo dos hijos del fundador. Hoy
+        sigue siendo una empresa familiar, con casi 135 personas en plantilla y sede con showroom en Waiblingen.
+      </p>
+    </div>
   </section>
 
   <section class="band band--ink" aria-label="BAEHR en cifras">
     <dl class="band__row">
-      <div class="band__item rv"><dt>1949</dt><dd>año de fundación</dd></div>
-      <div class="band__item rv"><dt>135</dt><dd>personas, aproximadamente</dd></div>
-      <div class="band__item rv"><dt>+40</dt><dd>países con distribuidor oficial</dd></div>
-      <div class="band__item rv"><dt>+70</dt><dd>años de experiencia en sus productos</dd></div>
+      <div class="band__item rv"><dt>1949</dt><dd>fundación en Waiblingen</dd></div>
+      <div class="band__item rv"><dt>1977</dt><dd>relevo generacional</dd></div>
+      <div class="band__item rv"><dt>Casi 135</dt><dd>personas en plantilla</dd></div>
+      <div class="band__item rv"><dt>Más de 40</dt><dd>países con socio de exportación</dd></div>
     </dl>
   </section>
 
   <section class="worlds">
-    <h2 class="h2 rv">Seis mundos BAEHR</h2>
+    <h2 class="h2 rv">Seis marcas de la&nbsp;casa</h2>
+    <p class="lead rv worlds__lead">Todo lo que BAEHR firma con su nombre se reparte en seis marcas.</p>
     <ul class="worlds__list">
       {
         worlds.map((w) => (
@@ -72,28 +67,37 @@ const worlds = [
   </section>
 
   <section class="statement">
-    <p class="statement__es rv">Productos creados por y para especialistas en el cuidado de los pies.</p>
+    <h2 class="statement__es rv">Del gremio, para el&nbsp;gremio</h2>
+    <p class="statement__p rv">
+      PEDIBAEHR es la marca de BAEHR para el cuidado de los pies, con productos creados por y para especialistas. Detrás de su
+      desarrollo hay más de setenta años de experiencia e investigación, y sus fórmulas combinan principios activos modernos y
+      clásicos. La gama cubre todas las necesidades del cuidado de los pies y se ordena por tipo de piel, del 1 al 7.
+    </p>
     <p class="statement__de rv" lang="de">„Produkte für und von Fußpflegespezialisten“, PEDIBAEHR</p>
   </section>
 
   <section class="split">
     <div class="split__col rv">
-      <h2 class="h2">Saber compartido</h2>
-      <p class="lead">BAEHR forma a profesionales con seminarios y asesoramiento. En España, BAEHR España organiza seminarios online y presenciales.</p>
+      <h2 class="h2">El saber se&nbsp;comparte</h2>
+      <p class="lead">BAEHR comparte con gusto lo que sabe con los profesionales. Por eso organiza seminarios.</p>
       <a class="textlink" href="/#seminarios">Ver los seminarios</a>
     </div>
     <div class="split__col rv">
-      <h2 class="h2">BAEHR en España</h2>
-      <p class="lead">Proxy Beauty Spain, S.L. distribuye BAEHR a salones, profesionales de manicura y pedicura, podólogos y particulares.</p>
-      <p class="split__addr">Calle Perelló, 34<br />08005 Barcelona</p>
+      <h2 class="h2">BAEHR en&nbsp;España</h2>
+      <p class="lead">
+        BAEHR España es Proxy Beauty Spain, S.L., distribuidor oficial de la marca, con sede en Barcelona. La empresa figura en
+        la lista de socios de exportación que publica BAEHR. Atendemos a salones, profesionales de manicura y pedicura,
+        podólogos y particulares.
+      </p>
+      <p class="split__addr">Proxy Beauty Spain, S.L.<br />Calle Perelló, 34<br />08005 Barcelona</p>
     </div>
   </section>
 
   <section class="cta">
-    <h2 class="cta__h">Trabaja con BAEHR</h2>
-    <p class="cta__t">Date de alta como profesional y compra a precio profesional.</p>
+    <h2 class="cta__h">¿Empezamos?</h2>
+    <p class="cta__t">Date de alta como profesional o recorre el protocolo, producto a producto.</p>
     <div class="cta__b">
-      <a class="pill pill--white" href="/#profesionales">Darme de alta</a>
+      <a class="pill pill--white" href="/profesionales/#alta">Darme de alta</a>
       <a class="pill pill--line-white" href="/#protocolo">Ver el protocolo</a>
     </div>
   </section>

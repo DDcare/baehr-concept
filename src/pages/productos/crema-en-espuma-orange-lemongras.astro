@@ -3,21 +3,27 @@
 // Feiten: docs/merk-en-woordenlijst.md, deel A. Geen prijs: die staat niet in de bron.
 import Base from '../../layouts/Base.astro';
 
-const title = 'Crema en espuma Orange-Lemongras, 125 ml | BAEHR España';
+const title = 'Crema en espuma para pies Orange-Lemongras | BAEHR España';
 const description =
-  'Cremeschaum Orange-Lemongras de PEDIBAEHR: crema en espuma para pies con un 5 % de urea, pantenol y extractos de ginkgo, ginseng y limón. Vegana. 125 y 300 ml.';
+  'Crema en espuma PEDIBAEHR con un 5 % de urea, pantenol y extractos de ginkgo, ginseng y limón. Ligera y de rápida absorción. Vegana. En 125 y 300 ml.';
 
 const faq = [
-  { q: '¿Cuánta urea contiene?', a: 'Un 5 % de urea, junto con pantenol y extractos de ginkgo, ginseng y limón.' },
-  { q: '¿Es vegana?', a: 'Sí. El fabricante la indica como vegana.' },
-  { q: '¿En qué tamaños está disponible?', a: 'En 125 ml y en 300 ml.' },
   {
-    q: '¿Quién la fabrica?',
-    a: 'Gustav Baehr GmbH, en Waiblingen (Alemania). BAEHR España es el distribuidor oficial de BAEHR en España.',
+    q: '¿Cuánta urea lleva?',
+    a: 'La crema en espuma Cremeschaum Orange-Lemongras lleva un 5 % de urea. Sus otros principios activos son el pantenol y los extractos de ginkgo, ginseng y limón.',
   },
   {
-    q: '¿Tiene algún test de tolerancia cutánea?',
-    a: 'Sí: el sello de 5 estrellas de dermatest, de septiembre de 2025, con 20 personas durante 4 semanas.',
+    q: '¿En qué se diferencia de la crema de pies Orange-Lemongras?',
+    a: 'Las dos llevan urea, pero difieren en la textura y en el resto de los activos. La crema de pies Orange-Lemongras lleva aceites de naranja y de lemongrass; la crema en espuma, un 5 % de urea, pantenol y extractos de ginkgo, ginseng y limón, en una espuma ligera de rápida absorción.',
+  },
+  {
+    q: '¿Qué indica el sello de cinco estrellas?',
+    a: 'Es el sello de tolerancia cutánea de Dermatest GmbH. El de la crema en espuma Cremeschaum Orange-Lemongras es de septiembre de 2025 y se basa en una prueba clínica de 4 semanas con 20 voluntarios.',
+  },
+  { q: '¿Es vegana?', a: 'Sí. La crema en espuma Cremeschaum Orange-Lemongras es vegana.' },
+  {
+    q: '¿Quién es el fabricante?',
+    a: 'Gustav Baehr GmbH, una empresa familiar con sede en Waiblingen (Alemania). En España la distribuye BAEHR España, distribuidor oficial de la marca.',
   },
 ];
 
@@ -28,13 +34,14 @@ const jsonld = [
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://baehr.com.es/' },
       { '@type': 'ListItem', position: 2, name: 'Tienda', item: 'https://baehr.com.es/#tienda' },
-      { '@type': 'ListItem', position: 3, name: 'Crema en espuma Orange-Lemongras' },
+      { '@type': 'ListItem', position: 3, name: 'Cremas en espuma', item: 'https://baehr.com.es/tienda/' },
+      { '@type': 'ListItem', position: 4, name: 'Orange-Lemongras' },
     ],
   },
   {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: 'Cremeschaum Orange-Lemongras, 125 ml',
+    name: 'Cremeschaum Orange-Lemongras',
     description,
     image: 'https://baehr.com.es/img/productos/espuma.webp',
     brand: { '@type': 'Brand', name: 'PEDIBAEHR' },
@@ -47,25 +54,26 @@ const jsonld = [
   },
 ];
 
-const steps = ['Baño', 'Exfoliación', 'Mascarilla', 'Crema', 'Espuma'];
+const steps = ['Baño de pies', 'Exfoliación', 'Mascarilla', 'Crema', 'Crema en espuma'];
 const pairs = [
-  { img: 'bano', name: 'SPA Wellness Fußbad', type: 'Baño de pies, 500 ml', step: 0, tint: 'aqua' },
-  { img: 'exfoliante', name: 'fresh feet Fußpeeling', type: 'Exfoliante, 125 ml', step: 1, tint: 'aqua' },
-  { img: 'mascarilla', name: 'Fuß-Vliesmaske Orange-Lemongras', type: 'Mascarilla, caja de 5 pares', step: 2, tint: 'sun' },
-  { img: 'crema', name: 'Fußcreme Orange-Lemongras', type: 'Crema, 125 ml', step: 3, tint: 'sun' },
+  { img: 'bano', name: 'SPA Wellness Fußbad', type: 'Baño de pies con hibisco y loto', size: '500 ml', step: 0, aria: 'Ver el baño de pies en el protocolo' },
+  { img: 'exfoliante', name: 'fresh feet Fußpeeling', type: 'Exfoliante de pies con sal marina', size: '125 y 450 ml', step: 1, aria: 'Ver el exfoliante en el protocolo' },
+  { img: 'mascarilla', name: 'Fuß-Vliesmaske Orange-Lemongras', type: 'Mascarilla de tejido para pies muy secos', size: 'Caja de 5 pares', step: 2, aria: 'Ver la mascarilla en el protocolo' },
+  { img: 'crema', name: 'Fußcreme Orange-Lemongras', type: 'Crema de pies con aceites de naranja y de lemongrass', size: '30, 125 y 500 ml', step: 3, aria: 'Ver la crema de pies en el protocolo' },
 ];
 ---
 
 <Base title={title} description={description} page="producto" jsonld={jsonld}>
-  <nav class="crumbs" aria-label="Ruta">
+  <nav class="crumbs" aria-label="Ruta de navegación">
     <a href="/">Inicio</a>
-    <a href="/#tienda">Tienda</a>
-    <span aria-current="page">Crema en espuma Orange-Lemongras</span>
+    <a href="/tienda/">Tienda</a>
+    <a href="/tienda/">Cremas en espuma</a>
+    <span aria-current="page">Orange-Lemongras</span>
   </nav>
 
   <section class="pdp">
-    <div class="pdp__stage" data-visor tabindex="0" role="img" aria-label="Bote de Cremeschaum Orange-Lemongras en 3D. Arrastra o usa las flechas para girarlo.">
-      <img class="pdp__still" src="/img/productos/espuma.webp" width="600" height="900" alt="" decoding="async" />
+    <div class="pdp__stage" data-visor tabindex="0" role="img" aria-label="Modelo 3D giratorio del bote de Cremeschaum Orange-Lemongras">
+      <img class="pdp__still" src="/img/productos/espuma.webp" width="600" height="900" alt="Bote blanco de la crema en espuma Cremeschaum Orange-Lemongras, de PEDIBAEHR, con la etiqueta de frente." decoding="async" />
       <canvas class="pdp__canvas" aria-hidden="true"></canvas>
       <div class="pdp__hint" aria-hidden="true"><span class="pdp__ribs"></span>Arrastra para girar</div>
       <button class="pdp__pause" type="button" data-visor-pause data-pause="Pausar el giro" data-play="Reanudar el giro" aria-pressed="false">Pausar el giro</button>
@@ -74,17 +82,17 @@ const pairs = [
     <div class="pdp__buy">
       <h1 class="pdp__h">
         <span class="pdp__big">Crema en&nbsp;espuma</span>
-        <span class="pdp__soft">Cremeschaum Orange-Lemongras, 125&nbsp;ml</span>
+        <span class="pdp__soft" lang="de">Cremeschaum Orange-Lemongras</span>
       </h1>
-      <p class="pdp__lead">
-        Espuma de textura ligera y rápida absorción para el cuidado de los pies. Con un 5&nbsp;% de urea, pantenol y
-        extractos de ginkgo, ginseng y limón.
-      </p>
-      <ul class="chips">
+      <ul class="chips" aria-label="Marca, línea y serie">
         <li>PEDIBAEHR</li>
         <li>Línea WELLNESS</li>
         <li>Serie Orange-Lemongras</li>
       </ul>
+      <p class="pdp__lead">
+        Espuma ligera y de rápida absorción para el cuidado de los pies. Lleva un 5&nbsp;% de urea, pantenol y extractos de
+        ginkgo, ginseng y limón. Vegana.
+      </p>
 
       <fieldset class="sizes">
         <legend>Tamaño</legend>
@@ -94,12 +102,15 @@ const pairs = [
 
       <div class="price" data-when="pro">
         <p class="price__label">Precio profesional</p>
-        <p class="price__text">Inicia sesión para ver tu precio.</p>
-        <a class="textlink" href="/#profesionales">Iniciar sesión</a>
+        <p class="price__text">Lo verás al acceder a tu cuenta.</p>
+        <p class="price__links">
+          <a class="textlink" href="/profesionales/#alta">Acceder</a>
+          <span>¿Aún no tienes cuenta? <a class="textlink" href="/profesionales/#alta">Solicitar el alta</a></span>
+        </p>
       </div>
       <div class="price" data-when="home">
-        <p class="price__label">Precio</p>
-        <p class="price__text">Se muestra al conectar la tienda.</p>
+        <p class="price__label">Precio para particulares</p>
+        <p class="price__text">Precio pendiente de publicar.</p>
       </div>
 
       <form class="addcart" novalidate>
@@ -109,52 +120,55 @@ const pairs = [
           <button type="button" data-qty="1" aria-label="Uno más">+</button>
         </div>
         <button class="pill pill--red addcart__btn" type="submit">Añadir a la cesta</button>
-        <p class="addcart__ok" role="status" hidden>Añadido a la cesta.</p>
+        <p class="addcart__ok" role="status" hidden>Añadido a la cesta. <a class="textlink" href="/tienda/" data-open-cart>Ver la cesta</a></p>
       </form>
 
       <ul class="service">
-        <li>Envío gratuito en pedidos a partir de 60&nbsp;€</li>
-        <li>Fabricado por Gustav Baehr GmbH, Waiblingen (Alemania)</li>
-        <li>Distribuidor oficial de BAEHR en España</li>
+        <li data-when="home">Envío gratuito en pedidos a partir de 60&nbsp;€.</li>
+        <li>Fabricante: Gustav Baehr GmbH, Waiblingen (Alemania).</li>
+        <li>Vendido por BAEHR España, distribuidor oficial de la marca.</li>
       </ul>
     </div>
   </section>
 
   <div class="buybar" aria-hidden="true">
-    <span class="buybar__name">Cremeschaum Orange-Lemongras, 125&nbsp;ml</span>
+    <span class="buybar__name" lang="de">Cremeschaum Orange-Lemongras</span>
     <button class="pill pill--red" type="button" tabindex="-1" data-buybar>Añadir a la cesta</button>
   </div>
 
   <section class="band" aria-label="Datos del producto">
     <dl class="band__row">
       <div class="band__item rv"><dt>5&nbsp;%</dt><dd>de urea</dd></div>
-      <div class="band__item rv"><dt>Vegana</dt><dd>según el fabricante</dd></div>
-      <div class="band__item rv"><dt>125 y 300</dt><dd>mililitros</dd></div>
-      <div class="band__item rv"><dt>5 estrellas</dt><dd>tolerancia cutánea, dermatest 09/2025</dd></div>
+      <div class="band__item rv"><dt>5 estrellas</dt><dd>en tolerancia cutánea, según Dermatest (09/2025)</dd></div>
+      <div class="band__item rv"><dt>Vegana</dt><dd>sin ingredientes de origen animal</dd></div>
+      <div class="band__item rv"><dt>2 tamaños</dt><dd>125 y 300&nbsp;ml</dd></div>
     </dl>
   </section>
 
   <section class="inside">
-    <h2 class="h2 rv">Lo que contiene</h2>
+    <h2 class="h2 rv">Sus&nbsp;activos</h2>
     <ul class="inside__list">
-      <li class="stretch"><span>Urea</span><small>5&nbsp;%</small></li>
-      <li class="stretch"><span>Pantenol</span></li>
-      <li class="stretch"><span>Ginkgo</span><small>extracto</small></li>
-      <li class="stretch"><span>Ginseng</span><small>extracto</small></li>
-      <li class="stretch"><span>Limón</span><small>extracto</small></li>
+      <li class="stretch"><span aria-hidden="true">Urea</span><small>Urea al 5&nbsp;%</small></li>
+      <li class="stretch"><span aria-hidden="true">Pantenol</span><small class="sr">Pantenol</small></li>
+      <li class="stretch"><span aria-hidden="true">Ginkgo</span><small>Extracto de ginkgo</small></li>
+      <li class="stretch"><span aria-hidden="true">Ginseng</span><small>Extracto de ginseng</small></li>
+      <li class="stretch"><span aria-hidden="true">Limón</span><small>Extracto de limón</small></li>
     </ul>
   </section>
 
   <section class="texture">
-    <h2 class="h2 rv">Textura</h2>
-    <p class="texture__quote rv">Una espuma ligera que se absorbe rápido y deja la piel suave como el terciopelo.</p>
+    <h2 class="h2 rv">Textura&nbsp;ligera</h2>
+    <div class="texture__body">
+      <p class="texture__quote rv">Una espuma de rápida absorción que deja un tacto aterciopelado.</p>
+      <p class="texture__note rv">Según BAEHR, las espumas para pies se absorben más rápido que las pomadas y apenas dejan residuos.</p>
+    </div>
   </section>
 
   <section class="proto">
     <div class="proto__text">
-      <h2 class="h2 rv">El último paso del&nbsp;protocolo</h2>
-      <p class="lead rv">Cierra el protocolo de la home, después del baño, la exfoliación, la mascarilla y la crema.</p>
-      <a class="pill pill--white rv" href="/#protocolo">Ver el protocolo en 3D</a>
+      <h2 class="h2 rv">El último&nbsp;paso</h2>
+      <p class="lead rv">Cierra el protocolo de cinco pasos que te proponemos en la página de inicio.</p>
+      <a class="pill pill--white rv" href="/#protocolo">Ver el protocolo</a>
     </div>
     <ol class="proto__steps rv" aria-label="Pasos del protocolo">
       {steps.map((s, i) => <li aria-current={i === 4 ? 'step' : undefined}>{s}</li>)}
@@ -163,18 +177,19 @@ const pairs = [
 
   <section class="shop shop--pairs">
     <div class="shop__head">
-      <h2 class="h2 rv">Combínala con</h2>
+      <h2 class="h2 rv">Los otros cuatro&nbsp;pasos</h2>
     </div>
     <ul class="shop__row shop__row--four">
       {
         pairs.map((p) => (
           <li class="card rv">
-            <a class="card__link" href={`/#paso-${p.step + 1}`}>
-              <span class={`card__img card__img--${p.tint}`}>
+            <a class="card__link" href={`/#paso-${p.step + 1}`} aria-label={p.aria}>
+              <span class="card__img">
                 <img src={`/img/productos/${p.img}.webp`} width="600" height="900" alt="" loading="lazy" decoding="async" />
               </span>
-              <span class="card__name">{p.name}</span>
-              <span class="card__type" set:html={p.type} />
+              <span class="card__name" lang="de">{p.name}</span>
+              <span class="card__type">{p.type}</span>
+              <span class="card__type">{p.size}</span>
               <span class="card__go">Ver en el protocolo</span>
             </a>
           </li>
@@ -184,7 +199,7 @@ const pairs = [
   </section>
 
   <section class="faq">
-    <h2 class="h2 rv">Preguntas frecuentes</h2>
+    <h2 class="h2 rv">Preguntas y&nbsp;respuestas</h2>
     <div class="faq__list">
       {
         faq.map((f) => (
