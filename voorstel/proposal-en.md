@@ -96,7 +96,7 @@ From month four, we'll publish the service pages.
 ## Terms and what we need from you
 
 - All prices exclude VAT.
-- There's no fixed term. You can stop at any time with one month's notice. The only condition is the one above: the shop and portal are free once we've worked together for 12 months, and if you stop earlier, you pay €125 for each month left.
+- You can stop at any time with one month's notice. If you stop before 12 months, you only pay off the rest of the shop and portal: €125 for each month left.
 - The monthly report covers sign-ups, first orders, repeat orders and the cost per new customer.
 - We don't guarantee Google rankings or a specific number of visits.
 

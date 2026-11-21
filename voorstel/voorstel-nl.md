@@ -100,7 +100,7 @@ Vanaf de vierde maand publiceren we de pagina's per dienst. [Aanname: planning u
 ## Voorwaarden en wat we van je nodig hebben
 
 - Prijzen exclusief btw.
-- Geen vaste looptijd. Je kunt opzeggen wanneer je wilt, met een maand opzegtermijn. Stop je vóór 12 maanden, dan geldt alleen wat hierboven staat: 125 euro voor elke maand die nog over is. [Aanname: geen vaste looptijd en een maand opzegtermijn; besluit van Claude op basis van de afspraak "125 euro per resterende maand bij eerder opzeggen".]
+- Je kunt opzeggen wanneer je wilt, met een maand opzegtermijn. Stop je vóór 12 maanden, dan betaal je alleen het resterende deel van winkel en portaal: 125 euro voor elke maand die nog over is. [Aanname: geen vaste looptijd en een maand opzegtermijn; besluit van Claude op basis van de afspraak "125 euro per resterende maand bij eerder opzeggen".]
 - Het maandrapport bevat deze cijfers: aanmeldingen, eerste bestellingen, herhaalbestellingen en kosten per nieuwe klant.
 - We garanderen geen posities in Google en geen bepaald aantal bezoekers.
 

@@ -101,7 +101,7 @@ Skin Complete (Nederland, skincomplete.eu): merk van ledmaskers en huidverzorgin
 ## Voorwaarden
 
 - Prijzen exclusief IVA.
-- Geen vaste looptijd (geen permanencia). Altijd opzegbaar met een maand opzegtermijn. De enige voorwaarde is de terugbetaling hierboven: winkel en portaal zijn gratis na 12 maanden samenwerking; wie eerder stopt, betaalt 125 euro per resterende maand.
+- Geen vaste looptijd. Gebruik NIET "sin permanencia": in Spanje betekent permanencia juist een minimale looptijd met een vergoeding bij eerder stoppen. Altijd opzegbaar met een maand opzegtermijn. De enige voorwaarde is de terugbetaling hierboven: winkel en portaal zijn gratis na 12 maanden samenwerking; wie eerder stopt, betaalt 125 euro per resterende maand.
 - Maandrapport in cijfers: aanmeldingen van professionals, eerste bestellingen, herhaalbestellingen, kosten per nieuwe klant.
 - Wat we van haar nodig hebben: drie cijfers (hoeveel professionals zich per maand aanmelden, hoeveel daarvan bestellen, gemiddeld orderbedrag); leestoegang tot Google Search Console en haar statistieken; bij een pakket met campagnes beheertoegang tot haar advertentieaccounts. Accounts en inloggegevens blijven van haar.
 - Geen garantie op posities of bezoekers.

@@ -96,7 +96,7 @@ A partir del cuarto mes publicaremos las páginas por servicio.
 ## Condiciones y lo que necesitamos de ti
 
 - Precios sin IVA.
-- Sin permanencia. Puedes darte de baja cuando quieras, con un mes de preaviso. Si lo haces antes de los 12 meses, solo se aplica lo que explicamos arriba: 125 € por cada mes que falte.
+- Puedes darte de baja cuando quieras, con un mes de preaviso. Si lo haces antes de los 12 meses, solo pagas la parte pendiente de la tienda y el portal: 125 € por cada mes que falte.
 - El informe mensual recoge estas cifras: altas, primeros pedidos, recompras y coste por cliente nuevo.
 - No garantizamos posiciones en Google ni un número concreto de visitas.
 
