@@ -135,7 +135,7 @@ Gebruikte productpagina's: DR https://www.druni.es/crema-reparadora-pies-body-na
 
 ### Oordeel
 
-"Carrito" en "cesta" zijn allebei gewoon Spaans in Spanje; de vier grootste beautyketens in de steekproef zetten "Añadir al carrito" op de knop. Het echte probleem is mengen: Arenal schrijft "tu cesta" en daarna "Llénalo" (mannelijk, van carrito). Functieknoppen staan bijna overal in de infinitief ("Añadir", "Finalizar compra", "Crear cuenta"), ook op sites die verder tú schrijven.
+"Carrito" en "cesta" zijn allebei gewoon Spaans in Spanje; Druni, Primor, Arenal en Douglas zetten "Añadir al carrito" op de knop. Het echte probleem is mengen: Arenal schrijft "tu cesta" en daarna "Llénalo" (mannelijk, van carrito). Functieknoppen staan bijna overal in de infinitief ("Añadir", "Finalizar compra", "Crear cuenta"), ook op sites die verder tú schrijven.
 
 ## 2. Verzending, service en bedragen
 
@@ -198,7 +198,7 @@ Telling (alleen Z en C): "Envío gratis" in 12 winkels (DR, PR, DG, PC, CL, AM, 
 | Thema | Vormen en vindplaats |
 |---|---|
 | Levertijd | "Entrega en 24-48 horas" (GC Z); "Entregas en 24/48 h a toda la península y Baleares" (CL Z); "Entrega express 24/72 horas" (PS Z); "Entregas 24 - 48h\*" (FR Z); "2-3 días laborables" (DG Z); "Fecha de entrega estimada 3 días" (PR Z); "Entrega prevista: Península\*: Jueves 26/11/2026" (PC Z) |
-| Gebied | "Península y Baleares" (PR Z, CL C, ON Z); "Excepto Baleares" (AM Z); "Canarias, Ceuta, Melilla" (FR Z) |
+| Gebied | "Península y Baleares" (PR Z, CL Z, ON Z); "Excepto Baleares" (AM Z); "Canarias, Ceuta, Melilla" (FR Z) |
 | Retour | "Devoluciones gratuitas" (PS Z); "30 días de devolución" (DG Z); "Devoluciones en 30 días" (FR Z); "Garantía de devolución" (PR Z); "Hasta 30 días para realizar la devolución." (AM Z) |
 | Betalen | "Pago seguro" (PS Z); "Pago seguro & 1-Click Shopping" (PR Z); "Pago 100% seguro" (AM Z); "Compra ahora y paga después." (PR Z) |
 | Proefjes | "2 muestras de regalo" (DG Z); "Muestras de regalo. En todos los productos." (AM Z) |
@@ -324,7 +324,7 @@ De vaste formule is "Envío gratis a partir de X €". "Envío gratuito" dient v
 |---|---|
 | "Mascarillas para pies" | DG Z, rubriek (https://www.douglas.es/es/c/cuerpo/cuidado-de-pies/mascarillas-para-pies/130705); ON Z |
 | "Mascarilla para pies" | DR Z, H1; titel "Mascarilla para pies - Mima tus pies \| druni" (https://www.druni.es/parafarmacia/corporal/pies/mascarillas) |
-| Sokvorm in productnamen | "Calcetines Mascarilla Exfoliante" en "Calcetines Mascarilla Nutritiva" (DR, Iroha Nature), "Calcetín Ultra Hidratante" (CL, Bonté, uit de paginadata, C), "Calcetines Cosméticos para Pies con Manteca de Karité" (DG, Perderma), "Hydrating Socks" (DG), "Foot Peel Socks" (DR); tussenkop "Pies felices y sin complejos con los calcetines exfoliantes" (DG). Alle Z. |
+| Sokvorm in productnamen | "Calcetines Mascarilla Exfoliante" en "Calcetines Mascarilla Nutritiva" (DR, Iroha Nature), "Calcetín Ultra Hidratante" (CL, Bonté, uit de paginadata, C), "Calcetines Cosméticos para Pies con Manteca de Karité" (DG, Perderma), "Hydrating Socks" (DG), "Foot Peel Socks" (DR); tussenkop "Pies felices y sin complejos con los calcetines exfoliantes" (DG). Overige Z. |
 | Sokvorm bij Sephora | adres van een productpagina: "mascarillas-para-pies-de-coco-wild-wishes---calcetines-tratamiento-impregnados" (SE S, https://www.sephora.es/p/mascarillas-para-pies-de-coco-wild-wishes---calcetines-tratamiento-impregnados-P10011222.html) |
 | Soortregels | "Mascarilla nutritiva para pies" (DR, Scholl Pedimask; AR, Sence), "Mascarilla exfoliante para pies" (DR), "Mascarilla reparadora de pies" (DR), "Mascarilla hidratante pies" (DR, Beter). Alle Z. |
 | Vlies | "Charming Winter Foot Sheet Mask" (DG Z, Engels). "Mascarilla de tejido" voor voeten nergens gezien. |
@@ -340,7 +340,7 @@ De vaste formule is "Envío gratis a partir de X €". "Envío gratuito" dient v
 
 ### Oordeel
 
-De hoofdrubriek heet bijna overal "Cuidado de pies"; de H1 van de crèmerubriek is overal "Cremas para pies". Voor peeling, masker en bad zijn "Exfoliantes para pies", "Mascarillas para pies" en "Baño de pies" de gangbare rubrieken. "Peeling" roept in Spanje vooral de sok met zuren op, niet een scrub met zeezout. Voor schuim bestaat geen winkelrubriek; "crema en espuma" is de vakterm in het podologiekanaal, "espuma para pies" het woord van de consument (zie de Google-suggesties in deel 6). Ureum is in Spanje een kenmerk in de productnaam, geen rubriek.
+De hoofdrubriek heet bijna overal "Cuidado de pies"; de H1 van de crèmerubriek is bij Druni, Arenal, Primor en Douglas "Cremas para pies". Voor peeling, masker en bad zijn "Exfoliantes para pies", "Mascarillas para pies" en "Baño de pies" de gangbare rubrieken. "Peeling" roept in Spanje vooral de sok met zuren op, niet een scrub met zeezout. Voor schuim bestaat geen winkelrubriek; "crema en espuma" is de vakterm in het podologiekanaal, "espuma para pies" het woord van de consument (zie de Google-suggesties in deel 6). Ureum is in Spanje een kenmerk in de productnaam, geen rubriek.
 
 ## 5. Productpagina's
 
@@ -357,7 +357,7 @@ De hoofdrubriek heet bijna overal "Cuidado de pies"; de H1 van de crèmerubriek 
 | ON (BAEHR) | "Descripción:", "Beneficios principales:", "Modo de uso:", "Ingredientes activos:", plus kenmerken "Marca", "Colección", "Nombre original", "Typo de producto" (spelfout), "Volumen disponible" | Z |
 | EU (fabrikant) | "Modo de uso", "Ingredientes", "Beneficios" | C, https://www.eucerin.es/productos/urea-repair/pies-crema-10-porciento-urea |
 
-Telling: "Ingredientes" bij PR, AR, DG, CL, PC en EU, en als "Ingredientes activos" bij ON; niet op de bekeken pagina's van DR en PS. Bij PR en AR staat het kopje alleen als de fabrikant een INCI-lijst levert. "Descripción" bij 5 (DR, AR, CL, PC, ON), "Detalles" of "Detalles del producto" bij 3 (PR, DG, PS). Voor de gebruiksaanwijzing is er geen meerderheid: "Modo de uso" (DG, ON, EU), "Modo de empleo" (PC), "Cómo utilizar" (PR), "Aplicación" (CL), "Beauty Tips" (DR, AR). "Beneficios" bij 5 (CL, PC, PS, ON, EU). "Formato" is overal een kenmerk ("Formato: Tubo" bij PR), geen kopje.
+Telling: "Ingredientes" bij PR, AR, DG, CL, PC en EU, en als "Ingredientes activos" bij ON; niet op de bekeken pagina's van DR en PS. Bij PR en AR staat het kopje alleen als de fabrikant een INCI-lijst levert. "Descripción" bij 5 (DR, AR, CL, PC, ON), "Detalles" of "Detalles del producto" bij 3 (PR, DG, PS). Voor de gebruiksaanwijzing is er geen meerderheid: "Modo de uso" (DG, ON, EU), "Modo de empleo" (PC), "Cómo utilizar" (PR), "Aplicación" (CL), "Beauty Tips" (DR, AR). "Beneficios" bij 5 (CL, PC, PS, ON, EU). "Formato" is bij PR een kenmerk ("Formato: Tubo"), geen kopje.
 
 ### Maten en eenheden
 
@@ -381,11 +381,11 @@ Norm: een symbool staat achter het getal met een spatie en krijgt geen punt (zie
 | Originele naam, streepje, Spaanse omschrijving | adressen van productpagina's: "masques-pieds---tratamiento-hidratante-para-pies", "foot-relief-moisturizing-creme---crema-hidratante" | SE S |
 | Spaanse naam, lijnnaam origineel | "Healthy Feet Crema para Pies muy secos y agrietados", "Peppermint Mascarilla Exfoliante para Pies", "Mascarilla para Pies con Aceite de Coco" | PR Z |
 | Alles vertaald, ook de lijnnaam | BAEHR bij Oops Nails: Crema regeneradora "Pies frescos" (aanname: dit is fresh feet Regenerationscreme), Mascarilla para los pies "Pies frescos", Exfoliante para los pies "Pasos Refrescantes"; de Duitse naam staat als kenmerk "Nombre original: Cremeschaum Schrunden Mit Echinacea" en in de H2 "(CREMESCHAUM SCHRUNDEN MIT ECHINACEA)" | ON Z, https://oopsnailsbcn.es/collections/baehr-pedibaehr |
-| Duits in de naam | Alleen merk- en lijnnamen ("Gehwol Fusskraft" bij FR). Duitse soortwoorden zoals "Fußcreme" of "Cremeschaum" staan in geen enkele winkel als productnaam, behalve als "Nombre original" bij ON. | Z |
+| Duits in de naam | Alleen merk- en lijnnamen ("Gehwol Fusskraft" bij FR). Duitse soortwoorden zoals "Fußcreme" of "Cremeschaum" staan in geen enkele winkel uit de steekproef als productnaam, behalve als "Nombre original" bij ON. | Z |
 
 ### Oordeel
 
-Grote winkels laten merk- en lijnnamen in de oorspronkelijke taal staan (Engels of Frans), maar zetten er altijd een Spaanse soortregel bij; die soortregel is ook wat in titel en meta description terugkomt. Duitse soortwoorden zijn in Spaanse winkels geen gewoonte. Oops Nails, dat BAEHR al in Spanje verkoopt, vertaalt alles, ook de lijnnaam fresh feet; dat wijkt af van de grote winkels.
+Grote winkels laten merk- en lijnnamen in de oorspronkelijke taal staan (Engels of Frans), maar zetten er altijd een Spaanse soortregel bij; die soortregel is ook wat in titel en meta description terugkomt. Duitse soortwoorden zijn in Spaanse winkels geen gewoonte. Oops Nails, dat BAEHR al in Spanje verkoopt, vertaalt alles, vermoedelijk ook de lijnnaam fresh feet ("Pies frescos"); dat wijkt af van de grote winkels, die lijnnamen als "Healthy Feet" en "Foot Peel" onvertaald laten.
 
 ## 6. SEO
 
@@ -572,18 +572,18 @@ De kern is overal dezelfde: aviso legal, privacidad, cookies, voorwaarden, verze
 ## Aanbeveling voor BAEHR España
 
 1. Knoppen en navigatie: "Añadir al carrito", mand "Carrito", lege mand "Tu carrito está vacío.", "Finalizar compra", "Seguir comprando", "Mi cuenta", "Iniciar sesión", "Crear cuenta", "¿Has olvidado tu contraseña?", zoekveld "Buscar productos", "Disponible", "Agotado" met knop "Avísame", "Cantidad", "Eliminar".
-   Waarom: dit zijn de vormen van Druni, Primor, Arenal en Douglas; "cesta" is ook goed Spaans, maar kies één woord en meng nooit (Arenal: "tu cesta... Llénalo").
+   Waarom: per element de meest gebruikte vorm in de steekproef, met knop en mand zoals bij Druni, Primor, Arenal en Douglas; "cesta" is ook goed Spaans, maar kies één woord en meng nooit (Arenal: "tu cesta... Llénalo").
 2. Verzending en bedragen: "Envío gratis a partir de 60 €" (eigen bedrag invullen), als kopje "Envío gratuito", voortgang "Te faltan 12,50 € para el envío gratis", en altijd het gebied "Península y Baleares"; bedragen als "12,95 €" met komma en harde spatie voor het euroteken, drempels zonder ",00".
-   Waarom: "Envío gratis a partir de" is de vaakst geziene formule (tien winkels), en het symbool achter het getal met spatie is de RAE-norm die Druni, Primor en Douglas bij prijzen volgen.
+   Waarom: "Envío gratis" is de vaakst geziene woordkeus (twaalf winkels) en "a partir de" de vaakst geziene drempelformule (tien winkels); het symbool achter het getal met spatie is de RAE-norm die Druni, Primor en Douglas bij prijzen volgen.
 3. Professionals: "Cuenta profesional", knop "Crea tu cuenta profesional", keuze "Soy profesional" en "Soy particular", velden "Razón social", "NIF/CIF", "Nombre", "Apellidos", "Teléfono", "Dirección", "Profesión" en alleen voor podologen "N.º de colegiado"; prijs voor professionals "Precio sin IVA", voor particulieren "IVA incluido". Wil je prijzen verbergen, dan "Inicia sesión para ver los precios profesionales" (eigen formulering, nergens zo gezien).
    Waarom: Válquer en Salerm noemen het "cuenta profesional", Clarel en Fresco vragen deze velden en Fresco toont "Precio sin IVA"; "zona profesional" en "área profesional" zag ik nergens.
 4. Categorieën: hoofdrubriek "Cuidado de pies", subrubrieken "Baño de pies", "Exfoliantes para pies", "Mascarillas para pies", "Cremas para pies" en "Cremas en espuma" (H1 "Cremas en espuma para pies"); ureum in de productnaam ("Crema de pies con urea") en eventueel als filter "Con urea", niet als rubriek; het woord "calcetines" pas gebruiken als de sokvorm bevestigd is.
    Waarom: dit zijn de rubrieknamen van Douglas, Druni, Arenal, Primor en Clarel; voor schuim bestaat geen winkelrubriek, "crema en espuma" is de vakterm (Podoservice, Callusan) en de consument zoekt "espuma para pies".
 5. Productpagina: kopjes "Descripción", "Modo de empleo", "Ingredientes" en "Características" (met "Formato", "Textura", "Tipo de piel"); maten als "125 ml" (spatie, kleine letters, geen punt) en "Caja de 5 pares"; naam is Spaanse soort plus lijnnaam ("Crema de pies Orange-Lemongras", "Exfoliante para pies fresh feet"), met de Duitse naam alleen als "Nombre original".
-   Waarom: Perfume's Club, Primor, Douglas en Clarel gebruiken deze kopjes, en grote winkels zetten altijd een Spaanse soortregel naast de originele naam; Duitse soortwoorden als "Fußcreme" komen in Spaanse winkels niet voor.
+   Waarom: "Descripción", "Ingredientes" en "Características" zijn de gangbare kopjes bij Perfume's Club, Primor, Douglas en Clarel (voor de gebruiksaanwijzing is er geen meerderheid: "Modo de empleo" bij Perfume's Club, "Modo de uso" bij Douglas), en grote winkels zetten altijd een Spaanse soortregel naast de originele naam; Duitse soortwoorden als "Fußcreme" zag ik in geen enkele Spaanse winkel.
 6. SEO: categorietitel "Cremas para pies | BAEHR España"; producttitel soort, lijn en kenmerk, gevolgd door "| BAEHR España" (bijvoorbeeld "Crema en espuma para pies con urea | BAEHR España"); H1 kort en gelijk aan de zoekterm; meta description begint met de zoekterm, noemt een toegestane eigenschap en "Envío gratis a partir de X €", zonder emoji; zoektermen "crema para pies secos", "crema de pies con urea", "talones agrietados", "durezas", "espuma para pies", "exfoliante para pies", "mascarilla hidratante para pies", "baño de pies".
    Waarom: zoekterm voorop en winkelnaam achter "|" is het patroon van Arenal, Primor, Clarel en Douglas, en al deze termen staan in de Google-suggesties; emoji horen bij de kortingsstijl van Primor, Druni en Douglas en passen niet bij "elite" (oordeel).
 7. Aanspreekvorm: tú overal, ook in formulieren, meldingen en korte juridische regels; knoppen voor een handeling in de infinitief ("Añadir al carrito", "Iniciar sesión"), uitnodigingen in de gebiedende wijs ("Descubre", "Crea tu cuenta").
-   Waarom: alle grote winkels schrijven tú; usted verschijnt alleen in niet-aangepaste sjabloonteksten (Podoservice, Douglas, Oops Nails) en maakt een site slordig.
+   Waarom: alle grote winkels schrijven tú; usted verschijnt vooral in niet-aangepaste sjabloonteksten (Podoservice, Douglas, Oops Nails) en maakt een site slordig.
 8. Voet: "Contacto", "Preguntas frecuentes", "Envíos y devoluciones", "Condiciones generales de venta", "Aviso legal", "Política de privacidad", "Política de cookies", "Configuración de cookies".
    Waarom: dit zijn de gangbaarste vormen, en "Condiciones generales de venta" past bij verkoop aan professionals én particulieren (Sephora, Oops Nails); laat juridisch nagaan of ook "Desistimiento del contrato" (Douglas) en "Declaración de accesibilidad" (Primor, Arenal, Perfume's Club) nodig zijn.
