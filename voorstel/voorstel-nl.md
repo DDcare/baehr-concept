@@ -1,155 +1,136 @@
-# Voorstel voor BAEHR España (Nederlandse moedertekst)
+# Voorstel voor BAEHR España (Nederlandse versie voor D)
 
-Werkversie voor D. Dit is de inhoud die in het Spaans en Engels staat, zin voor zin te vergelijken. Wat tussen rechte haken staat met "Aanname" is nog niet bevestigd en gaat niet zo naar de klant voordat D het heeft nagekeken. De markeringen staan alleen in deze Nederlandse versie; in de Spaanse en Engelse tekst staan dezelfde zinnen zonder markering, en de lijst onderaan dit bestand zegt welke zinnen het zijn.
-
----
-
-## Titel
-
-Meer salons en professionals die bij jou bestellen
-
-Voorstel voor Proxy Beauty Spain, S.L. (BAEHR España). November 2026.
-
-## Inleiding
-
-Je vroeg ons om drie dingen: meer naamsbekendheid in Spanje, meer nieuwe professionele klanten, en meer bestellingen van wie zich al aanmeldt. Dit voorstel zegt per doel wat we doen, wat we bouwen, wat het kost en wat je realistisch mag verwachten.
-
-## In het kort
-
-- Een nieuwe webwinkel en een portaal voor professionals, gratis bij een samenwerking van 12 maanden.
-- Vier pakketten van 480 tot 1.480 euro per maand. Elk pakket bevat het vorige.
-- Ons advies: Plus campagnes, 1.140 euro per maand, met een advertentiebudget vanaf 1.000 euro per maand dat rechtstreeks naar Google en Meta gaat. [Aanname: budget 1.000 euro, waarvan 600 Google en 400 Meta.]
-- Geen garantie op posities of bezoekers. Wel elke maand een rapport in cijfers.
-
-## Waar je nu staat
-
-Wat we zagen, zonder in te loggen en zonder je eigen cijfers. [Aanname: de bevindingen hieronder komen uit het oude voorstel (controle van 18 november 2026) en uit de schermafbeeldingen van D. Claude heeft ze niet zelf kunnen controleren, omdat de site automatische bezoekers blokkeert.]
-
-- Wie in Google zoekt naar de officiële BAEHR-winkel in Spanje, komt bij Duitse winkels uit. Het AI-overzicht bij die resultaten zei dat er geen Spaanse distributeur te vinden was.
-- De server van je site laat geen automatische bezoekers door. Ook de robots van ChatGPT en vergelijkbare diensten krijgen een controlepagina te zien in plaats van je site.
-- In de catalogus staan vertaalfouten: "FRES FEET" (de serie heet "fresh feet"), "Pies seca", "Serie alovera", en een categorieadres "uncategorized-es". Een professional zoekt in eigen woorden en vindt het product dan niet.
-- Drie verschillende drempels voor gratis verzending: 60 euro op de site, 100 en 150 euro op oude pagina's die nog in Google staan.
-- Een pagina laadt 43 scripts en 44 stylesheets. Op een telefoon kost dat seconden bij elke stap van een bestelling.
-- Het aanmeldformulier voor professionals heeft 14 velden. Dat is volgens ons de grootste rem op nieuwe professionele klanten.
-
-Wat al goed werkt: een duidelijke niche, een eigen registratie voor professionals, seminars, en kanalen op Instagram, YouTube, WhatsApp en Telegram.
-
-## Het plan per doel
-
-### Naamsbekendheid in Spanje
-
-- Eén vaste omschrijving overal, op je site, in je Google-bedrijfsprofiel en op social media: Proxy Beauty Spain, S.L., Barcelona, officiële distributeur van BAEHR in Spanje.
-- De vermelding op de partnerpagina van de fabrikant laten kloppen met diezelfde gegevens. (Feit: de exportpartnerpagina van Gustav Baehr GmbH noemt Proxy Beauty Spain SL met baehr.com.es.)
-- Zoekmachines en AI-robots toegang geven tot je site, en gegevens over je bedrijf en producten zo vastleggen dat Google en AI-diensten ze kunnen lezen.
-- Zoekopdrachten op BAEHR en op "distribuidor BAEHR España" gaan nu naar Duitse winkels. Daar ligt de snelste winst. (Geen termijn genoemd in de Spaanse en Engelse tekst, bewust.)
-
-### Nieuwe professionele klanten
-
-- Pagina's per behandeling en per huidtype, in de woorden waarmee professionals zoeken: kloven, eelt, zweetvoeten, zeer droge huid. Steeds als verzorging beschreven, niet als behandeling van een aandoening.
-- Het seminar als ingang: een pagina per stad met aanmelding, en na het seminar een e-mail met toegang tot het portaal en een startaanbod.
-- Een proefset per behandeling als eerste bestelling. (Feit: PEDIBAEHR heeft een proefmaat van 35 ml.)
-- Advertenties per beroep: Google op zoekopdrachten van professionals, Instagram en Facebook voor manicure, pedicure en schoonheidsspecialisten.
-- Realistisch: de professionele niche (pedicure, podologie) is in drie tot zes maanden haalbaar. Brede consumentenzoektermen zoals "crema de pies" niet; die beloven we niet.
-- [Aanname: een groot deel van je huidige professionele klanten spreekt Russisch. Dat leiden we af uit het Telegram-kanaal en het seminar in het Russisch met Spaanse vertaling.] Klopt dat, dan houden we die groep vast via de kanalen die al werken, en bouwen we er een Spaanstalige instroom naast. Dat bespreken we graag in het gesprek.
-
-### Van contact naar bestelling
-
-- Twee ingangen op de home: voor professionals en voor particulieren.
-- Aanmelden in twee minuten in plaats van 14 velden. De conceptsite laat zien hoe dat werkt.
-- Professionele prijzen direct na goedkeuring.
-- Snel bestellen vanaf een productlijst, een eerdere bestelling met één knop herhalen, en een herinnering als een product bijna op is.
-- Een rekenhulp voor de salon: kostprijs per behandeling en de prijs voor de klant.
-
-## Wat we bouwen
-
-De fabrikant legt je geen strenge eisen op voor ontwerp en opbouw. Daarom kunnen we de winkel bouwen rond je belangrijkste klant: de salon en de professional.
-
-### Nieuwe webwinkel
-
-- Vervangt de huidige site. Producten, bestellingen en klanten gaan mee.
-- Een eigen ontwerp, geen sjabloon.
-- Een catalogus in correct Spaans, met de vaktermen die professionals gebruiken.
-- Snel op de telefoon.
-- Eén drempel voor gratis verzending en duidelijke levertijden.
-- Seminarpagina's per stad met aanmelding.
-
-### Portaal voor professionals
-
-- Aanvraag van een salon in twee minuten.
-- Professionele prijzen direct na goedkeuring.
-- Snel bestellen vanaf een lijst, eerdere bestelling herhalen.
-- Facturen en bestelgeschiedenis in een eigen account.
-
-## Pakketten
-
-Elk pakket bevat het vorige. Prijzen per maand. [Aanname: exclusief btw.]
-
-### Site en Google, 480 euro per maand
-
-Nieuwe site met webwinkel, vindbaarheid in Google en in AI-antwoorden, teksten, hosting, onderhoud en een maandrapport.
-
-### Plus portaal, 680 euro per maand
-
-Alles uit Site en Google, plus het portaal waar salons en professionals zich aanmelden en direct tegen professionele prijzen bestellen. [Aanname: inclusief beheer van het portaal.]
-
-### Plus campagnes, 1.140 euro per maand. Ons advies
-
-Alles uit Plus portaal, plus opzet en beheer van Google-advertenties. [Aanname: het eigen team beheert de campagnes.]
-
-### Plus social, 1.480 euro per maand
-
-Alles uit Plus campagnes, plus social media en advertenties op Instagram en Facebook.
-
-### Gratis bij 12 maanden
-
-De webwinkel en het portaal hebben samen een waarde van 1.500 euro. Bij een samenwerking van 12 maanden betaal je daar niets voor. Stop je eerder, dan betaal je 125 euro per resterende maand. Voorbeeld: stop je na 4 maanden, dan betaal je 1.000 euro. Bij Site en Google bouwen we alleen de webwinkel; het portaal zit vanaf Plus portaal in het pakket. [Aanname: of de waarde van 1.500 euro en de 125 euro per maand dan ook lager zijn, moet D bepalen.]
-
-### Advertentiebudget, apart
-
-Het advertentiebudget staat los van het maandbedrag. Je betaalt het rechtstreeks aan Google en Meta, en de advertentieaccounts blijven van jou. Ons voorstel om mee te beginnen: vanaf 1.000 euro per maand, 600 euro voor Google en 400 euro voor Meta. [Aanname: deze bedragen.] We stellen het bij op basis van de cijfers uit je eigen advertentieaccount.
-
-[Aanname uit het oude voorstel: de campagnes beginnen pas als het portaal live is. Eerder zouden advertenties mensen naar een aanmelding sturen die nu weinig oplevert. Tot dan betaal je 480 euro per maand.]
-
-## Bewijs
-
-Skin Complete (Nederland): een merk van ledmaskers en huidverzorging dat via klinieken en salons verkoopt. Wij bouwden de site en het B2B-portaal: een salon vraagt een account aan en krijgt een eigen B2B-winkel met partnerprijzen, protocollen en training. Resultaat: 80 nieuwe zakelijke afnemers, klinieken en salons. [Aanname: periode onbekend, D vult in.] Het merk werkt nu met klinieken en salons in Nederland, België en Curaçao. skincomplete.eu
-
-## Planning
-
-[Aanname: planning uit het oude voorstel.]
-
-- Eerste maand: meten, toegang voor zoek- en AI-robots, het ontwerp van de nieuwe winkel.
-- Tweede en derde maand: livegang van winkel en portaal, catalogus, seminarpagina's.
-- Vanaf de vierde maand: advertenties, social media, pagina's per behandeling, en elke maand een rapport.
-
-## Voorwaarden
-
-- Prijzen exclusief btw. [Aanname.]
-- Looptijd: 12 maanden voor de gratis webwinkel en het portaal. Daarna maandelijks opzegbaar met een opzegtermijn van één maand. [Aanname: opzegtermijn.]
-- Rapport: één keer per maand in cijfers: aanmeldingen van professionals, eerste bestellingen, herhaalbestellingen en de kosten per nieuwe klant.
-- Wat we van je nodig hebben: drie cijfers (hoeveel professionals zich per maand aanmelden, hoeveel daarvan bestellen, en het gemiddelde orderbedrag) leestoegang tot Google Search Console en je statistieken, en bij een pakket met campagnes beheertoegang tot je advertentieaccounts. De accounts en inloggegevens blijven van jou.
-
-## Volgende stap
-
-Een gesprek van 30 minuten met jou en je partners. We lopen het plan door, beantwoorden je vragen en laten de conceptsite zien. Laat ons weten wanneer het je uitkomt.
-
-Denis, [naam bureau]. [Aanname: afzender; naam bureau nog invullen.]
-
-Conceptsite: [link]
+Deze versie volgt het definitieve Spaans (`propuesta-es.md`) alinea voor alinea, zodat je de inhoud kunt controleren. Een zin-voor-zin terugvertaling van het Spaans staat in `controle-es.md`. Tussen rechte haken met "Aanname" staat wat nog niet bevestigd is; die markeringen staan niet in het Spaans en Engels. De lijst onderaan zegt wat je vóór verzending moet bevestigen.
 
 ---
 
-## Aannames in deze tekst, voor D
+Hoi Valeria,
 
-- Advertentiebudget vanaf 1.000 euro: 600 Google, 400 Meta.
-- Inhoud per pakket (gereconstrueerd), en of het eigen team de campagnes beheert.
-- Prijzen exclusief btw, opzegtermijn één maand na de eerste 12 maanden.
-- Wat gratis is bij het pakket Site en Google (alleen de winkel, of ook het portaal).
-- Campagnes pas na livegang van het portaal, en tot dan 480 euro per maand.
-- Periode van de 80 nieuwe afnemers bij Skin Complete.
-- Naam van het bureau en de link naar de conceptsite.
-- De bevindingen over de huidige site (Duitse winkels in Google, AI-overzicht, robots geblokkeerd, vertaalfouten, drie verzenddrempels, 43 scripts, 14 velden): overgenomen uit het oude voorstel en de overdracht, niet door Claude gecontroleerd.
-- Russischtalige professionals als huidige basis: afgeleid uit schermafbeeldingen, in de tekst als vraag geformuleerd.
-- Planning per maand uit het oude voorstel.
+Zoals afgesproken per mail, hier is het voorstel. Je wilde weten hoe we je vindbaarheid zouden verbeteren, in Google en in de antwoorden van ChatGPT en andere AI-assistenten, en hoe we drie doelen zouden aanpakken: dat BAEHR España bekender wordt, dat er nieuwe professionals bijkomen en dat er meer bestellingen binnenkomen. Je vroeg ook om pakketten met prijzen en een gesprek om het te bespreken. We hebben het geschreven met jou en je partners in gedachten.
 
-Weggelaten ten opzichte van het oude Russische voorstel: "exclusieve distributeur" (niet geverifieerd) en "Duitse productie" als algemene claim (niet geverifieerd).
+Bij het voorstel sturen we je de link naar een prototype dat we voor BAEHR España hebben gemaakt. Het is niet de definitieve site, maar het laat zien welke kant we op zouden gaan. Open het op je telefoon en let in de versie voor professionals vooral op de aanmelding. [Aanname: Valeria krijgt toegang tot het prototype; de preview zit nu achter een login.]
+
+## Wat we gezien hebben
+
+We hebben de site van buitenaf bekeken, zoals elke bezoeker, zonder in te loggen en zonder je cijfers te kennen. [Aanname: alle bevindingen hieronder komen uit de controle van 18 november 2026 in het oude voorstel en uit jouw schermafbeeldingen. Claude kon ze niet opnieuw controleren, omdat de site automatische bezoekers blokkeert.]
+
+De basis is goed: BAEHR España heeft een heel duidelijke niche, een aparte registratie voor professionals, seminars en kanalen op Instagram, YouTube, WhatsApp en Telegram. Wat ontbreekt, is dat het merk beter zichtbaar is en dat kopen makkelijker gaat, en daarvoor moet eerst het volgende opgelost worden.
+
+- Wie in Google zoekt naar de officiële BAEHR-winkel in Spanje, krijgt Duitse winkels. Toen we het controleerden, zei de AI-samenvatting die Google bovenaan toonde dat er geen distributeur in Spanje te vinden was.
+- De server blokkeert bots, ook die van ChatGPT en vergelijkbare diensten. In plaats van de winkel krijgen ze een controlepagina. Omdat ze de site niet kunnen lezen, kunnen ze hem ook niet noemen in hun antwoorden.
+- In de catalogus staan vertaalfouten en tikfouten zoals "FRES FEET" (de serie heet "fresh feet"), "Pies seca" en "Serie alovera", en een categorie met de URL "uncategorized-es". Wie zoekt met de vaktermen, vindt het product niet.
+- Er zijn drie verschillende minimumbedragen voor gratis verzending: 60 euro op de site, en 100 en 150 euro op oude pagina's die Google nog toont.
+- Eén pagina laadt 43 scripts en 44 stylesheets. Op de telefoon betekent dat seconden wachten bij elke stap van een bestelling.
+- Het aanmeldformulier voor professionals heeft 14 velden. Volgens ons is dat wat nieuwe aanmeldingen het meest afremt.
+
+## Wat we per doel voorstellen
+
+### Dat Spanje weet wie BAEHR verkoopt
+
+Om dat voor Google en de AI-assistenten duidelijk te maken, beginnen we hier.
+
+- Overal dezelfde omschrijving gebruiken (site, Google-bedrijfsprofiel en social media): "Proxy Beauty Spain, S.L., Barcelona, officiële distributeur van BAEHR in Spanje". [Aanname: Valeria mag "officiële distributeur" voeren. De fabrikant noemt het bedrijf op zijn site "exportpartner".]
+- De fabrikant vragen dezelfde gegevens in zijn distributeurslijst te zetten. Proxy Beauty Spain staat er al, met baehr.com.es, dus het is alleen gelijktrekken. (Feit: de exportpartnerpagina van Gustav Baehr GmbH.)
+- Zoekmachines en AI-bots toelaten, en het bedrijf en elk product beschrijven met gestructureerde gegevens, een formaat dat Google en die assistenten kunnen lezen.
+
+De snelste winst zit in zoekopdrachten als "BAEHR" of "distribuidor BAEHR España", die nu naar andere winkels gaan. Wie daarop zoekt, kent het merk al en wil alleen weten waar hij het kan kopen.
+
+### Meer professionele klanten
+
+- Pagina's per dienst, zoals pedicure of manicure, en per huidtype, geschreven in de woorden waarmee professionals zoeken: kloven, eelt, zweten, zeer droge huid. Altijd als cosmetische verzorging, nooit als behandeling van een aandoening.
+- Het seminar als ingang. Elke stad krijgt een eigen pagina met inschrijving, en na afloop krijgen de deelnemers een mail met toegang tot het portaal en een welkomstaanbod.
+- Voor de eerste bestelling een proefset per dienst. PEDIBAEHR heeft een proefmaat van 35 ml die goed bij dat idee past. (Feit: deel A van de merkfeiten. Niet geverifieerd: of BAEHR España die maat verkoopt.)
+- Advertenties per doelgroep: in Google gekoppeld aan zoekopdrachten uit de branche, op Instagram en Facebook gericht op schoonheidsspecialisten, manicures en pedicures.
+
+Over de termijnen zijn we liever meteen duidelijk. Bij vakzoekopdrachten (pedicure, podologie) is zichtbaarheid binnen drie tot zes maanden realistisch. Bij algemene zoekopdrachten zoals "crema de pies" niet, en dat gaan we je ook niet beloven.
+
+Er is iets wat we je liever vragen dan aannemen. Als we naar het Telegram-kanaal kijken en naar het seminar in het Russisch met Spaanse vertaling, hebben we de indruk dat een groot deel van je professionele klanten Russisch spreekt. Klopt dat? Dan is het idee om die groep vast te houden via de kanalen die al werken, en daarnaast een nieuwe route te openen naar professionals die in het Spaans werken. Dat bespreken we graag in het gesprek.
+
+### Van eerste klik naar bestelling
+
+De site moet tegelijk werken voor schoonheidssalons, podologen, klinieken en manicure- en pedicurespecialisten, en ook voor particulieren. Daarom krijgt de homepage twee ingangen, één voor elke groep.
+
+In plaats van het huidige formulier duurt aanmelden twee minuten; in het prototype zie je hoe. Zodra het account is goedgekeurd, ziet de salon de professionele prijzen, en vanaf dat moment draait het erom dat hij opnieuw bestelt.
+
+Daarvoor kan elke salon snel bestellen vanaf een productlijst, een eerdere bestelling met één klik herhalen en een melding krijgen wanneer het, op basis van zijn koopritme, waarschijnlijk tijd is om bij te bestellen. Hij krijgt ook een rekenhulp met de kostprijs per dienst en de verkoopprijs voor de klant.
+
+## De winkel en het portaal
+
+De nieuwe winkel vervangt de huidige site, en we zetten de producten, bestellingen en klanten erin over. Omdat je ons vertelde dat de fabrikant geen strenge eisen stelt aan ontwerp en opbouw, krijgt de winkel een eigen uitstraling, zonder sjabloon. De catalogus komt in correct Spaans, met de woorden uit de branche, en de winkel laadt snel op de telefoon. Er komt één minimumbedrag voor gratis verzending en duidelijke levertijden.
+
+Het portaal wordt de afgeschermde omgeving voor professionals, met alles wat in het vorige deel staat. Elke salon vindt in zijn account ook de facturen en de bestelgeschiedenis.
+
+## Vier pakketten die op elkaar stapelen
+
+Prijzen per maand, exclusief btw. [Aanname: exclusief btw.]
+
+- Winkel en SEO, 480 euro per maand. De nieuwe site met winkel, vindbaarheid in Google en in AI-antwoorden, teksten, hosting, onderhoud en een maandrapport.
+- Met portaal, 680 euro per maand. Het vorige plus het portaal voor professionals, dat wij beheren. [Aanname: inhoud van het pakket, en dat wij het portaal beheren.]
+- Met Google Ads, 1.140 euro per maand. Het vorige plus de Google Ads-campagnes, die wij opzetten en beheren. [Aanname: het eigen team beheert de campagnes.]
+- Met social, 1.480 euro per maand. Het vorige plus het beheer van social media en de advertenties op Instagram en Facebook.
+
+We raden "Met Google Ads" aan. Vindbaarheid kost maanden voordat ze resultaat geeft; advertenties in Google bereiken mensen die al naar producten zoeken veel sneller, en met het portaal live is de aanmelding geen rem meer.
+
+### Winkel en portaal zonder kosten als we 12 maanden samenwerken
+
+Winkel en portaal hebben samen een waarde van 1.500 euro. Bij "Winkel en SEO" bouwen we alleen de winkel; het portaal zit erin vanaf "Met portaal". Bij 12 maanden samenwerking betaal je daar niets voor. Stop je eerder, dan betaal je 125 euro voor elke maand die nog over is tot 12. Voorbeeld: stoppen na vier maanden kost 8 x 125 = 1.000 euro. [Aanname: wat eerder stoppen kost bij "Winkel en SEO", waar het portaal niet in zit. De tekst noemt alleen de 1.500 euro voor beide samen.]
+
+### Het advertentiebudget staat apart
+
+Wat je aan advertenties uitgeeft, zit niet in het maandbedrag. Je betaalt het rechtstreeks aan Google en Meta, en de advertentieaccounts zijn van jou.
+
+Omdat er nu geen vast advertentiebudget is, stellen we voor te beginnen met minimaal 1.000 euro per maand, verdeeld over 600 euro voor Google en 400 euro voor Meta. Daarna stellen we het bij op basis van de resultaten in je accounts. [Aanname: deze bedragen.]
+
+De campagnes starten zodra het portaal werkt. Eerder zouden advertenties mensen naar het huidige formulier sturen en zou je betalen voor klikken die onderweg blijven hangen. Tot dat moment betaal je 480 euro per maand, welk pakket je ook kiest. [Aanname: dit geldt voor elk pakket, ook "Met portaal".]
+
+## We hebben dit al gedaan voor Skin Complete
+
+Skin Complete (skincomplete.eu) is een Nederlands merk van ledmaskers en huidverzorging dat via klinieken en schoonheidssalons verkoopt. We maakten hun site en hun B2B-portaal. Wie een account aanvraagt, krijgt een eigen B2B-winkel met partnerprijzen, protocollen en training.
+
+Met de site en het portaal kregen ze er 80 nieuwe zakelijke klanten bij, klinieken en schoonheidssalons. Het merk werkt nu met bedrijven in Nederland, België en Curaçao. Het is een model dat sterk lijkt op wat we jou voorstellen. [Aanname: periode van de 80 klanten onbekend; bewust niet genoemd.]
+
+## Hoe de eerste maanden eruitzien
+
+In de eerste maand zetten we de metingen op, openen we de site voor zoekmachines en AI-bots en ontwerpen we de nieuwe winkel. Het maandrapport begint diezelfde maand.
+
+In de tweede en derde maand gaan de winkel en het portaal live, met de herziene catalogus en de seminarpagina's.
+
+Vanaf de vierde maand publiceren we de pagina's per dienst en starten, afhankelijk van je pakket, de advertenties en social media. [Aanname: planning uit het oude voorstel.]
+
+## Voorwaarden en wat we van je nodig hebben
+
+- Prijzen exclusief btw.
+- De verbintenis is 12 maanden; daardoor kunnen we de winkel en het portaal gratis bouwen. Daarna maandelijks, met een maand opzegtermijn. [Aanname: opzegtermijn.]
+- Het maandrapport bevat deze cijfers: aanmeldingen, eerste bestellingen, herhaalbestellingen en kosten per nieuwe klant.
+- We garanderen geen posities in Google en geen bepaald aantal bezoekers.
+
+Om goed te meten hebben we drie cijfers nodig: hoeveel aanmeldingen je per maand krijgt, hoeveel van die accounts uiteindelijk bestellen en wat het gemiddelde orderbedrag is. We hebben ook leestoegang nodig tot Google Search Console en de statistieken van de site en, als je een pakket met campagnes kiest, beheerderstoegang tot de advertentieaccounts. De accounts en wachtwoorden blijven van jou.
+
+## Laten we een halfuur praten
+
+We stellen een gesprek van 30 minuten voor met jou en je partners, om het plan door te nemen en samen naar het prototype te kijken. Laat ons weten welke dag en welk tijdstip jullie uitkomt, dan passen wij ons aan.
+
+Groet,
+
+Denis
+
+[naam bureau]
+
+---
+
+## Te bevestigen door D vóór verzending
+
+- Naam van het bureau als afzender.
+- Hoe Valeria het prototype kan openen (de preview zit achter de Vercel-login).
+- Advertentiebudget: minimaal 1.000 euro, waarvan 600 Google en 400 Meta.
+- Wie de campagnes beheert (eigen team of uitbesteed) en wat "wij beheren het portaal" inhoudt.
+- Btw: prijzen exclusief. Opzegtermijn: een maand na de eerste 12 maanden.
+- Wat eerder stoppen kost bij "Winkel en SEO" (alleen winkel, geen portaal).
+- 480 euro tot het portaal live is, voor elk pakket, ook "Met portaal".
+- Maandrapport vanaf de eerste maand (besluit van Claude: het zit in elk pakket; het oude voorstel noemde de vierde maand).
+- Periode van de 80 nieuwe afnemers bij Skin Complete (staat er nu bewust niet in).
+- De bevindingen over de huidige site (Duitse winkels in Google, AI-samenvatting, geblokkeerde bots, vertaalfouten, drie verzenddrempels, 43 scripts en 44 stylesheets, 14 velden): uit het oude voorstel en jouw schermafbeeldingen, niet opnieuw gecontroleerd. Klopt er één niet meer, dan schaadt dat het hele stuk.
+- "Distribuidor oficial": Valeria laten bevestigen dat ze dat mag voeren.
+- Russischtalige klanten: staat als vraag in de tekst, niet als feit.
+
+Bewust weggelaten: "exclusieve distributeur" en "Duitse productie" (beide niet geverifieerd), en elke termijn voor de merkzoekopdrachten.
