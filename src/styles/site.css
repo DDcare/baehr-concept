@@ -2068,6 +2068,10 @@ h1 {
     border-left: 0;
     padding-left: 0;
   }
+  .band__item dt {
+    font-size: clamp(1.2rem, 5.4vw, 2rem);
+    white-space: normal;
+  }
   .band__item:nth-child(n + 3) {
     border-top: 1px solid var(--line);
   }
