@@ -81,3 +81,12 @@ Zoals het voorbeeld dat D liet zien (een pakkettenpagina voor een andere klant, 
 
 - Met D in het Nederlands, kort en kritisch. Geen nummering als opmaak, geen sterretjes, geen em dashes of en dashes, geen AI-taal.
 - Niets versturen of publiceren. Committen en pushen naar `main` van deze privé-repo mag: de preview blijft achter de Vercel-login.
+
+## Toevoeging 21 november, avond: 3D per product als optie
+
+Besluit van D en zijn partner:
+
+- De 3D-productfilm komt hoe dan ook op de home.
+- Op productpagina's is een ronddraaiend 3D-model mogelijk, maar alleen als optie. In de conceptsite staat één voorbeeld: de productpagina van het Cremeschaum Orange-Lemongras (`/productos/crema-en-espuma-orange-lemongras/`).
+- Biedt het aan als optie met een prijs per product ("als je dit voor alle producten wilt, betaal je X per product"). Het bedrag X bepaalt D.
+- Leg in het voorstel eerlijk uit dat dit veel werk is per product (vorm, etiket rondom, controle) en dat het ten koste gaat van de laadsnelheid van die pagina. Voor een echte 360 graden zijn foto's van alle kanten of de etiketbestanden van de fabrikant nodig: nu is alleen de voorkant echt.
