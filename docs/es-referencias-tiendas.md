@@ -265,7 +265,7 @@ De vaste formule is "Envío gratis a partir de X €". "Envío gratuito" dient v
 | AR | Parafarmacia > Cuidados > "Cuidados de pies" | H1 "Cuidados de pies"; titel "Productos para el cuidado de los pies \| Arenal Perfumerías" | Z | https://www.arenal.com/parafarmacia/cuidados/pies |
 | PR | Corporales > "Cuidado de piernas y pies" > "Cremas para pies", "Desodorantes para pies" | H1 "Cuidado de piernas y pies" | Z | https://www.primor.eu/es_es/cuidado-de-piernas-y-pies |
 | PR | parafarmacie | H1 "Pies", H2 "Productos de parafarmacia para el cuidado de pies" | Z | https://www.primor.eu/es_es/productos-de-parafarmacia-para-el-cuidado-de-pies |
-| DG | Cuerpo > "Cuidado de pies" > "Cremas para pies", "Baño de pies", "Exfoliantes de pies", "Mascarillas para pies", "Quita callos" | H1 "Cuidado de pies" | Z | https://www.douglas.es/es/c/cuerpo/cuidado-de-pies/1307 |
+| DG | Cuerpo > "Cuidado de pies" > "Cremas para pies", "Baño de pies", "Exfoliantes de pies", "Mascarillas para pies", "Quita callos" | H1 "Cuidado de pies" | Z (H1), C (rubrieknamen uit de paginadata) | https://www.douglas.es/es/c/cuerpo/cuidado-de-pies/1307 |
 | CL | Cosmética > "Cuidado pies" > "Cremas y exfoliantes para pies", "Desodorante pies" | H1 "Cremas y exfoliantes para pies" | Z | https://www.clarel.es/es/cosmetica/cuidado-pies/cremas-y-exfoliantes-para-pies |
 | PC | Cosmética Corporal > Zonas Específicas > "Cuidado de pies"; elders "Raspadores durezas pies" en "Cuidado Pies" | H1 "Tratamientos para pies. Cremas para pies" | Z | https://www.perfumesclub.com/es/cosmetica-corporal_zonas-especificas_pies/mujer/fs/ |
 | ON | "Cosmética para pies" > "Aceites para pies", "Desodorantes para pies", "Exfoliantes para pies", "Mascarillas para pies", "Cremas de pies", "Balsamos para los pies" (zonder accent); los daarvan "Cuidado Podológico", "Herramientas de podología" | H1 "Productos para pies" | Z | https://oopsnailsbcn.es/collections/productos-para-pies |
@@ -324,7 +324,7 @@ De vaste formule is "Envío gratis a partir de X €". "Envío gratuito" dient v
 |---|---|
 | "Mascarillas para pies" | DG Z, rubriek (https://www.douglas.es/es/c/cuerpo/cuidado-de-pies/mascarillas-para-pies/130705); ON Z |
 | "Mascarilla para pies" | DR Z, H1; titel "Mascarilla para pies - Mima tus pies \| druni" (https://www.druni.es/parafarmacia/corporal/pies/mascarillas) |
-| Sokvorm in productnamen | "Calcetines Mascarilla Exfoliante" en "Calcetines Mascarilla Nutritiva" (DR, Iroha Nature), "Calcetín Ultra Hidratante" (CL, Bonté), "Calcetines Cosméticos para Pies con Manteca de Karité" (DG, Perderma), "Hydrating Socks" (DG), "Foot Peel Socks" (DR); tussenkop "Pies felices y sin complejos con los calcetines exfoliantes" (DG). Alle Z. |
+| Sokvorm in productnamen | "Calcetines Mascarilla Exfoliante" en "Calcetines Mascarilla Nutritiva" (DR, Iroha Nature), "Calcetín Ultra Hidratante" (CL, Bonté, uit de paginadata, C), "Calcetines Cosméticos para Pies con Manteca de Karité" (DG, Perderma), "Hydrating Socks" (DG), "Foot Peel Socks" (DR); tussenkop "Pies felices y sin complejos con los calcetines exfoliantes" (DG). Alle Z. |
 | Sokvorm bij Sephora | adres van een productpagina: "mascarillas-para-pies-de-coco-wild-wishes---calcetines-tratamiento-impregnados" (SE S, https://www.sephora.es/p/mascarillas-para-pies-de-coco-wild-wishes---calcetines-tratamiento-impregnados-P10011222.html) |
 | Soortregels | "Mascarilla nutritiva para pies" (DR, Scholl Pedimask; AR, Sence), "Mascarilla exfoliante para pies" (DR), "Mascarilla reparadora de pies" (DR), "Mascarilla hidratante pies" (DR, Beter). Alle Z. |
 | Vlies | "Charming Winter Foot Sheet Mask" (DG Z, Engels). "Mascarilla de tejido" voor voeten nergens gezien. |
@@ -336,7 +336,7 @@ De vaste formule is "Envío gratis a partir de X €". "Envío gratuito" dient v
 |---|---|
 | Geen eigen rubriek | Geen enkele winkel heeft een rubriek "urea". PR heeft het filter "Ingrediente estrella" met de waarde "Urea" (Z). |
 | Productnamen | "Crema para pies con 20% de urea" (AR Z), "Crema con un 10% de urea y manteca de karité" (DR Z), "Crema De Pies Reparadora Con Urea" (AR Z), "Keratolin para Talones Agrietados con 25% de Urea" (DG Z), "UreaRepair Crema de Cuidado de Pies 10% Urea" (PR Z), "Crema Pies Anti Durezas Aloe Vera Y 20% Urea" (CL C), "Crema de pies con 10% de urea" (ON Z, BAEHR), "Urea 15" met soortregel "Hidratación intensiva de pies" (DR Z) |
-| Verwante rubrieken | "Quita callos" (DG Z), "Crema Antidurezas Pies" (DR Z), meta "antidurezas con urea" (CL Z) |
+| Verwante rubrieken | "Quita callos" (DG C), "Crema Antidurezas Pies" (DR Z), meta "antidurezas con urea" (CL Z) |
 
 ### Oordeel
 
@@ -380,7 +380,7 @@ Norm: een symbool staat achter het getal met een spatie en krijgt geen punt (zie
 | Originele naam plus Spaans soortwoord op één regel | "7th Heaven FOOT PEEL mascarilla exfoliante" (PC); "SMOOTHING FOOT SCRUB exfoliante para pies" (DG); "Gehwol EXTRA - Regeneración profunda 75ml", "Gehwol Fusskraft Repair Cream - Crema reparadora 75ml" (FR) | Z |
 | Originele naam, streepje, Spaanse omschrijving | adressen van productpagina's: "masques-pieds---tratamiento-hidratante-para-pies", "foot-relief-moisturizing-creme---crema-hidratante" | SE S |
 | Spaanse naam, lijnnaam origineel | "Healthy Feet Crema para Pies muy secos y agrietados", "Peppermint Mascarilla Exfoliante para Pies", "Mascarilla para Pies con Aceite de Coco" | PR Z |
-| Alles vertaald, ook de lijnnaam | BAEHR bij Oops Nails: Crema regeneradora "Pies frescos" (fresh feet), Mascarilla para los pies "Pies frescos", Exfoliante para los pies "Pasos Refrescantes"; de Duitse naam staat als kenmerk "Nombre original: Cremeschaum Schrunden Mit Echinacea" en in de H2 "(CREMESCHAUM SCHRUNDEN MIT ECHINACEA)" | ON Z, https://oopsnailsbcn.es/collections/baehr-pedibaehr |
+| Alles vertaald, ook de lijnnaam | BAEHR bij Oops Nails: Crema regeneradora "Pies frescos" (aanname: dit is fresh feet Regenerationscreme), Mascarilla para los pies "Pies frescos", Exfoliante para los pies "Pasos Refrescantes"; de Duitse naam staat als kenmerk "Nombre original: Cremeschaum Schrunden Mit Echinacea" en in de H2 "(CREMESCHAUM SCHRUNDEN MIT ECHINACEA)" | ON Z, https://oopsnailsbcn.es/collections/baehr-pedibaehr |
 | Duits in de naam | Alleen merk- en lijnnamen ("Gehwol Fusskraft" bij FR). Duitse soortwoorden zoals "Fußcreme" of "Cremeschaum" staan in geen enkele winkel als productnaam, behalve als "Nombre original" bij ON. | Z |
 
 ### Oordeel
