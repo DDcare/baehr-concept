@@ -1,0 +1,98 @@
+---
+// Tienda: los productos del concepto, con filtro por tipo. Sin precios: no están en la fuente.
+import Base from '../layouts/Base.astro';
+import { PRODUCTOS, enlace } from '../data/productos';
+
+const title = 'Tienda de cosmética para pies | BAEHR España';
+const description =
+  'Cosmética profesional BAEHR para el cuidado de los pies: baños de pies, exfoliantes, mascarillas, cremas y cremas en espuma. Distribuidor oficial en España.';
+
+const filtros = [
+  { k: 'todo', t: 'Todo' },
+  { k: 'bano', t: 'Baños de pies' },
+  { k: 'exfoliante', t: 'Exfoliantes' },
+  { k: 'mascarilla', t: 'Mascarillas' },
+  { k: 'crema', t: 'Cremas' },
+  { k: 'espuma', t: 'Cremas en espuma' },
+];
+// La Schutzcreme también es una crema
+const grupo = (kind: string) => (kind === 'proteccion' ? 'crema' : kind);
+
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Tienda BAEHR España',
+    hasPart: PRODUCTOS.map((p) => ({ '@type': 'Product', name: p.name, brand: { '@type': 'Brand', name: p.id === 'bano' ? 'BAEHR BEAUTY CONCEPT' : 'PEDIBAEHR' } })),
+  },
+];
+---
+
+<Base title={title} description={description} page="tienda" jsonld={jsonld}>
+  <section class="shop-hero">
+    <h1 class="shop-hero__h"><span class="stretch is-in">Tienda</span></h1>
+    <p class="lead">Cosmética profesional para el cuidado de los pies. Los mismos productos que usan los salones, para tu cabina o para casa.</p>
+  </section>
+
+  <section class="catalog" aria-label="Productos">
+    <div class="catalog__bar">
+      <div class="filters" role="group" aria-label="Filtrar por tipo de producto">
+        {filtros.map((f, i) => <button type="button" data-filter={f.k} aria-pressed={i === 0 ? 'true' : 'false'}>{f.t}</button>)}
+      </div>
+      <p class="catalog__note" data-when="pro">Precios profesionales al iniciar sesión.</p>
+      <p class="catalog__note" data-when="home">Envío gratis a partir de 60&nbsp;€.</p>
+    </div>
+
+    <ul class="catalog__grid">
+      {
+        PRODUCTOS.map((p) => (
+          <li class="card" data-kind={grupo(p.kind)}>
+            <a class="card__link" href={enlace(p)}>
+              <span class={`card__img${p.href ? ' card__img--red' : ''}`}>
+                <img src={`/img/productos/${p.img}.webp`} width="600" height="900" alt="" loading="lazy" decoding="async" />
+              </span>
+              <span class="card__name" set:html={p.name} />
+              <span class="card__type" set:html={p.type} />
+              <span class="card__go">{p.href ? 'Ver producto' : 'Ver en el protocolo'}</span>
+            </a>
+            <button class="card__add" type="button" data-add={p.id}>Añadir a la cesta</button>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="catalog__empty" hidden>No hay productos de este tipo en el concepto.</p>
+  </section>
+
+  <section class="cta">
+    <h2 class="cta__h">¿Tienes un salón?</h2>
+    <p class="cta__t">Date de alta como profesional y compra a precio profesional.</p>
+    <div class="cta__b">
+      <a class="pill pill--white" href="/profesionales/#alta">Solicitar el alta</a>
+    </div>
+  </section>
+</Base>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
+  const cards = document.querySelectorAll<HTMLElement>('.catalog__grid .card');
+  const empty = document.querySelector<HTMLElement>('.catalog__empty');
+  buttons.forEach((b) =>
+    b.addEventListener('click', () => {
+      const k = b.dataset.filter;
+      buttons.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      let shown = 0;
+      cards.forEach((c) => {
+        const on = k === 'todo' || c.dataset.kind === k;
+        c.hidden = !on;
+        if (on) shown++;
+      });
+      if (empty) empty.hidden = shown > 0;
+    })
+  );
+  document.querySelectorAll<HTMLButtonElement>('[data-add]').forEach((b) =>
+    b.addEventListener('click', () => {
+      (window as any).baehrCesta?.add(b.dataset.add, 1);
+      (window as any).baehrCesta?.open();
+    })
+  );
+</script>

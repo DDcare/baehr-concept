@@ -3,11 +3,12 @@
 import '@fontsource-variable/archivo/wdth.css';
 import '@fontsource-variable/newsreader/wght-italic.css';
 import '../styles/site.css';
+import { PRODUCTOS } from '../data/productos';
 
 interface Props {
   title: string;
   description: string;
-  page?: 'home' | 'producto' | 'marca';
+  page?: 'home' | 'producto' | 'marca' | 'tienda' | 'profesionales' | 'contacto' | 'error';
   jsonld?: object[];
 }
 const { title, description, page = 'home', jsonld = [] } = Astro.props;
@@ -69,9 +70,9 @@ const org = {
       <div class="bar">
         <a class="logo" href={home ? '#inicio' : '/'} aria-label="BAEHR España, inicio">BAEHR</a>
         <nav class="nav" aria-label="Principal">
-          <a href={to('#tienda')}>Tienda</a>
+          <a href="/tienda/" aria-current={page === 'tienda' ? 'page' : undefined}>Tienda</a>
           <a href={to('#protocolo')} data-go-step="0">Protocolo</a>
-          <a href={to('#profesionales')}>Profesionales</a>
+          <a href="/profesionales/" aria-current={page === 'profesionales' ? 'page' : undefined}>Profesionales</a>
           <a href={to('#seminarios')}>Seminarios</a>
           <a href="/la-marca/" aria-current={page === 'marca' ? 'page' : undefined}>La marca</a>
         </nav>
@@ -79,18 +80,19 @@ const org = {
           <button type="button" data-set-mode="pro" aria-pressed="true">Profesional</button>
           <button type="button" data-set-mode="home" aria-pressed="false">Particular</button>
         </div>
-        <a class="bar__link" href={to('#profesionales')}>Acceder</a>
-        <a class="cart" href={to('#tienda')} aria-label="Cesta: 0 productos">Cesta <b data-cart-count>0</b></a>
+        <a class="bar__link" href="/profesionales/#alta">Acceder</a>
+        <a class="cart" href="/tienda/" data-open-cart aria-controls="cesta">Cesta <b data-cart-count>0</b></a>
         <button class="menu" type="button" aria-expanded="false" aria-controls="menu-movil">Menú</button>
       </div>
       <nav class="sheet" id="menu-movil" aria-label="Menú" hidden>
-        <a href={to('#tienda')}>Tienda</a>
+        <a href="/tienda/">Tienda</a>
         <a href={to('#protocolo')} data-go-step="0">Protocolo</a>
-        <a href={to('#profesionales')}>Profesionales</a>
+        <a href="/profesionales/">Profesionales</a>
         <a href={to('#seminarios')}>Seminarios</a>
         <a href="/la-marca/">La marca</a>
-        <a href={to('#profesionales')}>Acceder</a>
-        <a href={to('#tienda')}>Cesta (0)</a>
+        <a href="/contacto/">Contacto</a>
+        <a href="/profesionales/#alta">Acceder</a>
+        <a href="/tienda/" data-open-cart>Cesta</a>
       </nav>
     </header>
 
@@ -107,11 +109,12 @@ const org = {
           <p class="foot__small">Proxy Beauty Spain, S.L. Calle Perelló, 34, 08005 Barcelona.</p>
         </div>
         <nav aria-label="Secciones">
-          <a href={to('#tienda')}>Tienda</a>
+          <a href="/tienda/">Tienda</a>
           <a href={to('#protocolo')} data-go-step="0">Protocolo</a>
-          <a href={to('#profesionales')}>Profesionales</a>
+          <a href="/profesionales/">Profesionales</a>
           <a href={to('#seminarios')}>Seminarios</a>
           <a href="/la-marca/">La marca</a>
+          <a href="/contacto/">Contacto</a>
         </nav>
         <nav aria-label="Redes sociales">
           <a href="https://www.instagram.com/baehr.espana/" rel="noopener">Instagram</a>
@@ -129,8 +132,49 @@ const org = {
       <p class="foot__mark stretch" aria-hidden="true">BAEHR</p>
     </footer>
 
+    <div class="drawer" id="cesta" role="dialog" aria-modal="true" aria-labelledby="cesta-h" hidden>
+      <div class="drawer__scrim" data-close></div>
+      <aside class="drawer__panel">
+        <div class="drawer__top">
+          <h2 class="drawer__h" id="cesta-h">Tu cesta</h2>
+          <button class="drawer__close" type="button" data-close>Cerrar</button>
+        </div>
+        <ul class="drawer__list"></ul>
+        <div class="drawer__empty">
+          <p>Tu cesta está vacía.</p>
+          <a class="pill pill--red" href="/tienda/">Seguir comprando</a>
+        </div>
+        <div class="drawer__foot" hidden>
+          <p class="drawer__price" data-when="pro">Tu precio profesional aparece al iniciar sesión.</p>
+          <p class="drawer__price" data-when="home">El precio se calcula al finalizar la compra.</p>
+          <button class="pill pill--red drawer__checkout" type="button">Finalizar compra</button>
+          <p class="drawer__ok" role="status" hidden>Demostración de diseño: no se tramita ningún pedido.</p>
+        </div>
+        <template>
+          <li class="line">
+            <span class="line__img"><img src="" width="600" height="900" alt="" /></span>
+            <span class="line__text">
+              <span class="line__name"></span>
+              <span class="line__type"></span>
+              <span class="line__row">
+                <span class="qty qty--s" role="group" aria-label="Cantidad">
+                  <button type="button" data-step="-1" aria-label="Uno menos">−</button>
+                  <output>1</output>
+                  <button type="button" data-step="1" aria-label="Uno más">+</button>
+                </span>
+                <button class="line__remove" type="button" data-remove>Eliminar</button>
+              </span>
+            </span>
+          </li>
+        </template>
+      </aside>
+    </div>
+
+    <script type="application/json" id="productos-data" set:html={JSON.stringify(PRODUCTOS.map(({ id, name, type, img }) => ({ id, name, type, img })))} />
+
     <script>
       import '../scripts/ui.js';
+      import '../scripts/cart.js';
     </script>
   </body>
 </html>

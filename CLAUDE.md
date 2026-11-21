@@ -16,6 +16,7 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 - Feiten alleen uit `docs/merk-en-woordenlijst.md`. Wat daar "niet geverifieerd" heet, komt niet op de site.
 - Cosmeticaclaims: niets therapeutisch of medisch, en niet meer beloven dan de Duitse tekst van de fabrikant. De regels en de lijst met te vermijden woorden staan in deel C van hetzelfde document.
 - Percentages met lidwoord en harde spatie: "con un 10 % de urea".
+- Eis van D (21-11): het Spaans moet lezen alsof een Spaans SEO-bureau het schreef, nooit vertaald. Knoppen, categorieën, verzendregels en paginatitels volgen de vormen van grote Spaanse beautywinkels; de referentielijst met bronnen staat in `docs/es-referencias-tiendas.md`. Een fout in het Spaans kost de klant.
 
 ## Ontwerp
 

@@ -1,0 +1,147 @@
+---
+// Profesionales: alta, ventajas y una demostración del pedido rápido del portal B2B.
+import Base from '../layouts/Base.astro';
+import Alta from '../components/Alta.astro';
+import { PRODUCTOS } from '../data/productos';
+
+const title = 'Alta profesional para salones y podólogos | BAEHR España';
+const description =
+  'Date de alta como profesional en BAEHR España: precios profesionales, pedido rápido por referencia, repetición de pedidos y facturas en tu cuenta.';
+
+const ventajas = [
+  { h: 'Precios profesionales', t: 'Tus precios aparecen en cuanto activamos tu cuenta.' },
+  { h: 'Pedido rápido', t: 'Busca por nombre o referencia y añade varios productos de una vez.' },
+  { h: 'Repite tu pedido', t: 'Tu último pedido, otra vez, con un clic.' },
+  { h: 'Facturas a mano', t: 'Facturas e historial de pedidos en tu cuenta.' },
+];
+const pasos = [
+  { h: 'Solicitas el alta', t: 'Nombre comercial, NIF o CIF y correo electrónico. Dos minutos.' },
+  { h: 'La revisamos', t: 'Te respondemos en un día laborable.' },
+  { h: 'Compras a precio profesional', t: 'Entras con tu cuenta y pides cuando lo necesites.' },
+];
+const faq = [
+  { q: '¿Quién puede darse de alta?', a: 'Salones, profesionales de manicura y pedicura y podólogos.' },
+  { q: '¿Qué datos necesito?', a: 'Tu nombre comercial, tu NIF o CIF y un correo electrónico.' },
+  { q: '¿Cuánto tarda la activación?', a: 'Revisamos cada solicitud en un día laborable.' },
+  { q: '¿Puedo repetir un pedido anterior?', a: 'Sí. Desde tu cuenta repites tu último pedido con un clic.' },
+];
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+];
+---
+
+<Base title={title} description={description} page="profesionales" jsonld={jsonld}>
+  <section class="pro-hero">
+    <h1 class="pro-hero__h">
+      <span class="stretch is-in">Para</span>
+      <span class="stretch is-in">profesionales</span>
+    </h1>
+    <div class="pro-hero__side">
+      <p class="lead">Para salones, profesionales de manicura y pedicura y podólogos. Date de alta en dos minutos y compra BAEHR a precio profesional.</p>
+      <a class="pill pill--red" href="#alta">Solicitar el alta</a>
+    </div>
+  </section>
+
+  <section class="perks" aria-label="Ventajas">
+    <ul class="perks__grid">
+      {
+        ventajas.map((v) => (
+          <li class="perk rv">
+            <span class="perk__ribs" aria-hidden="true" />
+            <h2 class="perk__h">{v.h}</h2>
+            <p class="perk__t">{v.t}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="quick" id="pedido-rapido">
+    <div class="quick__text">
+      <h2 class="h2 rv">Pedido rápido</h2>
+      <p class="lead rv">Así pides en el portal profesional: escribe, añade y listo. Pruébalo.</p>
+      <p class="quick__note">Demostración de diseño: no se tramita ningún pedido.</p>
+    </div>
+    <div class="quick__box">
+      <label class="quick__search">
+        <span class="sr">Buscar producto</span>
+        <input type="search" placeholder="Busca por nombre o referencia" autocomplete="off" />
+      </label>
+      <ul class="quick__results">
+        {
+          PRODUCTOS.map((p) => (
+            <li class="qline" data-q={`${p.name} ${p.type}`.toLowerCase()}>
+              <span class="qline__img"><img src={`/img/productos/${p.img}.webp`} width="600" height="900" alt="" loading="lazy" /></span>
+              <span class="qline__text">
+                <span class="qline__name" set:html={p.name} />
+                <span class="qline__type" set:html={p.type} />
+              </span>
+              <button class="qline__add" type="button" data-add={p.id}>Añadir</button>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="quick__sum">
+        <span class="quick__count"><b data-cart-count>0</b> unidades en tu pedido</span>
+        <button class="pill pill--red" type="button" data-open-cart>Ver el pedido</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps3">
+    <h2 class="h2 rv">Así funciona</h2>
+    <ol class="steps3__row">
+      {
+        pasos.map((s) => (
+          <li class="steps3__item rv">
+            <h3 class="steps3__h">{s.h}</h3>
+            <p class="steps3__t">{s.t}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <section class="dark dark--alta" id="alta">
+    <div class="dark__text">
+      <h2 class="h2 rv">Solicita tu alta profesional</h2>
+      <p class="lead rv">Rellena los datos de tu negocio. Revisamos la solicitud en un día laborable y activamos tus precios profesionales.</p>
+    </div>
+    <Alta when={false} />
+  </section>
+
+  <section class="faq">
+    <h2 class="h2 rv">Preguntas frecuentes</h2>
+    <div class="faq__list">
+      {
+        faq.map((f) => (
+          <details class="faq__item">
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))
+      }
+    </div>
+  </section>
+</Base>
+
+<script>
+  const input = document.querySelector<HTMLInputElement>('.quick__search input');
+  const lines = document.querySelectorAll<HTMLElement>('.qline');
+  input?.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    lines.forEach((l) => (l.hidden = !!q && !(l.dataset.q || '').includes(q)));
+  });
+  document.querySelectorAll<HTMLButtonElement>('.qline__add').forEach((b) =>
+    b.addEventListener('click', () => {
+      (window as any).baehrCesta?.add(b.dataset.add, 1);
+      b.classList.remove('is-done');
+      void b.offsetWidth;
+      b.classList.add('is-done');
+    })
+  );
+</script>

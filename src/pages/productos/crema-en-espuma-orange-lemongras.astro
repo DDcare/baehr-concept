@@ -224,11 +224,6 @@ const pairs = [
     e.preventDefault();
     const ok = form.querySelector('.addcart__ok');
     if (ok) ok.hidden = false;
-    document.querySelectorAll('[data-cart-count]').forEach((el) => {
-      el.textContent = String(Number(el.textContent) + n);
-      el.classList.remove('is-pop');
-      void el.offsetWidth;
-      el.classList.add('is-pop');
-    });
+    (window as any).baehrCesta?.add('espuma', n);
   });
 </script>
