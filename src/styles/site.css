@@ -2295,6 +2295,9 @@ h1 {
 .dark--alta {
   align-items: start;
 }
+.dark--alta .h2 {
+  font-size: clamp(1.8rem, 3.4vw, 3.6rem);
+}
 
 .switch {
   display: inline-grid;
