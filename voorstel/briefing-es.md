@@ -86,7 +86,7 @@ Advertentiebudget:
 
 - Staat los van het maandbedrag. Ze betaalt het rechtstreeks aan Google en Meta. De advertentieaccounts blijven van haar.
 - Voorstel om te beginnen: vanaf 1.000 euro per maand, waarvan 600 euro Google en 400 euro Meta. Bijstellen op basis van de cijfers in haar eigen accounts.
-- De campagnes starten pas als het portaal live is. Eerder zouden advertenties mensen naar het huidige formulier sturen, dat weinig oplevert. Tot dan betaalt ze 480 euro per maand.
+- De campagnes starten pas als het portaal live is. Eerder zouden advertenties mensen naar het huidige formulier sturen, dat weinig oplevert. Tot dan betaalt ze 480 euro per maand, welk pakket ze ook kiest.
 
 ## Bewijs
 
@@ -94,9 +94,9 @@ Skin Complete (Nederland, skincomplete.eu): merk van ledmaskers en huidverzorgin
 
 ## Planning
 
-- Eerste maand: metingen opzetten, toegang voor zoek- en AI-robots, ontwerp van de nieuwe winkel.
+- Eerste maand: metingen opzetten, toegang voor zoek- en AI-robots, ontwerp van de nieuwe winkel. Het maandrapport begint deze maand (het zit in elk pakket).
 - Tweede en derde maand: winkel en portaal live, catalogus, seminarpagina's.
-- Vanaf de vierde maand: advertenties, social media, pagina's per dienst, elke maand een rapport.
+- Vanaf de vierde maand: advertenties en social media (afhankelijk van het pakket), pagina's per dienst.
 
 ## Voorwaarden
 
