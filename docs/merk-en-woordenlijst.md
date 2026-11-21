@@ -65,11 +65,26 @@ Tegenstrijdige derde bron: oncosmetics.com noemt "Founded in 1969". Dat is het j
 | Eigen uitleg: "Fußschäume ziehen aufgrund ihrer leichten Textur schneller ein als Salben und hinterlassen kaum Rückstände." | zelfde pagina |
 | Voorbeeld productclaims (Cremeschaum Orange-Lemongras, 125 en 300 ml): "im Durchschnitt 143 % mehr Feuchtigkeit"; "schnell einziehender Schaum mit leichter Textur"; 5 % urea; vegan: ja; "5-Sterne-Siegel" huidverdraagzaamheid, klinisch getest door dermatest GmbH (09/2025, 20 proefpersonen, 4 weken). | https://www.fusspflege.com/cremeschaum-orange-lemongrass/v30 |
 
+### De vijf producten van het protocol op de home
+
+Bron per product: de productpagina van de fabrikant, gelezen op 21 november 2026. Duitse citaten zijn letterlijk. Wat hier niet staat, komt niet in de Spaanse tekst.
+
+| Stap | Product (naam van de fabrikant) | Wat de fabrikant zegt | Bron |
+|---|---|---|---|
+| Voetbad | SPA Wellness Fußbad, Flasche mit Pumpe, 500 ml. Merk op het etiket: BAEHR BEAUTY CONCEPT (dus geen PEDIBAEHR). | "Wichtige Inhaltsstoffe: Hibiskus, Lotus". "Vegan: Ja". "Mit aromatischem Hibiskus und besonderen Feuchthaltefaktoren zur milden Reinigung und Erfrischung strapazierter Füße." Gebruik: "5 - 10 ml in 36 - 38 °C warmem Wasser verteilen und die Füße ca. 10 Minuten lang baden." Op het etiket (productfoto): "Mit Bambus-, Lotus- und Hibiskusextrakt. Zur milden Reinigung und Erfrischung pflegebedürftiger Füße." | https://www.fusspflege.com/spa-wellness-fussbad-flasche-mit-pumpe-500-ml/25854 |
+| Peeling | fresh feet Fußpeeling, 125 ml (ook 450 ml). Merk: PEDIBAEHR. Op het etiket: "Fußpeeling mit Meersalz". | Werkstof: "Totes Meer Salz". "Vegan: Nein". "dermatologisch geprüft". "glättet raue Fußhaut und vitalisiert trockene Stellen mit Mineralstoffen und Spurenelementen aus Meersalz". | https://www.fusspflege.com/fresh-feet-fusspeeling/v20 |
+| Masker | Fuß-Vliesmaske Orange-Lemongras, 1 Pack (5 Paar) (ook 30 paar). Merk: PEDIBAEHR, lijn WELLNESS, huidtype 3 (zeer droge huid). | Werkstoffen: Sheabutter, Macadamiaöl, Kokosnussextrakt. Vegan: ja. Dermatest-zegel 07/2020. "innovatives Wellness-Treatment zur intensiven Pflege extrem trockener Fußhaut". Op de doos (Engels): "Wellness treatment for very dry, rough skin". | https://www.fusspflege.com/fuss-vliesmaske-orange-lemongras-1-pack-5-paar/11737 |
+| Crème | Fußcreme Orange-Lemongras, 125 ml (ook 30 en 500 ml). Merk: PEDIBAEHR, lijn WELLNESS. | Werkstoffen: "Lemongrass-Öl, Orangenöl, Urea". Vegan: ja. Dermatest-zegel 03/2018. "114 % mehr Feuchtigkeit im Durchschnitt" (meetclaim van de fabrikant, niet overnemen zonder de volledige zin en de testgegevens). | https://www.fusspflege.com/fusscreme-orange-lemongras-125-ml/11561 |
+| Crèmeschuim | Cremeschaum Orange-Lemongras, 125 ml (ook 300 ml). Merk: PEDIBAEHR, lijn WELLNESS. | "aus 5 % Urea, Panthenol und Extrakten aus Ginkgo, Ginseng und Zitrone". Vegan: ja. Dermatest-zegel 09/2025. "schnell einziehender Schaum mit leichter Textur für samtweiche Pflege". | https://www.fusspflege.com/cremeschaum-orange-lemongrass/v30 |
+
+Niet op de home gebruikt, wel gezien: Schutzcreme mit 10 % Urea, 125 ml (lijn CARE & PROTECT), https://www.fusspflege.com/schutzcreme-mit-10-urea/v16.
+
 ### Claims, certificaten, prijzen
 
 | Feit | Bron |
 |---|---|
 | "Made in Germany" als uitdrukkelijke claim. Niet gevonden op de bedrijfspagina, de merkpagina's, de voordelenpagina of de gecontroleerde productpagina. Het colofon vermeldt alleen "Country of origin: Germany" bij de bedrijfsgegevens. | **niet geverifieerd** (gecontroleerd: /ueber-uns, /baehr-markenwelt/pedibaehr/, /vorteile-mit-baehr, /cremeschaum-orange-lemongrass/v30, /en/imprint/) |
+| Wel gezien: op het etiket van fresh feet Fußpeeling 125 ml staat "Made in Germany, Gustav Baehr GmbH, Max-Eyth-Str. 39, D-71332 Waiblingen" (productfoto van de fabrikant, artikelnummer 11328). Dat geldt voor dit ene product; voor het hele assortiment blijft de claim niet geverifieerd. | productfoto op https://www.fusspflege.com/fresh-feet-fusspeeling/v20 |
 | ISO 13485: in de voettekst staat een "mdc"-logo waarvan de bestandsnaam naar ISO 13485 verwijst. Geen tekst, certificaatnummer of reikwijdte gevonden. | **niet geverifieerd** als uitgeschreven claim; logo gezien op https://www.fusspflege.com/ |
 | Adviseurs zijn "ausgebildete Medizinprodukte-Berater". | https://www.fusspflege.com/ueber-uns |
 | Het voetverzorgingsapparaat A2000 wordt een medisch hulpmiddel ("Medizinprodukt") genoemd. | https://www.fusspflege.com/ueber-uns |
@@ -313,7 +328,7 @@ Aandachtspunten voor de opdrachtgever (oordeel, niet onderzocht):
 
 ## Niet geverifieerd, in één overzicht
 
-1. "Made in Germany" als claim op officiële pagina's.
+1. "Made in Germany" als claim op officiële pagina's en voor het hele assortiment (wel gezien op het etiket van één product, zie de tabel met de vijf producten).
 2. ISO 13485 als uitgeschreven certificering (alleen een logo met bestandsnaam).
 3. Waar de eigen producten fysiek worden gemaakt.
 4. Een door het bedrijf zelf genoemd aantal landen (eigen telling: 41 landen plus één regio op de partnerlijst).

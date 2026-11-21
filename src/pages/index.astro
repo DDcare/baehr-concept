@@ -65,7 +65,7 @@ const org = {
         <a class="logo" href="#inicio" aria-label="BAEHR España, inicio">BAEHR</a>
         <nav class="nav" aria-label="Principal">
           <a href="#inicio">Tienda</a>
-          <a href="#protocolo">Protocolo</a>
+          <a href="#inicio" data-go-step="0">Protocolo</a>
           <a href="#profesionales">Profesionales</a>
           <a href="#seminarios">Seminarios</a>
           <a href="#marca">La marca</a>
@@ -80,7 +80,7 @@ const org = {
       </div>
       <nav class="sheet" id="menu-movil" aria-label="Menú" hidden>
         <a href="#inicio">Tienda</a>
-        <a href="#protocolo">Protocolo</a>
+        <a href="#inicio" data-go-step="0">Protocolo</a>
         <a href="#profesionales">Profesionales</a>
         <a href="#seminarios">Seminarios</a>
         <a href="#marca">La marca</a>
@@ -90,7 +90,7 @@ const org = {
     </header>
 
     <main id="contenido">
-      <section class="film" id="inicio" aria-label="Presentación de producto">
+      <section class="film" id="inicio" aria-label="El protocolo, paso a paso">
         <div class="film__sticky">
           <div class="hero">
             <h1>
@@ -105,93 +105,105 @@ const org = {
             </p>
             <div class="hero__cta">
               <a class="pill pill--red" href="#profesionales" data-when="pro">Darme de alta</a>
-              <a class="pill pill--line" href="#protocolo" data-when="pro">Ver la tienda</a>
-              <a class="pill pill--red" href="#protocolo" data-when="home">Ver la tienda</a>
+              <a class="pill pill--line" href="#inicio" data-go-step="0" data-when="pro">Ver el protocolo</a>
+              <a class="pill pill--red" href="#inicio" data-go-step="0" data-when="home">Ver el protocolo</a>
               <a class="pill pill--line" href="#profesionales" data-when="home">Soy profesional</a>
             </div>
           </div>
 
           <figure class="still">
-            <img src="/posters/tubo.webp" width="900" height="1320" alt="Tubo de crema para pies PEDIBAEHR con un 10 % de urea" loading="lazy" decoding="async" />
+            <img src="/posters/conjunto.webp" width="1000" height="1120" alt="Los cinco productos BAEHR del protocolo: frasco de baño de pies, tarro de exfoliante, caja de mascarillas, tubo de crema y bote de crema en espuma." loading="lazy" decoding="async" />
           </figure>
 
           <div class="stagebg" aria-hidden="true"></div>
           <canvas id="stage" aria-hidden="true"></canvas>
+          <div class="vig" aria-hidden="true"></div>
           <div class="grain" aria-hidden="true"></div>
 
-          <div class="beat beat--a">
-            <div class="beat__box">
-              <h2 class="beat__h">Crema para pies con un 10&nbsp;% de urea</h2>
-              <p class="chip" data-when="pro">Precio profesional tras el alta</p>
-              <p class="chip" data-when="home">Disponible en la tienda</p>
-            </div>
-            <ul class="calls">
-              <li class="call call--1">Urea al 10&nbsp;%</li>
-              <li class="call call--2">BAEHR, en Waiblingen (Alemania) desde&nbsp;1949</li>
-              <li class="call call--3">PEDIBAEHR: productos creados por y para especialistas en el cuidado de los pies</li>
+          <article class="chap chap--left">
+            <h2 class="chap__h">Baño de&nbsp;pies</h2>
+            <p class="chap__prod">SPA Wellness Fußbad, 500&nbsp;ml</p>
+            <p class="chap__text">Limpia con suavidad y refresca los pies cansados.</p>
+            <ul class="facts">
+              <li>Con hibisco y loto</li>
+              <li>Vegano</li>
+              <li>De 5 a 10&nbsp;ml por baño</li>
             </ul>
-          </div>
+            <a class="pill pill--white" href="#inicio">Ver el baño de pies</a>
+            <img class="still__img" src="/posters/paso-1.webp" width="1400" height="900" alt="Frasco blanco de SPA Wellness Fußbad, con dosificador, junto a un cuenco blanco con agua en el que cae un chorro fino." loading="lazy" decoding="async" />
+          </article>
 
-          <div class="beat beat--b">
-            <h2 class="beat__h">Dos texturas, una sola marca</h2>
-            <p class="duo duo--a">Crema</p>
-            <p class="duo duo--b">Crema en espuma</p>
-            <img class="still__img" src="/posters/duo.webp" width="1400" height="900" alt="Tubo de crema y bote de crema en espuma PEDIBAEHR" loading="lazy" decoding="async" />
-          </div>
+          <article class="chap chap--right">
+            <h2 class="chap__h">Exfoliación</h2>
+            <p class="chap__prod">fresh feet Fußpeeling, 125&nbsp;ml</p>
+            <p class="chap__text">Alisa la piel áspera de los pies.</p>
+            <ul class="facts">
+              <li>Con sal marina</li>
+              <li>Con minerales y oligoelementos</li>
+              <li>En 125 y 450&nbsp;ml</li>
+            </ul>
+            <a class="pill pill--white" href="#inicio">Ver el exfoliante</a>
+            <img class="still__img" src="/posters/paso-2.webp" width="1400" height="900" alt="Tarro abierto del exfoliante fresh feet Fußpeeling, con la tapa al lado y cristales de sal alrededor." loading="lazy" decoding="async" />
+          </article>
 
-          <div class="beat beat--c">
-            <div class="beat__box">
-              <h2 class="beat__h">Crema en espuma</h2>
-              <p class="beat__soft">Espuma de textura ligera y rápida absorción.</p>
-              <ul class="facts">
-                <li>Orange-Lemongrass</li>
-                <li>Con un 5&nbsp;% de urea</li>
-                <li>Vegana</li>
-              </ul>
-              <a class="pill pill--white" href="#protocolo">Ver cremas en espuma</a>
+          <article class="chap chap--left">
+            <h2 class="chap__h">Mascarilla</h2>
+            <p class="chap__prod">Fuß-Vliesmaske Orange-Lemongras</p>
+            <p class="chap__text">Mascarilla de tejido para el cuidado intensivo de la piel muy seca.</p>
+            <ul class="facts">
+              <li>Con karité, macadamia y coco</li>
+              <li>Vegana</li>
+              <li>Caja de 5 pares</li>
+            </ul>
+            <a class="pill pill--white" href="#inicio">Ver la mascarilla</a>
+            <img class="still__img" src="/posters/paso-3.webp" width="1400" height="900" alt="Caja de la mascarilla Fuß-Vliesmaske Orange-Lemongras, de la que salen cinco sobres en abanico." loading="lazy" decoding="async" />
+          </article>
+
+          <article class="chap chap--right">
+            <h2 class="chap__h">Crema</h2>
+            <p class="chap__prod">Fußcreme Orange-Lemongras, 125&nbsp;ml</p>
+            <p class="chap__text">Cuida la piel de los pies con aceites de naranja y de lemongrass.</p>
+            <ul class="facts">
+              <li>Con urea</li>
+              <li>Vegana</li>
+              <li>En 30, 125 y 500&nbsp;ml</li>
+            </ul>
+            <a class="pill pill--white" href="#inicio">Ver la crema</a>
+            <img class="still__img" src="/posters/paso-4.webp" width="1400" height="900" alt="Tubo de la crema Fußcreme Orange-Lemongras, inclinado en el aire, con una espiral de crema debajo." loading="lazy" decoding="async" />
+          </article>
+
+          <article class="chap chap--left">
+            <h2 class="chap__h">Crema en&nbsp;espuma</h2>
+            <p class="chap__prod">Cremeschaum Orange-Lemongras, 125&nbsp;ml</p>
+            <p class="chap__text">Espuma de textura ligera y rápida absorción.</p>
+            <ul class="facts">
+              <li>Con un 5&nbsp;% de urea</li>
+              <li>Vegana</li>
+              <li>En 125 y 300&nbsp;ml</li>
+            </ul>
+            <a class="pill pill--white" href="#inicio">Ver la crema en espuma</a>
+            <img class="still__img" src="/posters/paso-5.webp" width="1400" height="900" alt="Bote de la crema en espuma Cremeschaum Orange-Lemongras, inclinado en el aire, con una nube de espuma debajo." loading="lazy" decoding="async" />
+          </article>
+
+          <div class="fin">
+            <h2 class="fin__h">Cinco pasos, un&nbsp;protocolo</h2>
+            <p class="fin__text">Un producto BAEHR para cada paso.</p>
+            <div class="fin__cta">
+              <a class="pill pill--white" href="#profesionales" data-when="pro">Pedir los cinco productos</a>
+              <a class="pill pill--white" href="#inicio" data-when="home">Comprar los cinco productos</a>
             </div>
-            <img class="still__img" src="/posters/espuma.webp" width="1400" height="900" alt="Bote de crema en espuma PEDIBAEHR Orange-Lemongrass" loading="lazy" decoding="async" />
           </div>
 
-          <p class="hint" aria-hidden="true">Arrastra para girar</p>
+          <nav class="stepper" aria-label="Pasos del protocolo">
+            <button type="button">Baño</button>
+            <button type="button">Exfoliación</button>
+            <button type="button">Mascarilla</button>
+            <button type="button">Crema</button>
+            <button type="button">Espuma</button>
+          </nav>
           <div class="flash" aria-hidden="true"></div>
-          <div class="ribs" aria-hidden="true"></div>
           <p class="cue" aria-hidden="true">Desliza</p>
         </div>
-      </section>
-
-      <section class="protocol" id="protocolo">
-        <div class="protocol__head">
-          <h2 class="h2 rv">El protocolo en cabina</h2>
-          <p class="lead rv">Cuatro pasos y un producto para cada uno. Todo de la misma marca.</p>
-          <a class="pill pill--line rv" href="#protocolo">Ver los productos de cada paso</a>
-        </div>
-        <ol class="steps">
-          <li class="step rv">
-            <a href="#protocolo">
-              <span class="step__name">Baño de pies</span>
-              <span class="step__text">Prepara la piel antes de empezar.</span>
-            </a>
-          </li>
-          <li class="step rv">
-            <a href="#protocolo">
-              <span class="step__name">Exfoliación</span>
-              <span class="step__text">Retira la piel seca.</span>
-            </a>
-          </li>
-          <li class="step rv">
-            <a href="#protocolo">
-              <span class="step__name">Mascarilla</span>
-              <span class="step__text">Cuidado intensivo durante el servicio.</span>
-            </a>
-          </li>
-          <li class="step rv">
-            <a href="#protocolo">
-              <span class="step__name">Crema en espuma</span>
-              <span class="step__text">El cierre de cada servicio.</span>
-            </a>
-          </li>
-        </ol>
       </section>
 
       <section class="dark" id="profesionales">
@@ -231,7 +243,7 @@ const org = {
           <p class="lead rv">
             Compra los mismos productos para el cuidado diario. Envío gratuito en pedidos a partir de 60&nbsp;€.
           </p>
-          <a class="pill pill--red rv" href="#protocolo">Ir a la tienda</a>
+          <a class="pill pill--red rv" href="#inicio" data-go-step="0">Ver el protocolo</a>
         </div>
       </section>
 
@@ -289,7 +301,7 @@ const org = {
         </div>
         <nav aria-label="Secciones">
           <a href="#inicio">Tienda</a>
-          <a href="#protocolo">Protocolo</a>
+          <a href="#inicio" data-go-step="0">Protocolo</a>
           <a href="#profesionales">Profesionales</a>
           <a href="#seminarios">Seminarios</a>
           <a href="#marca">La marca</a>

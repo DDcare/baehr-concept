@@ -30,4 +30,4 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 
 - De productfilm zit in `src/scripts/film.js`. Het scrollen stuurt één waarde van 0 tot 1; camera en producten volgen vaste standen per moment.
 - Beweging testen met Playwright en `reducedMotion: 'no-preference'`. De testbrowser rendert langzaam; wacht ruim voor een schermopname.
-- Na wijzigingen in de 3D de stilstaande beelden opnieuw maken met `tools/posters.js`.
+- Na wijzigingen in de 3D de stilstaande beelden opnieuw maken met `tools/posters.cjs`.
