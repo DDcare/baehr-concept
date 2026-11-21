@@ -41,7 +41,7 @@ Wat al goed werkt: een duidelijke niche, een eigen registratie voor professional
 - Eén vaste omschrijving overal, op je site, in je Google-bedrijfsprofiel en op social media: Proxy Beauty Spain, S.L., Barcelona, officiële distributeur van BAEHR in Spanje.
 - De vermelding op de partnerpagina van de fabrikant laten kloppen met diezelfde gegevens. (Feit: de exportpartnerpagina van Gustav Baehr GmbH noemt Proxy Beauty Spain SL met baehr.com.es.)
 - Zoekmachines en AI-robots toegang geven tot je site, en gegevens over je bedrijf en producten zo vastleggen dat Google en AI-diensten ze kunnen lezen.
-- Zoekopdrachten op BAEHR en op "distribuidor BAEHR España" gaan nu naar Duitse winkels. Daar ligt de snelste winst. [Aanname over termijn: zichtbaar resultaat binnen de eerste drie maanden na livegang.]
+- Zoekopdrachten op BAEHR en op "distribuidor BAEHR España" gaan nu naar Duitse winkels. Daar ligt de snelste winst. (Geen termijn genoemd in de Spaanse en Engelse tekst, bewust.)
 
 ### Nieuwe professionele klanten
 
@@ -102,7 +102,7 @@ Alles uit Plus campagnes, plus social media en advertenties op Instagram en Face
 
 ### Gratis bij 12 maanden
 
-De webwinkel en het portaal hebben samen een waarde van 1.500 euro. Bij een samenwerking van 12 maanden betaal je daar niets voor. Stop je eerder, dan betaal je 125 euro per resterende maand. Voorbeeld: stop je na 4 maanden, dan betaal je 1.000 euro. [Aanname: bij het pakket Site en Google is alleen de webwinkel gratis, het portaal hoort bij Plus portaal en hoger. Of de waarde dan ook lager is, moet D bepalen.]
+De webwinkel en het portaal hebben samen een waarde van 1.500 euro. Bij een samenwerking van 12 maanden betaal je daar niets voor. Stop je eerder, dan betaal je 125 euro per resterende maand. Voorbeeld: stop je na 4 maanden, dan betaal je 1.000 euro. Bij Site en Google bouwen we alleen de webwinkel; het portaal zit vanaf Plus portaal in het pakket. [Aanname: of de waarde van 1.500 euro en de 125 euro per maand dan ook lager zijn, moet D bepalen.]
 
 ### Advertentiebudget, apart
 
@@ -127,7 +127,7 @@ Skin Complete (Nederland): een merk van ledmaskers en huidverzorging dat via kli
 - Prijzen exclusief btw. [Aanname.]
 - Looptijd: 12 maanden voor de gratis webwinkel en het portaal. Daarna maandelijks opzegbaar met een opzegtermijn van één maand. [Aanname: opzegtermijn.]
 - Rapport: één keer per maand in cijfers: aanmeldingen van professionals, eerste bestellingen, herhaalbestellingen en de kosten per nieuwe klant.
-- Wat we van je nodig hebben: drie cijfers (hoeveel professionals zich per maand aanmelden, hoeveel daarvan bestellen, en het gemiddelde orderbedrag) en leestoegang tot Google Search Console, Google Ads en je statistieken. De inloggegevens blijven bij jou.
+- Wat we van je nodig hebben: drie cijfers (hoeveel professionals zich per maand aanmelden, hoeveel daarvan bestellen, en het gemiddelde orderbedrag) leestoegang tot Google Search Console en je statistieken, en bij een pakket met campagnes beheertoegang tot je advertentieaccounts. De accounts en inloggegevens blijven van jou.
 
 ## Volgende stap
 
@@ -149,7 +149,6 @@ Conceptsite: [link]
 - Periode van de 80 nieuwe afnemers bij Skin Complete.
 - Naam van het bureau en de link naar de conceptsite.
 - De bevindingen over de huidige site (Duitse winkels in Google, AI-overzicht, robots geblokkeerd, vertaalfouten, drie verzenddrempels, 43 scripts, 14 velden): overgenomen uit het oude voorstel en de overdracht, niet door Claude gecontroleerd.
-- Termijn voor merkzoekopdrachten: eerste drie maanden na livegang.
 - Russischtalige professionals als huidige basis: afgeleid uit schermafbeeldingen, in de tekst als vraag geformuleerd.
 - Planning per maand uit het oude voorstel.
 
