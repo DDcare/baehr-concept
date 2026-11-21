@@ -77,7 +77,7 @@ const jsonld = [
       <h2 class="h2 rv">Prueba el pedido&nbsp;rápido</h2>
       <p class="lead rv">Escribe un nombre o una referencia y añade el producto a la cesta.</p>
       <p class="quick__note">Demostración de diseño: no se envía ningún pedido.</p>
-      <a class="pill pill--white quick__acct" href="/cuenta/">Ver una cuenta de ejemplo</a>
+      <a class="pill pill--white quick__acct" href="/mi-cuenta/">Ver una cuenta de ejemplo</a>
     </div>
     <div class="quick__box">
       <label class="quick__search">
@@ -205,7 +205,7 @@ const jsonld = [
       }
     });
     // demostración: con los dos campos rellenos se entra en la cuenta de ejemplo
-    if (ok) location.href = '/cuenta/';
+    if (ok) location.href = '/mi-cuenta/';
   });
 
   const input = document.querySelector<HTMLInputElement>('.quick__search input');

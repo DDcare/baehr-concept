@@ -84,7 +84,11 @@ const org = {
           <button type="button" data-set-mode="pro" aria-pressed="true">Profesional</button>
           <button type="button" data-set-mode="home" aria-pressed="false">Particular</button>
         </div>
-        <a class="bar__link" href="/profesionales/#acceso">Acceder</a>
+        {page === 'cuenta' ? (
+          <a class="bar__link" href="/mi-cuenta/" aria-current="page">Mi cuenta</a>
+        ) : (
+          <a class="bar__link" href="/profesionales/#acceso">Acceder</a>
+        )}
         <a class="cart" href="/tienda/" data-open-cart aria-controls="cesta">Cesta <b data-cart-count>0</b></a>
         <button class="menu" type="button" aria-expanded="false" aria-controls="menu-movil">Menú</button>
       </div>

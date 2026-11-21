@@ -22,7 +22,7 @@ npm run preview   # de gebouwde versie lokaal bekijken
 - `src/pages/tienda.astro`: de winkel met filter per productsoort (ook via de adresregel, bijvoorbeeld `/tienda/?tipo=crema`).
 - `src/pages/profesionales.astro`: voordelen, demo van snel bestellen, aanmelden of inloggen (`/profesionales/#acceso` opent inloggen), FAQ.
 - `src/pages/contacto.astro` en `src/pages/404.astro`.
-- `src/pages/cuenta.astro`: demo van de professionele account (het B2B-portaal): eigen pas met de naam uit het aanmeldformulier, laatste bestelling herhalen, bestelgeschiedenis, facturen, gegevens. Voorbeeldgegevens, geen prijzen. Inloggen op `/profesionales/#acceso` leidt hierheen.
+- `src/pages/mi-cuenta.astro`: demo van de professionele account (het B2B-portaal): eigen pas met de naam uit het aanmeldformulier, laatste bestelling herhalen, bestelgeschiedenis, facturen, gegevens. Voorbeeldgegevens, geen prijzen. Inloggen op `/profesionales/#acceso` leidt hierheen.
 - `src/components/Alta.astro`: het aanmeldformulier met de professionele pas (home en professionals).
 - `src/data/productos.ts`: de zes producten van het concept; `src/scripts/cart.js`: de cesta (schuiflade, bewaard in de browser).
 - Links naar een stap in de film vanaf andere pagina's: `/#protocolo` of `/#paso-1` tot en met `/#paso-5`.

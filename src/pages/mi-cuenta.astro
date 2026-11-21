@@ -5,56 +5,61 @@ import { PRODUCTOS } from '../data/productos';
 
 const T = {
   title: 'Mi cuenta profesional | BAEHR España',
-  description: 'Demostración de la cuenta profesional de BAEHR España: repite pedidos, consulta tu historial y descarga tus facturas.',
+  description:
+    'Repite tu último pedido, consulta tu historial y descarga tus facturas desde tu cuenta profesional de BAEHR España. Demostración con datos de ejemplo.',
   hello: 'Hola,',
-  sampleName: 'Estudio Ejemplo',
+  sampleName: 'Salón Ejemplar',
   sampleNif: 'B00000000',
-  demo: 'Así será tu cuenta profesional. Todos los datos de esta página son de ejemplo.',
-  guest: 'La cuenta profesional es para salones, podólogos y profesionales de manicura y pedicura.',
-  guestLink: 'Solicitar el alta',
-  lastH: 'Tu último pedido',
-  lastLine: (fecha: string, n: number) => `${fecha}, ${n} unidades`,
+  demo: 'Así es la cuenta profesional por dentro, con datos de ejemplo.',
+  guest: 'La cuenta profesional es para salones, podólogos y profesionales de manicura y pedicura. ¿Es tu caso?',
+  guestLink: 'Solicita el alta',
+  lastH: 'Tu último pedido',
+  lastLine: (fecha: string, n: number) => `Realizado el ${fecha}, con ${n} ${n === 1 ? 'producto' : 'productos'}`,
   repeat: 'Repetir pedido',
-  repeated: 'Añadido a la cesta.',
-  quickH: 'Pedido rápido',
-  quickT: 'Busca por nombre o referencia y añade productos sin recorrer la tienda.',
+  repeated: 'Productos añadidos a la cesta.',
+  seeCart: 'Ver la cesta',
+  quickH: '¿Toca reponer?',
+  quickT: 'Busca por nombre o referencia y añade a la cesta lo que te falte.',
   quickBtn: 'Hacer un pedido rápido',
-  ordersH: 'Tus pedidos',
+  ordersH: 'Historial de pedidos',
   cols: ['Pedido', 'Fecha', 'Productos', 'Estado'],
   actions: 'Acciones',
-  estado: { entregado: 'Entregado', camino: 'En camino', preparacion: 'En preparación' } as Record<string, string>,
-  again: 'Repetir',
-  invoice: 'Factura',
-  invoiceMsg: 'Demostración de diseño: no se descarga ningún archivo.',
+  estado: { entregado: 'Entregado', camino: 'En camino', preparacion: 'En preparación' } as Record<string, string>,
+  again: 'Repetir pedido',
+  againAria: (n: string) => `Repetir el pedido ${n}`,
+  invoice: 'Descargar factura',
+  invoiceAria: (n: string) => `Descargar la factura del pedido ${n}`,
+  invoiceMsg: 'Demostración de diseño: no se descarga ninguna factura.',
   sample: 'Datos de ejemplo.',
-  invoicesH: 'Facturas',
-  invoicesT: 'Cada pedido tiene su factura, siempre disponible en tu cuenta.',
+  invoicesH: 'Tus facturas',
+  invoicesT: 'Descarga las facturas de tus pedidos cuando las necesites.',
   invoicesBtn: 'Ver todas las facturas',
-  dataH: 'Tus datos',
+  dataH: 'Tus datos',
   labels: ['Nombre comercial', 'NIF o CIF', 'Correo electrónico', 'Dirección de envío'],
-  sampleMail: 'hola@estudioejemplo.es',
+  sampleMail: 'hola@example.com',
   sampleAddr: 'Calle Ejemplo, 1, 08000 Barcelona',
-  edit: 'Modificar mis datos',
+  edit: 'Modificar datos',
   editMsg: 'Demostración de diseño: los datos no se pueden modificar.',
   logout: 'Cerrar sesión',
 };
 
 const byId = Object.fromEntries(PRODUCTOS.map((p) => [p.id, p]));
-const fmt = new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
+// Fechas en formato español (20/11/2026), contadas hacia atrás desde hoy para que el ejemplo no envejezca
+const fmt = new Intl.DateTimeFormat('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' });
+const daysAgo = (d: number) => new Date(Date.now() - d * 86400000);
+const iso = (d: Date) => d.toISOString().slice(0, 10);
 // Pedidos de ejemplo
 const pedidos = [
-  { n: '10482', fecha: '2026-11-18', estado: 'camino', items: [['espuma', 6], ['crema', 6], ['exfoliante', 2], ['bano', 1]] },
-  { n: '10397', fecha: '2026-11-04', estado: 'entregado', items: [['espuma', 6], ['mascarilla', 4], ['proteccion', 3]] },
-  { n: '10251', fecha: '2026-10-21', estado: 'entregado', items: [['crema', 12], ['exfoliante', 2]] },
-  { n: '10118', fecha: '2026-10-07', estado: 'entregado', items: [['bano', 2], ['espuma', 6], ['crema', 6], ['mascarilla', 2]] },
-] as { n: string; fecha: string; estado: string; items: [string, number][] }[];
+  { n: '10517', dias: 1, estado: 'preparacion', items: [['espuma', 2], ['crema', 2]] },
+  { n: '10498', dias: 3, estado: 'camino', items: [['bano', 1], ['exfoliante', 2], ['mascarilla', 3]] },
+  { n: '10436', dias: 17, estado: 'entregado', items: [['espuma', 3], ['proteccion', 3]] },
+  { n: '10372', dias: 31, estado: 'entregado', items: [['crema', 3], ['espuma', 3], ['exfoliante', 2], ['bano', 1]] },
+] as { n: string; dias: number; estado: string; items: [string, number][] }[];
 const total = (items: [string, number][]) => items.reduce((a, [, q]) => a + q, 0);
 const last = pedidos[0];
 ---
 
 <Base title={T.title} description={T.description} page="cuenta">
-  <p class="acct-guest" data-when="home">{T.guest} <a class="textlink" href="/profesionales/#alta">{T.guestLink}</a></p>
-
   <section class="acct-hero">
     <div class="acct-hero__text">
       <h1 class="acct-hero__h">
@@ -62,6 +67,7 @@ const last = pedidos[0];
         <span class="stretch is-in acct-hero__name" data-acct="salon">{T.sampleName}</span>
       </h1>
       <p class="lead">{T.demo}</p>
+      <p class="acct-guest" data-when="home">{T.guest} <a class="textlink" href="/profesionales/#alta">{T.guestLink}</a></p>
     </div>
     <div class="pass acct-pass" aria-hidden="true">
       <div class="pass__card">
@@ -76,31 +82,33 @@ const last = pedidos[0];
 
   <section class="acct-grid">
     <article class="acct-card">
-      <h2 class="acct-card__h">{T.lastH}</h2>
-      <p class="acct-card__line">{T.lastLine(fmt.format(new Date(last.fecha)), total(last.items))}</p>
+      <h2 class="acct-card__h" set:html={T.lastH} />
+      <p class="acct-card__line">
+        <time datetime={iso(daysAgo(last.dias))} data-days-ago={last.dias} data-template={T.lastLine('{f}', total(last.items))}>{T.lastLine(fmt.format(daysAgo(last.dias)), total(last.items))}</time>
+      </p>
       <ul class="acct-thumbs">
         {
           last.items.map(([id, q]) => (
             <li>
               <span class="acct-thumbs__img"><img src={`/img/productos/${byId[id].img}.webp`} width="600" height="900" alt="" loading="lazy" /></span>
               <span class="acct-thumbs__q">× {q}</span>
-              <span class="sr">{byId[id].name}</span>
+              <span class="sr" lang="de">{byId[id].name}</span>
             </li>
           ))
         }
       </ul>
       <button class="pill pill--red" type="button" data-repeat={last.n}>{T.repeat}</button>
-      <p class="acct-msg" role="status" hidden>{T.repeated}</p>
+      <p class="acct-msg" role="status" hidden>{T.repeated} <a class="textlink" href="/tienda/" data-open-cart>{T.seeCart}</a></p>
     </article>
     <article class="acct-card acct-card--red">
-      <h2 class="acct-card__h">{T.quickH}</h2>
+      <h2 class="acct-card__h" set:html={T.quickH} />
       <p class="acct-card__line">{T.quickT}</p>
       <a class="pill pill--white" href="/profesionales/#pedido-rapido">{T.quickBtn}</a>
     </article>
   </section>
 
-  <section class="orders">
-    <h2 class="h2 rv">{T.ordersH}</h2>
+  <section class="orders" id="historial">
+    <h2 class="h2 rv" set:html={T.ordersH} />
     <table class="otable">
       <thead>
         <tr>
@@ -113,19 +121,23 @@ const last = pedidos[0];
           pedidos.map((o) => (
             <tr>
               <th scope="row" data-label={T.cols[0]}>{o.n}</th>
-              <td data-label={T.cols[1]}>{fmt.format(new Date(o.fecha))}</td>
+              <td data-label={T.cols[1]}>
+                <time datetime={iso(daysAgo(o.dias))} data-days-ago={o.dias}>{fmt.format(daysAgo(o.dias))}</time>
+              </td>
               <td data-label={T.cols[2]}>
                 <span class="otable__thumbs" aria-hidden="true">
                   {o.items.slice(0, 4).map(([id]) => <img src={`/img/productos/${byId[id].img}.webp`} width="600" height="900" alt="" loading="lazy" />)}
                 </span>
-                <span>{total(o.items)} unidades</span>
+                <span>{total(o.items)}</span>
               </td>
               <td data-label={T.cols[3]}>
-                <span class={`status status--${o.estado}`}>{T.estado[o.estado]}</span>
+                <span class={`status status--${o.estado}`} set:html={T.estado[o.estado]} />
               </td>
               <td class="otable__act">
-                <button class="mini" type="button" data-repeat={o.n}>{T.again}</button>
-                <button class="mini mini--line" type="button" data-invoice>{T.invoice}</button>
+                <button class="mini" type="button" data-repeat={o.n} aria-label={T.againAria(o.n)}>{T.again}</button>
+                {o.estado !== 'preparacion' && (
+                  <button class="mini mini--line" type="button" data-invoice aria-label={T.invoiceAria(o.n)}>{T.invoice}</button>
+                )}
               </td>
             </tr>
           ))
@@ -133,17 +145,18 @@ const last = pedidos[0];
       </tbody>
     </table>
     <p class="orders__note">{T.sample}</p>
+    <p class="acct-msg" data-repeat-msg role="status" hidden>{T.repeated} <a class="textlink" href="/tienda/" data-open-cart>{T.seeCart}</a></p>
     <p class="acct-msg" data-invoice-msg role="status" hidden>{T.invoiceMsg}</p>
   </section>
 
   <section class="acct-split">
     <div class="acct-box">
-      <h2 class="acct-card__h">{T.invoicesH}</h2>
+      <h2 class="acct-card__h" set:html={T.invoicesH} />
       <p class="acct-card__line">{T.invoicesT}</p>
-      <button class="pill pill--line" type="button" data-invoice>{T.invoicesBtn}</button>
+      <a class="pill pill--line" href="#historial">{T.invoicesBtn}</a>
     </div>
     <div class="acct-box">
-      <h2 class="acct-card__h">{T.dataH}</h2>
+      <h2 class="acct-card__h" set:html={T.dataH} />
       <dl class="acct-data">
         <div><dt>{T.labels[0]}</dt><dd data-acct="salon">{T.sampleName}</dd></div>
         <div><dt>{T.labels[1]}</dt><dd data-acct="nif">{T.sampleNif}</dd></div>
@@ -155,7 +168,7 @@ const last = pedidos[0];
     </div>
   </section>
 
-  <p class="acct-out"><a class="textlink" href="/">{T.logout}</a></p>
+  <p class="acct-out"><a class="textlink" href="/profesionales/#acceso">{T.logout}</a></p>
 </Base>
 
 <script type="application/json" id="pedidos-data" set:html={JSON.stringify(pedidos)} />
@@ -166,18 +179,31 @@ const last = pedidos[0];
     const pase = JSON.parse(localStorage.getItem('baehr-pase') || 'null');
     if (pase) {
       document.querySelectorAll<HTMLElement>('[data-acct]').forEach((el) => {
-        const v = pase[el.dataset.acct || ''];
-        if (v) el.textContent = el.dataset.acct === 'nif' ? v.toUpperCase() : v;
+        const key = el.dataset.acct || '';
+        const v = (pase[key] || '').trim();
+        if (!v) return;
+        if (key === 'nif') el.textContent = v.slice(0, 2).toUpperCase() + '·'.repeat(Math.max(0, Math.min(7, v.length - 2)));
+        // harde spatie voor het laatste woord: de kop eindigt nooit op één los woord
+        else el.textContent = v.replace(/\s+(\S+)$/, '\u00a0$1');
       });
     }
   } catch (e) {}
+
+  // Fechas de ejemplo contadas desde hoy, en formato 20/11/2026
+  const fmt = new Intl.DateTimeFormat('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' });
+  document.querySelectorAll<HTMLTimeElement>('time[data-days-ago]').forEach((t) => {
+    const d = new Date(Date.now() - Number(t.dataset.daysAgo) * 86400000);
+    t.dateTime = d.toISOString().slice(0, 10);
+    const f = fmt.format(d);
+    t.textContent = t.dataset.template ? t.dataset.template.replace('{f}', f) : f;
+  });
 
   const pedidos = JSON.parse(document.getElementById('pedidos-data')?.textContent || '[]') as { n: string; items: [string, number][] }[];
   document.querySelectorAll<HTMLButtonElement>('[data-repeat]').forEach((b) =>
     b.addEventListener('click', () => {
       const o = pedidos.find((p) => p.n === b.dataset.repeat);
       o?.items.forEach(([id, q]) => (window as any).baehrCesta?.add(id, q));
-      const msg = b.parentElement?.querySelector<HTMLElement>('.acct-msg');
+      const msg = b.closest('.acct-card')?.querySelector<HTMLElement>('.acct-msg') || document.querySelector<HTMLElement>('[data-repeat-msg]');
       if (msg) msg.hidden = false;
       (window as any).baehrCesta?.open();
     })

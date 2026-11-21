@@ -2521,12 +2521,14 @@ h1 {
 
 /* ---------- Mi cuenta (demostración del portal profesional) ---------- */
 .acct-guest {
-  margin: clamp(6.2rem, 12vh, 7.5rem) var(--pad) 0;
-  padding: 0.8rem 1.2rem;
-  border-radius: 999px;
+  margin-top: 1.2rem;
+  max-width: 34rem;
+  padding: 0.9rem 1.3rem;
+  border-radius: 1.6rem;
   background: var(--ink);
   color: #fff;
   font-size: 0.9rem;
+  line-height: 1.45;
 }
 .acct-guest .textlink {
   margin-left: 0.4rem;
@@ -2539,9 +2541,6 @@ h1 {
   gap: 2rem clamp(2rem, 5vw, 5rem);
   align-items: end;
   padding: clamp(7.5rem, 17vh, 10.5rem) var(--pad) clamp(2.5rem, 6vh, 4rem);
-}
-html[data-mode='home'] .acct-hero {
-  padding-top: clamp(2rem, 5vh, 3rem);
 }
 .acct-hero__h .stretch {
   display: block;
@@ -2688,8 +2687,9 @@ html[data-mode='home'] .acct-hero {
   object-fit: contain;
   box-shadow: 0 0 0 2px var(--paper);
 }
+/* acciones alineadas a la izquierda: «Repetir pedido» queda en la misma columna en cada fila */
 .otable__act {
-  text-align: right !important;
+  text-align: left !important;
   white-space: nowrap;
 }
 .status {
