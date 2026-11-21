@@ -100,6 +100,11 @@ if (pass) {
     if (!slot) return;
     input.addEventListener('input', () => {
       const v = input.value.trim();
+      try {
+        const saved = JSON.parse(localStorage.getItem('baehr-pase') || '{}');
+        saved[input.name] = v;
+        localStorage.setItem('baehr-pase', JSON.stringify(saved));
+      } catch (e) {}
       if (input.name === 'nif' && v) slot.textContent = v.slice(0, 2).toUpperCase() + '·'.repeat(Math.max(0, Math.min(7, v.length - 2)));
       else slot.textContent = v || slot.dataset.empty;
       slot.classList.toggle('is-set', !!v);

@@ -77,6 +77,7 @@ const jsonld = [
       <h2 class="h2 rv">Prueba el pedido&nbsp;rápido</h2>
       <p class="lead rv">Escribe un nombre o una referencia y añade el producto a la cesta.</p>
       <p class="quick__note">Demostración de diseño: no se envía ningún pedido.</p>
+      <a class="pill pill--white quick__acct" href="/cuenta/">Ver una cuenta de ejemplo</a>
     </div>
     <div class="quick__box">
       <label class="quick__search">
@@ -147,7 +148,6 @@ const jsonld = [
         </label>
         <a class="login__forgot" href="#acceso">¿Has olvidado tu contraseña?</a>
         <button class="pill pill--red" type="submit">Iniciar sesión</button>
-        <p class="signup__ok" role="status" hidden>No se ha iniciado ninguna sesión.</p>
         <p class="signup__note">Demostración de diseño: no se envía ningún dato.</p>
       </form>
     </div>
@@ -181,10 +181,17 @@ const jsonld = [
     });
   }
   tabs.forEach((t) => t.addEventListener('click', () => show(t.getAttribute('aria-controls') || 'panel-alta')));
-  if (location.hash === '#acceso') {
-    show('panel-acceso');
-    document.getElementById('alta')?.scrollIntoView();
+  // /profesionales/#acceso abre el acceso; también si ya estás en esta página y pulsas «Acceder»
+  function fromHash() {
+    if (location.hash === '#acceso') {
+      show('panel-acceso');
+      document.getElementById('alta')?.scrollIntoView();
+    } else if (location.hash === '#alta') {
+      show('panel-alta');
+    }
   }
+  fromHash();
+  window.addEventListener('hashchange', fromHash);
   document.querySelector<HTMLFormElement>('.login')?.addEventListener('submit', (e) => {
     e.preventDefault();
     const f = e.currentTarget as HTMLFormElement;
@@ -197,8 +204,8 @@ const jsonld = [
         ok = false;
       }
     });
-    const msg = f.querySelector<HTMLElement>('.signup__ok');
-    if (msg) msg.hidden = !ok;
+    // demostración: con los dos campos rellenos se entra en la cuenta de ejemplo
+    if (ok) location.href = '/cuenta/';
   });
 
   const input = document.querySelector<HTMLInputElement>('.quick__search input');

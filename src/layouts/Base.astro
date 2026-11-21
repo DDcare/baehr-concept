@@ -8,7 +8,7 @@ import { PRODUCTOS } from '../data/productos';
 interface Props {
   title: string;
   description: string;
-  page?: 'home' | 'producto' | 'marca' | 'tienda' | 'profesionales' | 'contacto' | 'error';
+  page?: 'home' | 'producto' | 'marca' | 'tienda' | 'profesionales' | 'contacto' | 'cuenta' | 'error';
   jsonld?: object[];
 }
 const { title, description, page = 'home', jsonld = [] } = Astro.props;

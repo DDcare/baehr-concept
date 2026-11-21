@@ -2500,6 +2500,305 @@ h1 {
   }
 }
 
+/* ---------- Mi cuenta (demostración del portal profesional) ---------- */
+.acct-guest {
+  margin: clamp(6.2rem, 12vh, 7.5rem) var(--pad) 0;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.9rem;
+}
+.acct-guest .textlink {
+  margin-left: 0.4rem;
+  font-weight: 600;
+  color: #fff;
+}
+.acct-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 2rem clamp(2rem, 5vw, 5rem);
+  align-items: end;
+  padding: clamp(7.5rem, 17vh, 10.5rem) var(--pad) clamp(2.5rem, 6vh, 4rem);
+}
+html[data-mode='home'] .acct-hero {
+  padding-top: clamp(2rem, 5vh, 3rem);
+}
+.acct-hero__h .stretch {
+  display: block;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 6.4vw, 7.4rem);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+.acct-hero__h .acct-hero__name {
+  /* el nombre del salón puede ser largo: se reparte en líneas equilibradas, nunca se corta */
+  font-size: clamp(1.9rem, 4.6vw, 5.4rem);
+  line-height: 0.95;
+  color: var(--ink);
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+.acct-hero .lead {
+  margin-top: 1.2rem;
+  max-width: 34rem;
+}
+.acct-pass {
+  justify-self: end;
+}
+.acct-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: clamp(0.8rem, 1.6vw, 1.4rem);
+  padding: 0 var(--pad);
+}
+.acct-card,
+.acct-box {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 1rem;
+  padding: clamp(1.6rem, 3vw, 2.6rem);
+  border-radius: clamp(1.8rem, 3vw, 2.8rem);
+  background: #fff;
+}
+.acct-card--red {
+  background: var(--red);
+  color: #fff;
+}
+.acct-card__h {
+  font-weight: 800;
+  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+  line-height: 1;
+  text-transform: uppercase;
+  font-variation-settings: 'wdth' 116;
+}
+.acct-card__line {
+  max-width: 30rem;
+  color: var(--muted);
+}
+.acct-card--red .acct-card__line {
+  color: rgba(255, 255, 255, 0.85);
+}
+.acct-thumbs {
+  display: flex;
+  gap: clamp(0.5rem, 1.2vw, 0.8rem);
+  width: 100%;
+}
+.acct-thumbs li {
+  flex: 0 1 4.4rem;
+  min-width: 0;
+  display: grid;
+  justify-items: center;
+  gap: 0.35rem;
+}
+.acct-thumbs__img {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: 999px;
+  background: var(--paper);
+  overflow: hidden;
+}
+.acct-thumbs__img img {
+  position: absolute;
+  inset: 8% 10% 4%;
+  width: 80%;
+  height: 88%;
+  object-fit: contain;
+  object-position: 50% 100%;
+}
+.acct-thumbs__q {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.acct-msg {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--red);
+}
+.acct-msg[hidden] {
+  display: none;
+}
+.orders {
+  padding: clamp(4rem, 10vh, 7rem) var(--pad) clamp(3rem, 7vh, 5rem);
+}
+.otable {
+  width: 100%;
+  margin-top: clamp(1.4rem, 3.5vh, 2.4rem);
+  border-collapse: collapse;
+  border-top: 1.5px solid var(--ink);
+}
+.otable th,
+.otable td {
+  padding: 1rem 0.8rem 1rem 0;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: middle;
+  font-size: 0.95rem;
+}
+.otable thead th {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+.otable tbody th {
+  font-weight: 800;
+  font-variation-settings: 'wdth' 112;
+}
+.otable td:nth-child(3) {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.otable__thumbs {
+  display: flex;
+}
+.otable__thumbs img {
+  width: 1.9rem;
+  height: 2.85rem;
+  margin-right: -0.55rem;
+  padding: 0.15rem;
+  border-radius: 999px;
+  background: #fff;
+  object-fit: contain;
+  box-shadow: 0 0 0 2px var(--paper);
+}
+.otable__act {
+  text-align: right !important;
+  white-space: nowrap;
+}
+.status {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.status--entregado {
+  background: rgba(24, 24, 26, 0.08);
+}
+.status--camino {
+  background: var(--red);
+  color: #fff;
+}
+.status--preparacion {
+  border: 1.5px solid var(--ink);
+}
+.mini {
+  border: 0;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  padding: 0.5rem 0.95rem;
+  font-weight: 600;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+.mini--line {
+  margin-left: 0.3rem;
+  border: 1.5px solid var(--ink);
+  background: none;
+  color: var(--ink);
+}
+.orders__note {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.acct-split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.8rem, 1.6vw, 1.4rem);
+  padding: 0 var(--pad);
+}
+.acct-data {
+  display: grid;
+  width: 100%;
+  border-top: 1px solid var(--line);
+}
+.acct-data div {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+.acct-data dt {
+  color: var(--muted);
+}
+.acct-data dd {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.acct-out {
+  padding: clamp(2.5rem, 6vh, 4rem) var(--pad) clamp(4rem, 10vh, 7rem);
+}
+.acct-out .textlink {
+  font-weight: 600;
+}
+.quick__acct {
+  margin-top: 1.4rem;
+}
+@media (max-width: 960px) {
+  .acct-hero,
+  .acct-grid,
+  .acct-split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .acct-pass {
+    justify-self: start;
+  }
+}
+@media (max-width: 720px) {
+  .otable thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .otable tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.4rem 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .otable th,
+  .otable td {
+    padding: 0;
+    border: 0;
+  }
+  .otable td:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+  .otable td:nth-child(4) {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+  .otable td:nth-child(2) {
+    grid-column: 1;
+    color: var(--muted);
+  }
+  .otable__act {
+    grid-column: 1 / -1;
+    text-align: left !important;
+  }
+  .acct-data div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.1rem;
+  }
+}
+
 /* ---------- Cesta: panel lateral ---------- */
 .drawer {
   position: fixed;
