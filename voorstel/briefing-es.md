@@ -26,7 +26,7 @@ Dit is geen tekst om te vertalen. Het is een lijst met feiten, besluiten en gren
 ## Wat we zagen op haar huidige site (van buitenaf, zonder inloggen, zonder haar cijfers)
 
 - Wie in Google zoekt naar de officiële BAEHR-winkel in Spanje, komt bij Duitse winkels. Het AI-overzicht van Google bij die zoekopdracht zei dat er geen Spaanse distributeur te vinden was.
-- De server laat geen automatische bezoekers door: ook de robots van ChatGPT en vergelijkbare diensten krijgen een controlepagina in plaats van de site. Gevolg: AI-diensten kunnen haar niet noemen.
+- De server laat geen automatische bezoekers door: ook de robots van ChatGPT en vergelijkbare diensten krijgen een controlepagina in plaats van de site. Gevolg: AI-diensten zullen haar site waarschijnlijk niet aanraden (niet: kunnen haar nooit noemen; ze kunnen via andere bronnen wel iets weten).
 - Vertaalfouten in de catalogus, letterlijk: "FRES FEET" (de serie heet "fresh feet"), "Pies seca", "Serie alovera", en een categorie-URL "uncategorized-es". Een professional zoekt met eigen vakwoorden en vindt het product dan niet.
 - Drie verschillende drempels voor gratis verzending: 60 euro op de site, 100 en 150 euro op oude pagina's die nog in Google staan.
 - Eén pagina laadt 43 scripts en 44 stylesheets: op de telefoon seconden wachten bij elke stap van een bestelling.
@@ -85,8 +85,8 @@ Gratis bouw:
 Advertentiebudget:
 
 - Staat los van het maandbedrag. Ze betaalt het rechtstreeks aan Google en Meta. De advertentieaccounts blijven van haar.
-- Voorstel om te beginnen: vanaf 1.000 euro per maand, waarvan 600 euro Google en 400 euro Meta. Bijstellen op basis van de cijfers in haar eigen accounts.
-- De campagnes starten pas als het portaal live is. Eerder zouden advertenties mensen naar het huidige formulier sturen, dat weinig oplevert. Tot dan betaalt ze 480 euro per maand, welk pakket ze ook kiest.
+- Voorstel om te beginnen: minimaal 600 euro per maand voor Google (vanaf pakket 3). Bij pakket 4 komt daar minimaal 400 euro per maand voor Meta bij, samen 1.000 euro. Pakket 3 heeft geen Meta. Bijstellen op basis van de cijfers in haar eigen accounts.
+- De campagnes en social media starten pas als het portaal live is (tweede of derde maand). Eerder zouden advertenties mensen naar het huidige formulier sturen, dat weinig oplevert. Tot het portaal live is, betaalt ze 480 euro per maand, welk pakket ze ook kiest.
 
 ## Bewijs
 
@@ -95,13 +95,13 @@ Skin Complete (Nederland, skincomplete.eu): merk van ledmaskers en huidverzorgin
 ## Planning
 
 - Eerste maand: metingen opzetten, toegang voor zoek- en AI-robots, ontwerp van de nieuwe winkel. Het maandrapport begint deze maand (het zit in elk pakket).
-- Tweede en derde maand: winkel en portaal live, catalogus, seminarpagina's.
-- Vanaf de vierde maand: advertenties en social media (afhankelijk van het pakket), pagina's per dienst.
+- Tweede en derde maand: winkel en portaal live, catalogus, seminarpagina's. Zodra het portaal live is, starten campagnes en social media (afhankelijk van het pakket).
+- Vanaf de vierde maand: pagina's per dienst.
 
 ## Voorwaarden
 
 - Prijzen exclusief IVA.
-- 12 maanden voor de gratis winkel en het portaal; daarna maandelijks opzegbaar met een maand opzegtermijn.
+- Geen vaste looptijd (geen permanencia). Altijd opzegbaar met een maand opzegtermijn. De enige voorwaarde is de terugbetaling hierboven: winkel en portaal zijn gratis na 12 maanden samenwerking; wie eerder stopt, betaalt 125 euro per resterende maand.
 - Maandrapport in cijfers: aanmeldingen van professionals, eerste bestellingen, herhaalbestellingen, kosten per nieuwe klant.
 - Wat we van haar nodig hebben: drie cijfers (hoeveel professionals zich per maand aanmelden, hoeveel daarvan bestellen, gemiddeld orderbedrag); leestoegang tot Google Search Console en haar statistieken; bij een pakket met campagnes beheertoegang tot haar advertentieaccounts. Accounts en inloggegevens blijven van haar.
 - Geen garantie op posities of bezoekers.
