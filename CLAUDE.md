@@ -31,3 +31,10 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 - De productfilm zit in `src/scripts/film.js`. Het scrollen stuurt één waarde van 0 tot 1; camera en producten volgen vaste standen per moment.
 - Beweging testen met Playwright en `reducedMotion: 'no-preference'`. De testbrowser rendert langzaam; wacht ruim voor een schermopname.
 - Na wijzigingen in de 3D de stilstaande beelden opnieuw maken met `tools/posters.cjs`.
+
+## Oordeel van D over de eerste versie (21 november 2026)
+
+- Letterlijk: "voor 1e ontwerp oke, maar ben niet helemaal content", "ziet er te simpel basic uit", "ik wil elite, uniek, eigen identiteit, speels maar professioneel".
+- De site reageert traag op zijn laptop. Eerst de snelheid oplossen, dan pas meer effecten toevoegen.
+- Verdeling van D: ontwerp en 3D alleen op Fable, Opus alleen voor tekst (het voorstel in het Spaans en Engels).
+- Voorstel van Claude, nog niet bevestigd door D: de volgende ontwerpronde begint met twee of drie stijlbeelden van één stap waaruit D kiest, daarna pas de hele film ombouwen.
