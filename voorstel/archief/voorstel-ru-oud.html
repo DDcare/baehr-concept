@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Предложение для BAEHR España</title>
+<link rel="stylesheet" href="node_modules/@fontsource/prata/400.css">
+<link rel="stylesheet" href="node_modules/@fontsource/golos-text/400.css">
+<link rel="stylesheet" href="node_modules/@fontsource/golos-text/500.css">
+<link rel="stylesheet" href="node_modules/@fontsource/golos-text/600.css">
+<style>
+  @page { size: A4; margin: 0; }
+  :root {
+    --paper: #F4EFE7;
+    --ink: #1B2420;
+    --pine: #22372E;
+    --accent: #BF4426;
+    --accent-light: #F0A283;
+    --muted: #5F665F;
+    --soft: #E8E0D2;
+    --line: rgba(27, 36, 32, .26);
+    --line-light: rgba(244, 239, 231, .28);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: 'Golos Text', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.5;
+    color: var(--ink);
+    background: #cfcabf;
+    hyphens: manual;
+  }
+  .page {
+    width: 210mm;
+    height: 297mm;
+    padding: 16mm 18mm 15mm;
+    background: var(--paper);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    page-break-after: always;
+    break-after: page;
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  h1, h2, h3, .big { font-family: 'Prata', serif; font-weight: 400; }
+  .num { font-family: 'Golos Text', sans-serif; font-weight: 500; font-variant-numeric: tabular-nums; }
+  h1, h2, h3 { text-wrap: balance; }
+  h1 { font-size: 36pt; line-height: 1.16; letter-spacing: -0.01em; }
+  h2 { font-size: 24pt; line-height: 1.2; letter-spacing: -0.005em; }
+  h3 { font-size: 14pt; line-height: 1.28; }
+  p { text-wrap: pretty; }
+  em { font-style: normal; color: var(--accent); }
+
+  .run, .foot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8pt;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .foot { margin-top: auto; padding-top: 6mm; }
+  .sub { color: var(--muted); margin-top: 3mm; max-width: 130mm; }
+
+  /* Реестр: строки с тонкими линиями */
+  .ledger { border-top: 1px solid var(--line); }
+  .ledger .row {
+    display: grid;
+    grid-template-columns: 58mm 1fr;
+    column-gap: 9mm;
+    padding: 4mm 0;
+    border-bottom: 1px solid var(--line);
+    align-items: start;
+  }
+  .ledger .row strong { font-weight: 600; font-size: 11pt; line-height: 1.38; }
+
+  .panel { background: var(--pine); color: var(--paper); padding: 9mm 10mm; }
+  .panel .ledger { border-top-color: var(--line-light); }
+  .panel .ledger .row { border-bottom-color: var(--line-light); }
+  .soft { background: var(--soft); padding: 7mm 8mm; }
+
+  /* Страница 1 */
+  .cover h1 { margin-top: 30mm; max-width: 160mm; }
+  .cover .lead { margin-top: 9mm; max-width: 128mm; font-size: 12pt; line-height: 1.55; }
+  .cover .panel { margin-top: auto; }
+  .cover .panel h3 { margin-bottom: 5mm; }
+  .cover .panel .row { grid-template-columns: 1fr auto; padding: 3.4mm 0; align-items: baseline; }
+  .cover .panel .row span { font-weight: 500; font-size: 11pt; }
+  .cover .panel .row .num { font-size: 11.5pt; text-align: right; }
+  .cover .panel .row .num.free { color: var(--accent-light); }
+  .meta { display: grid; grid-template-columns: 1fr 1fr; column-gap: 9mm; margin-top: 7mm; font-size: 9.5pt; }
+  .meta b { display: block; font-weight: 600; }
+
+  /* Страница 2 */
+  .findings { margin-top: 9mm; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; column-gap: 6mm; margin-top: 9mm; }
+  .pair .soft h3 { margin-bottom: 3mm; }
+
+  /* Страница 3 */
+  .goals { margin-top: 8mm; border-top: 1px solid var(--ink); }
+  .goal {
+    display: grid;
+    grid-template-columns: 58mm 1fr;
+    column-gap: 9mm;
+    padding: 5mm 0 3mm;
+    border-bottom: 1px solid var(--ink);
+  }
+  .goal .acts p { padding: 2.1mm 0; border-bottom: 1px solid var(--line); }
+  .goal .acts p:first-child { padding-top: 0; }
+  .goal .acts p:last-child { border-bottom: 0; }
+  .timeline { margin-top: 9mm; }
+  .timeline h3 { margin-bottom: 4mm; }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 6mm; }
+  .steps div { border-top: 3px solid var(--accent); padding-top: 3mm; }
+  .steps b { display: block; font-weight: 600; margin-bottom: 1mm; }
+
+  /* Страница 4 */
+  .build { display: grid; grid-template-columns: 1fr 1fr; column-gap: 6mm; margin-top: 8mm; }
+  .build .soft h3 { margin-bottom: 3.5mm; font-size: 13pt; white-space: nowrap; }
+  .nowrap { white-space: nowrap; }
+  .build .soft p { padding: 2.2mm 0; border-top: 1px solid var(--line); }
+  .build .soft .intro { border-top: 0; padding-top: 0; padding-bottom: 3.5mm; }
+  .case { margin-top: 8mm; padding: 8mm 10mm; display: grid; grid-template-columns: 50mm 1fr; column-gap: 9mm; align-items: center; }
+  .case .big { font-size: 80pt; line-height: 1; color: var(--accent-light); }
+  .case .cap { font-size: 10.5pt; font-weight: 500; margin-top: 2mm; max-width: 46mm; }
+  .case h3 { margin-bottom: 3.5mm; }
+  .case .site { margin-top: 3.5mm; font-size: 9.5pt; opacity: .8; }
+
+  /* Страница 5 */
+  .price { margin-top: 8mm; border-top: 1px solid var(--ink); }
+  .price .row {
+    display: grid;
+    grid-template-columns: 1fr 42mm 42mm;
+    column-gap: 6mm;
+    padding: 3.3mm 0;
+    border-bottom: 1px solid var(--line);
+    align-items: start;
+  }
+  .price .head { font-size: 8pt; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); padding: 2.4mm 0; }
+  .price .row strong { font-weight: 600; font-size: 11pt; }
+  .price .row small { display: block; font-size: 9pt; color: var(--muted); line-height: 1.4; margin-top: .6mm; }
+  .price .row .num { font-size: 13pt; font-weight: 600; display: block; line-height: 1.3; }
+  .price .row .amt small { margin-top: 0; }
+  .price .row .none { color: var(--muted); font-size: 9.5pt; }
+  .price .total { background: var(--soft); padding: 4mm; margin: 0 -4mm; border-bottom: 0; }
+  .price .total .num { color: var(--accent); }
+  .note { margin-top: 4mm; font-size: 9.5pt; color: var(--muted); max-width: 150mm; }
+  .terms { display: grid; grid-template-columns: 1fr 1fr; column-gap: 9mm; margin-top: 8mm; }
+  .terms h3 { margin-bottom: 3mm; }
+  .terms p { padding: 2mm 0; border-top: 1px solid var(--line); font-size: 9.8pt; }
+  .next { margin-top: 12mm; padding: 12mm 12mm 13mm; }
+  .next p { margin-top: 5mm; font-size: 12pt; line-height: 1.55; max-width: 128mm; }
+  .timeline + .foot { margin-top: auto; }
+</style>
+</head>
+<body>
+
+<section class="page cover">
+  <div class="run"><span>Предложение для BAEHR España</span><span>Ноябрь 2026</span></div>
+  <h1>Больше салонов и мастеров, <em>которые заказывают</em> у Вас</h1>
+  <p class="lead">Вы написали о двух трудностях: новых профессиональных клиентов приходит мало, а те, кто приходит, не всегда доходят до заказа. Этот план отвечает на обе: что мы меняем, что строим и сколько стоит каждая часть.</p>
+
+  <div class="panel">
+    <h3>Коротко</h3>
+    <div class="ledger">
+      <div class="row"><span>Новый магазин и портал для профессионалов</span><span class="num free">бесплатно при сотрудничестве от года</span></div>
+      <div class="row"><span>Видимость в Google и ChatGPT</span><span class="num">480 евро в месяц</span></div>
+      <div class="row"><span>Реклама в Google</span><span class="num">300 евро в месяц, бюджет от 600 евро</span></div>
+      <div class="row"><span>Соцсети и реклама в Instagram и Facebook</span><span class="num">700 евро в месяц, бюджет от 400 евро</span></div>
+    </div>
+  </div>
+  <div class="meta">
+    <p><b>Для кого</b>Валерия и партнёры BAEHR España (Proxy Beauty Spain, S.L.)</p>
+    <p><b>Подготовил</b>Денис</p>
+  </div>
+</section>
+
+<section class="page">
+  <div class="run"><span>Предложение для BAEHR España</span><span>Где Вы сейчас</span></div>
+  <h2 style="margin-top:12mm">Что мы увидели на baehr.com.es</h2>
+  <p class="sub">Проверка от 18 ноября 2026 года. Только то, что можно показать и перепроверить.</p>
+
+  <div class="ledger findings">
+    <div class="row"><strong>ИИ не знает, что Вы дистрибьютор</strong><p>На запрос об официальном магазине BAEHR в Испании поиск показал немецкие сайты. ИИ-сводка по этим результатам сообщила, что испанского дистрибьютора найти не удалось.</p></div>
+    <div class="row"><strong>Роботы не проходят защиту хостинга</strong><p>На автоматический запрос сервер отдаёт проверочную страницу вместо сайта (коды 429 и 403), в том числе по адресу robots.txt. Роботы ChatGPT и похожих сервисов такую проверку пройти не могут.</p></div>
+    <div class="row"><strong>В каталоге ошибки перевода</strong><p>«FRES FEET», «Pies seca», «Serie alovera», адрес категории «uncategorized-es». Мастер ищет товар своими словами и не находит его, а доверие к профессиональной марке падает.</p></div>
+    <div class="row"><strong>Три разных порога бесплатной доставки</strong><p>На сайте сегодня указано 60 евро. На старых страницах, которые остались в поиске, указано 100 и 150 евро.</p></div>
+    <div class="row"><strong>Тяжёлые страницы</strong><p>На одной странице подключено 43 скрипта и 44 файла стилей. На телефоне это лишние секунды ожидания перед каждым шагом заказа.</p></div>
+  </div>
+
+  <div class="pair">
+    <div class="soft">
+      <h3>Чего мы пока не видели</h3>
+      <p>Защита хостинга не пропускает автоматические проверки. Поэтому путь регистрации и оформления заказа мы пройдём вместе с Вами на встрече.</p>
+    </div>
+    <div class="soft">
+      <h3>Что уже работает</h3>
+      <p>Понятная ниша и немецкое производство. Регистрация для профессионалов. Семинары для мастеров. Каналы в Instagram, YouTube, WhatsApp и Telegram.</p>
+    </div>
+  </div>
+  <div class="foot"><span>baehr.com.es</span><span>Ноябрь 2026</span></div>
+</section>
+
+<section class="page">
+  <div class="run"><span>Предложение для BAEHR España</span><span>План</span></div>
+  <h2 style="margin-top:12mm">Что мы предлагаем сделать</h2>
+  <p class="sub">Три задачи из Вашего письма и то, что мы делаем для каждой.</p>
+
+  <div class="goals">
+    <div class="goal">
+      <h3>Узнаваемость в Испании</h3>
+      <div class="acts">
+        <p>Одна точная фраза везде: Proxy Beauty Spain, S.L., Барселона, эксклюзивный дистрибьютор BAEHR в Испании. На сайте, в профиле Google и в соцсетях.</p>
+        <p>Упоминание и ссылка на сайте производителя в Германии.</p>
+        <p>Доступ для поисковых и ИИ-роботов, разметка данных о компании и товарах.</p>
+        <p>Раздел с протоколами процедур: трещины, гиперкератоз, потливость. Теми словами, которыми ищут мастера.</p>
+      </div>
+    </div>
+    <div class="goal">
+      <h3>Новые профессиональные клиенты</h3>
+      <div class="acts">
+        <p>Семинар как вход: страница на каждый город, запись, а после семинара письмо с доступом в портал и стартовым предложением.</p>
+        <p>Пробный набор под конкретную процедуру как первый заказ.</p>
+        <p>Реклама по профессии: Google по запросам мастеров, Instagram и Facebook для косметологов, мастеров маникюра и педикюра.</p>
+      </div>
+    </div>
+    <div class="goal">
+      <h3>Конверсия: от контакта к заказу</h3>
+      <div class="acts">
+        <p>Два входа на главной странице: для профессионалов и для частных покупателей.</p>
+        <p>Портал, в котором салон регистрируется и заказывает за один визит.</p>
+        <p>Расчёт для салона: себестоимость процедуры и цена для клиента.</p>
+        <p>Повтор заказа одной кнопкой и напоминание, когда средство заканчивается.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot"><span>baehr.com.es</span><span>Ноябрь 2026</span></div>
+</section>
+
+<section class="page">
+  <div class="run"><span>Предложение для BAEHR España</span><span>Что мы строим</span></div>
+  <h2 style="margin-top:12mm">Магазин и портал, в котором салон заказывает сам</h2>
+  <p class="sub">Производитель не ограничивает Вас в дизайне и структуре. Поэтому магазин можно построить вокруг Вашего главного клиента: салона и мастера.</p>
+
+  <div class="build">
+    <div class="soft">
+      <h3>Новый интернет-магазин</h3>
+      <p class="intro">Заменяет нынешний сайт. Товары, заказы и клиенты сохраняются.</p>
+      <p>Собственный дизайн, а не шаблон.</p>
+      <p>Каталог на грамотном испанском языке.</p>
+      <p>Быстрая загрузка на телефоне.</p>
+      <p>Один порог бесплатной доставки и понятные сроки.</p>
+      <p>Страницы семинаров с записью по городам.</p>
+    </div>
+    <div class="soft">
+      <h3>Портал для профессионалов</h3>
+      <p class="intro">Регистрация у Вас уже есть. Портал делает из неё место для заказа.</p>
+      <p>Заявка салона за две минуты.</p>
+      <p>Профессиональные цены сразу после одобрения.</p>
+      <p>Быстрый заказ по списку товаров.</p>
+      <p>Повтор прошлого заказа одной кнопкой.</p>
+      <p>Счета и история заказов в личном кабинете.</p>
+    </div>
+  </div>
+
+  <div class="panel case">
+    <div>
+      <div class="big">80</div>
+      <p class="cap">новых оптовых клиентов: клиник и салонов</p>
+    </div>
+    <div>
+      <h3 class="nowrap">Пример: Skin&nbsp;Complete, Нидерланды</h3>
+      <p>Марка LED-масок и средств для кожи, которая продаёт через клиники и салоны. Мы сделали сайт и B2B-портал: салон подаёт заявку и получает собственный B2B-магазин с партнёрскими ценами, протоколами и обучением. Сегодня марка работает с клиниками и салонами в Нидерландах, Бельгии и на Кюрасао.</p>
+      <p class="site">skincomplete.eu</p>
+    </div>
+  </div>
+  <div class="foot"><span>baehr.com.es</span><span>Ноябрь 2026</span></div>
+</section>
+
+<section class="page">
+  <div class="run"><span>Предложение для BAEHR España</span><span>Стоимость</span></div>
+  <h2 style="margin-top:12mm">Сколько это стоит</h2>
+  <p class="sub">Отдельно то, что Вы платите нам, и отдельно рекламный бюджет, который идёт напрямую в Google и Meta.</p>
+
+  <div class="price">
+    <div class="row head"><span>Часть</span><span>Нам</span><span>Рекламный бюджет</span></div>
+    <div class="row"><div><strong>Новый магазин и портал для профессионалов</strong><small>Дизайн и разработка, стоимость 1 500 евро</small></div><div class="amt"><span class="num">0 евро</span><small>при сотрудничестве от года</small></div><span class="none">не нужен</span></div>
+    <div class="row"><div><strong>Видимость в Google и ChatGPT</strong><small>SEO, ИИ-ответы, тексты, хостинг и обслуживание</small></div><div class="amt"><span class="num">480 евро</span><small>в месяц</small></div><span class="none">не нужен</span></div>
+    <div class="row"><div><strong>Реклама в Google</strong><small>Настройка и ведение кампаний</small></div><div class="amt"><span class="num">300 евро</span><small>в месяц</small></div><div class="amt"><span class="num">от 600 евро</span><small>в месяц</small></div></div>
+    <div class="row"><div><strong>Соцсети и реклама Meta</strong><small>Контент и кампании в Instagram и Facebook</small></div><div class="amt"><span class="num">700 евро</span><small>в месяц</small></div><div class="amt"><span class="num">от 400 евро</span><small>в месяц</small></div></div>
+    <div class="row total"><strong>Всё вместе</strong><div class="amt"><span class="num">1 480 евро</span><small>в месяц</small></div><div class="amt"><span class="num">от 1 000 евро</span><small>в месяц</small></div></div>
+  </div>
+  <p class="note">Рекламные части начинаются с запуска портала: до него реклама вела бы людей на путь, который пока плохо превращает их в заказчиков. До запуска Вы платите 480 евро в месяц.</p>
+
+  <div class="timeline">
+    <h3>Ориентировочный график</h3>
+    <div class="steps">
+      <div><b>Первый месяц</b>Измерение, доступ для роботов, концепция нового магазина.</div>
+      <div><b>Второй и третий месяц</b>Запуск магазина и портала, каталог, страницы семинаров.</div>
+      <div><b>С четвёртого месяца</b>Реклама, соцсети, протоколы, отчёт в цифрах каждый месяц.</div>
+    </div>
+  </div>
+  <div class="foot"><span>baehr.com.es</span><span>Ноябрь 2026</span></div>
+</section>
+
+<section class="page">
+  <div class="run"><span>Предложение для BAEHR España</span><span>Условия</span></div>
+  <h2 style="margin-top:12mm">Условия и следующий шаг</h2>
+
+  <div class="ledger findings">
+    <div class="row"><strong>Цены</strong><p>Указаны без НДС.</p></div>
+    <div class="row"><strong>Срок</strong><p>Магазин и портал вместе стоят 1 500 евро. При сотрудничестве от 12 месяцев Вы эту сумму не платите: каждый месяц она уменьшается на 125 евро. Например, при выходе через 4 месяца остаётся 1 000 евро.</p></div>
+    <div class="row"><strong>Рекламный бюджет</strong><p>Вы платите его напрямую Google и Meta. Рекламные кабинеты остаются Вашими. Суммы в этом предложении: стартовая оценка, мы уточним её по данным Вашего рекламного кабинета.</p></div>
+    <div class="row"><strong>Отчёт</strong><p>Раз в месяц в цифрах: регистрации профессионалов, первые заказы, повторные заказы и стоимость одного нового клиента.</p></div>
+    <div class="row"><strong>Что нужно от Вас</strong><p>Три цифры: сколько профессионалов регистрируется в месяц, какая доля из них делает заказ и каков средний чек. И доступ на просмотр к Google Search Console, Google Ads и аналитике. Вход остаётся у Вас.</p></div>
+  </div>
+
+  <div class="panel next">
+    <h2>Встреча на 30 минут</h2>
+    <p>С Вами и партнёрами. Мы пройдём план, ответим на вопросы и договоримся, когда покажем концепцию нового магазина. Напишите, когда Вам удобно.</p>
+  </div>
+  <div class="foot"><span>Денис</span><span>Ноябрь 2026</span></div>
+</section>
+
+<script>
+  // Короткие слова не остаются в конце строки; числа не отрываются от единиц
+  (function () {
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    var nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(function (n) {
+      if (n.parentNode.nodeName === 'SCRIPT' || n.parentNode.nodeName === 'STYLE') return;
+      var t = n.nodeValue;
+      t = t.replace(/(^|[\s(«])([А-Яа-яЁё]{1,3}) (?=\S)/g, '$1$2 ');
+      t = t.replace(/(^|[\s(«])([А-Яа-яЁё]{1,3}) (?=\S)/g, '$1$2 ');
+      t = t.replace(/(\d) (\d{3})/g, '$1 $2');
+      t = t.replace(/(\d) (евро|месяц|минут|скрипт|файл|ноября)/g, '$1 $2');
+      n.nodeValue = t;
+    });
+  })();
+</script>
+</body>
+</html>
