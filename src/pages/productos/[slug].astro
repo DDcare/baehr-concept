@@ -1,0 +1,309 @@
+---
+// Ficha de producto para los cinco productos del protocolo. Los textos salen de src/data/fichas.json
+// (redactados y revisados; hechos solo de docs/merk-en-woordenlijst.md, parte A). Sin precio: no consta en la fuente.
+import Base from '../../layouts/Base.astro';
+import fichas from '../../data/fichas.json';
+
+export function getStaticPaths() {
+  return fichas.productos.map((p, i) => ({ params: { slug: p.slug }, props: { p, i } }));
+}
+const { p, i } = Astro.props;
+const todos = fichas.productos;
+const otros = todos.filter((o) => o.id !== p.id);
+const pasos = ['Baño de pies', 'Exfoliación', 'Mascarilla', 'Crema', 'Crema en espuma'];
+const orden = ['El primer paso', 'El segundo paso', 'El tercer paso', 'El cuarto paso', 'El último paso'];
+const marca = p.chips[0] ?? 'BAEHR';
+const fotos = [
+  { src: `/img/estudio/${p.id}.webp`, w: 800, h: 1200, alt: '', pack: false },
+  { src: `/img/productos/${p.id}.webp`, w: 600, h: 900, alt: p.alt, pack: true },
+  ...(p.id === 'espuma' ? [{ src: '/img/estudio/espuma-textura.webp', w: 800, h: 1200, alt: '', pack: false }] : []),
+];
+const nb = (s: string) => s.replace(/ (ml|pares|%)/g, ' $1');
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://baehr.com.es/' },
+      { '@type': 'ListItem', position: 2, name: 'Tienda', item: 'https://baehr.com.es/tienda/' },
+      { '@type': 'ListItem', position: 3, name: `${p.h1} ${p.nombre}` },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: p.nombre,
+    description: p.description,
+    image: `https://baehr.com.es/img/productos/${p.id}.webp`,
+    brand: { '@type': 'Brand', name: marca },
+    manufacturer: { '@type': 'Organization', name: 'Gustav Baehr GmbH' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: p.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+];
+---
+
+<Base title={p.title} description={p.description} page="producto" jsonld={jsonld}>
+  <nav class="crumbs" aria-label="Ruta de navegación">
+    <a href="/">Inicio</a>
+    <a href="/tienda/">Tienda</a>
+    <span aria-current="page">{p.h1} <span lang="de">{p.nombre}</span></span>
+  </nav>
+
+  <section class="pdp">
+    <div class="pdp__stage" data-galeria>
+      {
+        fotos.map((f, k) => (
+          <img
+            class:list={['pdp__img', { 'is-on': k === 0, 'pdp__img--pack': f.pack }]}
+            src={f.src}
+            width={f.w}
+            height={f.h}
+            alt={f.alt}
+            fetchpriority={k === 0 ? 'high' : undefined}
+            loading={k === 0 ? undefined : 'lazy'}
+            decoding={k === 0 ? undefined : 'async'}
+          />
+        ))
+      }
+      <div class="pdp__thumbs" role="group" aria-label="Imágenes del producto">
+        {
+          fotos.map((f, k) => (
+            <button type="button" aria-pressed={k === 0 ? 'true' : 'false'} aria-label={`Imagen ${k + 1} de ${fotos.length}`}>
+              <img class:list={[{ 'thumb--pack': f.pack }]} src={f.src} width={f.w} height={f.h} alt="" loading={k === 0 ? undefined : 'lazy'} />
+            </button>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="pdp__buy">
+      <h1 class="pdp__h">
+        <span class="pdp__big">{p.h1}</span>
+        <span class="pdp__soft" lang="de">{p.nombre}</span>
+      </h1>
+      <ul class="chips" aria-label="Marca, línea y serie">
+        {p.chips.map((c) => <li>{c}</li>)}
+      </ul>
+      <p class="pdp__lead" set:html={nb(p.lead)} />
+
+      <fieldset class="sizes">
+        <legend>Tamaño</legend>
+        {
+          p.tamanos.map((t, k) => (
+            <label>
+              <input type="radio" name="tam" value={t} checked={k === 0} />
+              <span set:html={nb(t)} />
+            </label>
+          ))
+        }
+      </fieldset>
+
+      <div class="price" data-when="pro">
+        <p class="price__label">Precio profesional</p>
+        <p class="price__text">Lo verás al iniciar sesión.</p>
+        <p class="price__links">
+          <a class="textlink" href="/profesionales/#acceso">Iniciar sesión</a>
+          <span>¿Aún no tienes cuenta? <a class="textlink" href="/profesionales/#alta">Solicita el alta</a></span>
+        </p>
+      </div>
+      <div class="price" data-when="home">
+        <p class="price__label">Precio para particulares</p>
+        <p class="price__text">Precio pendiente de publicar.</p>
+      </div>
+
+      <form class="addcart" data-id={p.id} novalidate>
+        <div class="qty" role="group" aria-label="Cantidad">
+          <button type="button" data-qty="-1" aria-label="Reducir cantidad">−</button>
+          <output aria-live="polite">1</output>
+          <button type="button" data-qty="1" aria-label="Aumentar cantidad">+</button>
+        </div>
+        <button class="pill pill--red addcart__btn" type="submit">Añadir a la cesta</button>
+        <p class="addcart__ok" role="status" hidden>Añadido a la cesta. <a class="textlink" href="/tienda/" data-open-cart>Ver la cesta</a></p>
+      </form>
+
+      <ul class="service">
+        <li>5&nbsp;+&nbsp;1 gratis en productos BAEHR del mismo tamaño. Hasta el 30 de noviembre.</li>
+        <li data-when="home">Envío gratis en pedidos a partir de 60&nbsp;€.</li>
+        <li>Fabricante: Gustav Baehr GmbH, Waiblingen (Alemania).</li>
+        <li>Vendido por BAEHR España, distribuidor oficial de la marca.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="buybar" aria-hidden="true">
+    <span class="buybar__name">{pasos[i]} <span class="buybar__size" data-buybar-size set:html={nb(p.tamanos[0])} /></span>
+    <button class="pill pill--red" type="button" tabindex="-1" data-buybar>Añadir a la cesta</button>
+  </div>
+
+  <section class="band" aria-label="Datos del producto">
+    <dl class:list={['band__row', { 'band__row--three': p.hechos.length === 3 }]}>
+      {
+        p.hechos.map((h) => (
+          <div class="band__item rv">
+            <dt set:html={nb(h.valor)} />
+            <dd set:html={nb(h.texto)} />
+          </div>
+        ))
+      }
+    </dl>
+  </section>
+
+  <section class="texture texture--desc">
+    <h2 class="h2 rv">Descripción</h2>
+    <div class="desc__body">
+      {p.descripcion.map((t) => <p class="rv" set:html={nb(t)} />)}
+    </div>
+  </section>
+
+  {
+    p.activos && (
+      <section class="inside">
+        <h2 class="h2 rv">Activos&nbsp;clave</h2>
+        <ul class="inside__list">
+          {p.activos.map((a) =>
+            a.nota ? (
+              <li class="stretch">
+                <span class="inside__n" aria-hidden="true">{a.nombre}</span> <span class="inside__q" aria-hidden="true" set:html={nb(a.nota)} /> <span class="sr" set:html={nb(a.sr)} />
+              </li>
+            ) : (
+              <li class="stretch">
+                <span class="inside__n">{a.nombre}</span>
+              </li>
+            )
+          )}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    p.uso && (
+      <section class="inside inside--uso">
+        <h2 class="h2 rv">Cómo se&nbsp;usa</h2>
+        <ol class="uso__list">
+          {p.uso.map((u) => <li class="rv" set:html={nb(u)} />)}
+        </ol>
+      </section>
+    )
+  }
+
+  {
+    p.id === 'espuma' && (
+      <section class="texture">
+        <h2 class="h2 rv">Textura&nbsp;ligera</h2>
+        <div class="texture__body">
+          <p class="texture__quote rv">Una espuma de rápida absorción que deja un tacto aterciopelado.</p>
+          <p class="texture__note rv">Según BAEHR, las espumas para pies se absorben más rápido que las pomadas y apenas dejan residuos.</p>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="proto">
+    <div class="proto__text">
+      <h2 class="h2 rv">{orden[i]}</h2>
+      <p class="lead rv">{p.protocolo}</p>
+      <a class="pill pill--white rv" href="/protocolo/">Ver el protocolo</a>
+    </div>
+    <ol class="proto__steps rv" aria-label="Pasos del protocolo">
+      {pasos.map((s, k) => <li aria-current={k === i ? 'step' : undefined}>{s}</li>)}
+    </ol>
+  </section>
+
+  <section class="shop shop--pairs">
+    <div class="shop__head">
+      <h2 class="h2 rv">Los otros cuatro&nbsp;pasos</h2>
+    </div>
+    <ul class="shop__row shop__row--four">
+      {
+        otros.map((o) => (
+          <li class="card rv">
+            <a class="card__link" href={`/productos/${o.slug}/`}>
+              <span class="card__img card__img--studio">
+                <img src={`/img/estudio/${o.id}.webp`} width="800" height="1200" alt="" loading="lazy" decoding="async" />
+              </span>
+              <span class="card__name" lang="de">{o.nombre}</span>
+              <span class="card__type">{o.h1}</span>
+              <span class="card__type" set:html={nb(o.tamanos.join(', '))} />
+              <span class="card__go">Ver la ficha</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="faq">
+    <h2 class="h2 rv">Preguntas frecuentes</h2>
+    <div class="faq__list">
+      {
+        p.faq.map((f) => (
+          <details class="faq__item">
+            <summary>{f.q}</summary>
+            <p set:html={nb(f.a)} />
+          </details>
+        ))
+      }
+    </div>
+  </section>
+</Base>
+
+<script>
+  // Galería: tres imágenes del producto, sin 3D en la ficha (decisión del 22-11)
+  const gal = document.querySelector('[data-galeria]');
+  if (gal) {
+    const imgs = gal.querySelectorAll('.pdp__img');
+    const tabs = gal.querySelectorAll('.pdp__thumbs button');
+    tabs.forEach((b, i) =>
+      b.addEventListener('click', () => {
+        imgs.forEach((im, k) => im.classList.toggle('is-on', k === i));
+        tabs.forEach((t, k) => t.setAttribute('aria-pressed', String(k === i)));
+      })
+    );
+  }
+  // Cantidad y cesta: demostración, no envía nada
+  const form = document.querySelector('.addcart');
+  const out = form?.querySelector('output');
+  let n = 1;
+  form?.querySelectorAll('[data-qty]').forEach((b) =>
+    b.addEventListener('click', () => {
+      n = Math.max(1, Math.min(99, n + Number(b.dataset.qty)));
+      if (out) out.textContent = String(n);
+    })
+  );
+  // Barra de compra en el móvil: visible mientras el botón principal no está en pantalla; se retira al llegar al pie
+  const bar = document.querySelector('.buybar');
+  const mainBtn = form?.querySelector('.addcart__btn');
+  const foot = document.querySelector('.foot');
+  if (bar && mainBtn && 'IntersectionObserver' in window) {
+    let btnSeen = false;
+    let footSeen = false;
+    const sync = () => bar.classList.toggle('is-on', !btnSeen && !footSeen);
+    new IntersectionObserver((e) => {
+      btnSeen = e[0].isIntersecting;
+      sync();
+    }).observe(mainBtn);
+    if (foot)
+      new IntersectionObserver((e) => {
+        footSeen = e[0].isIntersecting;
+        sync();
+      }).observe(foot);
+    bar.querySelector('[data-buybar]')?.addEventListener('click', () => form?.requestSubmit());
+    const size = bar.querySelector('[data-buybar-size]');
+    document.querySelectorAll<HTMLInputElement>('.sizes input').forEach((r) =>
+      r.addEventListener('change', () => {
+        if (size && r.checked) size.textContent = r.value.replace(/ (ml|pares)/, '\u00a0$1');
+      })
+    );
+  }
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const ok = form.querySelector('.addcart__ok');
+    if (ok) ok.hidden = false;
+    (window as any).baehrCesta?.add((form as HTMLElement).dataset.id, n);
+  });
+</script>

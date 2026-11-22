@@ -1,0 +1,94 @@
+---
+// El protocolo en una página: los cinco pasos, cada uno con su producto. Textos: src/data/fichas.json.
+import Base from '../layouts/Base.astro';
+import fichas from '../data/fichas.json';
+const t = fichas.protocolo;
+const pasos = ['Baño de pies', 'Exfoliación', 'Mascarilla', 'Crema', 'Crema en espuma'];
+const [h1a, h1b] = t.h1.split(', ');
+const nb = (s: string) => s.replace(/ (ml|pares|%)/g, ' $1');
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://baehr.com.es/' },
+      { '@type': 'ListItem', position: 2, name: 'Protocolo' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: t.h1,
+    itemListElement: fichas.productos.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: `${pasos[i]}: ${p.nombre}`,
+      url: `https://baehr.com.es/productos/${p.slug}/`,
+    })),
+  },
+];
+---
+
+<Base title={t.title} description={t.description} page="protocolo" jsonld={jsonld}>
+  <section class="about-hero">
+    <h1 class="about-hero__h about-hero__h--largo">
+      <span class="stretch is-in">{h1a},</span>
+      <span class="stretch is-in">{h1b}</span>
+    </h1>
+    <div class="ruta__intro">
+      <p class="lead">{t.intro}</p>
+      <a class="pill pill--red" href="/#protocolo">Verlo en 3D</a>
+    </div>
+  </section>
+
+  <ol class="ruta">
+    {
+      fichas.productos.map((p, i) => (
+        <li class="ruta__paso rv">
+          <a class="ruta__img" href={`/productos/${p.slug}/`} tabindex="-1" aria-hidden="true">
+            <img src={`/img/estudio/${p.id}.webp`} width="800" height="1200" alt="" loading={i === 0 ? undefined : 'lazy'} decoding="async" />
+          </a>
+          <div class="ruta__body">
+            <h2 class="h2">{pasos[i]}</h2>
+            <p class="ruta__name" lang="de">{p.nombre}</p>
+            <p class="lead" set:html={nb(p.lead)} />
+            <ul class="ruta__datos">
+              {p.hechos.slice(0, 3).map((h) => (
+                <li>
+                  <b set:html={nb(h.valor)} /> <span set:html={nb(h.texto)} />
+                </li>
+              ))}
+            </ul>
+            <div class="ruta__go">
+              <button class="pill pill--red" type="button" data-add={p.id} data-done="Añadido">Añadir a la cesta</button>
+              <a class="pill pill--line" href={`/productos/${p.slug}/`}>Ver la ficha</a>
+            </div>
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+
+  <section class="cta">
+    <h2 class="cta__h">{t.h1}</h2>
+    <p class="cta__t">{t.cierre}</p>
+    <div class="cta__b">
+      <a class="pill pill--white" href="/profesionales/#pedido-rapido" data-when="pro">Pedir los cinco productos</a>
+      <a class="pill pill--white" href="/tienda/" data-when="home">Comprar los cinco productos</a>
+    </div>
+  </section>
+</Base>
+
+<script>
+  // Añadir a la cesta desde el protocolo: demostración, no envía nada
+  document.querySelectorAll<HTMLButtonElement>('[data-add]').forEach((b) => {
+    const label = b.textContent;
+    let back = 0;
+    b.addEventListener('click', () => {
+      (window as any).baehrCesta?.add(b.dataset.add, 1);
+      b.textContent = b.dataset.done || label;
+      clearTimeout(back);
+      back = window.setTimeout(() => (b.textContent = label), 1500);
+    });
+  });
+</script>

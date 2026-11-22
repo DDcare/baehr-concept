@@ -4,7 +4,7 @@ Voor de sessie die hierna verder werkt (D denkt aan Opus). Het ontwerp is gebouw
 
 ## Wat vaststaat (niet opnieuw ontwerpen)
 
-- De vormen: capsule, ribbel, en het tubevormige blok (`.dark`, `.quick`, `.proto`), hele capsules voor `.cta` en `.statement`. De regels staan in `CLAUDE.md` onder Ontwerp.
+- De vormen: capsule en ribbel. Elk groot blok is een hele capsule (`.dark`, `.quick`, `.proto`, `.cta`, `.statement`). De tubevorm met geribbelde rand is door D afgekeurd. De regels staan in `CLAUDE.md` onder Ontwerp.
 - De letterschaal, de kleuren en de zilveren band.
 - De studiobeelden in `public/img/estudio/`. Opnieuw maken: `node tools/retratos.cjs http://127.0.0.1:4321/ public/img/estudio tools/retratos.json` (het bestand `textura-a.webp` daarna hernoemen naar `espuma-textura.webp`, de varianten b en c weggooien).
 - Besluiten van D: 3D alleen op de home, geen 3D op productpagina's.
@@ -32,3 +32,15 @@ Daarnaast met eigen scripts gecontroleerd: axe-core op alle pagina's (geen foute
 ## Spaans
 
 Elke nieuwe of gewijzigde tekst gaat langs `redactor-es` en `corrector-es`, met Nederlandse terugvertaling. De eindredactie van deze ronde staat in `docs/eindredactie-ronda3-es.md` (geen verplichte tekstwijzigingen).
+
+## Aanvulling 22 november, laat
+
+Na het oordeel van D over de derde ronde is op `ontwerp` bijgekomen: vijf productpagina's uit één sjabloon (`src/pages/productos/[slug].astro` met `src/data/fichas.json`), de pagina `/protocolo/`, een herontworpen merkpagina. Geschreven door een schrijver op Sonnet en nagelezen door `corrector-es`: `docs/redactie-fichas-es.md`, `docs/eindredactie-fichas-es.md`. De elf aanbevolen (niet verplichte) wijzigingen uit dat rapport zijn nog niet beoordeeld.
+
+Nieuwe korte teksten die nog niet langs de eindredactie zijn geweest: de tussenkoppen "Descripción" en "Cómo se usa", de koppen "El primer paso" tot "El cuarto paso", de knop "Verlo en 3D" op de protocolpagina, en de in vieren geknipte zinnen van de tijdlijn op de merkpagina.
+
+D laat zijn CRO-skill naar de site kijken voordat deze stand naar `main` gaat.
+
+Advies van Claude over de home van de echte winkel (D vroeg ernaar, nog niet besloten): de rij met de vijf producten hoort bij het protocol. Voor een echte winkel met het hele assortiment komen daar twee rijen bij: kopen per categorie (de zes merken van het huis, of per behoefte: pies, manos, uñas, aparatos, higiene) en de best verkochte producten. Welke producten dat zijn moet uit de verkoopcijfers van de klant komen.
+
+Bij de peeling noemt de fabrikant in een kenmerkveld zout uit de Dode Zee; op het etiket staat alleen zeezout. De site zegt overal "sal marina" tot de klant het bevestigt.

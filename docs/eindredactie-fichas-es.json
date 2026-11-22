@@ -1,0 +1,34 @@
+[
+  {
+    "id": "bano",
+    "campo": "faq",
+    "indice": 4,
+    "subcampo": "a",
+    "viejo": "Lo fabrica Gustav Baehr GmbH, en Waiblingen (Alemania).",
+    "nuevo": "La marca pertenece a Gustav Baehr GmbH, una empresa familiar con sede en Waiblingen (Alemania)."
+  },
+  {
+    "id": "mascarilla",
+    "campo": "descripcion",
+    "indice": 2,
+    "subcampo": null,
+    "viejo": "Cada caja contiene 5 pares y también existe en formato de 30 pares. Es el tercer paso del protocolo BAEHR de cinco pasos.",
+    "nuevo": "Cada caja contiene 5 pares. También hay un formato de 30 pares. Es el tercer paso del protocolo BAEHR de cinco pasos."
+  },
+  {
+    "id": "crema",
+    "campo": "faq",
+    "indice": 3,
+    "subcampo": "a",
+    "viejo": "La crema para pies lleva aceites de naranja y de lemongrass. La crema en espuma lleva",
+    "nuevo": "Las dos llevan urea. La crema para pies lleva además aceites de naranja y de lemongrass. La crema en espuma lleva"
+  },
+  {
+    "id": "espuma",
+    "campo": "h1",
+    "indice": null,
+    "subcampo": null,
+    "viejo": "Crema en espuma",
+    "nuevo": "Crema en espuma para pies"
+  }
+]

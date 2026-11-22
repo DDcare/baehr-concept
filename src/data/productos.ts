@@ -11,10 +11,10 @@ export interface Producto {
 }
 
 export const PRODUCTOS: Producto[] = [
-  { id: 'bano', name: 'SPA Wellness Fußbad', type: 'Baño de pies, 500 ml', kind: 'bano', img: 'bano', step: 0 },
-  { id: 'exfoliante', name: 'fresh feet Fußpeeling', type: 'Exfoliante para pies, 125 ml', kind: 'exfoliante', img: 'exfoliante', step: 1, ref: '11328' },
-  { id: 'mascarilla', name: 'Fuß-Vliesmaske Orange-Lemongras', type: 'Mascarilla para pies, caja de 5 pares', kind: 'mascarilla', img: 'mascarilla', step: 2 },
-  { id: 'crema', name: 'Fußcreme Orange-Lemongras', type: 'Crema para pies, 125 ml', kind: 'crema', img: 'crema', step: 3 },
+  { id: 'bano', name: 'SPA Wellness Fußbad', type: 'Baño de pies, 500 ml', kind: 'bano', img: 'bano', step: 0, href: '/productos/bano-de-pies-spa-wellness/' },
+  { id: 'exfoliante', name: 'fresh feet Fußpeeling', type: 'Exfoliante para pies, 125 ml', kind: 'exfoliante', img: 'exfoliante', step: 1, ref: '11328', href: '/productos/exfoliante-para-pies-fresh-feet/' },
+  { id: 'mascarilla', name: 'Fuß-Vliesmaske Orange-Lemongras', type: 'Mascarilla para pies, caja de 5 pares', kind: 'mascarilla', img: 'mascarilla', step: 2, href: '/productos/mascarilla-para-pies-orange-lemongras/' },
+  { id: 'crema', name: 'Fußcreme Orange-Lemongras', type: 'Crema para pies, 125 ml', kind: 'crema', img: 'crema', step: 3, href: '/productos/crema-para-pies-orange-lemongras/' },
   {
     id: 'espuma',
     name: 'Cremeschaum Orange-Lemongras',

@@ -3,7 +3,7 @@
 const { chromium } = require('playwright');
 (async () => {
   const browser = await chromium.launch();
-  const pages = ['/', '/tienda/', '/productos/crema-en-espuma-orange-lemongras/', '/profesionales/', '/la-marca/', '/contacto/', '/mi-cuenta/', '/404.html'];
+  const pages = ['/', '/tienda/', '/productos/crema-en-espuma-orange-lemongras/', '/productos/bano-de-pies-spa-wellness/', '/productos/exfoliante-para-pies-fresh-feet/', '/productos/mascarilla-para-pies-orange-lemongras/', '/productos/crema-para-pies-orange-lemongras/', '/protocolo/', '/profesionales/', '/la-marca/', '/contacto/', '/mi-cuenta/', '/404.html'];
   let found = 0;
   for (const [w, h] of [[360, 760], [390, 844], [820, 1180], [1024, 768], [1440, 900]]) {
     const ctx = await browser.newContext({ viewport: { width: w, height: h }, reducedMotion: 'reduce' });
