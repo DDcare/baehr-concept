@@ -29,6 +29,13 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 - Titels breken niet midden in een woord af en eindigen niet op één los woord.
 - Controleer elke wijziging op desktop, tablet en telefoon, en ook de versie met "minder beweging".
 
+## Besluiten van D over snelheid en 3D (22 november 2026, avond)
+
+- 3D alleen op de home. Geen 3D op productpagina's, ook niet als betaalde optie, en het komt niet in het voorstel (elke 3D-pagina kost ongeveer 200 kB aan three.js plus model en etiket).
+- Onthouden voor de bouw: het grootste snelheidsrisico zit straks in Shopify (eigen scripts en vooral apps). Zo weinig mogelijk apps en een vast budget per pagina, bijvoorbeeld hooguit 1 MB en een LCP onder 2,5 seconden op een telefoon.
+- Home lichter maken: kleinere afbeeldingen en lettertypes met alleen de tekens die we gebruiken. De film mag niet wachten op alles wat laadt.
+- De 3D-viewer op de voorbeeldproductpagina start pas na het eerste beeld of bij aanraken. Open: of die viewer in het concept blijft nu de optie vervalt (voorstel van Claude: vervangen door stilstaande studiobeelden; nog niet bevestigd door D).
+
 ## 3D
 
 - De productfilm zit in `src/scripts/film.js`. Het scrollen stuurt één waarde van 0 tot 1; camera en producten volgen vaste standen per moment.

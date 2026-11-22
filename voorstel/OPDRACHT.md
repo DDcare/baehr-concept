@@ -80,7 +80,7 @@ Zoals het voorbeeld dat D liet zien (een pakkettenpagina voor een andere klant, 
 ## Afspraken
 
 - Met D in het Nederlands, kort en kritisch. Geen nummering als opmaak, geen sterretjes, geen em dashes of en dashes, geen AI-taal.
-- Niets versturen of publiceren. Committen en pushen naar `main` van deze privé-repo mag: de preview blijft achter de Vercel-login.
+- Niets versturen of publiceren. Werk op de tak `ontwerp`. `main` is sinds 21-11 de openbare link (baehr-concept.vercel.app): daar alleen naartoe met akkoord van D per keer.
 
 ## Toevoeging 21 november, avond: 3D per product als optie
 
@@ -90,3 +90,11 @@ Besluit van D en zijn partner:
 - Op productpagina's is een ronddraaiend 3D-model mogelijk, maar alleen als optie. In de conceptsite staat één voorbeeld: de productpagina van het Cremeschaum Orange-Lemongras (`/productos/crema-en-espuma-orange-lemongras/`).
 - Biedt het aan als optie met een prijs per product ("als je dit voor alle producten wilt, betaal je X per product"). Het bedrag X bepaalt D.
 - Leg in het voorstel eerlijk uit dat dit veel werk is per product (vorm, etiket rondom, controle) en dat het ten koste gaat van de laadsnelheid van die pagina. Voor een echte 360 graden zijn foto's van alle kanten of de etiketbestanden van de fabrikant nodig: nu is alleen de voorkant echt.
+
+## Besluit 22 november, avond: geen 3D op productpagina's, ook niet als optie
+
+Besluit van D (22-11), dit vervangt de toevoeging van 21-11 hierboven:
+
+- 3D alleen op de home. Geen 3D op productpagina's en de optie "3D per product" komt niet in het voorstel.
+- Reden: elke 3D-pagina haalt three.js binnen (ongeveer 200 kB) plus model en etiket, en dan gaat de snelheidswinst verloren die we de klant beloven.
+- Te onthouden voor de bouw (advies, door D bevestigd met "onthouden"): het grootste snelheidsrisico zit straks in Shopify, niet in de 3D. Shopify voegt eigen scripts toe en vooral apps maken een winkel traag. Dus zo weinig mogelijk apps en een vast budget per pagina, bijvoorbeeld hooguit 1 MB en een LCP onder 2,5 seconden op een telefoon. Geschikt als toezegging in het voorstel, maar alleen met akkoord van D op de getallen.
