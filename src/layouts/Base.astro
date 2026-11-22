@@ -43,7 +43,7 @@ const org = {
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="robots" content="noindex, nofollow" />
-    <meta name="theme-color" content="#F2EEE7" />
+    <meta name="theme-color" content="#F5F5F3" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
@@ -144,7 +144,12 @@ const org = {
         </nav>
       </div>
       <p class="foot__end">Concepto de diseño, noviembre de 2026.</p>
-      <p class="foot__mark stretch" aria-hidden="true"><span>B</span><span>A</span><span>E</span><span>H</span><span>R</span></p>
+      {/* Las cinco letras son los cinco pasos, igual que en la película. Atajo solo para el ratón: el protocolo ya está en el menú. */}
+      <p class="foot__mark stretch" aria-hidden="true">
+        {['Baño', 'Exfoliación', 'Mascarilla', 'Crema', 'Espuma'].map((paso, i) => (
+          <a href={to(`#paso-${i + 1}`)} data-go-step={i} tabindex="-1"><span>{'BAEHR'[i]}</span><i>{paso}</i></a>
+        ))}
+      </p>
     </footer>
 
     <div class="drawer" id="cesta" role="dialog" aria-modal="true" aria-labelledby="cesta-h" hidden>

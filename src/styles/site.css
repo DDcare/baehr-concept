@@ -1,13 +1,15 @@
-/* BAEHR España, concepto. Una sola forma: la cápsula del envase y el nervado del cierre del tubo. */
+/* BAEHR España, concepto. Una sola forma: la cápsula del envase y el nervado del cierre del tubo.
+   Colores del envase: blanco limpio, rojo BAEHR y la banda plateada de la etiqueta. */
 
 :root {
-  --paper: #f2eee7;
+  --paper: #f5f5f3;
+  --silver: linear-gradient(180deg, #dfe0e2 0%, #f7f7f7 40%, #e9eaeb 62%, #cdced1 100%);
   --white: #ffffff;
   --ink: #18181a;
   --red: #a60d1c;
   --red-2: #86091a;
-  --muted: #5b5a57;
-  --line: rgba(24, 24, 26, 0.16);
+  --muted: #56575a;
+  --line: rgba(24, 24, 26, 0.13);
   /* margen lateral; en pantallas anchas el contenido no pasa de 82rem */
   --pad: max(clamp(1.1rem, 4vw, 3.5rem), calc((100vw - 82rem) / 2));
   /* Escala tipográfica: una sola voz, en pocos tamaños. Los titulares van en mayúsculas anchas pero contenidas */
@@ -204,7 +206,7 @@ html[data-mode='pro'] [data-when='home'] {
   transition: background 0.3s;
 }
 .top.is-solid .bar {
-  background: rgba(242, 238, 231, 0.88);
+  background: rgba(245, 245, 243, 0.9);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 }
@@ -976,12 +978,14 @@ h1 {
 .stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid var(--ink);
-  border-bottom: 1px solid var(--ink);
+  padding: 0 clamp(1.2rem, 2.4vw, 2.2rem);
+  border-radius: 999px;
+  background: var(--silver);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(0, 0, 0, 0.08);
 }
 .stat {
-  padding: 1.3rem clamp(0.8rem, 1.6vw, 1.5rem) 1.4rem;
-  border-left: 1px solid var(--line);
+  padding: 1.1rem clamp(0.8rem, 1.6vw, 1.5rem) 1.15rem;
+  border-left: 1px solid rgba(24, 24, 26, 0.14);
 }
 .stat:first-child {
   padding-left: 0;
@@ -994,12 +998,12 @@ h1 {
   letter-spacing: -0.02em;
   font-variation-settings: 'wdth' 118;
   white-space: nowrap;
-  color: var(--red);
+  color: var(--ink);
 }
 .stat dd {
-  margin-top: 0.6rem;
+  margin-top: 0.45rem;
   max-width: 14rem;
-  color: var(--muted);
+  color: #3d3e41;
   font-size: 0.88rem;
   line-height: 1.35;
 }
@@ -1220,6 +1224,8 @@ h1 {
   }
   .stats {
     grid-template-columns: minmax(0, 1fr);
+    padding: 0.3rem 1.3rem;
+    border-radius: 1.6rem;
   }
   .stat,
   .stat:first-child {
@@ -1227,11 +1233,11 @@ h1 {
     grid-template-columns: 5.6rem minmax(0, 1fr);
     align-items: baseline;
     gap: 1rem;
-    padding: 0.9rem 0;
+    padding: 0.85rem 0;
     border-left: 0;
   }
   .stat + .stat {
-    border-top: 1px solid var(--line);
+    border-top: 1px solid rgba(24, 24, 26, 0.14);
   }
   .stat dd {
     margin-top: 0;
@@ -1377,28 +1383,71 @@ h1 {
 /* El logotipo del pie: entra estrecho y se estira hasta ocupar el ancho del contenido.
    Solo el contorno, fino: grande pero ligero. Cada letra se llena de rojo al pasar el puntero. */
 .foot__mark {
-  padding: 0 var(--pad);
-  margin-top: clamp(1rem, 3vh, 2rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1.7rem var(--pad) 0;
   font-weight: 900;
-  font-size: min(19.4vw, 17.6rem);
-  line-height: 0.76;
-  letter-spacing: -0.01em;
+  font-size: clamp(2.9rem, 10.5vw, 7.4rem);
+  line-height: 0.78;
   color: transparent;
-  -webkit-text-stroke: 1.25px rgba(242, 238, 231, 0.36);
+  -webkit-text-stroke: 1px rgba(245, 245, 243, 0.42);
   white-space: nowrap;
   overflow: hidden;
   user-select: none;
   --stretch-to: 125;
   transition-duration: 1.8s;
 }
-.foot__mark span {
+.foot__mark a {
+  position: relative;
+  display: block;
+  color: inherit;
+  text-decoration: none;
   transition: color 0.5s, -webkit-text-stroke-color 0.5s;
 }
+/* El nombre del paso asoma sobre su letra */
+.foot__mark i {
+  position: absolute;
+  left: 0.05em;
+  bottom: calc(100% + 0.3rem);
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1;
+  color: rgba(245, 245, 243, 0.82);
+  -webkit-text-stroke: 0;
+  opacity: 0;
+  translate: 0 5px;
+  transition: opacity 0.3s, translate 0.3s;
+}
+/* Las letras de los extremos se alinean ópticamente con el margen de la página */
+.foot__mark a:first-child {
+  margin-left: -0.065em;
+}
+.foot__mark a:last-child {
+  margin-right: -0.03em;
+}
+.foot__mark a:first-child i {
+  left: 0.115em;
+}
+.foot__mark a:last-child i {
+  left: auto;
+  right: 0.08em;
+}
 @media (hover: hover) {
-  .foot__mark span:hover {
+  .foot__mark a:hover {
     color: var(--red);
     -webkit-text-stroke-color: var(--red);
     transition-duration: 0.12s;
+  }
+  .foot__mark a:hover i {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@media (hover: none) {
+  .foot__mark a {
+    pointer-events: none;
   }
 }
 
@@ -1445,7 +1494,7 @@ h1 {
   display: block;
   aspect-ratio: 2 / 3;
   border-radius: 999px;
-  background: radial-gradient(70% 55% at 50% 64%, #ffffff 0%, #f7f4ef 100%);
+  background: radial-gradient(70% 55% at 50% 64%, #ffffff 0%, #ececea 100%);
   overflow: hidden;
   transition: background 0.45s;
 }
@@ -1757,15 +1806,18 @@ h1 {
 .band {
   padding: 0 var(--pad);
 }
+/* Los datos van sobre la banda plateada de la etiqueta del envase, en forma de cápsula */
 .band__row {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1px solid var(--ink);
-  border-bottom: 1px solid var(--ink);
+  padding: 0 clamp(1.2rem, 2.6vw, 2.6rem);
+  border-radius: 999px;
+  background: var(--silver);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(0, 0, 0, 0.08);
 }
 .band__item {
-  padding: clamp(1.4rem, 3.4vw, 2.6rem) clamp(0.8rem, 1.8vw, 1.8rem);
-  border-left: 1px solid var(--line);
+  padding: 1.15rem clamp(0.8rem, 1.8vw, 1.8rem) 1.2rem;
+  border-left: 1px solid rgba(24, 24, 26, 0.14);
 }
 .band__item:first-child {
   border-left: 0;
@@ -1779,31 +1831,17 @@ h1 {
   text-transform: uppercase;
   font-variation-settings: 'wdth' 112;
   white-space: nowrap;
-  color: var(--red);
+  color: var(--ink);
 }
 .band__item dd {
-  margin-top: 0.65rem;
+  margin-top: 0.45rem;
   max-width: 16rem;
-  color: var(--muted);
+  color: #3d3e41;
   font-size: 0.88rem;
   line-height: 1.35;
 }
-.band--ink {
-  padding: clamp(2.6rem, 7vh, 4.5rem) var(--pad);
-  background: var(--ink);
-  color: #fff;
-}
-.band--ink .band__row {
-  border-color: rgba(255, 255, 255, 0.85);
-}
-.band--ink .band__item {
-  border-color: rgba(255, 255, 255, 0.2);
-}
-.band--ink .band__item dt {
-  color: #fff;
-}
-.band--ink .band__item dd {
-  color: rgba(255, 255, 255, 0.7);
+.band--pad {
+  padding-bottom: clamp(3rem, 8vh, 5rem);
 }
 
 /* Letras que se estiran al aparecer (el eje de anchura de Archivo) */
@@ -3437,14 +3475,15 @@ html.has-drawer {
     padding-left: 0;
   }
   .band__item dt {
-    font-size: clamp(1.1rem, 4.6vw, 1.5rem);
+    font-size: clamp(0.98rem, 4.1vw, 1.5rem);
     white-space: normal;
   }
   .band__item:nth-child(n + 3) {
-    border-top: 1px solid var(--line);
+    border-top: 1px solid rgba(24, 24, 26, 0.14);
   }
-  .band--ink .band__item:nth-child(n + 3) {
-    border-top-color: rgba(255, 255, 255, 0.2);
+  .band__row {
+    padding: 0.2rem 1.3rem;
+    border-radius: 1.6rem;
   }
   .years__row {
     row-gap: 2.2rem;
