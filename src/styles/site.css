@@ -1064,8 +1064,13 @@ h1 {
 
 /* Vertical: móvil y tableta en retrato */
 @media (max-aspect-ratio: 85/100) {
+  /* en el móvil cada paso tiene más recorrido: con el dedo se avanza muy deprisa */
+  .film {
+    height: 660vh;
+  }
   .film__sticky {
-    --n-top: 53svh;
+    /* como mínimo debajo del texto del hero (la película lo ajusta al medir); nunca encima de los botones */
+    --n-top: max(53svh, 23.5rem);
     --n-right: 5vw;
     --n-bottom: 3svh;
     --n-left: 5vw;

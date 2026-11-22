@@ -894,6 +894,9 @@ function init() {
   const LIFT = 0.5;
   const FOAM_SIZE = 0.62;
 
+  // Velocidad máxima de la película, en fracción del recorrido por segundo: un paso tarda al menos 0,7 s
+  const MAX_SPEED = 0.22;
+
   // ---------- Encuadre ----------
   let W = 1;
   let H = 1;
@@ -908,6 +911,27 @@ function init() {
     tall = w / h < 0.85;
     camera.aspect = w / h;
     keys = shots(tall);
+    fitHero();
+  }
+
+  // En vertical la cápsula empieza justo debajo del texto del hero. En un teléfono real la ventana es más baja
+  // que en el ensayo (barra de Safari) y con una altura fija la cápsula pisaba los botones.
+  function fitHero() {
+    const cta = hero?.querySelector('.hero__cta') || hero;
+    if (!cta) return;
+    if (!tall) {
+      sticky.style.removeProperty('--n-top');
+      return;
+    }
+    let bottom = cta.offsetHeight;
+    for (let el = cta; el && el !== sticky; el = el.offsetParent) bottom += el.offsetTop;
+    const top = Math.max(H * 0.53, bottom + 18);
+    sticky.style.setProperty('--n-top', `${Math.round(top)}px`);
+    // el encuadre inicial sigue a la cápsula: su centro es el centro del grupo de productos
+    const centre = (top + H * 0.97) / 2 / H;
+    keys[0][1].sy = centre - 0.5;
+    // y si la cápsula queda más baja de lo previsto (44 % del alto), los productos se encogen con ella
+    keys[0][1].hf = 0.25 * Math.min(1, (H * 0.97 - top) / (H * 0.44));
   }
 
   // Resolución: como mucho 1,5 píxeles por punto; si el equipo no llega, baja sola (ver el bucle)
@@ -922,6 +946,8 @@ function init() {
     layout(w, h);
     wdthBase = parseFloat(getComputedStyle(sticky).getPropertyValue('--wdth-base')) || 125;
   }
+  // las letras cambian el alto del texto del hero: se vuelve a medir cuando han cargado
+  document.fonts?.ready.then(() => fitHero());
 
   const pointer = { x: 0, y: 0, sx: 0, sy: 0 };
   if (window.matchMedia('(hover: hover)').matches) {
@@ -1337,8 +1363,11 @@ function init() {
     last = now;
     if (forced === null) {
       readScroll();
-      // seguimiento del scroll independiente de la velocidad del equipo
-      p += (target - p) * (1 - Math.exp(-dt * 13));
+      // seguimiento del scroll independiente de la velocidad del equipo, con velocidad máxima: un gesto rápido
+      // (el impulso del dedo en el móvil) ya no salta de un paso a otro, la cámara recorre el camino
+      const want = (target - p) * (1 - Math.exp(-dt * 13));
+      const cap = MAX_SPEED * dt;
+      p += Math.max(-cap, Math.min(cap, want));
       if (Math.abs(target - p) < 0.0002) p = target;
     } else {
       p = forced;

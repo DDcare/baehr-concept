@@ -43,6 +43,8 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 - De productfilm zit in `src/scripts/film.js`. Het scrollen stuurt één waarde van 0 tot 1; camera en producten volgen vaste standen per moment.
 - Beweging testen met Playwright en `reducedMotion: 'no-preference'`. De testbrowser rendert langzaam; wacht ruim voor een schermopname.
 - Na wijzigingen in de 3D de stilstaande beelden opnieuw maken met `tools/posters.cjs`.
+- Test de home ook op een laag telefoonvenster (bijvoorbeeld 393 bij 660): Safari op de iPhone houdt minder hoogte over dan de testbrowser. D zag op 22-11 op zijn iPhone de capsule over de knoppen vallen; de capsule begint sindsdien onder de gemeten onderkant van de knoppen (`fitHero` in `film.js`).
+- De film heeft een maximumsnelheid (`MAX_SPEED`): na een snelle veeg loopt de camera stap voor stap door in plaats van te springen. Op staande schermen is de film 660vh, op liggende 520vh.
 
 ## Oordeel van D over de eerste versie (21 november 2026)
 
