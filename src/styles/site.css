@@ -1403,12 +1403,15 @@ h1 {
   --stretch-to: 125;
   transition-duration: 1.8s;
 }
-.foot__mark a {
+.foot__mark a,
+.foot__mark a:visited {
   position: relative;
   display: block;
-  color: inherit;
+  color: transparent;
+  -webkit-text-stroke-color: rgba(245, 245, 243, 0.42);
   text-decoration: none;
-  transition: color 0.5s, -webkit-text-stroke-color 0.5s;
+  /* la vuelta es corta: al fundir de rojo a transparente sobre fondo oscuro la letra pasaba por un tono casi negro */
+  transition: color 0.15s, -webkit-text-stroke-color 0.15s;
 }
 /* El nombre del paso asoma sobre su letra */
 .foot__mark i {
@@ -3685,51 +3688,21 @@ html.has-drawer {
 
 /* =====================================================================================
    Ronda 3 (22-11): una sola imagen de marca y ningún bloque cuadrado.
-   El bloque grande es un tubo tumbado: un extremo redondo (el tapón) y el otro plano y
-   estriado (el cierre). En pantallas estrechas el tubo se pone de pie.
+   Todo bloque grande es una cápsula entera, como el envase. (La primera versión era un tubo
+   con un extremo estriado: D la descartó el 22-11 por la silueta que formaba.)
    ===================================================================================== */
-:root {
-  --crimp: 26px;
-}
 .dark,
 .quick,
 .proto {
   position: relative;
+  margin: clamp(1.5rem, 5vh, 4rem) var(--pad);
+  padding: clamp(3.5rem, 9vh, 6rem) clamp(7rem, 15vw, 13rem);
+  border-radius: 999px;
 }
-.dark::after,
-.quick::after,
-.proto::after {
-  content: '';
-  position: absolute;
-  top: -9px;
-  bottom: -9px;
-  width: var(--crimp);
-}
-/* Tubo oscuro: tapón a la izquierda, cierre a la derecha */
-.dark {
-  margin: clamp(1.5rem, 5vh, 4rem) calc(var(--pad) + var(--crimp)) clamp(1.5rem, 5vh, 4rem) var(--pad);
-  padding: clamp(3.5rem, 9vh, 6rem) clamp(2rem, 5vw, 5rem) clamp(3.5rem, 9vh, 6rem) clamp(7rem, 15vw, 13rem);
-  border-radius: 999px 0 0 999px;
-}
-.dark::after {
-  left: 100%;
-  border-radius: 0 5px 5px 0;
-  background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0 2px, transparent 2px 8px), var(--ink);
-}
-/* Tubos rojos: al revés, para que la página no repita la misma silueta */
 .quick,
 .proto {
-  margin-inline: calc(var(--pad) + var(--crimp)) var(--pad);
-  padding-inline: clamp(2rem, 5vw, 5rem) clamp(7rem, 15vw, 13rem);
-  border-radius: 0 999px 999px 0;
+  margin-block: 0;
 }
-.quick::after,
-.proto::after {
-  right: 100%;
-  border-radius: 5px 0 0 5px;
-  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0 2px, transparent 2px 8px), var(--red);
-}
-/* Los bloques de texto centrado son una cápsula entera */
 .cta {
   border-radius: 999px;
   padding-inline: clamp(3rem, 12vw, 12rem);
@@ -3739,40 +3712,27 @@ html.has-drawer {
   padding: clamp(4rem, 11vh, 7rem) clamp(3rem, 12vw, 12rem);
   border-radius: 999px;
 }
-@media (max-width: 960px) {
+@media (max-width: 1180px) {
   .dark,
   .quick,
   .proto {
-    margin: 1.5rem var(--pad) calc(var(--crimp) + 2rem);
-    padding: clamp(3.6rem, 15vw, 5.2rem) 1.4rem 2.4rem;
-    border-radius: clamp(3rem, 15vw, 5.5rem) clamp(3rem, 15vw, 5.5rem) 0 0;
+    padding-inline: clamp(4.5rem, 9vw, 7rem);
+    border-radius: clamp(5rem, 14vw, 10rem);
   }
-  .dark::after,
-  .quick::after,
-  .proto::after {
-    top: 100%;
-    bottom: auto;
-    left: -7px;
-    right: -7px;
-    width: auto;
-    height: 22px;
-    border-radius: 0 0 5px 5px;
-  }
-  .dark::after {
-    background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0 2px, transparent 2px 8px), var(--ink);
-  }
-  .quick::after,
-  .proto::after {
-    background: repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0 2px, transparent 2px 8px), var(--red);
-  }
+}
+@media (max-width: 960px) {
+  .dark,
+  .quick,
+  .proto,
   .cta,
   .statement {
+    margin-inline: var(--pad);
+    padding: clamp(3.4rem, 14vw, 4.8rem) 1.5rem;
     border-radius: clamp(3rem, 15vw, 5.5rem);
-    padding-inline: 1.6rem;
   }
 }
 
-/* El formulario de alta va directamente sobre el tubo, sin tarjeta blanca */
+/* El formulario de alta va directamente sobre la cápsula, sin tarjeta blanca */
 .signup {
   padding: 0;
   background: none;
@@ -3969,7 +3929,7 @@ html.has-drawer {
   display: none;
 }
 @media (max-width: 640px) {
-  /* dentro del tubo hay menos ancho: el título baja un punto para no partir "cuenta profesional" */
+  /* dentro de la cápsula hay menos ancho: el título baja un punto para no partir "cuenta profesional" */
   .dark .h2,
   .dark--alta .h2 {
     font-size: min(var(--fs-h2), 6.2vw);
@@ -3982,4 +3942,202 @@ html.has-drawer {
 .quick__box,
 .addr {
   border-radius: clamp(2rem, 3.4vw, 3.2rem);
+}
+
+/* ===== La marca, rediseñada (ronda 3): imagen del estudio, la historia en cuatro fechas, seis cápsulas ===== */
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 5rem);
+  align-items: end;
+  padding-bottom: clamp(2rem, 5vh, 3.5rem);
+}
+.about-film {
+  padding: 0 var(--pad);
+}
+.about-film img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 999px;
+  background: #5a0710;
+}
+.era {
+  padding: clamp(4rem, 10vh, 7rem) var(--pad) clamp(2.5rem, 6vh, 4rem);
+}
+.era__row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1.2rem, 3vw, 3rem);
+  margin-top: clamp(2rem, 5vh, 3.2rem);
+}
+.era__item {
+  position: relative;
+  padding-top: 2.1rem;
+}
+.era__item::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 11px;
+  color: var(--red);
+  background: var(--ribs);
+  background-size: 9px 100%;
+}
+.era__y {
+  display: block;
+  --stretch-to: 118;
+  font-weight: 800;
+  font-size: var(--fs-page);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+.era__item p {
+  max-width: 32ch;
+  margin-top: 0.9rem;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+.casas {
+  padding: clamp(3.5rem, 9vh, 6.5rem) var(--pad);
+}
+.casas__head {
+  display: grid;
+  grid-template-columns: minmax(21rem, 1fr) minmax(0, 2fr);
+  gap: 1.4rem clamp(1.5rem, 4vw, 4rem);
+  align-items: end;
+}
+.casas__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.8rem, 1.4vw, 1.2rem);
+  margin-top: clamp(2rem, 5vh, 3rem);
+}
+.casa {
+  display: grid;
+  align-content: center;
+  gap: 0.5rem;
+  min-height: 11.5rem;
+  padding: 1.6rem clamp(2.4rem, 3.6vw, 3.6rem);
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--line);
+  transition: transform 0.45s cubic-bezier(0.3, 1.4, 0.5, 1);
+}
+.casa:hover {
+  transform: scale(1.025);
+}
+.casa:nth-child(1) {
+  background: var(--red);
+  color: #fff;
+  box-shadow: none;
+}
+.casa:nth-child(3),
+.casa:nth-child(4) {
+  background: var(--silver);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+}
+.casa:nth-child(6) {
+  background: var(--ink);
+  color: #fff;
+  box-shadow: none;
+}
+.casa__n {
+  font-weight: 800;
+  font-variation-settings: 'wdth' 116;
+  font-size: var(--fs-h3);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.casa__t {
+  font-size: 0.92rem;
+  line-height: 1.4;
+  opacity: 0.86;
+}
+.gremio {
+  --lap: clamp(3rem, 7vw, 6rem);
+  padding-top: clamp(1rem, 3vh, 2rem);
+}
+.gremio__row {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(0.5rem, 1.4vw, 1.2rem);
+  width: min(100% - 2 * var(--pad) - 4rem, 44rem);
+  margin: 0 auto calc(-1 * var(--lap));
+}
+.gremio__row li {
+  aspect-ratio: 2 / 3;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #5a0710;
+  box-shadow: 0 0 0 6px var(--paper);
+}
+.gremio__row img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gremio .statement {
+  padding-top: calc(var(--lap) + clamp(2.6rem, 7vh, 4.5rem));
+}
+.duo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.8rem, 1.6vw, 1.4rem);
+  padding: clamp(3.5rem, 9vh, 6.5rem) var(--pad);
+}
+.duo__col {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 1.2rem;
+  padding: clamp(2.6rem, 5vw, 4.5rem) clamp(2.4rem, 5vw, 5rem);
+  border-radius: clamp(3rem, 7vw, 6.5rem);
+}
+.duo__col--line {
+  box-shadow: inset 0 0 0 1px var(--ink);
+}
+.duo__col--ink {
+  background: var(--ink);
+  color: #fff;
+}
+.duo__addr {
+  font-weight: 600;
+  line-height: 1.5;
+}
+@media (max-width: 960px) {
+  .about-hero,
+  .casas__head,
+  .duo {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .era__row,
+  .casas__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .era__row,
+  .casas__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .casa {
+    min-height: 8.5rem;
+    border-radius: clamp(3rem, 15vw, 5.5rem);
+  }
+  .gremio__row li {
+    box-shadow: 0 0 0 4px var(--paper);
+  }
+}
+/* dentro de la cápsula la columna del formulario necesita algo más de ancho para la tarjeta */
+@media (min-width: 961px) {
+  .dark {
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+    gap: clamp(2rem, 4vw, 4.5rem);
+    padding-inline: clamp(6rem, 12vw, 11rem);
+  }
 }

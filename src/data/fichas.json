@@ -1,0 +1,418 @@
+{
+  "productos": [
+    {
+      "id": "bano",
+      "slug": "bano-de-pies-spa-wellness",
+      "h1": "Baño de pies",
+      "nombre": "SPA Wellness Fußbad",
+      "title": "Baño de pies SPA Wellness con hibisco y loto | BAEHR España",
+      "description": "Baño de pies SPA Wellness de BAEHR BEAUTY CONCEPT con hibisco y loto. Limpia con suavidad y refresca los pies cansados. Vegano. Frasco de 500 ml.",
+      "chips": [
+        "BAEHR BEAUTY CONCEPT"
+      ],
+      "lead": "Baño de pies para limpiar con suavidad y refrescar los pies cansados. Lleva hibisco y loto. Vegano, en frasco con dosificador de 500 ml.",
+      "tamanos": [
+        "500 ml"
+      ],
+      "hechos": [
+        {
+          "valor": "Hibisco y loto",
+          "texto": "ingredientes destacados"
+        },
+        {
+          "valor": "Vegano",
+          "texto": "sin ingredientes de origen animal"
+        },
+        {
+          "valor": "500 ml",
+          "texto": "frasco con dosificador"
+        },
+        {
+          "valor": "5 a 10 ml",
+          "texto": "por baño"
+        }
+      ],
+      "activos": [
+        {
+          "nombre": "Hibisco",
+          "nota": "extracto",
+          "sr": "Extracto de hibisco"
+        },
+        {
+          "nombre": "Loto",
+          "nota": "extracto",
+          "sr": "Extracto de loto"
+        },
+        {
+          "nombre": "Bambú",
+          "nota": "extracto",
+          "sr": "Extracto de bambú"
+        }
+      ],
+      "descripcion": [
+        "SPA Wellness Fußbad es el baño de pies de BAEHR BEAUTY CONCEPT. Limpia con suavidad y refresca los pies cansados. Lleva hibisco aromático y factores humectantes especiales.",
+        "Sus ingredientes destacados son el hibisco y el loto. En la etiqueta consta también el extracto de bambú. Es un producto vegano.",
+        "Se presenta en un frasco con dosificador de 500 ml. Es el primer paso del protocolo BAEHR de cinco pasos, pensado para profesionales en cabina y para el cuidado en casa."
+      ],
+      "uso": [
+        "Reparte de 5 a 10 ml de producto en agua de 36 a 38 grados.",
+        "Baña los pies durante unos 10 minutos."
+      ],
+      "protocolo": "Es el primer paso del protocolo de cinco pasos y va seguido del exfoliante para pies.",
+      "faq": [
+        {
+          "q": "¿Cuánto producto se usa por baño?",
+          "a": "De 5 a 10 ml en agua de 36 a 38 grados. Los pies se bañan durante unos 10 minutos."
+        },
+        {
+          "q": "¿Qué ingredientes destacan?",
+          "a": "El hibisco y el loto. En la etiqueta figura también el extracto de bambú."
+        },
+        {
+          "q": "¿Es vegano?",
+          "a": "Sí, es vegano."
+        },
+        {
+          "q": "¿Qué tamaño tiene?",
+          "a": "Se vende en un frasco con dosificador de 500 ml."
+        },
+        {
+          "q": "¿De qué marca es?",
+          "a": "Es de BAEHR BEAUTY CONCEPT, no de PEDIBAEHR. Lo fabrica Gustav Baehr GmbH, en Waiblingen (Alemania)."
+        }
+      ],
+      "alt": "Frasco blanco con dosificador del baño de pies SPA Wellness Fußbad, de BAEHR BEAUTY CONCEPT, con la etiqueta de frente."
+    },
+    {
+      "id": "exfoliante",
+      "slug": "exfoliante-para-pies-fresh-feet",
+      "h1": "Exfoliante para pies",
+      "nombre": "fresh feet Fußpeeling",
+      "title": "Exfoliante para pies fresh feet | BAEHR España",
+      "description": "Exfoliante para pies fresh feet de PEDIBAEHR con sal del Mar Muerto. Alisa la piel áspera de los pies con minerales y oligoelementos. En 125 y 450 ml.",
+      "chips": [
+        "PEDIBAEHR",
+        "Serie fresh feet"
+      ],
+      "lead": "Exfoliante para pies con sal marina. Alisa la piel áspera y revitaliza las zonas secas con minerales y oligoelementos. En 125 y 450 ml.",
+      "tamanos": [
+        "125 ml",
+        "450 ml"
+      ],
+      "hechos": [
+        {
+          "valor": "Sal marina",
+          "texto": "del Mar Muerto"
+        },
+        {
+          "valor": "Minerales",
+          "texto": "y oligoelementos de la sal marina"
+        },
+        {
+          "valor": "2 tamaños",
+          "texto": "125 y 450 ml"
+        }
+      ],
+      "activos": [
+        {
+          "nombre": "Sal marina",
+          "nota": "del Mar Muerto",
+          "sr": "Sal marina del Mar Muerto"
+        }
+      ],
+      "descripcion": [
+        "fresh feet Fußpeeling es el exfoliante para pies de PEDIBAEHR, de la serie fresh feet. En la etiqueta figura como exfoliante para pies con sal marina.",
+        "Alisa la piel áspera de los pies y revitaliza las zonas secas con minerales y oligoelementos de la sal marina. Su ingrediente es la sal del Mar Muerto. Según el fabricante, no es vegano.",
+        "Se vende en 125 y 450 ml. Es el segundo paso del protocolo BAEHR de cinco pasos, después del baño de pies."
+      ],
+      "uso": null,
+      "protocolo": "Es el segundo paso del protocolo de cinco pasos: va después del baño de pies y antes de la mascarilla.",
+      "faq": [
+        {
+          "q": "¿Qué lleva este exfoliante?",
+          "a": "Lleva sal del Mar Muerto, con minerales y oligoelementos de la sal marina."
+        },
+        {
+          "q": "¿Para qué sirve?",
+          "a": "Alisa la piel áspera de los pies y revitaliza las zonas secas."
+        },
+        {
+          "q": "¿Es vegano?",
+          "a": "No. Según el fabricante, este exfoliante no es vegano."
+        },
+        {
+          "q": "¿En qué tamaños se vende?",
+          "a": "En 125 y 450 ml."
+        },
+        {
+          "q": "¿Qué es la serie fresh feet?",
+          "a": "Es una serie de PEDIBAEHR, la marca de BAEHR para profesionales del cuidado de los pies."
+        }
+      ],
+      "alt": "Tarro del exfoliante para pies fresh feet Fußpeeling, de PEDIBAEHR, con la etiqueta de frente."
+    },
+    {
+      "id": "mascarilla",
+      "slug": "mascarilla-para-pies-orange-lemongras",
+      "h1": "Mascarilla para pies",
+      "nombre": "Fuß-Vliesmaske Orange-Lemongras",
+      "title": "Mascarilla para pies Orange-Lemongras | BAEHR España",
+      "description": "Mascarilla de tejido para pies PEDIBAEHR Orange-Lemongras con karité, macadamia y coco. Cuidado intensivo para pies muy secos. Vegana. Caja de 5 pares.",
+      "chips": [
+        "PEDIBAEHR",
+        "Línea WELLNESS",
+        "Serie Orange-Lemongras"
+      ],
+      "lead": "Mascarilla de tejido para el cuidado intensivo de la piel muy seca de los pies. Lleva manteca de karité, aceite de macadamia y extracto de coco. Vegana.",
+      "tamanos": [
+        "Caja de 5 pares",
+        "30 pares"
+      ],
+      "hechos": [
+        {
+          "valor": "Piel muy seca",
+          "texto": "cuidado intensivo"
+        },
+        {
+          "valor": "Karité",
+          "texto": "con macadamia y coco"
+        },
+        {
+          "valor": "Vegana",
+          "texto": "sin ingredientes de origen animal"
+        },
+        {
+          "valor": "5 pares",
+          "texto": "por caja"
+        }
+      ],
+      "activos": [
+        {
+          "nombre": "Karité",
+          "nota": "manteca",
+          "sr": "Manteca de karité"
+        },
+        {
+          "nombre": "Macadamia",
+          "nota": "aceite",
+          "sr": "Aceite de macadamia"
+        },
+        {
+          "nombre": "Coco",
+          "nota": "extracto",
+          "sr": "Extracto de coco"
+        }
+      ],
+      "descripcion": [
+        "Fuß-Vliesmaske Orange-Lemongras es una mascarilla de tejido para pies de PEDIBAEHR, de la línea WELLNESS. Según el fabricante, es un tratamiento wellness innovador para el cuidado intensivo de la piel extremadamente seca de los pies.",
+        "Sus ingredientes destacados son la manteca de karité, el aceite de macadamia y el extracto de coco. Es una mascarilla vegana.",
+        "Cada caja contiene 5 pares y también existe en formato de 30 pares. Es el tercer paso del protocolo BAEHR de cinco pasos."
+      ],
+      "uso": null,
+      "protocolo": "Es el tercer paso del protocolo de cinco pasos: va después del exfoliante y antes de la crema para pies.",
+      "faq": [
+        {
+          "q": "¿Cuántos pares trae la caja?",
+          "a": "La caja trae 5 pares. También existe el formato de 30 pares."
+        },
+        {
+          "q": "¿Qué ingredientes lleva?",
+          "a": "Manteca de karité, aceite de macadamia y extracto de coco."
+        },
+        {
+          "q": "¿Para qué tipo de piel es?",
+          "a": "Es para el cuidado intensivo de la piel muy seca de los pies."
+        },
+        {
+          "q": "¿Es vegana?",
+          "a": "Sí, es vegana."
+        },
+        {
+          "q": "¿De qué línea es?",
+          "a": "Es de PEDIBAEHR, línea WELLNESS, serie Orange-Lemongras."
+        }
+      ],
+      "alt": "Caja de la mascarilla de tejido para pies Fuß-Vliesmaske Orange-Lemongras, de PEDIBAEHR, con la etiqueta de frente."
+    },
+    {
+      "id": "crema",
+      "slug": "crema-para-pies-orange-lemongras",
+      "h1": "Crema para pies",
+      "nombre": "Fußcreme Orange-Lemongras",
+      "title": "Crema para pies Orange-Lemongras con urea | BAEHR España",
+      "description": "Crema para pies PEDIBAEHR Orange-Lemongras con urea y aceites de naranja y de lemongrass. Cuida la piel de los pies. Vegana. En 30, 125 y 500 ml.",
+      "chips": [
+        "PEDIBAEHR",
+        "Línea WELLNESS",
+        "Serie Orange-Lemongras"
+      ],
+      "lead": "Crema para pies con aceites de naranja y de lemongrass y urea. Cuida la piel de los pies. Vegana, en 30, 125 y 500 ml.",
+      "tamanos": [
+        "30 ml",
+        "125 ml",
+        "500 ml"
+      ],
+      "hechos": [
+        {
+          "valor": "Con urea",
+          "texto": "y aceites de naranja y de lemongrass"
+        },
+        {
+          "valor": "Vegana",
+          "texto": "sin ingredientes de origen animal"
+        },
+        {
+          "valor": "3 tamaños",
+          "texto": "30, 125 y 500 ml"
+        }
+      ],
+      "activos": [
+        {
+          "nombre": "Lemongrass",
+          "nota": "aceite",
+          "sr": "Aceite de lemongrass"
+        },
+        {
+          "nombre": "Naranja",
+          "nota": "aceite",
+          "sr": "Aceite de naranja"
+        },
+        {
+          "nombre": "Urea",
+          "nota": null,
+          "sr": "Urea"
+        }
+      ],
+      "descripcion": [
+        "Fußcreme Orange-Lemongras es la crema para pies de PEDIBAEHR, de la línea WELLNESS y la serie Orange-Lemongras. Cuida la piel de los pies con aceites de naranja y de lemongrass.",
+        "Entre sus ingredientes destacados figuran el aceite de lemongrass, el aceite de naranja y la urea. Es una crema vegana.",
+        "Se vende en tres tamaños: 30, 125 y 500 ml. Es el cuarto paso del protocolo BAEHR de cinco pasos."
+      ],
+      "uso": null,
+      "protocolo": "Es el cuarto paso del protocolo de cinco pasos: va después de la mascarilla y antes de la crema en espuma.",
+      "faq": [
+        {
+          "q": "¿Qué lleva esta crema para pies?",
+          "a": "Aceite de lemongrass, aceite de naranja y urea."
+        },
+        {
+          "q": "¿Es vegana?",
+          "a": "Sí, es vegana."
+        },
+        {
+          "q": "¿En qué tamaños se vende?",
+          "a": "En 30, 125 y 500 ml."
+        },
+        {
+          "q": "¿En qué se diferencia de la crema en espuma Orange-Lemongras?",
+          "a": "La crema para pies lleva aceites de naranja y de lemongrass. La crema en espuma lleva un 5 % de urea, pantenol y extractos de ginkgo, ginseng y limón, en una espuma ligera."
+        },
+        {
+          "q": "¿De qué línea es?",
+          "a": "Es de PEDIBAEHR, línea WELLNESS, serie Orange-Lemongras."
+        }
+      ],
+      "alt": "Tubo de la crema para pies Fußcreme Orange-Lemongras, de PEDIBAEHR, con la etiqueta de frente."
+    },
+    {
+      "id": "espuma",
+      "slug": "crema-en-espuma-orange-lemongras",
+      "h1": "Crema en espuma",
+      "nombre": "Cremeschaum Orange-Lemongras",
+      "title": "Crema en espuma para pies Orange-Lemongras | BAEHR España",
+      "description": "Crema en espuma PEDIBAEHR con un 5 % de urea, pantenol y extractos de ginkgo, ginseng y limón. Ligera y de rápida absorción. Vegana. En 125 y 300 ml.",
+      "chips": [
+        "PEDIBAEHR",
+        "Línea WELLNESS",
+        "Serie Orange-Lemongras"
+      ],
+      "lead": "Espuma ligera y de rápida absorción para el cuidado de los pies. Lleva un 5 % de urea, pantenol y extractos de ginkgo, ginseng y limón. Vegana.",
+      "tamanos": [
+        "125 ml",
+        "300 ml"
+      ],
+      "hechos": [
+        {
+          "valor": "5 %",
+          "texto": "de urea"
+        },
+        {
+          "valor": "5 estrellas",
+          "texto": "en tolerancia cutánea, según Dermatest (09/2025)"
+        },
+        {
+          "valor": "Vegana",
+          "texto": "sin ingredientes de origen animal"
+        },
+        {
+          "valor": "2 tamaños",
+          "texto": "125 y 300 ml"
+        }
+      ],
+      "activos": [
+        {
+          "nombre": "Urea",
+          "nota": "al 5 %",
+          "sr": "Urea al 5 %"
+        },
+        {
+          "nombre": "Pantenol",
+          "nota": null,
+          "sr": "Pantenol"
+        },
+        {
+          "nombre": "Ginkgo",
+          "nota": "extracto",
+          "sr": "Extracto de ginkgo"
+        },
+        {
+          "nombre": "Ginseng",
+          "nota": "extracto",
+          "sr": "Extracto de ginseng"
+        },
+        {
+          "nombre": "Limón",
+          "nota": "extracto",
+          "sr": "Extracto de limón"
+        }
+      ],
+      "descripcion": [
+        "Cremeschaum Orange-Lemongras es la crema en espuma para pies de PEDIBAEHR, de la línea WELLNESS. Es una espuma de textura ligera y rápida absorción que deja un tacto aterciopelado.",
+        "Lleva un 5 % de urea, pantenol y extractos de ginkgo, ginseng y limón. Es vegana y cuenta con el sello de cinco estrellas en tolerancia cutánea de Dermatest GmbH (09/2025).",
+        "Según BAEHR, las espumas para pies se absorben más rápido que las pomadas y apenas dejan residuos. Esta se vende en 125 y 300 ml."
+      ],
+      "uso": null,
+      "protocolo": "Es el quinto y último paso del protocolo de cinco pasos y va después de la crema para pies.",
+      "faq": [
+        {
+          "q": "¿Cuánta urea lleva?",
+          "a": "Lleva un 5 % de urea. Sus otros principios activos son el pantenol y los extractos de ginkgo, ginseng y limón."
+        },
+        {
+          "q": "¿En qué se diferencia de la crema para pies Orange-Lemongras?",
+          "a": "Las dos llevan urea, pero difieren en la textura y en el resto de los activos. La crema para pies Orange-Lemongras lleva aceites de naranja y de lemongrass; la crema en espuma, un 5 % de urea, pantenol y extractos de ginkgo, ginseng y limón, en una espuma ligera de rápida absorción."
+        },
+        {
+          "q": "¿Qué es el sello de cinco estrellas?",
+          "a": "Es el sello de tolerancia cutánea de Dermatest GmbH. El de esta crema en espuma es de septiembre de 2025 y se basa en una prueba clínica de 4 semanas con 20 voluntarios."
+        },
+        {
+          "q": "¿Es vegana?",
+          "a": "Sí, es vegana."
+        },
+        {
+          "q": "¿Quién es el fabricante?",
+          "a": "Gustav Baehr GmbH, una empresa familiar con sede en Waiblingen (Alemania). En España, este producto lo vende BAEHR España, distribuidor oficial de la marca."
+        }
+      ],
+      "alt": "Bote blanco de la crema en espuma Cremeschaum Orange-Lemongras, de PEDIBAEHR, con la etiqueta de frente."
+    }
+  ],
+  "protocolo": {
+    "title": "Protocolo de cuidado de pies en cinco pasos | BAEHR España",
+    "description": "El protocolo BAEHR para el cuidado de los pies en cinco pasos: baño de pies, exfoliante, mascarilla, crema y crema en espuma. Para profesionales y para casa.",
+    "h1": "Cinco pasos, un protocolo",
+    "intro": "El protocolo BAEHR reúne cinco productos para el cuidado de los pies, uno para cada paso: baño de pies, exfoliante, mascarilla, crema y crema en espuma. Es para profesionales en cabina y para quien quiere el mismo cuidado en casa.",
+    "cierre": "Compra los cinco productos en la tienda o, si eres profesional, solicita tu alta profesional."
+  }
+}
