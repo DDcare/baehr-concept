@@ -76,7 +76,7 @@ We raden "Met Google Ads" aan. Vindbaarheid kost maanden voordat ze resultaat ge
 
 ### Winkel en portaal zonder kosten als we 12 maanden samenwerken
 
-Winkel en portaal hebben samen een waarde van 2.000 euro. Bij 12 maanden samenwerking betaal je daar niets voor. Stop je eerder, dan betaal je het resterende deel naar rato. Voorbeeld: stop je na vier maanden, dan blijven er acht over en betaal je 1.333 euro. [Aanname: naar rato in plaats van een maandbedrag (2.000 / 12 = 166,67). En nog open: wat eerder stoppen kost bij "Winkel en SEO", waar het portaal niet in zit.]
+Winkel en portaal hebben samen een waarde van 2.000 euro. Bij 12 maanden samenwerking betaal je daar niets voor. Stop je eerder, dan betaal je het resterende deel naar rato. Voorbeeld: stop je na vier maanden, dan blijven er acht over en betaal je 1.333 euro. [Aanname: naar rato in plaats van een maandbedrag (2.000 / 12 = 166,67).]
 
 ### Het Shopify-abonnement staat apart
 
@@ -88,7 +88,7 @@ Wat je aan advertenties uitgeeft, zit niet in het maandbedrag. Je betaalt het re
 
 Omdat er nu geen vast advertentiebudget is, stellen we voor te beginnen met minimaal 600 euro per maand voor Google, vanaf "Met Google Ads". Bij "Met social" komt daar minimaal 400 euro per maand voor Meta bij, samen 1.000 euro. Daarna stellen we het bij op basis van de resultaten in je accounts. [Aanname: deze bedragen.]
 
-De campagnes en social media starten zodra het portaal werkt, in de tweede maand. Eerder zouden advertenties mensen naar het huidige formulier sturen en zou je betalen voor klikken die onderweg blijven hangen. Tot dat moment betaal je 540 euro per maand, welk pakket je ook kiest. [Aanname: dit geldt voor elk pakket, ook "Met portaal".]
+De campagnes en social media starten zodra het portaal werkt, in de tweede maand. Eerder zouden advertenties mensen naar het huidige formulier sturen en zou je betalen voor klikken die onderweg blijven hangen. Tot dat moment betaal je 540 euro per maand, welk pakket je ook kiest. [Aanname: dit geldt voor elk pakket.]
 
 ## We hebben dit al gedaan voor Skin Complete
 
