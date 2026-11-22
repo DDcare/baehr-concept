@@ -87,9 +87,10 @@ function shots(tall) {
       K(RANGE[3][1], X[3] + 0.4, 1.95, -0.02, 0.13, 0.32, 0, 0.2),
       K(RANGE[4][0], X[4] + 0.5, 1.6, -0.05, 0.11, 0.31, 0, 0.2),
       K(RANGE[4][1], X[4] + 0.55, 1.5, -0.02, 0.1, 0.32, 0, 0.2),
-      // plano final: la palabra entera, de frente y recta
-      K(FIN[0] + 0.03, XC, 2.6, -0.03, 0.1, 0.031, 0, 0.19),
-      K(1.0, XC, 2.6, 0.03, 0.09, 0.0318, 0, 0.19),
+      // plano final: la palabra entera, de frente y recta. Queda al 60 % del alto y el texto se apoya justo encima
+      // (ver .fin en la hoja de estilos): los dos forman un solo grupo en el centro de la pantalla
+      K(FIN[0] + 0.03, XC, 2.6, -0.03, 0.1, 0.031, 0, 0.1),
+      K(1.0, XC, 2.6, 0.03, 0.09, 0.0318, 0, 0.1),
     ];
   }
   return [

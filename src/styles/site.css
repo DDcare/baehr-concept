@@ -715,9 +715,6 @@ h1 {
 .film__skip:hover {
   border-bottom-color: #fff;
 }
-.skip__short {
-  display: none;
-}
 .stepper::before {
   content: '';
   position: absolute;
@@ -1123,17 +1120,16 @@ h1 {
     padding: 0.55rem 1.2rem;
     font-size: 0.92rem;
   }
+  /* La palabra BAEHR empieza al 54,5 % del alto: el texto se apoya justo encima */
   .fin {
-    top: clamp(5.2rem, 11svh, 8rem);
+    top: auto;
+    bottom: calc(45.5% + 2rem);
   }
   .film__skip {
     bottom: calc(2.2svh + 0.2rem);
   }
-  .skip__long {
+  .skip__more {
     display: none;
-  }
-  .skip__short {
-    display: inline;
   }
   .stepper {
     left: var(--pad);
