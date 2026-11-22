@@ -266,10 +266,11 @@ html[data-mode='pro'] [data-when='home'] {
   grid-template-columns: 1fr 1fr;
   padding: 3px;
   border-radius: 999px;
-  background: rgba(24, 24, 26, 0.09);
+  /* la misma banda plateada del envase; el modo activo es una cápsula blanca */
+  background: var(--silver);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(0, 0, 0, 0.08);
   font-size: 0.85rem;
   font-weight: 600;
-  transition: background 0.3s;
 }
 .mode::before {
   content: '';
@@ -279,8 +280,9 @@ html[data-mode='pro'] [data-when='home'] {
   left: 3px;
   width: calc(50% - 3px);
   border-radius: 999px;
-  background: var(--ink);
-  transition: transform 0.4s cubic-bezier(0.3, 1.35, 0.5, 1), background 0.3s;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(24, 24, 26, 0.22);
+  transition: transform 0.4s cubic-bezier(0.3, 1.35, 0.5, 1);
 }
 html[data-mode='home'] .mode::before {
   transform: translateX(100%);
@@ -295,8 +297,11 @@ html[data-mode='home'] .mode::before {
   cursor: pointer;
   transition: color 0.25s;
 }
+.mode button {
+  color: var(--muted);
+}
 .mode button[aria-pressed='true'] {
-  color: #fff;
+  color: var(--ink);
 }
 .bar__link {
   font-size: 0.9rem;
@@ -366,6 +371,10 @@ html[data-mode='home'] .mode::before {
 }
 .top[data-theme='red'] .mode {
   background: rgba(255, 255, 255, 0.18);
+  box-shadow: none;
+}
+.top[data-theme='red'] .mode button {
+  color: #fff;
 }
 .top[data-theme='red'] .mode::before {
   background: #fff;
