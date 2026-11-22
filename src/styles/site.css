@@ -8,7 +8,14 @@
   --red-2: #86091a;
   --muted: #5b5a57;
   --line: rgba(24, 24, 26, 0.16);
-  --pad: clamp(1.1rem, 4vw, 3.5rem);
+  /* margen lateral; en pantallas anchas el contenido no pasa de 82rem */
+  --pad: max(clamp(1.1rem, 4vw, 3.5rem), calc((100vw - 82rem) / 2));
+  /* Escala tipográfica: una sola voz, en pocos tamaños. Los titulares van en mayúsculas anchas pero contenidas */
+  --fs-hero: clamp(2.1rem, min(1.2rem + 3.3vw, 12vh), 4.6rem);
+  --fs-page: clamp(2rem, 1.1rem + 3.2vw, 4.2rem);
+  --fs-h2: clamp(1.5rem, 1.05rem + 1.35vw, 2.4rem);
+  --fs-h3: clamp(1.02rem, 0.9rem + 0.4vw, 1.25rem);
+  --fs-lead: clamp(1rem, 0.95rem + 0.16vw, 1.1rem);
   --display: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
   --serif: 'Newsreader Variable', 'Newsreader', Georgia, serif;
   --ribs: repeating-linear-gradient(90deg, currentColor 0 2px, transparent 2px 7px);
@@ -60,7 +67,7 @@ body {
   color: var(--ink);
   font-family: var(--display);
   font-variation-settings: 'wdth' 100;
-  font-size: clamp(1rem, 0.95rem + 0.22vw, 1.125rem);
+  font-size: 1rem;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -124,12 +131,12 @@ html[data-mode='pro'] [data-when='home'] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 3rem;
-  padding: 0.7rem 1.55rem;
+  min-height: 2.75rem;
+  padding: 0.6rem 1.35rem;
   border-radius: 999px;
-  border: 1.5px solid transparent;
+  border: 1px solid transparent;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.92rem;
   line-height: 1.1;
   cursor: pointer;
   white-space: nowrap;
@@ -218,7 +225,7 @@ html[data-mode='pro'] [data-when='home'] {
   display: flex;
   gap: clamp(1rem, 2vw, 2.1rem);
   margin-inline: auto;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 .nav a,
@@ -290,14 +297,14 @@ html[data-mode='home'] .mode::before {
   color: #fff;
 }
 .bar__link {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 .cart {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 .cart b {
@@ -320,7 +327,7 @@ html[data-mode='home'] .mode::before {
 }
 .menu {
   display: none;
-  border: 1.5px solid currentColor;
+  border: 1px solid currentColor;
   background: none;
   border-radius: 999px;
   padding: 0.45rem 0.95rem;
@@ -342,7 +349,7 @@ html[data-mode='home'] .mode::before {
 }
 .sheet a {
   font-weight: 800;
-  font-size: clamp(2rem, 9vw, 3.4rem);
+  font-size: clamp(1.5rem, 6.4vw, 2.2rem);
   line-height: 1.12;
   text-transform: uppercase;
   letter-spacing: -0.015em;
@@ -449,7 +456,7 @@ h1 {
 .h1__big {
   display: block;
   font-weight: 800;
-  font-size: clamp(2.4rem, min(5.2vw, 13.5vh), 7.2rem);
+  font-size: var(--fs-hero);
   line-height: 0.9;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -460,7 +467,7 @@ h1 {
   margin-top: 0.34em;
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(1.4rem, min(2.5vw, 6vh), 3rem);
+  font-size: clamp(1.25rem, min(2.1vw, 5.4vh), 2.3rem);
   line-height: 1.08;
   letter-spacing: -0.01em;
   color: var(--red);
@@ -468,7 +475,7 @@ h1 {
 .hero__lead {
   margin-top: clamp(1.1rem, 2.6vh, 2rem);
   max-width: 34rem;
-  font-size: clamp(1rem, 1.25vw, 1.25rem);
+  font-size: var(--fs-lead);
   line-height: 1.45;
 }
 .hero__cta {
@@ -586,7 +593,7 @@ h1 {
 .fin__h {
   font-weight: 800;
   /* la palabra más larga (EXFOLIACIÓN) tiene que caber en el bloque */
-  font-size: clamp(2.2rem, min(4.4vw, 11vh), 4.9rem);
+  font-size: clamp(1.9rem, min(3.5vw, 9vh), 3.6rem);
   line-height: 0.94;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -597,13 +604,13 @@ h1 {
   margin-top: 0.9rem;
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(1.15rem, 1.7vw, 1.75rem);
+  font-size: clamp(1.1rem, 1.45vw, 1.45rem);
   line-height: 1.2;
 }
 .chap__text {
   margin-top: 0.7rem;
   max-width: 27rem;
-  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  font-size: clamp(0.98rem, 1.08vw, 1.08rem);
   line-height: 1.45;
 }
 /* los datos de cada paso: una lista recta, como la etiqueta de un envase */
@@ -619,7 +626,7 @@ h1 {
   gap: 0.7rem;
   padding: 0.5rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 600;
   line-height: 1.25;
 }
@@ -654,7 +661,7 @@ h1 {
   margin-top: 0.6rem;
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(1.2rem, 1.9vw, 1.95rem);
+  font-size: clamp(1.15rem, 1.6vw, 1.6rem);
 }
 .fin__cta {
   margin-top: 1.4rem;
@@ -742,15 +749,15 @@ h1 {
 /* Secciones tranquilas */
 .h2 {
   font-weight: 800;
-  font-size: clamp(2rem, 5.4vw, 5.6rem);
-  line-height: 0.95;
-  letter-spacing: -0.02em;
+  font-size: var(--fs-h2);
+  line-height: 1.02;
+  letter-spacing: -0.012em;
   text-transform: uppercase;
-  font-variation-settings: 'wdth' 116;
+  font-variation-settings: 'wdth' 118;
   text-wrap: balance;
 }
 .lead {
-  font-size: clamp(1.05rem, 1.35vw, 1.35rem);
+  font-size: var(--fs-lead);
   line-height: 1.45;
   max-width: 34rem;
   text-wrap: pretty;
@@ -766,7 +773,7 @@ h1 {
 }
 
 .dark .h2 {
-  font-size: clamp(2rem, 4vw, 4.4rem);
+  font-size: var(--fs-h2);
 }
 .dark {
   position: relative;
@@ -792,18 +799,18 @@ h1 {
   display: grid;
   width: 100%;
   max-width: 34rem;
-  border-top: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 .ticks li {
   padding: 0.85rem 0;
-  border-bottom: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   font-weight: 500;
 }
 .signup {
   display: grid;
   gap: 1.1rem;
   padding: clamp(1.6rem, 3vw, 2.6rem);
-  border-radius: clamp(1.8rem, 3vw, 2.8rem);
+  border-radius: clamp(1.4rem, 2vw, 2rem);
   background: #fff;
   color: var(--ink);
 }
@@ -817,7 +824,7 @@ h1 {
   width: 100%;
   min-height: 3.2rem;
   padding: 0.7rem 1.2rem;
-  border: 1.5px solid var(--line);
+  border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--paper);
   font-size: 1rem;
@@ -889,12 +896,12 @@ h1 {
   align-items: center;
   gap: clamp(1.2rem, 3.5vw, 3.5rem);
   padding: clamp(1.2rem, 2.2vw, 2rem) clamp(1.4rem, 3.2vw, 3.2rem);
-  border: 1.5px solid var(--ink);
+  border: 1px solid var(--ink);
   border-radius: 999px;
 }
 .seminar__date {
   font-weight: 800;
-  font-size: clamp(1.1rem, 1.7vw, 1.7rem);
+  font-size: clamp(1rem, 1.3vw, 1.3rem);
   line-height: 1;
   text-transform: uppercase;
   font-variation-settings: 'wdth' 116;
@@ -906,14 +913,14 @@ h1 {
   letter-spacing: -0.03em;
 }
 .seminar h3 {
-  font-size: clamp(1.15rem, 1.7vw, 1.7rem);
+  font-size: var(--fs-h3);
   font-weight: 700;
   line-height: 1.15;
 }
 .seminar__body p {
   margin-top: 0.35rem;
   color: var(--muted);
-  font-size: 0.98rem;
+  font-size: 0.92rem;
   line-height: 1.4;
   max-width: 44rem;
 }
@@ -925,9 +932,13 @@ h1 {
   position: relative;
   z-index: 5;
   background: #fff;
-  padding: clamp(4.5rem, 12vh, 9rem) var(--pad);
+  padding: clamp(4rem, 10vh, 7rem) var(--pad);
   display: grid;
-  gap: clamp(2rem, 5vw, 4rem);
+  gap: clamp(1.6rem, 3.5vw, 3rem);
+}
+.brand > .textlink,
+.seminars > .textlink {
+  justify-self: start;
 }
 .brand__grid {
   display: grid;
@@ -937,30 +948,33 @@ h1 {
 }
 .stats {
   display: grid;
-  border-top: 1.5px solid var(--ink);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
 }
 .stat {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 15rem);
-  align-items: end;
-  gap: 1.5rem;
-  padding: 1rem 0 1.1rem;
-  border-bottom: 1.5px solid var(--ink);
+  padding: 1.3rem clamp(0.8rem, 1.6vw, 1.5rem) 1.4rem;
+  border-left: 1px solid var(--line);
+}
+.stat:first-child {
+  padding-left: 0;
+  border-left: 0;
 }
 .stat dt {
   font-weight: 800;
-  font-size: clamp(3.2rem, 8.4vw, 8.6rem);
-  line-height: 0.86;
-  letter-spacing: -0.03em;
-  font-variation-settings: 'wdth' 125;
+  font-size: clamp(1.6rem, 2.6vw, 2.5rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variation-settings: 'wdth' 118;
+  white-space: nowrap;
   color: var(--red);
 }
 .stat dd {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: clamp(1.05rem, 1.35vw, 1.4rem);
-  line-height: 1.25;
-  padding-bottom: 0.3em;
+  margin-top: 0.6rem;
+  max-width: 14rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.35;
 }
 
 .foot {
@@ -984,7 +998,7 @@ h1 {
 .foot__lead {
   margin-top: 1.4rem;
   max-width: 24rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.35;
 }
@@ -998,7 +1012,7 @@ h1 {
   gap: 0.55rem;
   align-content: start;
   justify-items: start;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 .foot nav a:hover {
   text-decoration: underline;
@@ -1006,7 +1020,7 @@ h1 {
 }
 .foot__end {
   padding: 1.2rem var(--pad) 1.6rem;
-  border-top: 1.5px solid rgba(255, 255, 255, 0.18);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
   font-size: 0.8125rem;
   color: rgba(255, 255, 255, 0.66);
 }
@@ -1029,10 +1043,10 @@ h1 {
     transform: translateY(calc(var(--hero-out, 0) * -4vh));
   }
   .h1__big {
-    font-size: clamp(2.3rem, 12.1vw, 7.4rem);
+    font-size: clamp(2rem, 10vw, 4rem);
   }
   .h1__soft {
-    font-size: clamp(1.35rem, 5.6vw, 3.2rem);
+    font-size: clamp(1.25rem, 5vw, 2.4rem);
   }
   .hero__lead {
     font-size: clamp(0.95rem, 2.4vw, 1.3rem);
@@ -1055,11 +1069,11 @@ h1 {
   }
   .chap__h,
   .fin__h {
-    font-size: clamp(1.8rem, 9vw, 5.2rem);
+    font-size: clamp(1.6rem, 7.6vw, 3.4rem);
   }
   .chap__prod {
     margin-top: 0.55rem;
-    font-size: clamp(1.05rem, 4.2vw, 1.8rem);
+    font-size: clamp(1.02rem, 4vw, 1.5rem);
   }
   .chap__text {
     margin-top: 0.4rem;
@@ -1139,7 +1153,7 @@ h1 {
 
 @media (max-width: 640px) {
   .dark .h2 {
-    font-size: clamp(1.5rem, 6.9vw, 2.6rem);
+    font-size: var(--fs-h2);
   }
   .promo__long {
     display: none;
@@ -1166,10 +1180,24 @@ h1 {
   .cart {
     display: none;
   }
-  .stat {
+  .stats {
     grid-template-columns: minmax(0, 1fr);
-    gap: 0.45rem;
-    align-items: start;
+  }
+  .stat,
+  .stat:first-child {
+    display: grid;
+    grid-template-columns: 5.6rem minmax(0, 1fr);
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.9rem 0;
+    border-left: 0;
+  }
+  .stat + .stat {
+    border-top: 1px solid var(--line);
+  }
+  .stat dd {
+    margin-top: 0;
+    max-width: none;
   }
   .seminar {
     grid-template-columns: minmax(0, 1fr);
@@ -1308,20 +1336,32 @@ h1 {
   background: var(--ribs);
 }
 
-/* El logotipo del pie: entra estrecho y se estira hasta ocupar todo el ancho */
+/* El logotipo del pie: entra estrecho y se estira hasta ocupar el ancho del contenido.
+   Solo el contorno, fino: grande pero ligero. Cada letra se llena de rojo al pasar el puntero. */
 .foot__mark {
   padding: 0 var(--pad);
-  margin-top: clamp(1.5rem, 4vh, 3rem);
+  margin-top: clamp(1rem, 3vh, 2rem);
   font-weight: 900;
-  font-size: 19.4vw;
-  line-height: 0.74;
+  font-size: min(19.4vw, 17.6rem);
+  line-height: 0.76;
   letter-spacing: -0.01em;
-  color: var(--red);
+  color: transparent;
+  -webkit-text-stroke: 1.25px rgba(242, 238, 231, 0.36);
   white-space: nowrap;
   overflow: hidden;
   user-select: none;
   --stretch-to: 125;
   transition-duration: 1.8s;
+}
+.foot__mark span {
+  transition: color 0.5s, -webkit-text-stroke-color 0.5s;
+}
+@media (hover: hover) {
+  .foot__mark span:hover {
+    color: var(--red);
+    -webkit-text-stroke-color: var(--red);
+    transition-duration: 0.12s;
+  }
 }
 
 /* La cesta salta al añadir */
@@ -1525,7 +1565,7 @@ h1 {
 .pdp__big {
   display: block;
   font-weight: 800;
-  font-size: clamp(2.3rem, 4.4vw, 4.8rem);
+  font-size: clamp(1.9rem, 3.3vw, 3.2rem);
   line-height: 0.92;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -1537,14 +1577,14 @@ h1 {
   margin-top: 0.7rem;
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(1.25rem, 1.8vw, 1.8rem);
+  font-size: clamp(1.1rem, 1.45vw, 1.4rem);
   line-height: 1.15;
   color: var(--red);
 }
 .pdp__lead {
   margin-top: 1.3rem;
   max-width: 33rem;
-  font-size: clamp(1.02rem, 1.15vw, 1.15rem);
+  font-size: var(--fs-lead);
   line-height: 1.5;
 }
 .chips {
@@ -1610,7 +1650,7 @@ h1 {
 }
 .price__text {
   margin-top: 0.2rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 .price .textlink {
@@ -1628,7 +1668,7 @@ h1 {
 .qty {
   display: inline-flex;
   align-items: center;
-  border: 1.5px solid var(--ink);
+  border: 1px solid var(--ink);
   border-radius: 999px;
   min-height: 3rem;
 }
@@ -1682,8 +1722,8 @@ h1 {
 .band__row {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1.5px solid var(--ink);
-  border-bottom: 1.5px solid var(--ink);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
 }
 .band__item {
   padding: clamp(1.4rem, 3.4vw, 2.6rem) clamp(0.8rem, 1.8vw, 1.8rem);
@@ -1695,7 +1735,7 @@ h1 {
 }
 .band__item dt {
   font-weight: 800;
-  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  font-size: clamp(1.2rem, 1.7vw, 1.6rem);
   line-height: 1;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -1707,7 +1747,7 @@ h1 {
   margin-top: 0.65rem;
   max-width: 16rem;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   line-height: 1.35;
 }
 .band--ink {
@@ -1737,51 +1777,56 @@ h1 {
   font-variation-settings: 'wdth' var(--stretch-to, 125);
 }
 
+/* La ficha: una hoja a dos columnas, el título a la izquierda y el contenido a la derecha */
+.inside,
+.texture,
+.shop--pairs,
+.faq {
+  display: grid;
+  grid-template-columns: minmax(21rem, 1fr) minmax(0, 2fr);
+  gap: 1.4rem clamp(1.5rem, 4vw, 4rem);
+  align-items: start;
+}
 .inside {
-  padding: clamp(4rem, 11vh, 8rem) var(--pad) clamp(3rem, 8vh, 6rem);
+  padding: clamp(3.5rem, 9vh, 6rem) var(--pad) 0;
 }
 .inside__list {
-  margin-top: clamp(1.6rem, 4vh, 2.8rem);
-  border-top: 1.5px solid var(--ink);
+  border-top: 1px solid var(--ink);
 }
 .inside__list li {
-  display: flex;
+  --stretch-to: 118;
+  display: grid;
+  grid-template-columns: minmax(7rem, 12rem) minmax(0, 1fr);
   align-items: baseline;
-  justify-content: space-between;
   gap: 1rem;
-  padding: 0.18em 0 0.12em;
+  padding: 0.85rem 0 0.8rem;
   border-bottom: 1px solid var(--line);
+}
+.inside__n {
   font-weight: 800;
-  font-size: clamp(2.3rem, 7.4vw, 8rem);
-  line-height: 1;
-  letter-spacing: -0.02em;
+  font-size: var(--fs-h3);
+  line-height: 1.1;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
-.inside__list li:hover {
-  color: var(--red);
-}
-.inside__list small {
+.inside__q {
   font-family: var(--serif);
   font-style: italic;
-  font-weight: 400;
-  font-size: clamp(1rem, 1.7vw, 1.7rem);
-  letter-spacing: 0;
-  text-transform: none;
+  font-size: 1.1rem;
+  line-height: 1.1;
+  font-variation-settings: normal;
   color: var(--red);
 }
 .texture {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: clamp(1rem, 3vh, 2rem);
-  padding: 0 var(--pad) clamp(4rem, 11vh, 8rem);
+  padding: clamp(3rem, 7vh, 5rem) var(--pad) clamp(3.5rem, 9vh, 6rem);
 }
 .texture .texture__body {
-  max-width: 54rem;
+  max-width: 40rem;
 }
 .texture__quote {
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(1.7rem, 3.4vw, 3.6rem);
+  font-size: clamp(1.3rem, 2.2vw, 2.2rem);
   line-height: 1.12;
   color: var(--red);
   text-wrap: balance;
@@ -1793,7 +1838,7 @@ h1 {
   align-items: center;
   margin: 0 var(--pad);
   padding: clamp(2.4rem, 6vw, 4.5rem);
-  border-radius: clamp(2rem, 5vw, 4rem);
+  border-radius: clamp(1.5rem, 2.4vw, 2.2rem);
   background: var(--red);
   color: #fff;
 }
@@ -1823,25 +1868,26 @@ h1 {
   color: var(--red);
 }
 .shop--pairs {
-  padding-top: clamp(4rem, 11vh, 8rem);
+  padding-top: clamp(3.5rem, 9vh, 6rem);
+}
+.shop--pairs .shop__head {
+  display: block;
+  margin: 0;
 }
 .faq {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
-  gap: clamp(1.5rem, 4vw, 4rem);
   padding: clamp(3rem, 8vh, 6rem) var(--pad) clamp(4rem, 11vh, 8rem);
 }
 .faq .h2 {
-  font-size: clamp(1.8rem, 3vw, 3.2rem);
+  font-size: var(--fs-h2);
 }
 .proto .h2 {
-  font-size: clamp(2rem, 4vw, 4.2rem);
+  font-size: var(--fs-h2);
 }
 .faq__item {
-  border-top: 1.5px solid var(--ink);
+  border-top: 1px solid var(--ink);
 }
 .faq__item:last-child {
-  border-bottom: 1.5px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
 }
 .faq__item summary {
   display: flex;
@@ -1850,7 +1896,7 @@ h1 {
   gap: 1rem;
   padding: 1.1rem 0;
   font-weight: 700;
-  font-size: clamp(1.05rem, 1.35vw, 1.3rem);
+  font-size: clamp(1rem, 1.15vw, 1.1rem);
   cursor: pointer;
   list-style: none;
 }
@@ -1909,9 +1955,14 @@ h1 {
     white-space: nowrap;
   }
   .buybar .pill {
+    flex: none;
     min-height: 2.6rem;
     padding: 0.5rem 1.1rem;
     font-size: 0.9rem;
+    white-space: nowrap;
+  }
+  .buybar__name {
+    min-width: 0;
   }
 }
 
@@ -1935,7 +1986,7 @@ h1 {
 .pro-hero__h .stretch {
   display: block;
   font-weight: 800;
-  font-size: clamp(2.4rem, 11vw, 12.5rem);
+  font-size: var(--fs-page);
   line-height: 0.86;
   letter-spacing: -0.03em;
   text-transform: uppercase;
@@ -1947,7 +1998,7 @@ h1 {
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.4rem, 3vw, 2.9rem);
+  font-size: clamp(1.2rem, 2vw, 2rem);
   line-height: 1.1;
 }
 .catalog__empty {
@@ -1989,7 +2040,7 @@ h1 {
   justify-content: space-between;
   gap: 1rem 2rem;
   padding: 1rem 0 1.6rem;
-  border-top: 1.5px solid var(--ink);
+  border-top: 1px solid var(--ink);
 }
 .filters {
   display: flex;
@@ -1997,7 +2048,7 @@ h1 {
   gap: 0.4rem;
 }
 .filters button {
-  border: 1.5px solid var(--line);
+  border: 1px solid var(--line);
   border-radius: 999px;
   background: none;
   padding: 0.55rem 1rem;
@@ -2039,7 +2090,7 @@ h1 {
 .card__add {
   align-self: start;
   margin-top: 0.9rem;
-  border: 1.5px solid var(--ink);
+  border: 1px solid var(--ink);
   border-radius: 999px;
   background: none;
   padding: 0.55rem 1.1rem;
@@ -2057,6 +2108,70 @@ h1 {
   color: var(--muted);
 }
 
+@media (min-width: 1081px) {
+  /* En pantallas anchas, los filtros van en una columna lateral fija y los productos a su derecha */
+  .catalog {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    gap: 0 clamp(1.5rem, 4vw, 4rem);
+    align-items: start;
+  }
+  .catalog__bar {
+    position: sticky;
+    top: 5.5rem;
+    display: grid;
+    gap: 1.4rem;
+    padding: 0;
+    border-top: 1px solid var(--ink);
+  }
+  .filters {
+    display: grid;
+    gap: 0;
+  }
+  .filters button,
+  .filters button[aria-pressed='true'] {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    width: 100%;
+    padding: 0.75rem 0;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    background: none;
+    color: var(--ink);
+    font-weight: 500;
+    font-size: 0.92rem;
+    text-align: left;
+  }
+  .filters button::before {
+    content: '';
+    flex: none;
+    width: 0;
+    height: 8px;
+    color: var(--red);
+    background: var(--ribs);
+    transition: width 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .filters button:hover::before {
+    width: 0.5rem;
+  }
+  .filters button[aria-pressed='true'] {
+    font-weight: 700;
+  }
+  .filters button[aria-pressed='true']::before {
+    width: 1.1rem;
+  }
+  .catalog__grid,
+  .catalog__empty {
+    grid-column: 2;
+  }
+  .catalog__grid {
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--ink);
+  }
+}
+
 /* Profesionales */
 .pro-hero {
   display: grid;
@@ -2066,7 +2181,7 @@ h1 {
   padding: clamp(7.5rem, 17vh, 10.5rem) var(--pad) clamp(3rem, 8vh, 5rem);
 }
 .pro-hero__h .stretch {
-  font-size: clamp(1.6rem, 6.8vw, 7.8rem);
+  font-size: min(var(--fs-page), 7.4vw);
   white-space: nowrap;
 }
 .pro-hero__h .stretch + .stretch {
@@ -2085,7 +2200,7 @@ h1 {
 .perks__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1.5px solid var(--ink);
+  border-top: 1px solid var(--ink);
 }
 .perk {
   padding: 1.4rem clamp(0.8rem, 1.8vw, 1.6rem) 1.6rem;
@@ -2105,7 +2220,7 @@ h1 {
 .perk__h {
   margin-top: 1.1rem;
   font-weight: 800;
-  font-size: clamp(1.15rem, 1.6vw, 1.6rem);
+  font-size: var(--fs-h3);
   line-height: 1.05;
   text-transform: uppercase;
   font-variation-settings: 'wdth' 112;
@@ -2121,12 +2236,12 @@ h1 {
   align-items: start;
   margin: 0 var(--pad);
   padding: clamp(2.4rem, 6vw, 4.5rem);
-  border-radius: clamp(2rem, 5vw, 4rem);
+  border-radius: clamp(1.5rem, 2.4vw, 2.2rem);
   background: var(--red);
   color: #fff;
 }
 .quick .h2 {
-  font-size: clamp(1.5rem, 3.1vw, 3.2rem);
+  font-size: var(--fs-h2);
 }
 .quick .lead {
   margin-top: 1rem;
@@ -2146,7 +2261,7 @@ h1 {
   width: 100%;
   min-height: 3.2rem;
   padding: 0.8rem 1.3rem;
-  border: 1.5px solid var(--ink);
+  border: 1px solid var(--ink);
   border-radius: 999px;
   background: #fff;
   font-size: 1rem;
@@ -2220,7 +2335,7 @@ h1 {
 .quick__order {
   margin-top: 1rem;
   padding-top: 0.9rem;
-  border-top: 1.5px solid var(--ink);
+  border-top: 1px solid var(--ink);
 }
 .quick__label {
   font-size: 0.82rem;
@@ -2267,7 +2382,7 @@ h1 {
 .steps3__item {
   position: relative;
   padding-top: 1.4rem;
-  border-top: 1.5px solid var(--ink);
+  border-top: 1px solid var(--ink);
 }
 .steps3__item::before {
   content: '';
@@ -2281,7 +2396,7 @@ h1 {
 }
 .steps3__h {
   font-weight: 800;
-  font-size: clamp(1.3rem, 2.1vw, 2.1rem);
+  font-size: var(--fs-h3);
   line-height: 1.02;
   text-transform: uppercase;
   font-variation-settings: 'wdth' 114;
@@ -2296,7 +2411,7 @@ h1 {
   align-items: start;
 }
 .dark--alta .h2 {
-  font-size: clamp(1.8rem, 3.4vw, 3.6rem);
+  font-size: var(--fs-h2);
 }
 
 .switch {
@@ -2340,7 +2455,7 @@ h1 {
   padding: 0 var(--pad) clamp(4rem, 11vh, 8rem);
 }
 .channels {
-  border-top: 1.5px solid var(--ink);
+  border-top: 1px solid var(--ink);
 }
 .channel {
   display: grid;
@@ -2352,7 +2467,7 @@ h1 {
 }
 .channel__n {
   font-weight: 800;
-  font-size: clamp(1.5rem, 2.5vw, 2.8rem);
+  font-size: clamp(1.15rem, 1.6vw, 1.5rem);
   line-height: 1;
   text-transform: uppercase;
 }
@@ -2375,7 +2490,7 @@ h1 {
 }
 .addr__h {
   font-weight: 800;
-  font-size: 1.3rem;
+  font-size: 1.05rem;
   text-transform: uppercase;
   font-variation-settings: 'wdth' 118;
 }
@@ -2399,7 +2514,7 @@ h1 {
 .cform textarea {
   width: 100%;
   padding: 0.8rem 1.2rem;
-  border: 1.5px solid var(--line);
+  border: 1px solid var(--line);
   border-radius: 1.4rem;
   background: #fff;
   font-size: 1rem;
@@ -2468,11 +2583,11 @@ h1 {
 @media (max-width: 640px) {
   /* koppen met een lange groep die niet mag breken: op de telefoon net kleiner, zodat ze in het vak passen */
   .h2 {
-    font-size: clamp(1.7rem, 8.4vw, 5.6rem);
+    font-size: var(--fs-h2);
   }
   .seminars .h2,
   .dark--alta .h2 {
-    font-size: clamp(1.35rem, 6.4vw, 3rem);
+    font-size: var(--fs-h2);
   }
   .perks__grid {
     grid-template-columns: minmax(0, 1fr);
@@ -2545,7 +2660,7 @@ h1 {
 .acct-hero__h .stretch {
   display: block;
   font-weight: 800;
-  font-size: clamp(2.2rem, 6.4vw, 7.4rem);
+  font-size: var(--fs-page);
   line-height: 0.9;
   letter-spacing: -0.03em;
   text-transform: uppercase;
@@ -2553,7 +2668,7 @@ h1 {
 }
 .acct-hero__h .acct-hero__name {
   /* el nombre del salón puede ser largo: se reparte en líneas equilibradas, nunca se corta */
-  font-size: clamp(1.9rem, 4.6vw, 5.4rem);
+  font-size: clamp(1.7rem, 3.4vw, 3.3rem);
   line-height: 0.95;
   color: var(--ink);
   text-wrap: balance;
@@ -2580,7 +2695,7 @@ h1 {
   justify-items: start;
   gap: 1rem;
   padding: clamp(1.6rem, 3vw, 2.6rem);
-  border-radius: clamp(1.8rem, 3vw, 2.8rem);
+  border-radius: clamp(1.4rem, 2vw, 2rem);
   background: #fff;
 }
 .acct-card--red {
@@ -2589,7 +2704,7 @@ h1 {
 }
 .acct-card__h {
   font-weight: 800;
-  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+  font-size: clamp(1.1rem, 1.5vw, 1.45rem);
   line-height: 1;
   text-transform: uppercase;
   font-variation-settings: 'wdth' 116;
@@ -2649,7 +2764,7 @@ h1 {
   width: 100%;
   margin-top: clamp(1.4rem, 3.5vh, 2.4rem);
   border-collapse: collapse;
-  border-top: 1.5px solid var(--ink);
+  border-top: 1px solid var(--ink);
 }
 .otable th,
 .otable td {
@@ -2709,7 +2824,7 @@ h1 {
   color: #fff;
 }
 .status--preparacion {
-  border: 1.5px solid var(--ink);
+  border: 1px solid var(--ink);
 }
 .mini {
   border: 0;
@@ -2723,7 +2838,7 @@ h1 {
 }
 .mini--line {
   margin-left: 0.3rem;
-  border: 1.5px solid var(--ink);
+  border: 1px solid var(--ink);
   background: none;
   color: var(--ink);
 }
@@ -2865,18 +2980,18 @@ html.has-drawer {
   align-items: center;
   justify-content: space-between;
   padding-bottom: 1rem;
-  border-bottom: 1.5px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
 }
 .drawer__h {
   font-weight: 800;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   line-height: 1;
   letter-spacing: -0.01em;
   text-transform: uppercase;
   font-variation-settings: 'wdth' 118;
 }
 .drawer__close {
-  border: 1.5px solid var(--ink);
+  border: 1px solid var(--ink);
   border-radius: 999px;
   background: none;
   padding: 0.45rem 0.9rem;
@@ -2961,7 +3076,7 @@ html.has-drawer {
 .drawer__empty p {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   line-height: 1.15;
 }
 .drawer__empty[hidden] {
@@ -2974,7 +3089,7 @@ html.has-drawer {
   display: grid;
   gap: 0.8rem;
   padding-top: 1rem;
-  border-top: 1.5px solid var(--ink);
+  border-top: 1px solid var(--ink);
 }
 .drawer__foot[hidden] {
   display: none;
@@ -3024,7 +3139,7 @@ html.has-drawer {
   display: grid;
   gap: 1.2rem;
   max-width: 40rem;
-  font-size: clamp(1.05rem, 1.3vw, 1.3rem);
+  font-size: var(--fs-lead);
   line-height: 1.5;
 }
 .worlds__lead {
@@ -3033,7 +3148,7 @@ html.has-drawer {
 .statement__p {
   max-width: 44rem;
   margin: 1.6rem auto 0;
-  font-size: clamp(1.02rem, 1.25vw, 1.2rem);
+  font-size: 1rem;
   line-height: 1.55;
   opacity: 0.92;
 }
@@ -3048,7 +3163,7 @@ html.has-drawer {
 .about-hero__h .stretch {
   display: block;
   font-weight: 800;
-  font-size: clamp(3rem, 10.6vw, 12.5rem);
+  font-size: var(--fs-page);
   line-height: 0.86;
   letter-spacing: -0.03em;
   text-transform: uppercase;
@@ -3061,7 +3176,7 @@ html.has-drawer {
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.4rem, 3vw, 2.9rem);
+  font-size: clamp(1.2rem, 2vw, 2rem);
   line-height: 1.1;
 }
 .about-hero .lead {
@@ -3079,7 +3194,7 @@ html.has-drawer {
 .years__item {
   position: relative;
   padding-top: 1.2rem;
-  border-top: 1.5px solid var(--ink);
+  border-top: 1px solid var(--ink);
 }
 .years__item::before {
   content: '';
@@ -3109,7 +3224,7 @@ html.has-drawer {
 }
 .worlds__list {
   margin-top: clamp(1.6rem, 4vh, 2.8rem);
-  border-top: 1.5px solid var(--ink);
+  border-top: 1px solid var(--ink);
 }
 .worlds__item {
   display: grid;
@@ -3122,7 +3237,7 @@ html.has-drawer {
 .worlds__n {
   --stretch-to: 108;
   font-weight: 800;
-  font-size: clamp(1.25rem, 2.4vw, 2.6rem);
+  font-size: clamp(1.05rem, 1.45vw, 1.4rem);
   line-height: 1.02;
   letter-spacing: -0.015em;
   text-transform: uppercase;
@@ -3145,7 +3260,7 @@ html.has-drawer {
   margin: 0 auto;
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(1.9rem, 4.6vw, 4.8rem);
+  font-size: clamp(1.6rem, 2.9vw, 2.9rem);
   line-height: 1.06;
   text-wrap: balance;
 }
@@ -3161,7 +3276,7 @@ html.has-drawer {
   padding: clamp(4rem, 11vh, 8rem) var(--pad);
 }
 .split .h2 {
-  font-size: clamp(1.8rem, 3.3vw, 3.5rem);
+  font-size: var(--fs-h2);
 }
 .split .lead {
   margin-top: 1rem;
@@ -3179,14 +3294,14 @@ html.has-drawer {
 .cta {
   margin: 0 var(--pad) clamp(4rem, 11vh, 8rem);
   padding: clamp(2.8rem, 7vw, 5.5rem) clamp(1.4rem, 5vw, 5rem);
-  border-radius: clamp(2rem, 5vw, 4rem);
+  border-radius: clamp(1.5rem, 2.4vw, 2.2rem);
   background: var(--ink);
   color: #fff;
   text-align: center;
 }
 .cta__h {
   font-weight: 800;
-  font-size: clamp(1.7rem, 5.2vw, 5.4rem);
+  font-size: clamp(1.6rem, 2.9vw, 2.8rem);
   line-height: 0.95;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -3197,7 +3312,7 @@ html.has-drawer {
   margin-top: 1rem;
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(1.2rem, 1.9vw, 1.9rem);
+  font-size: clamp(1.05rem, 1.45vw, 1.4rem);
 }
 .cta__b {
   display: flex;
@@ -3216,6 +3331,9 @@ html.has-drawer {
 }
 
 @media (max-width: 1080px) {
+  .shop--pairs {
+    grid-template-columns: minmax(0, 1fr);
+  }
   .shop__row {
     grid-template-columns: none;
     grid-auto-flow: column;
@@ -3257,7 +3375,7 @@ html.has-drawer {
     border-bottom-color: transparent;
   }
   .proto .h2 {
-    font-size: clamp(1.6rem, 6.6vw, 4.2rem);
+    font-size: var(--fs-h2);
   }
 }
 @media (max-width: 820px) {
@@ -3281,7 +3399,7 @@ html.has-drawer {
     padding-left: 0;
   }
   .band__item dt {
-    font-size: clamp(1.2rem, 5.4vw, 2rem);
+    font-size: clamp(1.1rem, 4.6vw, 1.5rem);
     white-space: normal;
   }
   .band__item:nth-child(n + 3) {
@@ -3293,6 +3411,7 @@ html.has-drawer {
   .years__row {
     row-gap: 2.2rem;
   }
+  .inside,
   .texture,
   .faq,
   .split,
@@ -3330,7 +3449,7 @@ html.has-drawer {
   align-items: center;
 }
 .film-static .h1__big {
-  font-size: clamp(2.3rem, 4.7vw, 6.4rem);
+  font-size: var(--fs-hero);
 }
 .film-static .hero {
   position: relative;
@@ -3380,7 +3499,7 @@ html.has-drawer {
   transform: none;
   background: var(--red);
   padding: 4rem var(--pad);
-  border-top: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
   text-align: left;
 }
 .film-static .chap {
@@ -3421,7 +3540,7 @@ html.has-drawer {
     justify-self: stretch;
   }
   .film-static .h1__big {
-    font-size: clamp(2.3rem, 12.1vw, 7.4rem);
+    font-size: clamp(2rem, 10vw, 4rem);
   }
   .film-static .chap {
     grid-template-columns: minmax(0, 1fr);
