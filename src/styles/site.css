@@ -3345,6 +3345,7 @@ html.has-drawer {
   margin: 0 auto;
   font-family: var(--serif);
   font-style: italic;
+  font-weight: 400;
   font-size: clamp(1.6rem, 2.9vw, 2.9rem);
   line-height: 1.06;
   text-wrap: balance;

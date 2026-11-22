@@ -33,8 +33,8 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 
 - 3D alleen op de home. Geen 3D op productpagina's, ook niet als betaalde optie, en het komt niet in het voorstel (elke 3D-pagina kost ongeveer 200 kB aan three.js plus model en etiket).
 - Onthouden voor de bouw: het grootste snelheidsrisico zit straks in Shopify (eigen scripts en vooral apps). Zo weinig mogelijk apps en een vast budget per pagina, bijvoorbeeld hooguit 1 MB en een LCP onder 2,5 seconden op een telefoon.
-- Home lichter maken: kleinere afbeeldingen en lettertypes met alleen de tekens die we gebruiken. De film mag niet wachten op alles wat laadt.
-- De 3D-viewer op de voorbeeldproductpagina start pas na het eerste beeld of bij aanraken. Open: of die viewer in het concept blijft nu de optie vervalt (voorstel van Claude: vervangen door stilstaande studiobeelden; nog niet bevestigd door D).
+- Home lichter: gedaan op 22-11 (etiketten 669 naar 288 kB, lettertypes 151 naar 82 kB, three.js 147 naar 121 kB). De lettertypes bevatten alleen onze tekens: draai na nieuwe tekst `python3 -I tools/fuentes.py --check` op de build. Newsreader bestaat alleen cursief in gewicht 400: gebruik het accentlettertype nooit vet.
+- De 3D-viewer op de voorbeeldproductpagina start pas als de pagina geladen is of bij aanraken (gedaan 22-11). Open: of die viewer in het concept blijft nu de optie vervalt (voorstel van Claude: vervangen door stilstaande studiobeelden; nog niet bevestigd door D).
 
 ## 3D
 

@@ -1,28 +1,54 @@
 // Visor 360 de un solo envase para la ficha de producto.
 // Ligero a propósito: sin sombras calculadas ni reflejos, y solo dibuja cuando algo se mueve.
-// three.js se descarga solo cuando el visor entra en pantalla: hasta entonces se ve la foto del producto
+// three.js no se descarga con la página: hasta que arranca el visor se ve la foto del producto
 let THREE;
 let createProducts;
 let SIZE;
 
 const box = document.querySelector('[data-visor]');
 if (box) {
-  const io = new IntersectionObserver(
-    async (entries) => {
-      if (!entries[0].isIntersecting) return;
-      io.disconnect();
-      try {
-        THREE = await import('three');
-        ({ createProducts, SIZE } = await import('./productos.js'));
-      } catch (e) {
-        box.classList.add('is-static');
-        return;
-      }
-      init(box);
-    },
-    { rootMargin: '200px 0px' }
-  );
-  io.observe(box);
+  let started = false;
+  const gestures = ['pointerenter', 'pointerdown', 'touchstart', 'focusin', 'keydown'];
+  const start = async () => {
+    if (started) return;
+    started = true;
+    gestures.forEach((g) => box.removeEventListener(g, start));
+    try {
+      THREE = await import('./tres.js');
+      ({ createProducts, SIZE } = await import('./productos.js'));
+    } catch (e) {
+      box.classList.add('is-static');
+      return;
+    }
+    init(box);
+  };
+  // El 3D no compite con la primera pintura. Arranca al tocar el visor, o cuando la página ya ha cargado
+  // y el navegador está en reposo. Con ahorro de datos o conexión lenta, solo al tocarlo.
+  gestures.forEach((g) => box.addEventListener(g, start, { passive: true }));
+  const net = navigator.connection;
+  const lean = net && (net.saveData || /(^|-)2g$/.test(net.effectiveType || ''));
+  if (!lean) {
+    const whenIdle = () => {
+      const visible = () => {
+        const r = box.getBoundingClientRect();
+        return r.bottom > 0 && r.top < window.innerHeight;
+      };
+      const go = () => {
+        if (visible()) return start();
+        // fuera de pantalla: espera a que el visor vuelva a verse
+        const io = new IntersectionObserver((entries) => {
+          if (!entries[0].isIntersecting) return;
+          io.disconnect();
+          start();
+        });
+        io.observe(box);
+      };
+      if ('requestIdleCallback' in window) requestIdleCallback(go, { timeout: 3000 });
+      else setTimeout(go, 1200);
+    };
+    if (document.readyState === 'complete') setTimeout(whenIdle, 600);
+    else window.addEventListener('load', () => setTimeout(whenIdle, 600), { once: true });
+  }
 }
 
 function radial(stops) {

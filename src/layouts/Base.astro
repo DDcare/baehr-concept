@@ -1,8 +1,9 @@
 ---
 // Cabecera, pie y datos comunes de todas las páginas del concepto.
-import '@fontsource-variable/archivo/wdth.css';
-import '@fontsource-variable/newsreader/wght-italic.css';
+import '../styles/fuentes.css';
 import '../styles/site.css';
+// El tipo de los títulos se precarga: es lo primero que se lee en cada página
+import archivoUrl from '../fonts/archivo-baehr.woff2?url';
 import { PRODUCTOS } from '../data/productos';
 
 interface Props {
@@ -44,6 +45,7 @@ const org = {
     <meta name="description" content={description} />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#F5F5F3" />
+    <link rel="preload" as="font" type="font/woff2" href={archivoUrl} crossorigin />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />

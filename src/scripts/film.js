@@ -1541,7 +1541,7 @@ function init() {
       apply(v, 3, 1);
       if (shot) frameCamera({ ...shotAt(v, keys), ...shot }, 0, ease(seg(v, REVEAL, FIN[0] + 0.03)));
       renderer.render(scene, camera);
-      const url = renderer.domElement.toDataURL('image/webp', 0.9);
+      const url = renderer.domElement.toDataURL('image/webp', 0.82);
       resize();
       return url;
     },

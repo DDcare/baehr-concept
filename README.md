@@ -49,6 +49,8 @@ node tools/film-shots.cjs http://127.0.0.1:4321/ shots m 390 844 0,0.3,0.56,0.84
 node tools/static-check.cjs http://127.0.0.1:4321/ shots
 node tools/overflow-check.cjs http://127.0.0.1:4321   # koppen en tekst die niet in hun vak passen
 node tools/posters.cjs http://127.0.0.1:4321/ public/posters   # na wijzigingen in de 3D
+python3 -I tools/fuentes.py           # lettertypes opnieuw maken (alleen onze tekens en gewichten)
+python3 -I tools/fuentes.py --check   # na een build: staan alle tekens van de site in de lettertypes?
 ```
 
 De getallen na de schermmaat zijn momenten in de productfilm, van 0 (bovenaan) tot 1 (einde).
@@ -76,9 +78,21 @@ Film:
 
 Gecontroleerd op deze versie: passen van koppen en tekst op 360, 390, 820, 1024 en 1440 breed (`tools/overflow-check.cjs`, geen meldingen), axe-core op alle pagina's (geen fouten), afspelen, stoppen en overslaan van de film, de versie met "minder beweging". Spaanse eindredactie van de nieuwe teksten: `docs/eindredactie-film-es.md` (geen verplichte wijzigingen).
 
+Lichter gemaakt (22-11 avond, op verzoek van D). Gemeten op de lokale build, tekstbestanden met brotli:
+
+- Etiketten voor de 3D: 669 kB naar 288 kB, opnieuw gemaakt uit de bronfoto's op kleinere maat (`tools/texturas.py`). Op 1440 bij 900 is geen verschil in scherpte te zien.
+- Lettertypes: 151 kB naar 82 kB. Archivo houdt beide assen maar alleen onze tekens (63 kB), Newsreader cursief is één vast gewicht (19 kB). Eigen bestanden in `src/fonts/`, gemaakt met `tools/fuentes.py`; Archivo wordt vooraf geladen. Komt er tekst bij met een nieuw teken, draai dan de controle.
+- three.js: 147 kB naar 121 kB. De viewer van de productpagina haalde de hele bibliotheek dynamisch binnen, waardoor niets weggelaten kon worden; hij importeert nu alleen wat hij gebruikt (`src/scripts/tres.js`).
+- Stilstaande beelden: iets lagere kwaliteit, het eerste beeld van de home 64 kB naar 46 kB.
+- Home in totaal ongeveer 1.060 kB naar 570 kB.
+- Productpagina: de 3D start niet meer met de pagina. three.js wordt pas gehaald als de pagina geladen en de browser in rust is, of zodra iemand de viewer aanraakt. Met databesparing of een trage verbinding alleen bij aanraken. Voor het eerste beeld is nu ongeveer 140 kB nodig.
+
+Besluit van D (22-11 avond): 3D alleen op de home, geen 3D op productpagina's en niet als optie in het voorstel. Voor de bouw in Shopify: zo weinig mogelijk apps en een vast budget per pagina (bijvoorbeeld hooguit 1 MB en een LCP onder 2,5 seconden op een telefoon).
+
 Open:
 
 - Oordeel van D over deze versie, en akkoord om hem op `main` te zetten.
+- Blijft de 3D-viewer op de voorbeeldproductpagina staan nu de optie vervalt?
 - Snelheid op de laptop en telefoon van D, en een test in Safari.
 - Het onderzoek naar sites van bekende merken (opdracht van 21-11) is niet gedaan; alleen skincomplete.eu is bekeken.
 - De open punten voor de klant van 21-11 hieronder gelden nog (prijzen, termijn voor aanmeldingen, privacytekst, officiële etiketbestanden).

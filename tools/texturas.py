@@ -16,6 +16,9 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
 SRC, ROOT = sys.argv[1], sys.argv[2]
+# Kwaliteit van de WebP-texturen. 82 voor uitgerolde etiketten (kleine tekst), 76 voor de vlakke doos en het sachet.
+# Samen met de maten hieronder: zes texturen van samen ongeveer 260 kB in plaats van 670 kB.
+Q, Q_FLAT = 82, 76
 TEX = os.path.join(ROOT, 'public', 'tex')
 os.makedirs(TEX, exist_ok=True)
 
@@ -122,7 +125,7 @@ def unroll(name, top, bottom, out, tex_w, tex_h, bands=(), block=(0.2, 1.0), kee
         edge = np.where(in_band, edge * 0.0, edge)
     mix = np.where(front[None, :, None], edge, 1.0)
     tex = photo * (1 - mix) + back * mix
-    Image.fromarray(np.clip(tex, 0, 255).astype(np.uint8)).save(os.path.join(TEX, out), 'WEBP', quality=90, method=6)
+    Image.fromarray(np.clip(tex, 0, 255).astype(np.uint8)).save(os.path.join(TEX, out), 'WEBP', quality=Q, method=6)
 
     # profiel: halve breedte gedeeld door de totale hoogte, van boven naar beneden
     samples = 97
@@ -142,7 +145,7 @@ def flat(name, box, out, w, h, corner=0):
         mask = Image.new('L', (w * 2, h * 2), 0)
         ImageDraw.Draw(mask).rounded_rectangle([2, 2, w * 2 - 3, h * 2 - 3], radius=corner * 2, fill=255)
         im.putalpha(mask.resize((w, h), Image.LANCZOS))
-    im.save(os.path.join(TEX, out), 'WEBP', quality=90, method=6)
+    im.save(os.path.join(TEX, out), 'WEBP', quality=Q_FLAT, method=6)
 
 
 def unroll_band(name, out, cx, radius, y0, y1, sag, tex_w, tex_h, clean=(37.5, 44.5), fade=(37, 44)):
@@ -172,16 +175,16 @@ def unroll_band(name, out, cx, radius, y0, y1, sag, tex_w, tex_h, clean=(37.5, 4
     back = row[:, None, :] * np.ones((1, tex_w, 1))
     mix = smoothstep(fade[0], fade[1], deg)[None, :, None]
     tex = photo * (1 - mix) + back * mix
-    Image.fromarray(np.clip(tex, 0, 255).astype(np.uint8)).save(os.path.join(TEX, out), 'WEBP', quality=90, method=6)
+    Image.fromarray(np.clip(tex, 0, 255).astype(np.uint8)).save(os.path.join(TEX, out), 'WEBP', quality=Q, method=6)
 
 
 shapes = {}
 # Fußcreme Orange-Lemongras, 125 ml: tube op zijn dop
-shapes['tube'] = unroll('creme', 404, 2111, 'tubo.webp', 1536, 2048, bands=[(0.643, 0.694)], block=(0.12, 1.0))
+shapes['tube'] = unroll('creme', 404, 2111, 'tubo.webp', 1152, 1536, bands=[(0.643, 0.694)], block=(0.12, 1.0))
 # Cremeschaum Orange-Lemongras, 125 ml: spuitbus
-shapes['can'] = unroll('schuim', 319, 1944, 'bote.webp', 2048, 2048, bands=[(0.802, 0.849)], block=(0.36, 1.0))
+shapes['can'] = unroll('schuim', 319, 1944, 'bote.webp', 1536, 1536, bands=[(0.802, 0.849)], block=(0.36, 1.0))
 # SPA Wellness Fußbad, 500 ml: fles (alleen de fles zelf, de pomp is los gemodelleerd)
-shapes['bottle'] = unroll('bad', 221, 2900, 'botella.webp', 2048, 2048, bands=[], block=(0.22, 1.2), keep_from=0.235)
+shapes['bottle'] = unroll('bad', 221, 2900, 'botella.webp', 1536, 1536, bands=[], block=(0.22, 1.2), keep_from=0.235)
 # Fuß-Vliesmaske Orange-Lemongras: voorkant van de doos
 flat('masker', (522, 226, 1886, 2110), 'caja.webp', 1024, 1415)
 # Het sachet uit dezelfde doos (tweede productfoto, het sachet staat vooraan)

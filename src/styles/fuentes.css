@@ -1,0 +1,16 @@
+/* Lettertypes van de site: alleen de tekens en gewichten die we gebruiken (gemaakt met tools/fuentes.py). */
+@font-face {
+  font-family: 'Archivo Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400 900;
+  font-stretch: 62% 125%;
+  src: url('../fonts/archivo-baehr.woff2') format('woff2-variations');
+}
+@font-face {
+  font-family: 'Newsreader Variable';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src: url('../fonts/newsreader-italica-baehr.woff2') format('woff2');
+}
