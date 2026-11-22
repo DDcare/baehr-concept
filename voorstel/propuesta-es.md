@@ -52,15 +52,17 @@ Para eso, cada centro podrá hacer un pedido rápido desde una lista de producto
 
 ## La tienda y el portal
 
-La tienda nueva sustituirá a la web actual, y a ella migraremos los productos, los pedidos y los clientes. Como nos contaste que el fabricante no impone requisitos estrictos de diseño ni de estructura, la tienda tendrá una imagen propia, sin plantilla. El catálogo estará en un español correcto, con el vocabulario del sector, y la tienda cargará rápido en el móvil. Habrá un solo importe mínimo para el envío gratuito y plazos de entrega claros.
+Montaremos la tienda y el portal en Shopify. La tienda nueva sustituirá a la web actual, y a ella migraremos los productos, los pedidos y los clientes. Desde un único panel podrás gestionar directamente los productos, los pedidos, los clientes y los precios. Como nos contaste que el fabricante no impone requisitos estrictos de diseño ni de estructura, haremos un tema de Shopify propio, pensado para BAEHR España, y no una plantilla comprada. El catálogo estará en un español correcto, con el vocabulario del sector, y la tienda cargará rápido en el móvil. Habrá un solo importe mínimo para el envío gratuito y plazos de entrega claros.
 
-El portal será la zona privada para profesionales, con todo lo que hemos contado en el apartado anterior. Cada centro tendrá también en su cuenta las facturas y el historial de pedidos.
+El portal será la zona privada para profesionales, con todo lo que hemos contado en el apartado anterior. Cada centro tendrá también en su cuenta las facturas y el historial de pedidos. Lo que necesita un portal así (cuentas de empresa, precios profesionales, repetición de pedidos y condiciones de pago) viene de serie en todos los planes de pago de Shopify, también en el más económico.
+
+Con el cambio hay algo que conviene saber: las contraseñas de la web actual no se pueden pasar a Shopify. Por eso, los clientes que ya tienen cuenta recibirán un correo para activarla en la tienda nueva. Los profesionales entrarán con un código de un solo uso que les llega por correo, sin contraseña.
 
 ## Cuatro paquetes que van sumando
 
 Los precios son mensuales y sin IVA.
 
-- Tienda y SEO, 480 € al mes. La web nueva con la tienda, el posicionamiento en Google y en las respuestas de IA, los textos, el hosting, el mantenimiento y un informe mensual.
+- Tienda y SEO, 480 € al mes. La web nueva con la tienda en Shopify, el posicionamiento en Google y en las respuestas de IA, los textos, el mantenimiento y un informe mensual.
 - Con portal, 680 € al mes. Lo anterior más el portal para profesionales, que gestionamos nosotros.
 - Con Google Ads, 1.140 € al mes. Lo anterior más las campañas de Google Ads, que montamos y llevamos nosotros.
 - Con redes, 1.480 € al mes. Lo anterior más la gestión de redes sociales y los anuncios en Instagram y Facebook.
@@ -70,6 +72,10 @@ Te recomendamos «Con Google Ads». El posicionamiento tarda meses en dar result
 ### La tienda y el portal, sin coste si trabajamos 12 meses juntos
 
 La tienda y el portal suman un valor de 2.000 €. En «Tienda y SEO» construiremos solo la tienda; el portal se incluye a partir de «Con portal». Con 12 meses de colaboración, no pagas nada por ellos. Si decides terminar antes, pagas la parte proporcional a los meses que falten hasta los 12. Por ejemplo, dejarlo a los cuatro meses supone ocho meses pendientes, es decir, 1.333 €.
+
+### Lo que pagas directamente a Shopify
+
+El plan de Shopify lo pagas directamente a Shopify, fuera de nuestra cuota. Cuesta desde unos 30 € al mes, y elegiremos juntos el que mejor encaje. A eso se suman las comisiones que cobra Shopify por cada pago.
 
 ### El presupuesto de anuncios va aparte
 
