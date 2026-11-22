@@ -75,7 +75,7 @@ La tienda y el portal suman un valor de 2.000 €. En «Tienda y SEO» construi
 
 ### Lo que pagas directamente a Shopify
 
-El plan de Shopify lo pagas directamente a Shopify, fuera de nuestra cuota. El plan Basic, el primero que incluye estas funciones para profesionales, cuesta unos 30 € al mes, y elegiremos juntos el que mejor encaje. A eso se suman las comisiones que cobra Shopify por cada pago.
+El plan de Shopify lo pagas directamente a Shopify, fuera de nuestra cuota. El plan Basic, el primero que incluye las funciones del portal, cuesta unos 30 € al mes, y elegiremos juntos el que mejor encaje. A eso se suman las comisiones que cobra Shopify por cada pago.
 
 ### El presupuesto de anuncios va aparte
 
