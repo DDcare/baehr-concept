@@ -6,6 +6,7 @@ def inline(s):
     s = re.sub(r'&quot;|"([^"]+)"', lambda m: '“'+m.group(1)+'”' if m.group(1) else m.group(0), s)
     s = s.replace("'", "’")
     s = re.sub(r'(€[\d,]+|\d+ ml)', lambda m: '<span class="nw">'+m.group(1)+'</span>', s)
+    s = re.sub(r'(baehr-concept\.vercel\.app|skincomplete\.eu)', lambda m: '<a href="https://'+m.group(1)+'">'+m.group(1)+'</a>', s)
     return s
 body=[]; i=0; section=''
 while i < len(lines):

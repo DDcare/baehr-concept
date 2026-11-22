@@ -34,3 +34,5 @@ h2.newpage{break-before:page;margin-top:0}
 .cover{margin-top:30mm}
 h2,h3{break-inside:avoid}
 .closing{break-inside:avoid}
+a{color:var(--red);text-decoration:underline;text-underline-offset:.15em;text-decoration-thickness:.6pt}
+.pkg.rec a{color:var(--white)}
