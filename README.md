@@ -55,6 +55,16 @@ python3 -I tools/fuentes.py --check   # na een build: staan alle tekens van de s
 
 De getallen na de schermmaat zijn momenten in de productfilm, van 0 (bovenaan) tot 1 (einde).
 
+## Stand op 22 november 2026, laat: derde ontwerpronde
+
+Na het onderzoek naar andere sites (`docs/onderzoek-sites.md`) en met akkoord van D op het voorstel. Alles op `ontwerp`, niet op `main`.
+
+- Eén beeldwereld: staande beelden uit de rode 3D-studio (`public/img/estudio/`, 20 tot 47 kB per stuk) in de productrij van de home, bij "Los otros cuatro pasos", in het merkblok (de vijf letters met de producten) en in de winkel bij aanwijzen.
+- Geen rechthoekige blokken meer: grote blokken hebben de vorm van een tube met een geribbelde sluiting, gecentreerde blokken zijn een capsule, het aanmeldformulier staat direct op de tube.
+- Productpagina: galerij van drie beelden in plaats van de 3D-viewer (geen three.js meer op deze pagina). Op telefoon is het beeld hooguit 46 procent van de schermhoogte, zodat de titel op het eerste scherm staat; de koopbalk toont "Crema en espuma" met de gekozen maat, is zichtbaar zolang de eigen knop niet in beeld is en verdwijnt bij de voet.
+- Film: 520vh in plaats van 660vh, en een vaste knop "Añadir a la cesta" die het product van de getoonde stap in de cesta legt zonder het afspelen te stoppen.
+- Vervolg: `docs/OVERDRACHT.md`.
+
 ## Stand op 22 november 2026
 
 Werk op de tak `ontwerp`; `main` (de openbare link) toont nog de versie van 21-11 laat en wordt pas bijgewerkt met akkoord van D.

@@ -1495,7 +1495,10 @@ function init() {
     }
     requestAnimationFrame(tick);
   }
-  ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach((ev) => window.addEventListener(ev, stopPlay, { passive: true }));
+  // cualquier gesto detiene la reproducción, salvo pulsar "Añadir a la cesta": se puede comprar sin parar la película
+  ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach((ev) =>
+    window.addEventListener(ev, (e) => e.target?.closest?.('[data-film-add]') || stopPlay(), { passive: true })
+  );
   document.addEventListener('visibilitychange', () => document.hidden && stopPlay());
 
   const deep = location.hash.match(/^#(?:protocolo|paso-([1-5]))$/);
@@ -1508,6 +1511,25 @@ function init() {
       else goStep(Number(a.dataset.goStep) || 0);
     });
   });
+  // Comprar sin salir de la película: añade a la cesta el producto del paso que se está viendo
+  const addBtn = document.querySelector('[data-film-add]');
+  const STEP_IDS = ['bano', 'exfoliante', 'mascarilla', 'crema', 'espuma'];
+  if (addBtn) {
+    const label = addBtn.innerHTML;
+    let back = 0;
+    addBtn.addEventListener('click', () => {
+      const i = Math.max(0, Math.min(4, Number(getComputedStyle(stepper).getPropertyValue('--step')) || 0));
+      window.baehrCesta?.add(STEP_IDS[i], 1);
+      addBtn.textContent = addBtn.dataset.done || '';
+      // el lector de pantalla también oye la confirmación
+      addBtn.setAttribute('aria-label', 'Añadido a la cesta');
+      clearTimeout(back);
+      back = setTimeout(() => {
+        addBtn.innerHTML = label;
+        addBtn.setAttribute('aria-label', 'Añadir a la cesta');
+      }, 1500);
+    });
+  }
   // Saltar la película: directo a lo que viene después
   skip?.addEventListener('click', (e) => {
     e.preventDefault();

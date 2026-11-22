@@ -58,6 +58,7 @@ const jsonld = [
                 <a class="card__link" href={g.href}>
                   <span class={`card__img${p.href ? ' card__img--red' : ''}`}>
                     <img src={`/img/productos/${p.img}.webp`} width="600" height="900" alt="" loading="lazy" decoding="async" />
+                    {p.step !== undefined && <img class="card__alt" src={`/img/estudio/${p.img}.webp`} width="800" height="1200" alt="" loading="lazy" decoding="async" />}
                   </span>
                   <span class="card__name" lang="de" set:html={p.name} />
                   <span class="card__type" set:html={p.type} />
@@ -67,6 +68,7 @@ const jsonld = [
                 <div class="card__link">
                   <span class="card__img">
                     <img src={`/img/productos/${p.img}.webp`} width="600" height="900" alt="" loading="lazy" decoding="async" />
+                    {p.step !== undefined && <img class="card__alt" src={`/img/estudio/${p.img}.webp`} width="800" height="1200" alt="" loading="lazy" decoding="async" />}
                   </span>
                   <span class="card__name" lang="de" set:html={p.name} />
                   <span class="card__type" set:html={p.type} />

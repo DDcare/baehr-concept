@@ -25,6 +25,8 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 - Koppen zijn breed en zwaar maar klein: één letterschaal via de tokens `--fs-hero`, `--fs-page`, `--fs-h2`, `--fs-h3` en `--fs-lead` in `src/styles/site.css`. Geen kop groter dan de hero (hooguit 4,6rem), geen losse lettergroottes ernaast. Lijnen zijn 1px.
 - Kleuren: BAEHR-rood `#A60D1C`, inkt `#18181A`, papier `#F5F5F3` (helder wit zoals de verpakking, geen warm beige) en de zilveren band `--silver` (de etiketband van tube en bus) voor feiten, cijfers en de schakelaar in de kop. De 3D-studio is dieper rood.
 - Het woordmerk onderaan is klein: vijf omlijnde letters over de breedte, elke letter leidt naar zijn stap in het protocol. Niet terug naar een paginabreed gevuld woord (D, 22-11: "groot lomp").
+- Geen rechthoekige blokken (D, 22-11: "geen vierkante blokken"). Een groot blok heeft de vorm van een tube: één uiteinde rond, het andere recht met een geribbelde sluiting (`.dark`, `.quick`, `.proto`; op smalle schermen staat de tube rechtop). Een blok met gecentreerde tekst is een hele capsule (`.cta`, `.statement`). Kleine kaarten hebben hoeken van 2 tot 3,2rem. Het aanmeldformulier staat zonder witte kaart direct op de tube.
+- Eén beeldwereld: buiten de film komen de beelden ook uit de rode 3D-studio (`public/img/estudio/`, maken met `node tools/retratos.cjs <url> public/img/estudio tools/retratos.json`). Productrijen, het merkblok en de galerij van de productpagina gebruiken ze. In de winkel is de productfoto het eerste beeld en verschijnt het studiobeeld bij aanwijzen.
 - Geen decoratieve nummering, geen labels boven koppen, geen pijltjes in knoppen, geen stockfoto's en geen gegenereerde mensen.
 - Titels breken niet midden in een woord af en eindigen niet op één los woord.
 - Controleer elke wijziging op desktop, tablet en telefoon, en ook de versie met "minder beweging".
@@ -34,7 +36,7 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 - 3D alleen op de home. Geen 3D op productpagina's, ook niet als betaalde optie, en het komt niet in het voorstel (elke 3D-pagina kost ongeveer 200 kB aan three.js plus model en etiket).
 - Onthouden voor de bouw: het grootste snelheidsrisico zit straks in Shopify (eigen scripts en vooral apps). Zo weinig mogelijk apps en een vast budget per pagina, bijvoorbeeld hooguit 1 MB en een LCP onder 2,5 seconden op een telefoon.
 - Home lichter: gedaan op 22-11 (etiketten 669 naar 288 kB, lettertypes 151 naar 82 kB, three.js 147 naar 121 kB). De lettertypes bevatten alleen onze tekens: draai na nieuwe tekst `python3 -I tools/fuentes.py --check` op de build. Newsreader bestaat alleen cursief in gewicht 400: gebruik het accentlettertype nooit vet.
-- De 3D-viewer op de voorbeeldproductpagina start pas als de pagina geladen is of bij aanraken (gedaan 22-11). Open: of die viewer in het concept blijft nu de optie vervalt (voorstel van Claude: vervangen door stilstaande studiobeelden; nog niet bevestigd door D).
+- De 3D-viewer op de voorbeeldproductpagina is vervangen door een galerij van drie beelden (studio, productfoto, textuur), met akkoord van D op 22-11. De productpagina laadt geen three.js meer.
 
 ## 3D
 
@@ -57,3 +59,9 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 - Opdracht: kritisch naar het ontwerp kijken en het echt passend bij het merk maken. De 3D op de home blijft.
 - Verwerkt op 22-11 op de tak `ontwerp` (D heeft deze versie nog niet beoordeeld en hij staat nog niet op `main`): koppen ruim de helft kleiner, wit palet met zilveren band, voetregel klein, schakelaar in de kop licht, film 42 tot 52 procent minder rekentijd per beeld (testbrowser), één klik speelt de film af, een link slaat hem over, de film is korter (660vh).
 - Antwoord van Claude op de twijfel (oordeel, geen meting): de film is een wow bij het eerste bezoek en wrijving voor een terugkerende koper. Daarom kort, over te slaan en nooit verplicht. Bij een echte lancering scrolldiepte en klikken op "Saltar la animación" meten en daarna beslissen.
+
+## Derde ronde (22 november 2026, avond), akkoord van D op het voorstel
+
+- Letterlijk van D: "Het moet allemaal uniek strak elite zijn, eigen identiteit speels maar professioneel geen vierkante blokken", "Ze moeten morgen flabbergasted zijn van de site". Kopen tijdens de film moet kunnen; de productpagina op telefoon moest gefixt.
+- Gebouwd op `ontwerp` (D heeft het nog niet beoordeeld, niet op `main`): studiobeelden door de hele site, tubevormige blokken, productpagina met galerij en een koopbalk die op telefoon meteen zichtbaar is en bij de voet verdwijnt, film van 520vh met een vaste knop "Añadir a la cesta" die het product van de getoonde stap in de cesta legt.
+- Onderzoek en voorstel: `docs/onderzoek-sites.md`. Overdracht voor het vervolg op een ander model: `docs/OVERDRACHT.md`.

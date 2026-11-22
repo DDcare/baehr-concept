@@ -121,6 +121,7 @@ const description =
             <button type="button">Crema</button>
             <button type="button">Espuma</button>
           </nav>
+          <button class="film__add" type="button" data-film-add data-done="Añadido" aria-label="Añadir a la cesta">Añadir<span class="add__more"> a la cesta</span></button>
           <a class="film__skip" href="#tienda" aria-label="Saltar la animación">Saltar<span class="skip__more"> la animación</span></a>
           <div class="flash" aria-hidden="true"></div>
           <p class="cue" aria-hidden="true">Desliza</p>
@@ -136,7 +137,7 @@ const description =
         <ul class="shop__row">
           <li class="card rv">
             <a class="card__link" href="#inicio" data-go-step="0" aria-label="Ver el baño de pies en el protocolo">
-              <span class="card__img card__img--aqua"><img src="/img/productos/bano.webp" width="600" height="900" alt="" loading="lazy" decoding="async" /></span>
+              <span class="card__img card__img--studio"><img src="/img/estudio/bano.webp" width="800" height="1200" alt="" loading="lazy" decoding="async" /></span>
               <span class="card__name" lang="de">SPA Wellness Fußbad</span>
               <span class="card__type">Baño de pies</span>
               <span class="card__type">500&nbsp;ml</span>
@@ -145,7 +146,7 @@ const description =
           </li>
           <li class="card rv">
             <a class="card__link" href="#inicio" data-go-step="1" aria-label="Ver el exfoliante en el protocolo">
-              <span class="card__img card__img--aqua"><img src="/img/productos/exfoliante.webp" width="600" height="900" alt="" loading="lazy" decoding="async" /></span>
+              <span class="card__img card__img--studio"><img src="/img/estudio/exfoliante.webp" width="800" height="1200" alt="" loading="lazy" decoding="async" /></span>
               <span class="card__name" lang="de">fresh feet Fußpeeling</span>
               <span class="card__type">Exfoliante para pies</span>
               <span class="card__type">125 y 450&nbsp;ml</span>
@@ -154,7 +155,7 @@ const description =
           </li>
           <li class="card rv">
             <a class="card__link" href="#inicio" data-go-step="2" aria-label="Ver la mascarilla en el protocolo">
-              <span class="card__img card__img--sun"><img src="/img/productos/mascarilla.webp" width="600" height="900" alt="" loading="lazy" decoding="async" /></span>
+              <span class="card__img card__img--studio"><img src="/img/estudio/mascarilla.webp" width="800" height="1200" alt="" loading="lazy" decoding="async" /></span>
               <span class="card__name" lang="de">Fuß-Vliesmaske Orange-Lemongras</span>
               <span class="card__type">Mascarilla para pies</span>
               <span class="card__type">Caja de 5&nbsp;pares</span>
@@ -163,7 +164,7 @@ const description =
           </li>
           <li class="card rv">
             <a class="card__link" href="#inicio" data-go-step="3" aria-label="Ver la crema para pies en el protocolo">
-              <span class="card__img card__img--sun"><img src="/img/productos/crema.webp" width="600" height="900" alt="" loading="lazy" decoding="async" /></span>
+              <span class="card__img card__img--studio"><img src="/img/estudio/crema.webp" width="800" height="1200" alt="" loading="lazy" decoding="async" /></span>
               <span class="card__name" lang="de">Fußcreme Orange-Lemongras</span>
               <span class="card__type">Crema para pies</span>
               <span class="card__type">30, 125 y 500&nbsp;ml</span>
@@ -172,7 +173,7 @@ const description =
           </li>
           <li class="card card--main rv">
             <a class="card__link" href="/productos/crema-en-espuma-orange-lemongras/" aria-label="Ver la ficha de la crema en espuma">
-              <span class="card__img card__img--sun"><img src="/img/productos/espuma.webp" width="600" height="900" alt="" loading="lazy" decoding="async" /></span>
+              <span class="card__img card__img--studio"><img src="/img/estudio/espuma.webp" width="800" height="1200" alt="" loading="lazy" decoding="async" /></span>
               <span class="card__name" lang="de">Cremeschaum Orange-Lemongras</span>
               <span class="card__type">Crema en espuma</span>
               <span class="card__type">125 y 300&nbsp;ml</span>
@@ -228,6 +229,7 @@ const description =
       <section class="brand" id="marca">
         <div class="seal" aria-hidden="true"></div>
         <h2 class="h2 rv">Una marca alemana con&nbsp;oficio</h2>
+        <img class="brand__img rv" src="/img/estudio/baehr.webp" width="1800" height="760" alt="" loading="lazy" decoding="async" />
         <div class="brand__grid">
           <p class="lead rv">
             BAEHR nació en 1949 en Waiblingen, cerca de Stuttgart, y sigue siendo una empresa familiar. BAEHR
