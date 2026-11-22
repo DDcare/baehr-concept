@@ -22,7 +22,9 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 
 - Eén vormtaal: de capsule (van tube en bus) en de ribbel (van de dichtgeknepen tuberand). Geen andere vormen.
 - Lettertypes: Archivo Variable (breed en zwaar voor koppen) en Newsreader cursief voor accenten. Geen andere.
-- Kleuren: BAEHR-rood `#A60D1C`, inkt `#18181A`, papier `#F2EEE7`, wit. De 3D-studio is dieper rood.
+- Koppen zijn breed en zwaar maar klein: één letterschaal via de tokens `--fs-hero`, `--fs-page`, `--fs-h2`, `--fs-h3` en `--fs-lead` in `src/styles/site.css`. Geen kop groter dan de hero (hooguit 4,6rem), geen losse lettergroottes ernaast. Lijnen zijn 1px.
+- Kleuren: BAEHR-rood `#A60D1C`, inkt `#18181A`, papier `#F5F5F3` (helder wit zoals de verpakking, geen warm beige) en de zilveren band `--silver` (de etiketband van tube en bus) voor feiten, cijfers en de schakelaar in de kop. De 3D-studio is dieper rood.
+- Het woordmerk onderaan is klein: vijf omlijnde letters over de breedte, elke letter leidt naar zijn stap in het protocol. Niet terug naar een paginabreed gevuld woord (D, 22-11: "groot lomp").
 - Geen decoratieve nummering, geen labels boven koppen, geen pijltjes in knoppen, geen stockfoto's en geen gegenereerde mensen.
 - Titels breken niet midden in een woord af en eindigen niet op één los woord.
 - Controleer elke wijziging op desktop, tablet en telefoon, en ook de versie met "minder beweging".
@@ -46,3 +48,5 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 - Letterlijk: "ik vind dit te groot" (de lijst Activos clave op de productpagina), "meerdere dingen op site zijn nog beetje lomp", "3d is nog steeds een klein beetje langzaam ziet er wel geweldig uit op de homepage", "In footer hoe baehr komt is niet verkeerd maar oogt ook zo groot lomp".
 - Twijfel van D: haakt een klant af als hij door de hele film moet scrollen, of is dat juist het wow-effect?
 - Opdracht: kritisch naar het ontwerp kijken en het echt passend bij het merk maken. De 3D op de home blijft.
+- Verwerkt op 22-11 op de tak `ontwerp` (D heeft deze versie nog niet beoordeeld en hij staat nog niet op `main`): koppen ruim de helft kleiner, wit palet met zilveren band, voetregel klein, schakelaar in de kop licht, film 42 tot 52 procent minder rekentijd per beeld (testbrowser), één klik speelt de film af, een link slaat hem over, de film is korter (660vh).
+- Antwoord van Claude op de twijfel (oordeel, geen meting): de film is een wow bij het eerste bezoek en wrijving voor een terugkerende koper. Daarom kort, over te slaan en nooit verplicht. Bij een echte lancering scrolldiepte en klikken op "Saltar la animación" meten en daarna beslissen.

@@ -53,6 +53,36 @@ node tools/posters.cjs http://127.0.0.1:4321/ public/posters   # na wijzigingen 
 
 De getallen na de schermmaat zijn momenten in de productfilm, van 0 (bovenaan) tot 1 (einde).
 
+## Stand op 22 november 2026
+
+Werk op de tak `ontwerp`; `main` (de openbare link) toont nog de versie van 21-11 laat en wordt pas bijgewerkt met akkoord van D.
+
+Aanleiding: D vond de tweede versie te groot en lomp, de 3D nog iets te langzaam, en twijfelde of een klant afhaakt als hij door de hele film moet scrollen.
+
+Ontwerp:
+
+- Eén letterschaal. Koppen blijven breed en zwaar (zoals het logo) maar zijn ruim de helft kleiner; lijnen 1px; inhoud hooguit 82rem breed; pagina's in een vast raster van twee kolommen (titel links, inhoud rechts).
+- Wit palet (`#f5f5f3`) in plaats van warm beige, en de zilveren etiketband van de verpakking voor feiten, cijfers en de schakelaar Profesional of Particular.
+- De lijst Activos clave is een compacte tabel in plaats van reuzenletters.
+- Voetregel: het paginabrede woord is vervangen door vijf kleine omlijnde letters. Elke letter is een stap van het protocol (naam verschijnt bij aanwijzen, klik gaat naar de stap), net als in de film.
+- Slotbeeld op telefoon en tablet: tekst en het woord BAEHR staan als één groep in het midden.
+
+Film:
+
+- Sneller: geen schaduwkaart meer (alleen contactschaduwen), vloer zonder lichtberekening per pixel, spiegelbeelden met onverlichte materialen, koepel en gloed in één laag. Gemeten in de testbrowser zonder grafische kaart, direct na elkaar op 1440 bij 900: 350, 268, 232 en 305 ms per beeld op de momenten 0,2, 0,33, 0,5 en 0,82, tegen 657, 573, 398 en 582 ms voor de versie van 21-11 laat. Dat is 42 tot 52 procent minder. Niet gemeten op een echte laptop of telefoon.
+- Eén klik speelt alles af: "Ver el protocolo" en het menu-item Protocolo spelen de film in 27 seconden af; elke scroll, aanraking of toets stopt hem.
+- Overslaan: de link "Saltar la animación" (op telefoon "Saltar") springt naar wat na de film komt.
+- Korter: 660vh in plaats van 820vh (een vijfde minder scrollen), en de camera volgt het scrollen strakker.
+
+Gecontroleerd op deze versie: passen van koppen en tekst op 360, 390, 820, 1024 en 1440 breed (`tools/overflow-check.cjs`, geen meldingen), axe-core op alle pagina's (geen fouten), afspelen, stoppen en overslaan van de film, de versie met "minder beweging". Spaanse eindredactie van de nieuwe teksten: `docs/eindredactie-film-es.md` (geen verplichte wijzigingen).
+
+Open:
+
+- Oordeel van D over deze versie, en akkoord om hem op `main` te zetten.
+- Snelheid op de laptop en telefoon van D, en een test in Safari.
+- Het onderzoek naar sites van bekende merken (opdracht van 21-11) is niet gedaan; alleen skincomplete.eu is bekeken.
+- De open punten voor de klant van 21-11 hieronder gelden nog (prijzen, termijn voor aanmeldingen, privacytekst, officiële etiketbestanden).
+
 ## Stand op 21 november 2026, laat
 
 Werk op de tak `ontwerp`; `main` is de openbare link en blijft staan tot D akkoord geeft.
@@ -69,7 +99,7 @@ Nieuw in deze ronde:
 
 Open voor de ontwerpronde van morgen:
 
-- Het slotbeeld op de telefoon is recht maar klein.
+- Het slotbeeld op de telefoon is recht maar klein (22-11: tekst en woord staan nu als één groep; het woord zelf blijft klein omdat het in de breedte moet passen).
 - De 3D kan eliter (D, 21-11); ontwerp alleen op Fable.
 - Spaanse eindredactie van winkel, professionals, contact, cesta en 404 (zie `docs/`).
 - Prijzen ontbreken bewust: die staan niet in de bron.
