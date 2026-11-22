@@ -52,15 +52,17 @@ To help, each salon can order quickly from a product list, repeat a previous ord
 
 ## The shop and the portal
 
-The new shop will replace your current site, and we'll move the products, orders and customers across. You mentioned that the manufacturer has no strict requirements for design or structure, so the shop will have a look of its own instead of an off-the-shelf template. The catalogue will be in proper Spanish, in the terms professionals use, and the shop will load quickly on phones. Free delivery will start at one amount, the same everywhere, and delivery times will be clear.
+The new shop and the portal will both run on Shopify. You'll manage products, orders, customers and prices yourself, from one dashboard. The features professionals need, such as company accounts, trade price lists, reordering and payment terms, come as standard with every paid Shopify plan, including the cheapest.
 
-The portal will be the private area for professionals, with everything described in the previous section. Salons will also find their invoices and order history in their account.
+You mentioned that the manufacturer has no strict requirements for design or structure, so we'll build a Shopify theme of its own for BAEHR España instead of using an off-the-shelf template. The catalogue will be in proper Spanish, in the terms professionals use, and the shop will load quickly on phones. Free delivery will start at one amount, the same everywhere, and delivery times will be clear.
+
+We'll move the products, orders and customers across. Passwords can't be carried over to Shopify, so existing customers will get an email to activate their new account. Professionals sign in to the portal with a one-time code sent to their email, so there's no password to remember. The portal will have everything described in the previous section, and salons will also find their invoices and order history in their account.
 
 ## Four packages, each building on the last
 
 All prices exclude VAT.
 
-- Shop and SEO, €480 a month: the new site and shop, search optimisation for Google and AI assistants, copywriting, hosting, maintenance and a monthly report.
+- Shop and SEO, €480 a month: the new shop on Shopify, search optimisation for Google and AI assistants, copywriting, maintenance and a monthly report.
 - Plus Portal, €680 a month: all of the above, plus the portal for professionals, which we run for you.
 - Plus Google Ads, €1,140 a month: all of the above, plus Google Ads campaigns, which we set up and manage.
 - Plus Social, €1,480 a month: all of the above, plus social media management and ads on Instagram and Facebook.
@@ -70,6 +72,10 @@ We recommend Plus Google Ads. SEO takes months to pay off, while Google Ads reac
 ### The shop and portal at no cost if we work together for 12 months
 
 The shop and the portal are worth €2,000 together. With Shop and SEO, we build the shop only; the portal comes with Plus Portal and above. If we work together for 12 months, you pay nothing for them. If you stop earlier, you pay the remaining share pro rata. For example, if you stop after four months, eight months are left and you pay €1,333.
+
+### The Shopify plan is separate
+
+You pay the Shopify subscription directly to Shopify, separately from our monthly fee. Plans start at around €30 a month, and we'll choose the right one with you. Shopify also charges a processing fee on each card payment.
 
 ### The advertising budget is separate
 

@@ -65,11 +65,23 @@ Nieuwe webwinkel: vervangt de huidige site, producten, bestellingen en klanten g
 
 Portaal voor professionals: een salon vraagt in twee minuten een account aan; professionele prijzen na goedkeuring; snel bestellen vanaf een lijst en eerdere bestellingen herhalen; facturen en bestelgeschiedenis in het eigen account.
 
+## Platform: Shopify (besluit D, 22-11)
+
+- Winkel en B2B-portaal komen op Shopify.
+- Feit (help.shopify.com/en/manual/b2b): "Shopify B2B is available on the Basic, Grow, Advanced, and Shopify Plus plans." Volgens de B2B-pagina van Shopify (shopify.com/enterprise/blog/b2b-on-shopify, bijgewerkt 14-10-2026) zitten bedrijfsaccounts, betaaltermijnen, nabestellen en staffelprijzen in alle vier de abonnementen. Buiten Plus maximaal drie prijscatalogi (genoeg voor een professionele prijslijst).
+- Feit (zelfde B2B-pagina): "Buyers sign in with a one-time code sent to their email address." Professionals loggen dus in met een code per mail, zonder wachtwoord.
+- Feit (algemeen, Shopify-community en migratietools): wachtwoorden van een andere winkel kunnen niet naar Shopify mee. Bestaande klanten krijgen een mail om hun account te activeren.
+- Valeria beheert producten, bestellingen, klanten en prijzen zelf in één beheeromgeving van Shopify.
+- Aanname (nog niet bevestigd door D): het Shopify-abonnement betaalt Valeria rechtstreeks aan Shopify, net als het advertentiebudget. Het staat los van ons maandbedrag. Prijzen: de Spaanse prijspagina toonde (in dollars) Basic 39 per maand bij maandbetaling en 29 bij jaarbetaling; externe bronnen noemen in euro ongeveer 24 tot 36 euro voor Basic. Schrijf daarom "desde unos 30 € al mes" en zeg dat we het abonnement samen kiezen. Daarbij komen de betaalkosten van Shopify per transactie; noem die zonder percentage.
+- Gevolg voor pakket 1: "hosting" vervalt, want hosting zit in het Shopify-abonnement. Pakket 1 wordt: de nieuwe winkel op Shopify, vindbaarheid in Google en AI-antwoorden, teksten, onderhoud en maandrapport.
+- Eigen ontwerp: een eigen Shopify-thema, gemaakt voor BAEHR España, geen gekocht sjabloon.
+- Noem het huidige platform van baehr.com.es niet: dat is niet geverifieerd.
+
 ## Pakketten (vast, besloten door D)
 
 Elk pakket bevat het vorige. Prijzen per maand, exclusief btw (IVA).
 
-- Pakket 1, 480 euro per maand: nieuwe site met webwinkel, vindbaarheid in Google en in AI-antwoorden, teksten, hosting, onderhoud, maandrapport.
+- Pakket 1, 480 euro per maand: nieuwe winkel op Shopify, vindbaarheid in Google en in AI-antwoorden, teksten, onderhoud, maandrapport.
 - Pakket 2, 680 euro per maand: plus het portaal voor professionals, en wij beheren het portaal.
 - Pakket 3, 1.140 euro per maand: plus opzet en beheer van Google Ads-campagnes. Dit is ons advies.
 - Pakket 4, 1.480 euro per maand: plus social media en advertenties op Instagram en Facebook.

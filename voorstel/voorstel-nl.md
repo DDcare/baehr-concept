@@ -56,15 +56,17 @@ Daarvoor kan elke salon snel bestellen vanaf een productlijst, een eerdere beste
 
 ## De winkel en het portaal
 
-De nieuwe winkel vervangt de huidige site, en we zetten de producten, bestellingen en klanten erin over. Omdat je ons vertelde dat de fabrikant geen strenge eisen stelt aan ontwerp en opbouw, krijgt de winkel een eigen uitstraling, zonder sjabloon. De catalogus komt in correct Spaans, met de woorden uit de branche, en de winkel laadt snel op de telefoon. Er komt één minimumbedrag voor gratis verzending en duidelijke levertijden.
+De nieuwe winkel en het portaal komen allebei op Shopify. Je beheert producten, bestellingen, klanten en prijzen zelf, vanuit één beheeromgeving. De functies die professionals nodig hebben, zoals bedrijfsaccounts, professionele prijslijsten, nabestellen en betaaltermijnen, zitten standaard in elk betaald Shopify-abonnement, ook het goedkoopste. (Feit: help.shopify.com/en/manual/b2b en de B2B-pagina van Shopify, bijgewerkt 14-10-2026. Buiten Plus maximaal drie prijscatalogi.)
 
-Het portaal wordt de afgeschermde omgeving voor professionals, met alles wat in het vorige deel staat. Elke salon vindt in zijn account ook de facturen en de bestelgeschiedenis.
+Omdat je ons vertelde dat de fabrikant geen strenge eisen stelt aan ontwerp en opbouw, maken we een eigen Shopify-thema voor BAEHR España in plaats van een gekocht sjabloon. De catalogus komt in correct Spaans, met de woorden uit de branche, en de winkel laadt snel op de telefoon. Er komt één minimumbedrag voor gratis verzending en duidelijke levertijden.
+
+We zetten de producten, bestellingen en klanten over. Wachtwoorden kunnen niet mee naar Shopify, dus bestaande klanten krijgen een mail om hun nieuwe account te activeren. Professionals loggen in op het portaal met een eenmalige code per mail, zonder wachtwoord. Het portaal heeft alles wat in het vorige deel staat, en salons vinden er ook hun facturen en bestelgeschiedenis.
 
 ## Vier pakketten die op elkaar stapelen
 
 Prijzen per maand, exclusief btw. [Aanname: exclusief btw.]
 
-- Winkel en SEO, 480 euro per maand. De nieuwe site met winkel, vindbaarheid in Google en in AI-antwoorden, teksten, hosting, onderhoud en een maandrapport.
+- Winkel en SEO, 480 euro per maand. De nieuwe winkel op Shopify, vindbaarheid in Google en in AI-antwoorden, teksten, onderhoud en een maandrapport. (Hosting vervalt: die zit in het Shopify-abonnement.)
 - Met portaal, 680 euro per maand. Het vorige plus het portaal voor professionals, dat wij beheren. [Aanname: inhoud van het pakket, en dat wij het portaal beheren.]
 - Met Google Ads, 1.140 euro per maand. Het vorige plus de Google Ads-campagnes, die wij opzetten en beheren. [Aanname: het eigen team beheert de campagnes.]
 - Met social, 1.480 euro per maand. Het vorige plus het beheer van social media en de advertenties op Instagram en Facebook.
@@ -74,6 +76,10 @@ We raden "Met Google Ads" aan. Vindbaarheid kost maanden voordat ze resultaat ge
 ### Winkel en portaal zonder kosten als we 12 maanden samenwerken
 
 Winkel en portaal hebben samen een waarde van 2.000 euro. Bij "Winkel en SEO" bouwen we alleen de winkel; het portaal zit erin vanaf "Met portaal". Bij 12 maanden samenwerking betaal je daar niets voor. Stop je eerder, dan betaal je het resterende deel naar rato. Voorbeeld: stop je na vier maanden, dan blijven er acht over en betaal je 1.333 euro. [Aanname: naar rato in plaats van een maandbedrag (2.000 / 12 = 166,67). En nog open: wat eerder stoppen kost bij "Winkel en SEO", waar het portaal niet in zit.]
+
+### Het Shopify-abonnement staat apart
+
+Het abonnement van Shopify betaal je rechtstreeks aan Shopify, los van ons maandbedrag. Abonnementen beginnen bij ongeveer 30 euro per maand; we kiezen samen het juiste. Shopify rekent daarnaast betaalkosten per kaartbetaling. [Aanname: Valeria betaalt het abonnement zelf. Prijs: de Spaanse prijspagina van Shopify toonde vanaf hier dollars (Basic 39 per maand, 29 bij jaarbetaling); externe bronnen noemen 24 tot 36 euro. Controleer het bedrag op shopify.com/es/precios vanuit Spanje.]
 
 ### Het advertentiebudget staat apart
 
@@ -127,6 +133,7 @@ Denis
 - Wat eerder stoppen kost bij "Winkel en SEO" (alleen winkel, geen portaal).
 - 480 euro tot het portaal live is (maand twee), voor elk pakket, ook "Met portaal".
 - Maandrapport vanaf de eerste maand (besluit van Claude: het zit in elk pakket; het oude voorstel noemde de vierde maand).
+- Shopify-abonnement: betaalt Valeria het zelf, en klopt "vanaf ongeveer 30 euro per maand" als je de prijspagina vanuit Spanje bekijkt?
 - Prijs per product voor de 3D-optie (toevoeging aan de opdracht van 21-11; staat nog niet in het voorstel).
 - Periode van de 80 nieuwe afnemers bij Skin Complete (staat er nu bewust niet in).
 - De bevindingen over de huidige site (Duitse winkels in Google, AI-samenvatting, geblokkeerde bots, vertaalfouten, drie verzenddrempels, 43 scripts en 44 stylesheets, 14 velden): uit het oude voorstel en jouw schermafbeeldingen, niet opnieuw gecontroleerd. Klopt er één niet meer, dan schaadt dat het hele stuk.
