@@ -5,7 +5,7 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 ## Afspraken
 
 - Met D in het Nederlands, kort en kritisch. Feit, aanname en oordeel apart.
-- Niets publiceren, versturen of openbaar zetten zonder akkoord van D. De openbare link baehr-concept.vercel.app toont `main` (openbaar met akkoord van D, 21-11; nieuwe versie erop met akkoord, 22-11; de derde ronde erop met akkoord, 22-11 avond; de vierde ronde met productpagina's, protocolpagina en nieuwe merkpagina erop met akkoord, 22-11 laat). Werk op de tak `ontwerp` (preview achter de Vercel-login) en zet het pas op `main` met akkoord van D per keer.
+- Niets publiceren, versturen of openbaar zetten zonder akkoord van D. De openbare link baehr-concept.vercel.app toont `main` (openbaar met akkoord van D, 21-11; nieuwe versie erop met akkoord, 22-11; de derde ronde erop met akkoord, 22-11 avond; de vierde ronde met productpagina's, protocolpagina en nieuwe merkpagina erop met akkoord, 22-11 laat; de telefoonfix en de vollere home erop met akkoord, 22-11 laat). Werk op de tak `ontwerp` (preview achter de Vercel-login) en zet het pas op `main` met akkoord van D per keer.
 - Niets ophalen van baehr.com.es: de site zit achter een botfilter. Werk met schermafbeeldingen van D.
 - Na elk afgerond onderdeel committen. Geen node_modules of buildmappen in git.
 
@@ -75,3 +75,4 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 - D wilde eerst zijn CRO-skill laten kijken, maar gaf op 22-11 laat toch opdracht de laatste versie op de openbare link te zetten (gedaan). De CRO-skill staat alleen op zijn eigen computer en is vanuit een cloudsessie niet te bereiken; D kan de tekst plakken, dan komt hij in het project.
 - De GitHub-repo stond op 22-11 op openbaar. D wil dat mensen alleen de site kunnen zien: hij moet de repo zelf op privé zetten (Claude kan de zichtbaarheid niet wijzigen). Zet tot dat gebeurd is niets vertrouwelijks extra in de repo.
 - Open vraag van D: welke rij hoort op de home van de echte winkel (categorieën, bestsellers of de vijf van het protocol). Advies van Claude staat in `docs/OVERDRACHT.md`.
+- D op 22-11 laat: "Home oogt nog steeds kaal basic". Daarop is de home na de film voller gemaakt (lopende zilveren band, de vijf producten als donker blok met de capsules boven de rand, zes merken als gekleurde capsules, seminar op zilver). De eerste schermhoogte is niet veranderd; D heeft nog niet gezegd of hij die ook kaal vindt.
