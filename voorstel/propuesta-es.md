@@ -69,7 +69,7 @@ Te recomendamos «Con Google Ads». El posicionamiento tarda meses en dar result
 
 ### La tienda y el portal, sin coste si trabajamos 12 meses juntos
 
-La tienda y el portal suman un valor de 1.500 €. En «Tienda y SEO» construiremos solo la tienda; el portal se incluye a partir de «Con portal». Con 12 meses de colaboración, no pagas nada por ellos. Si decides terminar antes, pagas 125 € por cada mes que falte hasta los 12. Por ejemplo, dejarlo a los cuatro meses supone 8 × 125 € = 1.000 €.
+La tienda y el portal suman un valor de 2.000 €. En «Tienda y SEO» construiremos solo la tienda; el portal se incluye a partir de «Con portal». Con 12 meses de colaboración, no pagas nada por ellos. Si decides terminar antes, pagas la parte proporcional a los meses que falten hasta los 12. Por ejemplo, dejarlo a los cuatro meses supone ocho meses pendientes, es decir, 1.333 €.
 
 ### El presupuesto de anuncios va aparte
 
@@ -77,7 +77,7 @@ Lo que se invierte en anuncios no forma parte de la cuota mensual. Lo pagas dire
 
 Como ahora no hay un presupuesto fijo de publicidad, proponemos empezar con un mínimo de 600 € al mes para Google, a partir de «Con Google Ads». En «Con redes» se añaden como mínimo 400 € al mes para Meta, con lo que el total llega a 1.000 €. Luego lo ajustaremos según los resultados de tus cuentas.
 
-Las campañas y las redes arrancarán cuando el portal funcione, en el segundo o el tercer mes. Antes, los anuncios llevarían a la gente al formulario actual y estarías pagando clics que se quedan por el camino. Hasta ese momento pagas 480 € al mes, sea cual sea el paquete que elijas.
+Las campañas y las redes arrancarán cuando el portal funcione, en el segundo mes. Antes, los anuncios llevarían a la gente al formulario actual y estarías pagando clics que se quedan por el camino. Hasta ese momento pagas 480 € al mes, sea cual sea el paquete que elijas.
 
 ## Ya lo hemos hecho con Skin Complete
 
@@ -87,16 +87,14 @@ Con la web y el portal han sumado 80 clientes nuevos, entre clínicas y centros 
 
 ## Cómo serán los primeros meses
 
-El primer mes dejaremos montada la analítica, abriremos la web a los buscadores y a los bots de IA y diseñaremos la tienda nueva. El informe mensual empezará ese mismo mes.
+En las dos primeras semanas dejaremos montada la analítica, abriremos la web a los buscadores y a los bots de IA y diseñaremos la tienda nueva. En las dos siguientes la lanzaremos, con el catálogo revisado y las páginas de los seminarios. El informe mensual empezará ya el primer mes.
 
-Entre el segundo y el tercer mes pondremos en marcha la tienda y el portal, con el catálogo revisado y las páginas de los seminarios. En cuanto el portal funcione, y según el paquete que elijas, empezarán los anuncios y las redes.
-
-A partir del cuarto mes publicaremos las páginas por servicio.
+El segundo mes pondremos en marcha el portal y publicaremos las páginas por servicio. Desde ese momento, y según el paquete que elijas, empezarán los anuncios y las redes.
 
 ## Condiciones y lo que necesitamos de ti
 
 - Precios sin IVA.
-- Puedes darte de baja cuando quieras, con un mes de preaviso. Si lo haces antes de los 12 meses, solo pagas la parte pendiente de la tienda y el portal: 125 € por cada mes que falte.
+- Puedes darte de baja cuando quieras, con un mes de preaviso. Si lo haces antes de los 12 meses, solo pagas la parte pendiente de la tienda y el portal, en proporción a los meses que falten.
 - El informe mensual recoge estas cifras: altas, primeros pedidos, recompras y coste por cliente nuevo.
 - No garantizamos posiciones en Google ni un número concreto de visitas.
 
