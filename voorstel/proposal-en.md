@@ -4,7 +4,7 @@ Hi Valeria,
 
 As promised, here's our proposal. You asked how we'd make BAEHR España easier to find, on Google and in the answers that ChatGPT and other AI assistants give. You also asked how we'd reach your three goals: making the brand better known, winning new professional customers and getting more orders. And you asked for priced packages and a call to go through it all. We've written it with your partners in mind too.
 
-Here's a link to a prototype we've built for BAEHR España. It isn't the finished site, but it shows the direction we'd take. Open it on your phone and look at the version for professionals, especially the sign-up.
+Here's the prototype we've built for BAEHR España: baehr-concept.vercel.app. It isn't the finished site, but it shows the direction we'd take. Open it on your phone and look at the version for professionals, especially the sign-up.
 
 ## What we found
 
@@ -66,7 +66,7 @@ All prices exclude VAT.
 - Plus Google Ads, €1,020 a month: all of the above, plus Google Ads campaigns, which we set up and manage.
 - Plus Social, €1,560 a month: all of the above, plus social media management and ads on Instagram and Facebook.
 
-Including Shopify Basic and the minimum advertising budget, your total monthly cost comes to €561, €1,641 or €2,581, depending on the package.
+Including Shopify Basic and the minimum advertising budget, your total monthly cost comes to €564, €1,644 or €2,584 excluding VAT, depending on the package. Shopify's fees on each payment come on top.
 
 We recommend Plus Google Ads. SEO takes months to pay off, while Google Ads reach people straight away, at the moment they search for your products. And once the portal is live, the sign-up no longer puts anyone off.
 
@@ -76,7 +76,7 @@ The shop and the portal are worth €2,000 together. If we work together for 12 
 
 ### The Shopify plan is separate
 
-You pay the Shopify subscription directly to Shopify, separately from our monthly fee. Basic, at €21 a month on annual billing, is enough to start with. If several people will work in the shop, Grow costs €59 a month and allows up to five staff accounts. Shopify also charges a processing fee on each card payment.
+You pay the Shopify subscription directly to Shopify, separately from our monthly fee. Basic, at €24 a month on annual billing, is enough to start with. If several people will work in the shop, Grow costs €69 a month on annual billing and allows up to five staff accounts. Both prices exclude VAT. Shopify also charges a processing fee on each card payment.
 
 ### The advertising budget is separate
 
@@ -85,6 +85,12 @@ Ad spend isn't part of the monthly fee. You pay it directly to Google and Meta, 
 As you don't have a fixed advertising budget yet, we suggest starting with at least €600 a month on Google. With Plus Social, add at least €400 a month on Meta, so €1,000 in total. We'll then adjust it based on the results in your accounts.
 
 The campaigns and social media start once the portal is live, in month two. Before that, ads would send people to the current form, and you'd be paying for clicks that go nowhere. You pay €540 a month until the portal is live, whichever package you choose.
+
+### Optional: your products in 3D
+
+The 3D film on the home page is included in every package. A rotating 3D model on a product page is optional, at €150 per product as a one-off fee, excluding VAT. The five products in the home page film get theirs at no extra cost once we have the label files from the manufacturer. You can see an example on the prototype's product page for the Crema en espuma Orange-Lemongras.
+
+To be honest about it: each model takes real work (the shape, the label all the way round, and checking it), and it makes that page slower to load. For a model that's accurate from every side, we need photos from all sides or the manufacturer's label files. In the prototype, only the front is real so far.
 
 ## We've done this before with Skin Complete
 
@@ -115,4 +121,4 @@ Best wishes,
 
 Denis
 
-[agency name]
+Meneer Marketing

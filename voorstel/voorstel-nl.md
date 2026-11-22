@@ -8,7 +8,7 @@ Hoi Valeria,
 
 Zoals afgesproken per mail, hier is het voorstel. Je wilde weten hoe we je vindbaarheid zouden verbeteren, in Google en in de antwoorden van ChatGPT en andere AI-assistenten, en hoe we drie doelen zouden aanpakken: dat BAEHR España bekender wordt, dat er nieuwe professionals bijkomen en dat er meer bestellingen binnenkomen. Je vroeg ook om pakketten met prijzen en een gesprek om het te bespreken. We hebben het geschreven met jou en je partners in gedachten.
 
-Bij het voorstel sturen we je de link naar een prototype dat we voor BAEHR España hebben gemaakt. Het is niet de definitieve site, maar het laat zien welke kant we op zouden gaan. Open het op je telefoon en let in de versie voor professionals vooral op de aanmelding. [Aanname: Valeria krijgt toegang tot het prototype; de preview zit nu achter een login.]
+Hier is het prototype dat we voor BAEHR España hebben gemaakt: baehr-concept.vercel.app. Het is niet de definitieve site, maar het laat zien welke kant we op zouden gaan. Open het op je telefoon en let in de versie voor professionals vooral op de aanmelding.
 
 ## Wat we gezien hebben
 
@@ -70,7 +70,7 @@ Prijzen per maand, exclusief btw. [Aanname: exclusief btw.]
 - Met Google Ads, 1.020 euro per maand. Het vorige plus de Google Ads-campagnes, die wij opzetten en beheren. [Aanname: het eigen team beheert de campagnes.]
 - Met social, 1.560 euro per maand. Het vorige plus het beheer van social media en de advertenties op Instagram en Facebook.
 
-Met Shopify Basic en het minimale advertentiebudget erbij ben je per maand in totaal 561, 1.641 of 2.581 euro kwijt, afhankelijk van het pakket. [Rekenvoorbeeld van Claude: 540 + 21; 1.020 + 21 + 600; 1.560 + 21 + 600 + 400.]
+Met Shopify Basic en het minimale advertentiebudget erbij ben je per maand in totaal 564, 1.644 of 2.584 euro kwijt zonder btw, afhankelijk van het pakket. De betaalkosten van Shopify per betaling komen erbij. [Rekenvoorbeeld van Claude: 540 + 24; 1.020 + 24 + 600; 1.560 + 24 + 600 + 400.]
 
 We raden "Met Google Ads" aan. Vindbaarheid kost maanden voordat ze resultaat geeft; advertenties in Google bereiken mensen die al naar producten zoeken veel sneller, en met het portaal live is de aanmelding geen rem meer.
 
@@ -80,7 +80,7 @@ Winkel en portaal hebben samen een waarde van 2.000 euro. Bij 12 maanden samenwe
 
 ### Het Shopify-abonnement staat apart
 
-Het abonnement van Shopify betaal je rechtstreeks aan Shopify, los van ons maandbedrag. Basic, 21 euro per maand bij jaarbetaling, is genoeg om mee te beginnen. Werken er meerdere mensen in de winkel, dan kost Grow 59 euro per maand, met tot vijf medewerkersaccounts. Shopify rekent daarnaast betaalkosten per kaartbetaling. [Besluit D, 22-11: Valeria betaalt zelf, Basic of Grow. Prijzen van de Nederlandse Shopify-pagina bij jaarbetaling; controleer of Spanje dezelfde prijzen heeft.]
+Het abonnement van Shopify betaal je rechtstreeks aan Shopify, los van ons maandbedrag. Basic, 24 euro per maand bij jaarbetaling, is genoeg om mee te beginnen. Werken er meerdere mensen in de winkel, dan kost Grow 69 euro per maand bij jaarbetaling, met tot vijf medewerkersaccounts. Beide prijzen zonder btw. Shopify rekent daarnaast betaalkosten per kaartbetaling. [Bron prijzen: de officiële prijspagina toont vanaf de server alleen dollars; de meeste Spaanse bronnen van 2026 noemen voor Spanje 24 en 69 euro bij jaarbetaling, zonder IVA. Jouw Nederlandse pagina toonde 21 en 59 euro: Shopify rekent per land anders. Feit van de officiële pagina: Basic heeft geen extra medewerkersaccounts, Grow tot vijf.]
 
 ### Het advertentiebudget staat apart
 
@@ -89,6 +89,12 @@ Wat je aan advertenties uitgeeft, zit niet in het maandbedrag. Je betaalt het re
 Omdat er nu geen vast advertentiebudget is, stellen we voor te beginnen met minimaal 600 euro per maand voor Google, vanaf "Met Google Ads". Bij "Met social" komt daar minimaal 400 euro per maand voor Meta bij, samen 1.000 euro. Daarna stellen we het bij op basis van de resultaten in je accounts. [Aanname: deze bedragen.]
 
 De campagnes en social media starten zodra het portaal werkt, in de tweede maand. Eerder zouden advertenties mensen naar het huidige formulier sturen en zou je betalen voor klikken die onderweg blijven hangen. Tot dat moment betaal je 540 euro per maand, welk pakket je ook kiest. [Aanname: dit geldt voor elk pakket.]
+
+### Optie: je producten in 3D
+
+De 3D-film op de homepage zit in elk pakket. Een draaiend 3D-model op een productpagina is een optie: 150 euro per product, eenmalig, zonder btw. De vijf producten uit de film op de homepage krijgen het zonder extra kosten, zodra we de etiketbestanden van de fabrikant hebben. Een voorbeeld staat in het prototype, op de productpagina van de Crema en espuma Orange-Lemongras.
+
+Eerlijk gezegd: elk model is veel werk (de vorm, het etiket rondom en de controle), en het maakt die pagina trager. Voor een model dat van alle kanten klopt, hebben we foto's van alle kanten of de etiketbestanden van de fabrikant nodig. In het prototype is nu alleen de voorkant echt. [Prijs: advies van Claude op 22-11, op basis van marktprijzen voor eenvoudige productmodellen (ongeveer 40 tot 1.000 dollar per model, verpakkingen aan de onderkant). D kan het bedrag aanpassen.]
 
 ## We hebben dit al gedaan voor Skin Complete
 
@@ -120,24 +126,21 @@ Groet,
 
 Denis
 
-[naam bureau]
+Meneer Marketing
 
 ---
 
 ## Te bevestigen door D vóór verzending
 
-- Naam van het bureau als afzender.
-- De link naar het prototype in de tekst zetten: baehr-concept.vercel.app staat sinds 22-11 openbaar met jouw akkoord. Nu staat er alleen "we sturen je de link".
-- Advertentiebudget: minimaal 600 euro voor Google vanaf "Met Google Ads", plus minimaal 400 euro voor Meta bij "Met social" (samen 1.000 euro). Het oude voorstel noemde 1.000 euro voor iedereen, maar het aanbevolen pakket heeft geen Meta.
 - Wie de campagnes beheert (eigen team of uitbesteed) en wat "wij beheren het portaal" inhoudt.
-- Btw: prijzen exclusief. Looptijd: geen vaste looptijd, opzegtermijn een maand, terugbetaling naar rato vóór 12 maanden (2.000 / 12 per resterende maand; in de tekst alleen het voorbeeld van 1.333 euro na vier maanden).
+- Btw: onze prijzen exclusief. Looptijd: geen vaste looptijd, opzegtermijn een maand, terugbetaling naar rato vóór 12 maanden (2.000 / 12 per resterende maand; in de tekst alleen het voorbeeld van 1.333 euro na vier maanden).
 - 540 euro (het basisbedrag) tot het portaal live is in maand twee, voor elk pakket.
-- Maandrapport vanaf de eerste maand (besluit van Claude: het zit in elk pakket; het oude voorstel noemde de vierde maand).
-- Shopify: zijn Basic 21 en Grow 59 euro (jaarbetaling) ook de prijzen in Spanje?
-- Prijs per product voor de 3D-optie (toevoeging aan de opdracht van 21-11; staat nog niet in het voorstel).
-- Periode van de 80 nieuwe afnemers bij Skin Complete (staat er nu bewust niet in).
+- Maandrapport vanaf de eerste maand (besluit van Claude: het zit in elk pakket).
+- 3D-optie: 150 euro per product, de vijf producten uit de film gratis (advies van Claude).
 - De bevindingen over de huidige site (Duitse winkels in Google, AI-samenvatting, geblokkeerde bots, vertaalfouten, drie verzenddrempels, 43 scripts en 44 stylesheets, 14 velden): uit het oude voorstel en jouw schermafbeeldingen, niet opnieuw gecontroleerd. Klopt er één niet meer, dan schaadt dat het hele stuk.
 - "Distribuidor oficial": Valeria laten bevestigen dat ze dat mag voeren.
 - Russischtalige klanten: staat als vraag in de tekst, niet als feit.
+
+Besloten door D op 22-11: afzender Meneer Marketing, link baehr-concept.vercel.app in de tekst, Shopify Basic of Grow betaald door Valeria, drie pakketten van 540, 1.020 en 1.560 euro, geen periode bij Skin Complete.
 
 Bewust weggelaten: "exclusieve distributeur" en "Duitse productie" (beide niet geverifieerd), en elke termijn voor de merkzoekopdrachten.

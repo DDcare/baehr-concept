@@ -39,7 +39,7 @@ while i < len(lines):
         if l.strip() in ('Hi Valeria,',): cls=' class="greet"'
         if l.strip() in ('Best wishes,',): cls=' class="sign"'
         if l.strip() in ('Denis',): cls=' class="name-sign"'
-        if l.strip()=='[agency name]': cls=' class="agency"'
+        if l.strip() in ('[agency name]','Meneer Marketing'): cls=' class="agency"'
         body.append(f'<p{cls}>{inline(l)}</p>')
     i+=1
 if any('class="closing"' in b for b in body): body.append('</div>')
