@@ -27,6 +27,7 @@ const [url, outDir, name, w, h, list, scale] = process.argv.slice(2);
   await page.goto(url, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   await page.waitForFunction(() => window.__film && window.__film.loaded && window.__film.loaded(), null, { timeout: 30000 }).catch(() => {});
+  await page.evaluate(() => window.__film && window.__film.fixDpr && window.__film.fixDpr(1));
   await page.waitForTimeout(3200);
   const info = await page.evaluate(() => ({
     filmReady: document.documentElement.classList.contains('film-ready'),

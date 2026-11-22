@@ -1,0 +1,121 @@
+---
+// Tienda: los productos del concepto, con filtro por tipo. Tekst: redactor-es (21-11). Sin precios: no están en la fuente.
+import Base from '../layouts/Base.astro';
+import { PRODUCTOS } from '../data/productos';
+
+const title = 'Tienda online de cosmética profesional para pies | BAEHR España';
+const description =
+  'Compra cosmética profesional BAEHR para el cuidado de los pies: baño, exfoliante, mascarilla, crema, crema en espuma y crema con un 10 % de urea.';
+
+const filtros = [
+  { k: 'todo', t: 'Todos' },
+  { k: 'bano', t: 'Baños de pies' },
+  { k: 'exfoliante', t: 'Exfoliantes' },
+  { k: 'mascarilla', t: 'Mascarillas' },
+  { k: 'crema', t: 'Cremas' },
+  { k: 'espuma', t: 'Cremas en espuma' },
+];
+// La Schutzcreme aparece en "Cremas"
+const grupo = (kind: string) => (kind === 'proteccion' ? 'crema' : kind);
+const go = (p: (typeof PRODUCTOS)[number]) =>
+  p.href ? { href: p.href, t: 'Ver la ficha' } : p.step !== undefined ? { href: `/#paso-${p.step + 1}`, t: 'Ver en el protocolo' } : null;
+
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Tienda BAEHR España',
+    hasPart: PRODUCTOS.map((p) => ({ '@type': 'Product', name: p.name, brand: { '@type': 'Brand', name: p.id === 'bano' ? 'BAEHR BEAUTY CONCEPT' : 'PEDIBAEHR' } })),
+  },
+];
+---
+
+<Base title={title} description={description} page="tienda" jsonld={jsonld}>
+  <section class="shop-hero">
+    <h1 class="shop-hero__h">
+      <span class="stretch is-in">Tienda</span>
+      <span class="shop-hero__soft">para la cabina y para&nbsp;casa</span>
+    </h1>
+    <p class="lead">Los cinco productos del protocolo y una crema con un 10&nbsp;% de urea.</p>
+  </section>
+
+  <section class="catalog" aria-label="Productos">
+    <div class="catalog__bar">
+      <div class="filters" role="group" aria-label="Filtrar por tipo">
+        {filtros.map((f, i) => <button type="button" data-filter={f.k} aria-pressed={i === 0 ? 'true' : 'false'}>{f.t}</button>)}
+      </div>
+      <p class="catalog__note" data-when="pro"><a class="textlink" href="/profesionales/#acceso">Inicia sesión</a> para ver tus precios profesionales.</p>
+      <p class="catalog__note" data-when="home">Precios pendientes de publicar.</p>
+    </div>
+
+    <ul class="catalog__grid">
+      {
+        PRODUCTOS.map((p) => {
+          const g = go(p);
+          return (
+            <li class="card" data-kind={grupo(p.kind)}>
+              {g ? (
+                <a class="card__link" href={g.href}>
+                  <span class={`card__img${p.href ? ' card__img--red' : ''}`}>
+                    <img src={`/img/productos/${p.img}.webp`} width="600" height="900" alt="" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="card__name" lang="de" set:html={p.name} />
+                  <span class="card__type" set:html={p.type} />
+                  <span class="card__go">{g.t}</span>
+                </a>
+              ) : (
+                <div class="card__link">
+                  <span class="card__img">
+                    <img src={`/img/productos/${p.img}.webp`} width="600" height="900" alt="" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="card__name" lang="de" set:html={p.name} />
+                  <span class="card__type" set:html={p.type} />
+                </div>
+              )}
+              <button class="card__add" type="button" data-add={p.id}>Añadir a la cesta</button>
+            </li>
+          );
+        })
+      }
+    </ul>
+    <div class="catalog__empty" hidden>
+      <p>No hay productos de este tipo.</p>
+      <button class="textlink" type="button" data-filter-reset>Ver todos los productos</button>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2 class="cta__h">¿Compras para tu&nbsp;negocio?</h2>
+    <p class="cta__t">Date de alta y compra a precio profesional: la solicitud te lleva dos minutos.</p>
+    <div class="cta__b">
+      <a class="pill pill--white" href="/profesionales/#alta">Darme de alta</a>
+    </div>
+  </section>
+</Base>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
+  const cards = document.querySelectorAll<HTMLElement>('.catalog__grid .card');
+  const empty = document.querySelector<HTMLElement>('.catalog__empty');
+  function filter(k: string) {
+    buttons.forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.filter === k)));
+    let shown = 0;
+    cards.forEach((c) => {
+      const on = k === 'todo' || c.dataset.kind === k;
+      c.hidden = !on;
+      if (on) shown++;
+    });
+    if (empty) empty.hidden = shown > 0;
+  }
+  buttons.forEach((b) => b.addEventListener('click', () => filter(b.dataset.filter || 'todo')));
+  document.querySelector('[data-filter-reset]')?.addEventListener('click', () => filter('todo'));
+  // Filtro desde la URL, por ejemplo /tienda/?tipo=crema (los botones de la película de la home llegan así)
+  const tipo = new URLSearchParams(location.search).get('tipo');
+  if (tipo && document.querySelector(`[data-filter="${tipo}"]`)) filter(tipo);
+  document.querySelectorAll<HTMLButtonElement>('[data-add]').forEach((b) =>
+    b.addEventListener('click', () => {
+      (window as any).baehrCesta?.add(b.dataset.add, 1);
+      (window as any).baehrCesta?.open();
+    })
+  );
+</script>

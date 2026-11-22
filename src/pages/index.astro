@@ -1,95 +1,14 @@
 ---
-import '@fontsource-variable/archivo/wdth.css';
-import '@fontsource-variable/newsreader/wght-italic.css';
-import '../styles/site.css';
+import Base from '../layouts/Base.astro';
+import Alta from '../components/Alta.astro';
+import { PRODUCTOS, enlace } from '../data/productos';
 
 const title = 'BAEHR España | Cosmética profesional para pies, manos y uñas';
 const description =
-  'BAEHR España, distribuidor oficial de la marca alemana BAEHR. Cosmética profesional para pies, manos y uñas: para salones, profesionales de manicura y pedicura, podólogos y particulares.';
-
-const org = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'BAEHR España',
-  legalName: 'Proxy Beauty Spain, S.L.',
-  url: 'https://baehr.com.es/',
-  description:
-    'BAEHR España es el distribuidor oficial en España de la marca alemana BAEHR, fundada en 1949 en Waiblingen.',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Calle Perelló, 34',
-    postalCode: '08005',
-    addressLocality: 'Barcelona',
-    addressCountry: 'ES',
-  },
-  sameAs: [
-    'https://www.instagram.com/baehr.espana/',
-    'https://www.facebook.com/baehr.espana',
-    'https://t.me/baehr_spain',
-  ],
-};
+  'Cosmética profesional para pies, manos y uñas de la marca alemana BAEHR. Distribuidor oficial en España para salones, podólogos y particulares.';
 ---
 
-<!doctype html>
-<html lang="es" data-mode="pro">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta name="robots" content="noindex, nofollow" />
-    <meta name="theme-color" content="#F2EEE7" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_ES" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <script is:inline>
-      document.documentElement.classList.add('js');
-      try {
-        var m = localStorage.getItem('baehr-modo');
-        if (m === 'pro' || m === 'home') document.documentElement.dataset.mode = m;
-      } catch (e) {}
-    </script>
-    <script type="application/ld+json" set:html={JSON.stringify(org)} />
-  </head>
-  <body>
-    <a class="skip" href="#contenido">Saltar al contenido</a>
-
-    <header class="top" data-theme="light">
-      <p class="promo">
-        <span class="promo__long">5 + 1 gratis en productos BAEHR del mismo tamaño. Hasta el 30 de noviembre.</span>
-        <span class="promo__short">5 + 1 gratis hasta el 30 de noviembre.</span>
-      </p>
-      <div class="bar">
-        <a class="logo" href="#inicio" aria-label="BAEHR España, inicio">BAEHR</a>
-        <nav class="nav" aria-label="Principal">
-          <a href="#inicio">Tienda</a>
-          <a href="#inicio" data-go-step="0">Protocolo</a>
-          <a href="#profesionales">Profesionales</a>
-          <a href="#seminarios">Seminarios</a>
-          <a href="#marca">La marca</a>
-        </nav>
-        <div class="mode" role="group" aria-label="Tipo de cliente">
-          <button type="button" data-set-mode="pro" aria-pressed="true">Profesional</button>
-          <button type="button" data-set-mode="home" aria-pressed="false">Particular</button>
-        </div>
-        <a class="bar__link" href="#profesionales">Acceder</a>
-        <a class="cart" href="#inicio" aria-label="Cesta: 0 productos">Cesta <b>0</b></a>
-        <button class="menu" type="button" aria-expanded="false" aria-controls="menu-movil">Menú</button>
-      </div>
-      <nav class="sheet" id="menu-movil" aria-label="Menú" hidden>
-        <a href="#inicio">Tienda</a>
-        <a href="#inicio" data-go-step="0">Protocolo</a>
-        <a href="#profesionales">Profesionales</a>
-        <a href="#seminarios">Seminarios</a>
-        <a href="#marca">La marca</a>
-        <a href="#profesionales">Acceder</a>
-        <a href="#inicio">Cesta (0)</a>
-      </nav>
-    </header>
-
-    <main id="contenido">
+<Base title={title} description={description} page="home">
       <section class="film" id="inicio" aria-label="El protocolo, paso a paso">
         <div class="film__sticky">
           <div class="hero">
@@ -99,15 +18,15 @@ const org = {
               <span class="h1__soft">para pies, manos y uñas</span>
             </h1>
             <p class="hero__lead">
-              Marca alemana fundada en 1949. BAEHR España es su distribuidor oficial.{' '}
+              Marca alemana fundada en 1949. BAEHR España es distribuidor oficial de la marca.{' '}
               <span data-when="pro">Date de alta y compra a precio profesional.</span>
-              <span data-when="home">Envío gratuito en pedidos a partir de 60&nbsp;€.</span>
+              <span data-when="home">Envío gratis en pedidos a partir de 60&nbsp;€.</span>
             </p>
             <div class="hero__cta">
               <a class="pill pill--red" href="#profesionales" data-when="pro">Darme de alta</a>
               <a class="pill pill--line" href="#inicio" data-go-step="0" data-when="pro">Ver el protocolo</a>
               <a class="pill pill--red" href="#inicio" data-go-step="0" data-when="home">Ver el protocolo</a>
-              <a class="pill pill--line" href="#profesionales" data-when="home">Soy profesional</a>
+              <a class="pill pill--line" href="/profesionales/" data-when="home">Soy profesional</a>
             </div>
           </div>
 
@@ -116,6 +35,7 @@ const org = {
           </figure>
 
           <div class="stagebg" aria-hidden="true"></div>
+          <img class="stage-poster" src="/posters/conjunto.webp" width="1000" height="1120" alt="" fetchpriority="high" decoding="async" aria-hidden="true" />
           <canvas id="stage" aria-hidden="true"></canvas>
           <div class="vig" aria-hidden="true"></div>
           <div class="grain" aria-hidden="true"></div>
@@ -129,7 +49,7 @@ const org = {
               <li>Vegano</li>
               <li>De 5 a 10&nbsp;ml por baño</li>
             </ul>
-            <a class="pill pill--white" href="#inicio">Ver el baño de pies</a>
+            <a class="pill pill--white" href="/tienda/?tipo=bano">Ver el baño de pies</a>
             <img class="still__img" src="/posters/paso-1.webp" width="1400" height="900" alt="Frasco blanco de SPA Wellness Fußbad, con dosificador, junto a un cuenco blanco con agua en el que cae un chorro fino." loading="lazy" decoding="async" />
           </article>
 
@@ -142,20 +62,20 @@ const org = {
               <li>Con minerales y oligoelementos</li>
               <li>En 125 y 450&nbsp;ml</li>
             </ul>
-            <a class="pill pill--white" href="#inicio">Ver el exfoliante</a>
+            <a class="pill pill--white" href="/tienda/?tipo=exfoliante">Ver el exfoliante</a>
             <img class="still__img" src="/posters/paso-2.webp" width="1400" height="900" alt="Tarro abierto del exfoliante fresh feet Fußpeeling, con la tapa al lado y cristales de sal alrededor." loading="lazy" decoding="async" />
           </article>
 
           <article class="chap chap--left">
             <h2 class="chap__h">Mascarilla</h2>
             <p class="chap__prod">Fuß-Vliesmaske Orange-Lemongras</p>
-            <p class="chap__text">Mascarilla de tejido para el cuidado intensivo de la piel muy seca.</p>
+            <p class="chap__text">Mascarilla de tejido para el cuidado intensivo de la piel muy seca de los pies.</p>
             <ul class="facts">
               <li>Con karité, macadamia y coco</li>
               <li>Vegana</li>
               <li>Caja de 5 pares</li>
             </ul>
-            <a class="pill pill--white" href="#inicio">Ver la mascarilla</a>
+            <a class="pill pill--white" href="/tienda/?tipo=mascarilla">Ver la mascarilla</a>
             <img class="still__img" src="/posters/paso-3.webp" width="1400" height="900" alt="Caja de la mascarilla Fuß-Vliesmaske Orange-Lemongras, de la que salen cinco sobres en abanico." loading="lazy" decoding="async" />
           </article>
 
@@ -168,7 +88,7 @@ const org = {
               <li>Vegana</li>
               <li>En 30, 125 y 500&nbsp;ml</li>
             </ul>
-            <a class="pill pill--white" href="#inicio">Ver la crema</a>
+            <a class="pill pill--white" href="/tienda/?tipo=crema">Ver la crema</a>
             <img class="still__img" src="/posters/paso-4.webp" width="1400" height="900" alt="Tubo de la crema Fußcreme Orange-Lemongras, inclinado en el aire, con una espiral de crema debajo." loading="lazy" decoding="async" />
           </article>
 
@@ -181,7 +101,7 @@ const org = {
               <li>Vegana</li>
               <li>En 125 y 300&nbsp;ml</li>
             </ul>
-            <a class="pill pill--white" href="#inicio">Ver la crema en espuma</a>
+            <a class="pill pill--white" href="/productos/crema-en-espuma-orange-lemongras/">Ver la crema en espuma</a>
             <img class="still__img" src="/posters/paso-5.webp" width="1400" height="900" alt="Bote de la crema en espuma Cremeschaum Orange-Lemongras, inclinado en el aire, con una nube de espuma debajo." loading="lazy" decoding="async" />
           </article>
 
@@ -189,8 +109,8 @@ const org = {
             <h2 class="fin__h">Cinco pasos, un&nbsp;protocolo</h2>
             <p class="fin__text">Un producto BAEHR para cada paso.</p>
             <div class="fin__cta">
-              <a class="pill pill--white" href="#profesionales" data-when="pro">Pedir los cinco productos</a>
-              <a class="pill pill--white" href="#inicio" data-when="home">Comprar los cinco productos</a>
+              <a class="pill pill--white" href="/profesionales/#pedido-rapido" data-when="pro">Pedir los cinco productos</a>
+              <a class="pill pill--white" href="/tienda/" data-when="home">Comprar los cinco productos</a>
             </div>
           </div>
 
@@ -206,11 +126,66 @@ const org = {
         </div>
       </section>
 
+      <section class="shop" id="tienda" aria-labelledby="tienda-h">
+        <div class="seal" aria-hidden="true"></div>
+        <div class="shop__head">
+          <h2 class="h2 rv" id="tienda-h">Los cinco, de un&nbsp;vistazo</h2>
+          <p class="lead rv">Por orden de uso, del baño de pies a la crema en espuma.</p>
+        </div>
+        <ul class="shop__row">
+          <li class="card rv">
+            <a class="card__link" href="#inicio" data-go-step="0" aria-label="Ver el baño de pies en el protocolo">
+              <span class="card__img card__img--aqua"><img src="/img/productos/bano.webp" width="600" height="900" alt="" loading="lazy" decoding="async" /></span>
+              <span class="card__name" lang="de">SPA Wellness Fußbad</span>
+              <span class="card__type">Baño de pies</span>
+              <span class="card__type">500&nbsp;ml</span>
+              <span class="card__go">Ver en el protocolo</span>
+            </a>
+          </li>
+          <li class="card rv">
+            <a class="card__link" href="#inicio" data-go-step="1" aria-label="Ver el exfoliante en el protocolo">
+              <span class="card__img card__img--aqua"><img src="/img/productos/exfoliante.webp" width="600" height="900" alt="" loading="lazy" decoding="async" /></span>
+              <span class="card__name" lang="de">fresh feet Fußpeeling</span>
+              <span class="card__type">Exfoliante para pies</span>
+              <span class="card__type">125 y 450&nbsp;ml</span>
+              <span class="card__go">Ver en el protocolo</span>
+            </a>
+          </li>
+          <li class="card rv">
+            <a class="card__link" href="#inicio" data-go-step="2" aria-label="Ver la mascarilla en el protocolo">
+              <span class="card__img card__img--sun"><img src="/img/productos/mascarilla.webp" width="600" height="900" alt="" loading="lazy" decoding="async" /></span>
+              <span class="card__name" lang="de">Fuß-Vliesmaske Orange-Lemongras</span>
+              <span class="card__type">Mascarilla para pies</span>
+              <span class="card__type">Caja de 5&nbsp;pares</span>
+              <span class="card__go">Ver en el protocolo</span>
+            </a>
+          </li>
+          <li class="card rv">
+            <a class="card__link" href="#inicio" data-go-step="3" aria-label="Ver la crema para pies en el protocolo">
+              <span class="card__img card__img--sun"><img src="/img/productos/crema.webp" width="600" height="900" alt="" loading="lazy" decoding="async" /></span>
+              <span class="card__name" lang="de">Fußcreme Orange-Lemongras</span>
+              <span class="card__type">Crema para pies</span>
+              <span class="card__type">30, 125 y 500&nbsp;ml</span>
+              <span class="card__go">Ver en el protocolo</span>
+            </a>
+          </li>
+          <li class="card card--main rv">
+            <a class="card__link" href="/productos/crema-en-espuma-orange-lemongras/" aria-label="Ver la ficha de la crema en espuma">
+              <span class="card__img card__img--sun"><img src="/img/productos/espuma.webp" width="600" height="900" alt="" loading="lazy" decoding="async" /></span>
+              <span class="card__name" lang="de">Cremeschaum Orange-Lemongras</span>
+              <span class="card__type">Crema en espuma</span>
+              <span class="card__type">125 y 300&nbsp;ml</span>
+              <span class="card__go">Ver la ficha</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
       <section class="dark" id="profesionales">
         <div class="dark__text" data-when="pro">
-          <h2 class="h2 rv">Solicita tu alta profesional en dos minutos</h2>
+          <h2 class="h2 rv">Solicita tu alta profesional en dos&nbsp;minutos</h2>
           <p class="lead rv">
-            Rellena los datos de tu negocio. Revisamos la solicitud en un día laborable y activamos tus precios
+            Rellena los datos de tu negocio. Revisamos la solicitud y activamos tus precios
             profesionales.
           </p>
           <ul class="ticks rv">
@@ -219,40 +194,26 @@ const org = {
             <li>Repite tu último pedido con un clic</li>
             <li>Facturas e historial de pedidos en tu cuenta</li>
           </ul>
+          <a class="textlink textlink--light rv" href="/mi-cuenta/">Ver una cuenta de ejemplo</a>
         </div>
-        <form class="signup rv" data-when="pro" novalidate>
-          <label>
-            <span>Nombre comercial</span>
-            <input type="text" name="salon" autocomplete="organization" required />
-          </label>
-          <label>
-            <span>NIF o CIF</span>
-            <input type="text" name="nif" autocomplete="off" required />
-          </label>
-          <label>
-            <span>Correo electrónico</span>
-            <input type="email" name="correo" autocomplete="email" required />
-          </label>
-          <button class="pill pill--red" type="submit">Solicitar el alta</button>
-          <p class="signup__ok" role="status" hidden>Solicitud enviada. Te respondemos en un día laborable.</p>
-          <p class="signup__note">Demostración de diseño: no se envía ningún dato.</p>
-        </form>
+        <Alta />
 
         <div class="dark__text dark__text--wide" data-when="home">
-          <h2 class="h2 rv">Lo que usan los profesionales, también en casa</h2>
+          <h2 class="h2 rv">Lo que usan los profesionales, también en&nbsp;casa</h2>
           <p class="lead rv">
-            Compra los mismos productos para el cuidado diario. Envío gratuito en pedidos a partir de 60&nbsp;€.
+            Compra los mismos productos para el cuidado de tus pies. Envío gratis en pedidos a partir de 60&nbsp;€.
           </p>
           <a class="pill pill--red rv" href="#inicio" data-go-step="0">Ver el protocolo</a>
         </div>
       </section>
 
       <section class="seminars" id="seminarios">
-        <h2 class="h2 rv">Seminarios para profesionales</h2>
+        <div class="seal" aria-hidden="true"></div>
+        <h2 class="h2 rv">Seminarios para&nbsp;profesionales</h2>
         <article class="seminar rv">
           <p class="seminar__date"><b>26</b> nov</p>
           <div class="seminar__body">
-            <h3>Beauty Expert: maratón formativo online</h3>
+            <h3>Beauty Expert: maratón formativo&nbsp;online</h3>
             <p>
               Onicólisis y cuidado profesional BAEHR. Online, de 10:00 a 12:00 (hora peninsular). En ruso con
               traducción al español.
@@ -264,11 +225,12 @@ const org = {
       </section>
 
       <section class="brand" id="marca">
-        <h2 class="h2 rv">Una marca alemana con oficio</h2>
+        <div class="seal" aria-hidden="true"></div>
+        <h2 class="h2 rv">Una marca alemana con&nbsp;oficio</h2>
         <div class="brand__grid">
           <p class="lead rv">
             BAEHR nació en 1949 en Waiblingen, cerca de Stuttgart, y sigue siendo una empresa familiar. BAEHR
-            España distribuye sus productos a salones, profesionales de manicura y pedicura, podólogos y
+            España lleva sus productos a salones, profesionales de manicura y pedicura, podólogos y
             particulares.
           </p>
           <dl class="stats">
@@ -286,44 +248,10 @@ const org = {
             </div>
           </dl>
         </div>
+        <a class="textlink rv" href="/la-marca/">Conocer la marca</a>
       </section>
-    </main>
+</Base>
 
-    <footer class="foot">
-      <div class="foot__ribs" aria-hidden="true"></div>
-      <div class="foot__grid">
-        <div>
-          <span class="logo">BAEHR</span>
-          <p class="foot__lead">
-            BAEHR España es el distribuidor oficial de BAEHR en España.
-          </p>
-          <p class="foot__small">Proxy Beauty Spain, S.L. Calle Perelló, 34, 08005 Barcelona.</p>
-        </div>
-        <nav aria-label="Secciones">
-          <a href="#inicio">Tienda</a>
-          <a href="#inicio" data-go-step="0">Protocolo</a>
-          <a href="#profesionales">Profesionales</a>
-          <a href="#seminarios">Seminarios</a>
-          <a href="#marca">La marca</a>
-        </nav>
-        <nav aria-label="Redes sociales">
-          <a href="https://www.instagram.com/baehr.espana/" rel="noopener">Instagram</a>
-          <a href="https://www.facebook.com/baehr.espana" rel="noopener">Facebook</a>
-          <a href="https://t.me/baehr_spain" rel="noopener">Telegram</a>
-          <a href="https://wa.me/34616458742" rel="noopener">WhatsApp</a>
-        </nav>
-        <nav aria-label="Legal">
-          <a href="#inicio">Aviso legal</a>
-          <a href="#inicio">Política de privacidad</a>
-          <a href="#inicio">Política de cookies</a>
-        </nav>
-      </div>
-      <p class="foot__end">Concepto de diseño, noviembre de 2026.</p>
-    </footer>
-
-    <script>
-      import '../scripts/ui.js';
-      import '../scripts/film.js';
-    </script>
-  </body>
-</html>
+<script>
+  import '../scripts/film.js';
+</script>

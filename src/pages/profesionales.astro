@@ -1,0 +1,256 @@
+---
+// Profesionales: alta, ventajas y una demostración del pedido rápido del portal B2B.
+import Base from '../layouts/Base.astro';
+import Alta from '../components/Alta.astro';
+import { PRODUCTOS } from '../data/productos';
+
+// búsqueda sin acentos ni mayúsculas, y con espacios normales
+const norm = (t: string) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\u00a0/g, ' ').toLowerCase();
+
+const title = 'Alta profesional: precios y pedido rápido | BAEHR España';
+const description =
+  'Envía tu solicitud de alta en dos minutos. Precios profesionales, pedido rápido por referencia y facturas en tu cuenta.';
+
+const ventajas = [
+  { h: 'Precio profesional', t: 'Activamos tus precios al aprobar tu alta y los verás al iniciar sesión.' },
+  { h: 'Pedido rápido', t: 'Busca por nombre o referencia y añade productos sin recorrer la tienda.' },
+  { h: 'Lo de siempre', t: 'Repite tu último pedido con un clic.' },
+  { h: 'Tus facturas', t: 'En tu cuenta, junto con tu historial de pedidos.' },
+];
+const pasos = [
+  { h: 'Solicita', t: 'Rellena los datos de tu negocio en dos minutos.' },
+  { h: 'Revisamos', t: 'Comprobamos tus datos y aprobamos tu alta.' },
+  { h: 'Compra', t: 'Inicia sesión y haz tu pedido a precio profesional.' },
+];
+const faq = [
+  {
+    q: '¿Qué necesito para darme de alta?',
+    a: 'Tu nombre comercial, tu NIF o CIF y un correo electrónico. Rellenar la solicitud te lleva unos dos minutos.',
+  },
+  {
+    q: '¿Cuándo podré comprar a precio profesional?',
+    a: 'En cuanto aprobemos tu solicitud: inicia sesión y verás tus precios profesionales.',
+  },
+  {
+    q: '¿Puedo pedir por referencia?',
+    a: 'Sí. Con el pedido rápido buscas por nombre o referencia y añades los productos sin recorrer la tienda. También puedes repetir tu último pedido con un clic.',
+  },
+  { q: '¿Dónde encuentro mis facturas?', a: 'En tu cuenta, junto con tu historial de pedidos.' },
+];
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+];
+---
+
+<Base title={title} description={description} page="profesionales" jsonld={jsonld}>
+  <section class="pro-hero">
+    <h1 class="pro-hero__h">
+      <span class="stretch is-in">Compra</span>
+      <span class="stretch is-in">como&nbsp;profesional</span>
+    </h1>
+    <div class="pro-hero__side">
+      <p class="lead">Para salones, podólogos y profesionales de manicura y pedicura. Solicita tu alta en dos minutos: revisamos la solicitud y activamos tus precios profesionales.</p>
+      <a class="pill pill--red" href="#alta">Solicitar el alta</a>
+    </div>
+  </section>
+
+  <section class="perks" aria-label="Ventajas">
+    <ul class="perks__grid">
+      {
+        ventajas.map((v) => (
+          <li class="perk rv">
+            <span class="perk__ribs" aria-hidden="true" />
+            <h2 class="perk__h" set:html={v.h} />
+            <p class="perk__t">{v.t}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="quick" id="pedido-rapido">
+    <div class="quick__text">
+      <h2 class="h2 rv">Prueba el pedido&nbsp;rápido</h2>
+      <p class="lead rv">Escribe un nombre o una referencia y añade el producto a la cesta.</p>
+      <p class="quick__note">Demostración de diseño: no se envía ningún pedido.</p>
+      <a class="pill pill--white quick__acct" href="/mi-cuenta/">Ver una cuenta de ejemplo</a>
+    </div>
+    <div class="quick__box">
+      <label class="quick__search">
+        <span class="sr">Buscar producto</span>
+        <input type="search" placeholder="Busca por nombre" autocomplete="off" />
+      </label>
+      <ul class="quick__results">
+        {
+          PRODUCTOS.map((p) => (
+            <li class="qline" data-q={norm(`${p.name} ${p.type} ${p.ref ?? ''}`)}>
+              <span class="qline__img"><img src={`/img/productos/${p.img}.webp`} width="600" height="900" alt="" loading="lazy" /></span>
+              <span class="qline__text">
+                <span class="qline__name" lang="de" set:html={p.name} />
+                <span class="qline__type" set:html={p.type} />
+              </span>
+              <button class="qline__add" type="button" data-add={p.id} data-done="Añadido">Añadir</button>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="quick__none" hidden>No hay ningún producto con ese nombre o referencia.</p>
+      <div class="quick__order">
+        <p class="quick__label">Tu cesta</p>
+        <ul class="quick__lines"></ul>
+        <p class="quick__empty">Aún no has añadido ningún producto.</p>
+      </div>
+      <div class="quick__sum">
+        <button class="pill pill--red" type="button" data-open-cart>Ver la cesta</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps3">
+    <h2 class="h2 rv">Así&nbsp;funciona</h2>
+    <ol class="steps3__row">
+      {
+        pasos.map((s) => (
+          <li class="steps3__item rv">
+            <h3 class="steps3__h">{s.h}</h3>
+            <p class="steps3__t">{s.t}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <section class="dark dark--alta" id="alta">
+    <div class="dark__text">
+      <h2 class="h2 rv">Tu cuenta&nbsp;profesional</h2>
+      <p class="lead rv">Solicita el alta con tres datos de tu negocio o inicia sesión si ya tienes cuenta.</p>
+      <div class="switch" role="tablist" aria-label="Alta o acceso">
+        <button type="button" role="tab" id="tab-alta" aria-controls="panel-alta" aria-selected="true">Solicitar el alta</button>
+        <button type="button" role="tab" id="tab-acceso" aria-controls="panel-acceso" aria-selected="false" tabindex="-1">Iniciar sesión</button>
+      </div>
+    </div>
+    <div class="panel" id="panel-alta" role="tabpanel" aria-labelledby="tab-alta">
+      <Alta when={false} />
+    </div>
+    <div class="panel" id="panel-acceso" role="tabpanel" aria-labelledby="tab-acceso" hidden>
+      <form class="signup login" novalidate>
+        <label>
+          <span>Correo electrónico</span>
+          <input type="email" name="correo" autocomplete="email" required />
+        </label>
+        <label>
+          <span>Contraseña</span>
+          <input type="password" name="clave" autocomplete="current-password" required />
+        </label>
+        <a class="login__forgot" href="#acceso">¿Has olvidado tu contraseña?</a>
+        <button class="pill pill--red" type="submit">Iniciar sesión</button>
+        <p class="signup__note">Demostración de diseño: no se envía ningún dato.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="faq" id="preguntas">
+    <h2 class="h2 rv">Lo que más nos&nbsp;preguntan</h2>
+    <div class="faq__list">
+      {
+        faq.map((f) => (
+          <details class="faq__item">
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))
+      }
+    </div>
+  </section>
+</Base>
+
+<script>
+  // Alta o acceso: dos pestañas sobre el mismo bloque
+  const tabs = document.querySelectorAll<HTMLButtonElement>('.switch [role="tab"]');
+  function show(id: string) {
+    tabs.forEach((t) => {
+      const on = t.getAttribute('aria-controls') === id;
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+      const panel = document.getElementById(t.getAttribute('aria-controls') || '');
+      if (panel) panel.hidden = !on;
+    });
+  }
+  tabs.forEach((t) => t.addEventListener('click', () => show(t.getAttribute('aria-controls') || 'panel-alta')));
+  // /profesionales/#acceso abre el acceso; también si ya estás en esta página y pulsas «Acceder»
+  function fromHash() {
+    if (location.hash === '#acceso') {
+      show('panel-acceso');
+      document.getElementById('alta')?.scrollIntoView();
+    } else if (location.hash === '#alta') {
+      show('panel-alta');
+    }
+  }
+  fromHash();
+  window.addEventListener('hashchange', fromHash);
+  document.querySelector<HTMLFormElement>('.login')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const f = e.currentTarget as HTMLFormElement;
+    let ok = true;
+    f.querySelectorAll<HTMLInputElement>('input').forEach((i) => {
+      const v = i.checkValidity();
+      i.setAttribute('aria-invalid', String(!v));
+      if (!v && ok) {
+        i.focus();
+        ok = false;
+      }
+    });
+    // demostración: con los dos campos rellenos se entra en la cuenta de ejemplo
+    if (ok) location.href = '/mi-cuenta/';
+  });
+
+  const input = document.querySelector<HTMLInputElement>('.quick__search input');
+  const lines = document.querySelectorAll<HTMLElement>('.qline');
+  const none = document.querySelector<HTMLElement>('.quick__none');
+  input?.addEventListener('input', () => {
+    const q = input.value.trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\u00a0/g, ' ').toLowerCase();
+    let shown = 0;
+    lines.forEach((l) => {
+      const on = !q || (l.dataset.q || '').includes(q);
+      l.hidden = !on;
+      if (on) shown++;
+    });
+    if (none) none.hidden = shown > 0;
+  });
+  // Tu pedido: las líneas de la cesta, en directo
+  const orderList = document.querySelector<HTMLElement>('.quick__lines');
+  const orderEmpty = document.querySelector<HTMLElement>('.quick__empty');
+  window.addEventListener('baehr:cesta', (e) => {
+    const items = (e as CustomEvent).detail as { name: string; qty: number }[];
+    if (!orderList) return;
+    orderList.textContent = '';
+    items.forEach((i) => {
+      const li = document.createElement('li');
+      const name = document.createElement('span');
+      name.lang = 'de';
+      name.textContent = i.name;
+      const qty = document.createElement('b');
+      qty.textContent = `× ${i.qty}`;
+      li.append(name, qty);
+      orderList.append(li);
+    });
+    if (orderEmpty) orderEmpty.hidden = items.length > 0;
+  });
+  // si la cesta ya se cargó antes que esta página, que vuelva a avisar
+  (window as any).baehrCesta?.emit?.();
+  document.querySelectorAll<HTMLButtonElement>('.qline__add').forEach((b) =>
+    b.addEventListener('click', () => {
+      (window as any).baehrCesta?.add(b.dataset.add, 1);
+      b.classList.remove('is-done');
+      void b.offsetWidth;
+      b.classList.add('is-done');
+      const label = b.textContent;
+      b.textContent = b.dataset.done || label;
+      setTimeout(() => (b.textContent = label), 1200);
+    })
+  );
+</script>

@@ -1,0 +1,37 @@
+---
+// Alta profesional: formulario de demostración con la tarjeta que se rellena al escribir.
+interface Props {
+  when?: boolean;
+}
+const { when = true } = Astro.props;
+---
+
+<div class="signup-wrap" data-when={when ? 'pro' : undefined}>
+<div class="pass" aria-hidden="true">
+  <div class="pass__card">
+    <span class="pass__logo">BAEHR</span>
+    <span class="pass__kind">Profesional</span>
+    <span class="pass__name" data-pass="salon" data-empty="Nombre comercial">Nombre comercial</span>
+    <span class="pass__nif" data-pass="nif" data-empty="NIF o CIF">NIF o CIF</span>
+    <span class="pass__ribs"></span>
+  </div>
+</div>
+<form class="signup rv" novalidate>
+  <label>
+    <span>Nombre comercial</span>
+    <input type="text" name="salon" autocomplete="organization" required />
+  </label>
+  <label>
+    <span>NIF o CIF</span>
+    <input type="text" name="nif" autocomplete="off" required />
+  </label>
+  <label>
+    <span>Correo electrónico</span>
+    <input type="email" name="correo" autocomplete="email" required />
+  </label>
+  <label class="consent"><input type="checkbox" name="privacidad" required /><span>He leído y acepto la <a href="/">política de privacidad</a>.</span></label>
+  <button class="pill pill--red" type="submit">Solicitar el alta</button>
+  <p class="signup__ok" role="status" hidden>Solicitud enviada. La revisaremos lo antes posible.</p>
+  <p class="signup__note">Demostración de diseño: no se envía ningún dato.</p>
+</form>
+</div>

@@ -1,0 +1,195 @@
+---
+// Cabecera, pie y datos comunes de todas las páginas del concepto.
+import '@fontsource-variable/archivo/wdth.css';
+import '@fontsource-variable/newsreader/wght-italic.css';
+import '../styles/site.css';
+import { PRODUCTOS } from '../data/productos';
+
+interface Props {
+  title: string;
+  description: string;
+  page?: 'home' | 'producto' | 'marca' | 'tienda' | 'profesionales' | 'contacto' | 'cuenta' | 'error';
+  jsonld?: object[];
+}
+const { title, description, page = 'home', jsonld = [] } = Astro.props;
+const home = page === 'home';
+// En la home los enlaces van a secciones de la misma página; desde otra página, a la home
+const to = (hash: string) => (home ? hash : `/${hash}`);
+
+const org = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'BAEHR España',
+  legalName: 'Proxy Beauty Spain, S.L.',
+  url: 'https://baehr.com.es/',
+  description:
+    'BAEHR España es distribuidor oficial en España de la marca alemana BAEHR, fundada en 1949 en Waiblingen.',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Calle Perelló, 34',
+    postalCode: '08005',
+    addressLocality: 'Barcelona',
+    addressCountry: 'ES',
+  },
+  sameAs: ['https://www.instagram.com/baehr.espana/', 'https://www.facebook.com/baehr.espana', 'https://t.me/baehr_spain'],
+};
+---
+
+<!doctype html>
+<html lang="es" data-mode="pro" data-page={page}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#F2EEE7" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:image" content="https://baehr-concept.vercel.app/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script is:inline>
+      document.documentElement.classList.add('js');
+      try {
+        var m = localStorage.getItem('baehr-modo');
+        if (m === 'pro' || m === 'home') document.documentElement.dataset.mode = m;
+      } catch (e) {}
+    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(org)} />
+    {jsonld.map((data) => <script type="application/ld+json" set:html={JSON.stringify(data)} />)}
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+
+    <header class="top" data-theme="light">
+      <p class="promo">
+        <span class="promo__long">5 + 1 gratis en productos BAEHR del mismo tamaño. Hasta el 30 de noviembre.</span>
+        <span class="promo__short">5 + 1 gratis hasta el 30 de noviembre.</span>
+      </p>
+      <div class="bar">
+        <a class="logo" href={home ? '#inicio' : '/'} aria-label="BAEHR España, inicio">BAEHR</a>
+        <nav class="nav" aria-label="Principal">
+          <a href="/tienda/" aria-current={page === 'tienda' ? 'page' : undefined}>Tienda</a>
+          <a href={to('#protocolo')} data-go-step="0">Protocolo</a>
+          <a href="/profesionales/" aria-current={page === 'profesionales' ? 'page' : undefined}>Profesionales</a>
+          <a href={to('#seminarios')}>Seminarios</a>
+          <a href="/la-marca/" aria-current={page === 'marca' ? 'page' : undefined}>La marca</a>
+        </nav>
+        <div class="mode" role="group" aria-label="Tipo de cliente">
+          <button type="button" data-set-mode="pro" aria-pressed="true">Profesional</button>
+          <button type="button" data-set-mode="home" aria-pressed="false">Particular</button>
+        </div>
+        {page === 'cuenta' ? (
+          <a class="bar__link" href="/mi-cuenta/" aria-current="page">Mi cuenta</a>
+        ) : (
+          <a class="bar__link" href="/profesionales/#acceso">Acceder</a>
+        )}
+        <a class="cart" href="/tienda/" data-open-cart aria-controls="cesta">Cesta <b data-cart-count>0</b></a>
+        <button class="menu" type="button" aria-expanded="false" aria-controls="menu-movil">Menú</button>
+      </div>
+      <nav class="sheet" id="menu-movil" aria-label="Menú" hidden>
+        <a href="/tienda/">Tienda</a>
+        <a href={to('#protocolo')} data-go-step="0">Protocolo</a>
+        <a href="/profesionales/">Profesionales</a>
+        <a href={to('#seminarios')}>Seminarios</a>
+        <a href="/la-marca/">La marca</a>
+        <a href="/contacto/">Contacto</a>
+        {page === 'cuenta' ? (
+          <a href="/mi-cuenta/" aria-current="page">Mi cuenta</a>
+        ) : (
+          <a href="/profesionales/#acceso">Acceder</a>
+        )}
+        <a href="/tienda/" data-open-cart>Cesta</a>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <slot />
+    </main>
+
+    <footer class="foot">
+      <div class="foot__ribs" aria-hidden="true"></div>
+      <div class="foot__grid">
+        <div>
+          <span class="logo">BAEHR</span>
+          <p class="foot__lead">Distribuidor oficial de BAEHR en España.</p>
+          <p class="foot__small">Proxy Beauty Spain, S.L. Calle Perelló, 34, 08005 Barcelona.</p>
+        </div>
+        <nav aria-label="Secciones">
+          <a href="/tienda/">Tienda</a>
+          <a href={to('#protocolo')} data-go-step="0">Protocolo</a>
+          <a href="/profesionales/">Profesionales</a>
+          <a href={to('#seminarios')}>Seminarios</a>
+          <a href="/la-marca/">La marca</a>
+          <a href="/contacto/">Contacto</a>
+        </nav>
+        <nav aria-label="Redes sociales">
+          <a href="https://www.instagram.com/baehr.espana/" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/baehr.espana" rel="noopener">Facebook</a>
+          <a href="https://t.me/baehr_spain" rel="noopener">Telegram</a>
+          <a href="https://wa.me/34616458742" rel="noopener">WhatsApp</a>
+        </nav>
+        <nav aria-label="Ayuda y legal">
+          <a href="/profesionales/#preguntas">Preguntas frecuentes</a>
+          <a href="/">Envíos y devoluciones</a>
+          <a href="/">Condiciones generales de venta</a>
+          <a href="/">Aviso legal</a>
+          <a href="/">Política de privacidad</a>
+          <a href="/">Política de cookies</a>
+        </nav>
+      </div>
+      <p class="foot__end">Concepto de diseño, noviembre de 2026.</p>
+      <p class="foot__mark stretch" aria-hidden="true">BAEHR</p>
+    </footer>
+
+    <div class="drawer" id="cesta" role="dialog" aria-modal="true" aria-labelledby="cesta-h" hidden>
+      <div class="drawer__scrim" data-close></div>
+      <aside class="drawer__panel">
+        <div class="drawer__top">
+          <h2 class="drawer__h" id="cesta-h">Tu cesta</h2>
+          <button class="drawer__close" type="button" data-close>Cerrar</button>
+        </div>
+        <ul class="drawer__list"></ul>
+        <div class="drawer__empty">
+          <p>Tu cesta está vacía.</p>
+          <a class="pill pill--red" href="/tienda/">Seguir comprando</a>
+        </div>
+        <div class="drawer__foot" hidden>
+          <p class="drawer__price" data-when="pro"><a class="textlink" href="/profesionales/#acceso">Inicia sesión</a> para ver tus precios profesionales.</p>
+          <p class="drawer__price" data-when="home">Precios pendientes de publicar.</p>
+          <button class="pill pill--red drawer__checkout" type="button">Tramitar pedido</button>
+          <p class="drawer__ok" role="status" hidden>Demostración de diseño: no se envía ningún pedido.</p>
+        </div>
+        <template>
+          <li class="line">
+            <span class="line__img"><img src="" width="600" height="900" alt="" /></span>
+            <span class="line__text">
+              <span class="line__name" lang="de"></span>
+              <span class="line__type"></span>
+              <span class="line__row">
+                <span class="qty qty--s" role="group" aria-label="Cantidad">
+                  <button type="button" data-step="-1" aria-label="Reducir cantidad">−</button>
+                  <output>1</output>
+                  <button type="button" data-step="1" aria-label="Aumentar cantidad">+</button>
+                </span>
+                <button class="line__remove" type="button" data-remove>Eliminar</button>
+              </span>
+            </span>
+          </li>
+        </template>
+      </aside>
+    </div>
+
+    <script type="application/json" id="productos-data" set:html={JSON.stringify(PRODUCTOS.map(({ id, name, type, img }) => ({ id, name, type, img })))} />
+
+    <script>
+      import '../scripts/ui.js';
+      import '../scripts/cart.js';
+    </script>
+  </body>
+</html>

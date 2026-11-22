@@ -20,11 +20,10 @@ setMode(html.dataset.mode === 'home' ? 'home' : 'pro');
 function onScroll() {
   if (!top) return;
   top.classList.toggle('is-scrolled', window.scrollY > 24);
-  if (film) {
-    const past = film.getBoundingClientRect().bottom <= 90;
-    top.classList.toggle('is-solid', past);
-    if (past) top.dataset.theme = 'light';
-  }
+  // con película: sólida al salir de ella; en las demás páginas, en cuanto se baja un poco
+  const past = film ? film.getBoundingClientRect().bottom <= 90 : window.scrollY > 24;
+  top.classList.toggle('is-solid', past);
+  if (past && top.dataset.theme !== 'light') top.dataset.theme = 'light';
 }
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
@@ -72,7 +71,7 @@ form?.addEventListener('submit', (e) => {
 });
 
 // Apariciones al hacer scroll
-const items = document.querySelectorAll('.rv');
+const items = document.querySelectorAll('.rv, .seal, .stretch:not(.is-in):not(.foot__mark)');
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(
     (entries) => {
@@ -91,3 +90,51 @@ if ('IntersectionObserver' in window) {
 } else {
   items.forEach((el) => el.classList.add('is-in'));
 }
+
+// La tarjeta profesional se rellena mientras escribes, y se inclina con el puntero
+const pass = document.querySelector('.pass');
+if (pass) {
+  const card = pass.querySelector('.pass__card');
+  document.querySelectorAll('.signup input').forEach((input) => {
+    const slot = pass.querySelector(`[data-pass="${input.name}"]`);
+    if (!slot) return;
+    input.addEventListener('input', () => {
+      const v = input.value.trim();
+      try {
+        const saved = JSON.parse(localStorage.getItem('baehr-pase') || '{}');
+        saved[input.name] = v;
+        localStorage.setItem('baehr-pase', JSON.stringify(saved));
+      } catch (e) {}
+      if (input.name === 'nif' && v) slot.textContent = v.slice(0, 2).toUpperCase() + '·'.repeat(Math.max(0, Math.min(7, v.length - 2)));
+      else slot.textContent = v || slot.dataset.empty;
+      slot.classList.toggle('is-set', !!v);
+      card.classList.remove('is-pop');
+      void card.offsetWidth;
+      card.classList.add('is-pop');
+    });
+  });
+  if (window.matchMedia('(hover: hover)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    pass.addEventListener('pointermove', (e) => {
+      const r = pass.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      card.style.setProperty('--rx', `${(-y * 10).toFixed(2)}deg`);
+      card.style.setProperty('--ry', `${(x * 14).toFixed(2)}deg`);
+    });
+    pass.addEventListener('pointerleave', () => {
+      card.style.setProperty('--rx', '0deg');
+      card.style.setProperty('--ry', '0deg');
+    });
+  }
+}
+
+// El logotipo del pie está pegado al final de la página: se estira en cuanto asoma
+const mark = document.querySelector('.foot__mark');
+if (mark && 'IntersectionObserver' in window) {
+  const mo = new IntersectionObserver((entries) => {
+    if (!entries[0].isIntersecting) return;
+    mark.classList.add('is-in');
+    mo.disconnect();
+  });
+  mo.observe(mark);
+} else mark?.classList.add('is-in');

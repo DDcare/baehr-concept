@@ -71,23 +71,24 @@ const REVEAL = 0.84;
 function shots(tall) {
   const K = (p, x, y, az, el, hf, sx, sy) => [p, { t: [x, y, 0], az, el, hf, sx, sy }];
   if (tall) {
+    // En vertical la cámara gira poco: las letras se ven rectas
     return [
       K(0.0, XH, 1.8, 0.2, 0.11, 0.25, 0, 0.245),
-      K(0.06, XH + 1.5, 1.7, 0.1, 0.13, 0.28, 0, 0.12),
-      K(RANGE[0][0], X[0] + 0.35, 1.75, -0.16, 0.2, 0.27, 0, 0.2),
-      K(RANGE[0][1], X[0] + 0.35, 1.7, 0.06, 0.17, 0.28, 0, 0.2),
-      K(RANGE[1][0], X[1], 1.3, 0.2, 0.25, 0.36, 0, 0.21),
-      K(RANGE[1][1], X[1], 1.25, -0.1, 0.21, 0.38, 0, 0.21),
-      K(RANGE[2][0], X[2] - 1.5, 1.9, -0.16, 0.12, 0.3, 0, 0.2),
-      K(RANGE[2][0] + 0.07, X[2] - 1.5, 3.1, -0.04, 0.1, 0.235, 0, 0.2),
-      K(RANGE[2][1], X[2] - 1.5, 3.1, 0.08, 0.1, 0.24, 0, 0.2),
-      K(RANGE[3][0], X[3] + 0.4, 2.05, 0.16, 0.14, 0.31, 0, 0.2),
-      K(RANGE[3][1], X[3] + 0.4, 1.95, -0.06, 0.13, 0.32, 0, 0.2),
-      K(RANGE[4][0], X[4] + 0.5, 1.6, -0.12, 0.11, 0.31, 0, 0.2),
-      K(RANGE[4][1], X[4] + 0.55, 1.5, -0.04, 0.1, 0.32, 0, 0.2),
-      // en vertical la palabra no cabe de frente: se ve en diagonal, desde arriba, de la B (cerca) a la R (lejos)
-      K(FIN[0] + 0.03, 10.4, 1.5, -0.92, 0.46, 0.052, 0, 0.19),
-      K(1.0, 10.4, 1.5, -0.78, 0.42, 0.053, 0, 0.19),
+      K(0.06, XH + 1.5, 1.7, 0.08, 0.13, 0.28, 0, 0.12),
+      K(RANGE[0][0], X[0] + 0.35, 1.75, -0.06, 0.18, 0.27, 0, 0.2),
+      K(RANGE[0][1], X[0] + 0.35, 1.7, 0.03, 0.16, 0.28, 0, 0.2),
+      K(RANGE[1][0], X[1], 1.3, 0.08, 0.22, 0.36, 0, 0.21),
+      K(RANGE[1][1], X[1], 1.25, -0.04, 0.2, 0.38, 0, 0.21),
+      K(RANGE[2][0], X[2] - 1.5, 1.9, -0.06, 0.12, 0.3, 0, 0.2),
+      K(RANGE[2][0] + 0.07, X[2] - 1.5, 3.1, -0.02, 0.1, 0.235, 0, 0.2),
+      K(RANGE[2][1], X[2] - 1.5, 3.1, 0.03, 0.1, 0.24, 0, 0.2),
+      K(RANGE[3][0], X[3] + 0.4, 2.05, 0.06, 0.14, 0.31, 0, 0.2),
+      K(RANGE[3][1], X[3] + 0.4, 1.95, -0.02, 0.13, 0.32, 0, 0.2),
+      K(RANGE[4][0], X[4] + 0.5, 1.6, -0.05, 0.11, 0.31, 0, 0.2),
+      K(RANGE[4][1], X[4] + 0.55, 1.5, -0.02, 0.1, 0.32, 0, 0.2),
+      // plano final: la palabra entera, de frente y recta
+      K(FIN[0] + 0.03, XC, 2.6, -0.03, 0.1, 0.031, 0, 0.19),
+      K(1.0, XC, 2.6, 0.03, 0.09, 0.0318, 0, 0.19),
     ];
   }
   return [
@@ -151,7 +152,7 @@ function init() {
   renderer.toneMapping = THREE.NeutralToneMapping;
   renderer.toneMappingExposure = 0.96;
   renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = THREE.VSMShadowMap;
+  renderer.shadowMap.type = THREE.PCFShadowMap;
 
   const scene = new THREE.Scene();
   scene.fog = new THREE.Fog(STUDIO, 14, 40);
@@ -189,12 +190,11 @@ function init() {
   scene.add(new THREE.HemisphereLight(0xffffff, 0x8c1622, 0.3));
   const key = new THREE.DirectionalLight(0xffffff, 1.9);
   key.castShadow = true;
-  key.shadow.mapSize.set(LIGHT ? 1024 : 2048, LIGHT ? 1024 : 2048);
+  key.shadow.mapSize.set(LIGHT ? 768 : 1024, LIGHT ? 768 : 1024);
   key.shadow.camera.near = 1;
   key.shadow.camera.far = 60;
-  key.shadow.radius = 7;
-  key.shadow.blurSamples = LIGHT ? 12 : 20;
-  key.shadow.bias = -0.0004;
+  key.shadow.radius = 3;
+  key.shadow.bias = -0.0006;
   key.shadow.normalBias = 0.03;
   scene.add(key, key.target);
   const rim = new THREE.DirectionalLight(0xfff1ea, 2.4);
@@ -292,10 +292,12 @@ function init() {
   mirror.scale.y = -1;
   scene.add(mirror);
   const pairs = [];
-  function reflect(root) {
+  function reflect(root, cheap = null) {
     const copy = root.clone();
     copy.traverse((o) => {
-      if (o.isMesh) o.castShadow = false;
+      if (!o.isMesh) return;
+      o.castShadow = false;
+      if (cheap) o.material = cheap;
     });
     // las piezas con instancias comparten su posición con el original
     const src = [];
@@ -344,19 +346,17 @@ function init() {
       bevelEnabled: true,
       bevelThickness: bevel,
       bevelSize: bevel,
-      bevelSegments: LIGHT ? 2 : 3,
-      curveSegments: LIGHT ? 12 : 22,
+      bevelSegments: 2,
+      curveSegments: LIGHT ? 8 : 12,
     });
     geo.translate((-glyph.adv * LS) / 2, 0, -(LETTER_DEPTH + bevel));
     return geo;
   }
-  const letterMat = new THREE.MeshPhysicalMaterial({
+  const letterMat = new THREE.MeshStandardMaterial({
     color: 0x7c0817,
-    roughness: 0.55,
+    roughness: 0.5,
     metalness: 0,
-    clearcoat: 0.12,
-    clearcoatRoughness: 0.35,
-    envMapIntensity: 0.2,
+    envMapIntensity: 0.24,
     emissive: 0xb00f22,
     emissiveIntensity: 0,
   });
@@ -367,7 +367,7 @@ function init() {
     letters.add(m);
   });
   scene.add(letters);
-  reflect(letters);
+  reflect(letters, new THREE.MeshLambertMaterial({ color: 0x6a0714 }));
 
   // ---------- Fruta de la serie Orange-Lemongras ----------
   function sliceTexture(peel, pith, pulp, line) {
@@ -419,7 +419,6 @@ function init() {
       const face = new THREE.MeshPhysicalMaterial({ map: tex, roughness: 0.35, clearcoat: 0.9, clearcoatRoughness: 0.15 });
       const rindM = new THREE.MeshPhysicalMaterial({ color: peel, roughness: 0.5, clearcoat: 0.4 });
       const m = new THREE.Mesh(sliceGeo, [rindM, face, face]);
-      m.castShadow = true;
       g.add(m);
       return m;
     };
@@ -471,7 +470,6 @@ function init() {
     geo.setIndex(idx);
     const mesh = new THREE.Mesh(geo, material);
     mesh.frustumCulled = false;
-    mesh.castShadow = true;
     return { mesh, geo, rings, sides };
   }
   const sp = new THREE.Vector3();
@@ -621,7 +619,6 @@ function init() {
   const pourCurve = new THREE.QuadraticBezierCurve3(pourFrom, new THREE.Vector3(lerp(pourFrom.x, pourTo.x, 0.55), pourFrom.y + 0.02, lerp(pourFrom.z, pourTo.z, 0.55)), pourTo);
   const DOSE = LIGHT ? 8 : 11;
   const pour = new THREE.InstancedMesh(dropGeo, liquidMat, DOSE);
-  pour.castShadow = true;
   pour.frustumCulled = false;
   scene.add(pour);
 
@@ -664,7 +661,7 @@ function init() {
   })();
   jar.paste.material.bumpMap = grain;
   jar.paste.material.bumpScale = 1.4;
-  const CRYSTALS = LIGHT ? 200 : 520;
+  const CRYSTALS = LIGHT ? 160 : 360;
   const crystalMat = new THREE.MeshPhysicalMaterial({
     color: 0xffffff,
     roughness: 0.1,
@@ -691,7 +688,6 @@ function init() {
     crystalGeo.computeVertexNormals();
   }
   const crystals = new THREE.InstancedMesh(crystalGeo, crystalMat, CRYSTALS);
-  crystals.castShadow = !LIGHT;
   crystals.frustumCulled = false;
   {
     const tint = new THREE.Color();
@@ -866,10 +862,13 @@ function init() {
     keys = shots(tall);
   }
 
+  // Resolución: como mucho 1,5 píxeles por punto; si el equipo no llega, baja sola (ver el bucle)
+  const DPR_MAX = Math.min(window.devicePixelRatio || 1, 1.5);
+  let dpr = DPR_MAX;
+  let dprFixed = false;
   function resize() {
     const w = sticky.clientWidth;
     const h = sticky.clientHeight;
-    const dpr = Math.min(window.devicePixelRatio || 1, w < 820 ? 1.5 : 2);
     renderer.setPixelRatio(dpr);
     renderer.setSize(w, h, false);
     layout(w, h);
@@ -928,12 +927,22 @@ function init() {
   const v4 = new THREE.Vector3();
   const upV = new THREE.Vector3(0, 1, 0);
 
+  // Escribir una variable CSS solo cuando cambia: cada escritura obliga al navegador a recalcular estilos
+  const written = new WeakMap();
+  function setVar(el, name, value) {
+    let c = written.get(el);
+    if (!c) written.set(el, (c = {}));
+    if (c[name] === value) return;
+    c[name] = value;
+    el.style.setProperty(name, value);
+  }
+
   let activeStep = -2;
   function setStep(i) {
     if (i === activeStep) return;
     activeStep = i;
     stepButtons.forEach((b, k) => b.setAttribute('aria-current', k === i ? 'step' : 'false'));
-    if (stepper) stepper.style.setProperty('--step', String(Math.max(0, i)));
+    if (stepper) setVar(stepper, '--step', String(Math.max(0, i)));
   }
 
   let lastQ1 = -1;
@@ -949,36 +958,36 @@ function init() {
 
   function apply(p, time, intro = 1) {
     const io = 1 - Math.pow(1 - intro, 3);
-    sticky.style.setProperty('--intro', io.toFixed(4));
+    setVar(sticky, '--intro', io.toFixed(3));
 
     // ----- Capas HTML -----
     const open = ease(seg(p, 0.012, 0.075));
     const heroOut = seg(p, 0.016, 0.062);
-    sticky.style.setProperty('--k', (1 - open).toFixed(4));
-    sticky.style.setProperty('--hero-out', heroOut.toFixed(3));
-    sticky.style.setProperty('--p', p.toFixed(4));
-    sticky.style.setProperty('--wdth', lerp(wdthBase, 64, ease(seg(p, 0, 0.07))).toFixed(1));
-    sticky.style.setProperty('--flash', ease(seg(p, 0.99, 1)).toFixed(3));
-    sticky.style.setProperty('--steps-o', Math.min(seg(p, RANGE[0][0] - 0.02, RANGE[0][0] + 0.005), 1 - seg(p, FIN[0] - 0.025, FIN[0] - 0.005)).toFixed(3));
+    setVar(sticky, '--k', (1 - open).toFixed(3));
+    setVar(sticky, '--hero-out', heroOut.toFixed(3));
+    setVar(sticky, '--wdth', lerp(wdthBase, 64, ease(seg(p, 0, 0.07))).toFixed(0));
+    setVar(sticky, '--flash', ease(seg(p, 0.99, 1)).toFixed(3));
+    setVar(sticky, '--steps-o', Math.min(seg(p, RANGE[0][0] - 0.02, RANGE[0][0] + 0.005), 1 - seg(p, FIN[0] - 0.025, FIN[0] - 0.005)).toFixed(3));
     hero?.classList.toggle('is-gone', heroOut > 0.6);
 
     let current = -1;
     for (let i = 0; i < chapters.length; i++) {
       const [a, b] = RANGE[i];
       const v = Math.min(ease(seg(p, a + 0.004, a + 0.032)), 1 - ease(seg(p, b - 0.016, b + 0.006)));
-      chapters[i].style.setProperty('--v', v.toFixed(3));
+      setVar(chapters[i], '--v', v.toFixed(3));
       chapters[i].classList.toggle('is-on', v > 0.01);
       if (p >= a - 0.02 && p <= b + 0.015) current = i;
     }
     setStep(current);
     if (finale) {
       const v = ease(seg(p, FIN[0] + 0.012, FIN[0] + 0.045));
-      finale.style.setProperty('--v', v.toFixed(3));
+      setVar(finale, '--v', v.toFixed(3));
       finale.classList.toggle('is-on', v > 0.01);
     }
 
     const onScreen = film.getBoundingClientRect().bottom > 90;
-    if (header) header.dataset.theme = onScreen && open > 0.6 && p < 0.994 ? 'red' : 'light';
+    const theme = onScreen && open > 0.6 && p < 0.994 ? 'red' : 'light';
+    if (header && header.dataset.theme !== theme) header.dataset.theme = theme;
 
     // ----- Cámara y luz -----
     pointer.sx += (pointer.x - pointer.sx) * 0.05;
@@ -1265,25 +1274,89 @@ function init() {
     target = total > 0 ? clamp01(-r.top / total) : 0;
   }
 
+  const hasPoster = !!sticky.querySelector('.stage-poster');
+  let last = 0;
+  let idleFlip = false;
+  const perf = { win: [], skip: 20 };
   function frame(now) {
     if (!running) return;
+    const dt = last ? Math.min(0.1, (now - last) / 1000) : 1 / 60;
+    last = now;
     if (forced === null) {
       readScroll();
-      p += (target - p) * 0.12;
+      // seguimiento del scroll independiente de la velocidad del equipo
+      p += (target - p) * (1 - Math.exp(-dt * 10));
       if (Math.abs(target - p) < 0.0002) p = target;
     } else {
       p = forced;
+    }
+    // Quieto: basta con 30 imágenes por segundo para el agua y la fruta
+    const idle = forced === null && p === target && !drag.on && introT >= 1;
+    if (idle) {
+      idleFlip = !idleFlip;
+      if (idleFlip) {
+        requestAnimationFrame(frame);
+        return;
+      }
+    }
+    // Si el equipo va lento mientras se mueve, se rebaja la calidad paso a paso:
+    // primero la resolución (nunca por debajo de 0,75), después los reflejos del suelo, por último las sombras
+    if (!idle && !dprFixed && introT >= 1) {
+      if (perf.skip > 0) perf.skip--;
+      else {
+        perf.win.push(dt);
+        if (perf.win.length >= 30) {
+          // mediana: un tirón suelto (por ejemplo al cargar un paso) no rebaja la calidad
+          const sorted = perf.win.slice().sort((x, y) => x - y);
+          const avg = sorted[sorted.length >> 1] * 1000;
+          perf.win.length = 0;
+          if (avg > 24 && dpr > 0.75) {
+            dpr = Math.max(0.75, dpr - 0.25);
+            resize();
+            perf.skip = 30;
+          } else if (avg > 28 && mirror.visible) {
+            mirror.visible = false;
+            perf.skip = 30;
+          } else if (avg > 32 && key.castShadow) {
+            key.castShadow = false;
+            renderer.shadowMap.enabled = false;
+            perf.skip = 60;
+          }
+        }
+      }
     }
     if (loaded) {
       if (!introStart) {
         introStart = now;
         html.classList.add('film-ready');
+        warmUp();
       }
-      if (introT < 1) introT = Math.min(1, (now - introStart) / 1800);
+      // con imagen fija en la cápsula, el 3D aparece encima sin animación de entrada
+      if (introT < 1) introT = hasPoster ? 1 : Math.min(1, (now - introStart) / 1800);
     }
     apply(p, (now - t0) / 1000, introT);
     renderer.render(scene, camera);
     requestAnimationFrame(frame);
+  }
+
+  // Compilar de antemano los materiales de los cinco pasos: así no hay tirones al llegar a cada uno
+  let warmed = false;
+  function warmUp() {
+    if (warmed) return;
+    warmed = true;
+    const hidden = [];
+    scene.traverse((o) => {
+      if (!o.visible) {
+        hidden.push(o);
+        o.visible = true;
+      }
+    });
+    const done = () => hidden.forEach((o) => (o.visible = false));
+    if (renderer.compileAsync) renderer.compileAsync(scene, camera).then(done, done);
+    else {
+      renderer.compile(scene, camera);
+      done();
+    }
   }
 
   function start() {
@@ -1318,12 +1391,20 @@ function init() {
     else start();
   });
 
-  // Ir a un paso desde el indicador
-  function goStep(i) {
+  // Ir a un paso desde el indicador, o desde otra página con /#protocolo o /#paso-3
+  function goStep(i, jump = false) {
     const total = film.offsetHeight - window.innerHeight;
     const at = RANGE[i][0] + (RANGE[i][1] - RANGE[i][0]) * 0.55;
-    window.scrollTo({ top: film.offsetTop + total * at, behavior: 'smooth' });
+    window.scrollTo({ top: film.offsetTop + total * at, behavior: jump ? 'auto' : 'smooth' });
+    // al llegar desde otra página, la cámara salta directamente al paso en vez de recorrer el camino
+    if (jump) {
+      readScroll();
+      p = target;
+      introT = 1;
+    }
   }
+  const deep = location.hash.match(/^#(?:protocolo|paso-([1-5]))$/);
+  if (deep) setTimeout(() => goStep(deep[1] ? Number(deep[1]) - 1 : 0, true), 60);
   stepButtons.forEach((b, i) => b.addEventListener('click', () => goStep(i)));
   document.querySelectorAll('[data-go-step]').forEach((a) => {
     a.addEventListener('click', (e) => {
@@ -1335,6 +1416,14 @@ function init() {
   // Para pruebas y capturas
   window.__film = {
     loaded: () => loaded,
+    // para pruebas: resolución fija, sin ajuste automático
+    fixDpr(v) {
+      dprFixed = true;
+      dpr = v;
+      resize();
+    },
+    quality: () => ({ dpr, reflections: mirror.visible, shadows: key.castShadow }),
+    dpr: () => dpr,
     range: RANGE,
     set(v) {
       forced = v;

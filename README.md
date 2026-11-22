@@ -15,12 +15,23 @@ npm run preview   # de gebouwde versie lokaal bekijken
 
 ## Opbouw
 
-- `src/pages/index.astro`: de home, met alle Spaanse teksten.
+- `src/layouts/Base.astro`: kop, voet en gegevens die op elke pagina staan.
+- `src/pages/index.astro`: de home met de productfilm en de rij met de vijf producten.
+- `src/pages/productos/crema-en-espuma-orange-lemongras.astro`: voorbeeld van een productpagina, met een 3D-model om rond te draaien (`src/scripts/visor.js`).
+- `src/pages/la-marca.astro`: de merkpagina.
+- `src/pages/tienda.astro`: de winkel met filter per productsoort (ook via de adresregel, bijvoorbeeld `/tienda/?tipo=crema`).
+- `src/pages/profesionales.astro`: voordelen, demo van snel bestellen, aanmelden of inloggen (`/profesionales/#acceso` opent inloggen), FAQ.
+- `src/pages/contacto.astro` en `src/pages/404.astro`.
+- `src/pages/mi-cuenta.astro`: demo van de professionele account (het B2B-portaal): eigen pas met de naam uit het aanmeldformulier, laatste bestelling herhalen, bestelgeschiedenis, facturen, gegevens. Voorbeeldgegevens, geen prijzen. Inloggen op `/profesionales/#acceso` leidt hierheen.
+- `src/components/Alta.astro`: het aanmeldformulier met de professionele pas (home en professionals).
+- `src/data/productos.ts`: de zes producten van het concept; `src/scripts/cart.js`: de cesta (schuiflade, bewaard in de browser).
+- Links naar een stap in de film vanaf andere pagina's: `/#protocolo` of `/#paso-1` tot en met `/#paso-5`.
 - `src/scripts/film.js`: de 3D-studio (licht, camera, de vijf stappen, de letters) en de koppeling met het scrollen.
 - `src/scripts/productos.js`: de vijf verpakkingen en het sachet. `shapes.js` en `letras.js` zijn gegenereerd (zie `tools/`).
 - `src/scripts/ui.js`: schakelaar professional of particulier, menu, voorbeeldformulier, verschijnen bij scrollen.
 - `src/styles/site.css`: alle opmaak.
-- `public/posters/`: stilstaande beelden voor bezoekers met "minder beweging" of zonder WebGL.
+- `public/posters/`: stilstaande beelden voor bezoekers met "minder beweging" of zonder WebGL (`tools/posters.cjs`).
+- `public/img/productos/`: productfoto's met doorzichtige achtergrond, gemaakt uit de foto's van de fabrikant.
 - `docs/merk-en-woordenlijst.md`: geverifieerde merkfeiten, Spaanse vakwoordenlijst met bronnen en regels voor cosmeticaclaims.
 - `docs/eindredactie-home-es.md`: rapport van de Spaanse eindredactie, met Nederlandse terugvertaling per zin.
 - `tools/`: schermopnamen en stilstaande beelden maken met Playwright; `texturas.py` maakt texturen en omtrekken uit de productfoto's, `letras.py` haalt de letteromtrekken uit het lettertype.
@@ -36,10 +47,36 @@ npm run build && npm run preview
 node tools/film-shots.cjs http://127.0.0.1:4321/ shots d 1440 900 0,0.3,0.56,0.84 1
 node tools/film-shots.cjs http://127.0.0.1:4321/ shots m 390 844 0,0.3,0.56,0.84 2
 node tools/static-check.cjs http://127.0.0.1:4321/ shots
+node tools/overflow-check.cjs http://127.0.0.1:4321   # koppen en tekst die niet in hun vak passen
 node tools/posters.cjs http://127.0.0.1:4321/ public/posters   # na wijzigingen in de 3D
 ```
 
 De getallen na de schermmaat zijn momenten in de productfilm, van 0 (bovenaan) tot 1 (einde).
+
+## Stand op 21 november 2026, laat
+
+Werk op de tak `ontwerp`; `main` is de openbare link en blijft staan tot D akkoord geeft.
+
+Nieuw in deze ronde:
+
+- Snelheid: schaduwen met PCF in plaats van VSM (VSM tekende elke frame ook de hele vloer in de schaduwkaart), lichtere letters en goedkope reflecties van de letters, CSS-variabelen alleen schrijven als ze veranderen, geen korrel of wazige achtergrond over het 3D-beeld, resolutie hooguit 1,5 en zakt vanzelf als het apparaat het niet bijhoudt, 30 beelden per seconde in rust, film korter (820vh). Op de productpagina laadt three.js pas als de viewer in beeld komt.
+- Mobiel: de camera draait minder zodat de letters recht staan, het slotbeeld toont het woord van voren, feiten en stappen staan in rechte lijsten.
+- Merkelementen: de ribbelrand als zegel boven elk blok, letters die uitrekken (breedte-as van Archivo), een professionele pas die meeschrijft in het aanmeldformulier, een groot BAEHR onderaan dat uitrekt, zachte overgangen tussen pagina's, een deelafbeelding (`public/og.jpg`).
+- Pagina's: home, productpagina met 3D-viewer, merkpagina, winkel, professionals, accountdemo, contact, 404, en een cesta die op elke pagina werkt.
+- Trage apparaten: de film schaalt zichzelf terug als hij het niet bijhoudt (mediaan over 30 beelden): eerst de resolutie tot 0,75, dan de spiegelingen in de vloer, dan de schaduwen. Alle shaders worden bij het laden vooraf gecompileerd, zodat er geen hapering is bij aankomst in een nieuwe stap.
+- Snelheid gemeten (testbrowser zonder grafische kaart, zelfde resolutie): de film is per beeld 2,1 tot 3 keer sneller dan de versie van 21-11 middag.
+- Gecontroleerd: koppen en tekst passen op 360, 390, 820, 1024 en 1440 breed (`tools/overflow-check.cjs`), alle interne links bestaan, toegankelijkheid met axe-core.
+
+Open voor de ontwerpronde van morgen:
+
+- Het slotbeeld op de telefoon is recht maar klein.
+- De 3D kan eliter (D, 21-11); ontwerp alleen op Fable.
+- Spaanse eindredactie van winkel, professionals, contact, cesta en 404 (zie `docs/`).
+- Prijzen ontbreken bewust: die staan niet in de bron.
+- Termijn voor de controle van een professionele aanmelding: bewust weggelaten, want de klant heeft geen termijn genoemd. Een vaste belofte (bijvoorbeeld binnen één werkdag) werkt sterk voor conversie: voorleggen aan de klant en dan terugzetten op home, professionals en in het formulier.
+- Woordkeus winkelmand: overal "cesta" (El Corte Inglés, Fresco Podología); grote beautywinkels zeggen "carrito". Beide goed; niet mengen.
+- Toegankelijkheid (axe-core, WCAG 2.1 A en AA, alle pagina's): geen fouten, op één na. Het grote BAEHR in de voet haalt het contrast niet (2,3 tegen 3,0). Dat is bewust: WCAG stelt geen contrasteis aan een logo of merknaam, en het element is verborgen voor schermlezers.
+- Privacy: het vakje "He leído y acepto la política de privacidad" staat erin; de basisinformatie van de AEPD bij het formulier moet van de jurist van de klant komen.
 
 ## Stand op 21 november 2026 (avond)
 
