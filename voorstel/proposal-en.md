@@ -75,7 +75,7 @@ The shop and the portal are worth €2,000 together. With Shop and SEO, we build
 
 ### The Shopify plan is separate
 
-You pay the Shopify subscription directly to Shopify, separately from our monthly fee. The Basic plan, the first one that includes these trade features, costs around €30 a month, and we'll choose the right plan with you. Shopify also charges a processing fee on each card payment.
+You pay the Shopify subscription directly to Shopify, separately from our monthly fee. Basic, at €21 a month on annual billing, is enough to start with. If several people will work in the shop, Grow costs €59 a month and allows up to five staff accounts. Shopify also charges a processing fee on each card payment.
 
 ### The advertising budget is separate
 

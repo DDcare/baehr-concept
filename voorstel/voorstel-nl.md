@@ -79,7 +79,7 @@ Winkel en portaal hebben samen een waarde van 2.000 euro. Bij "Winkel en SEO" bo
 
 ### Het Shopify-abonnement staat apart
 
-Het abonnement van Shopify betaal je rechtstreeks aan Shopify, los van ons maandbedrag. Het Basic-abonnement, het eerste met deze functies voor professionals, kost ongeveer 30 euro per maand; we kiezen samen het juiste. Shopify rekent daarnaast betaalkosten per kaartbetaling. [Aanname: Valeria betaalt het abonnement zelf. Prijs: de Spaanse prijspagina van Shopify toonde vanaf hier dollars (Basic 39 per maand, 29 bij jaarbetaling); externe bronnen noemen 24 tot 36 euro. Controleer het bedrag op shopify.com/es/precios vanuit Spanje.]
+Het abonnement van Shopify betaal je rechtstreeks aan Shopify, los van ons maandbedrag. Basic, 21 euro per maand bij jaarbetaling, is genoeg om mee te beginnen. Werken er meerdere mensen in de winkel, dan kost Grow 59 euro per maand, met tot vijf medewerkersaccounts. Shopify rekent daarnaast betaalkosten per kaartbetaling. [Besluit D, 22-11: Valeria betaalt zelf, Basic of Grow. Prijzen van de Nederlandse Shopify-pagina bij jaarbetaling; controleer of Spanje dezelfde prijzen heeft.]
 
 ### Het advertentiebudget staat apart
 
@@ -133,7 +133,7 @@ Denis
 - Wat eerder stoppen kost bij "Winkel en SEO" (alleen winkel, geen portaal).
 - 480 euro tot het portaal live is (maand twee), voor elk pakket, ook "Met portaal".
 - Maandrapport vanaf de eerste maand (besluit van Claude: het zit in elk pakket; het oude voorstel noemde de vierde maand).
-- Shopify-abonnement: betaalt Valeria het zelf, en klopt "vanaf ongeveer 30 euro per maand" als je de prijspagina vanuit Spanje bekijkt?
+- Shopify: zijn Basic 21 en Grow 59 euro (jaarbetaling) ook de prijzen in Spanje?
 - Prijs per product voor de 3D-optie (toevoeging aan de opdracht van 21-11; staat nog niet in het voorstel).
 - Periode van de 80 nieuwe afnemers bij Skin Complete (staat er nu bewust niet in).
 - De bevindingen over de huidige site (Duitse winkels in Google, AI-samenvatting, geblokkeerde bots, vertaalfouten, drie verzenddrempels, 43 scripts en 44 stylesheets, 14 velden): uit het oude voorstel en jouw schermafbeeldingen, niet opnieuw gecontroleerd. Klopt er één niet meer, dan schaadt dat het hele stuk.
