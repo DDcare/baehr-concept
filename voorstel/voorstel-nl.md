@@ -62,20 +62,21 @@ Omdat je ons vertelde dat de fabrikant geen strenge eisen stelt aan ontwerp en o
 
 We zetten de producten, bestellingen en klanten over. Wachtwoorden kunnen niet mee naar Shopify, dus bestaande klanten krijgen een mail om hun nieuwe account te activeren. Professionals loggen in op het portaal met een eenmalige code per mail, zonder wachtwoord. Het portaal heeft alles wat in het vorige deel staat, en salons vinden er ook hun facturen en bestelgeschiedenis.
 
-## Vier pakketten die op elkaar stapelen
+## Drie pakketten die op elkaar stapelen
 
 Prijzen per maand, exclusief btw. [Aanname: exclusief btw.]
 
-- Winkel en SEO, 480 euro per maand. De nieuwe winkel op Shopify, vindbaarheid in Google en in AI-antwoorden, teksten, onderhoud en een maandrapport. (Hosting vervalt: die zit in het Shopify-abonnement.)
-- Met portaal, 680 euro per maand. Het vorige plus het portaal voor professionals, dat wij beheren. [Aanname: inhoud van het pakket, en dat wij het portaal beheren.]
-- Met Google Ads, 1.140 euro per maand. Het vorige plus de Google Ads-campagnes, die wij opzetten en beheren. [Aanname: het eigen team beheert de campagnes.]
-- Met social, 1.480 euro per maand. Het vorige plus het beheer van social media en de advertenties op Instagram en Facebook.
+- Winkel en portaal, 540 euro per maand. De nieuwe winkel en het portaal voor professionals op Shopify, dat wij beheren, plus vindbaarheid in Google en in AI-antwoorden, teksten, onderhoud en een maandrapport. (Hosting zit in het Shopify-abonnement.) [Besluit D, 22-11: drie pakketten, 540, 1.020 en 1.560 euro. Aanname: wat "wij beheren het portaal" inhoudt.]
+- Met Google Ads, 1.020 euro per maand. Het vorige plus de Google Ads-campagnes, die wij opzetten en beheren. [Aanname: het eigen team beheert de campagnes.]
+- Met social, 1.560 euro per maand. Het vorige plus het beheer van social media en de advertenties op Instagram en Facebook.
+
+Met Shopify Basic en het minimale advertentiebudget erbij ben je per maand in totaal 561, 1.641 of 2.581 euro kwijt, afhankelijk van het pakket. [Rekenvoorbeeld van Claude: 540 + 21; 1.020 + 21 + 600; 1.560 + 21 + 600 + 400.]
 
 We raden "Met Google Ads" aan. Vindbaarheid kost maanden voordat ze resultaat geeft; advertenties in Google bereiken mensen die al naar producten zoeken veel sneller, en met het portaal live is de aanmelding geen rem meer.
 
 ### Winkel en portaal zonder kosten als we 12 maanden samenwerken
 
-Winkel en portaal hebben samen een waarde van 2.000 euro. Bij "Winkel en SEO" bouwen we alleen de winkel; het portaal zit erin vanaf "Met portaal". Bij 12 maanden samenwerking betaal je daar niets voor. Stop je eerder, dan betaal je het resterende deel naar rato. Voorbeeld: stop je na vier maanden, dan blijven er acht over en betaal je 1.333 euro. [Aanname: naar rato in plaats van een maandbedrag (2.000 / 12 = 166,67). En nog open: wat eerder stoppen kost bij "Winkel en SEO", waar het portaal niet in zit.]
+Winkel en portaal hebben samen een waarde van 2.000 euro. Bij 12 maanden samenwerking betaal je daar niets voor. Stop je eerder, dan betaal je het resterende deel naar rato. Voorbeeld: stop je na vier maanden, dan blijven er acht over en betaal je 1.333 euro. [Aanname: naar rato in plaats van een maandbedrag (2.000 / 12 = 166,67). En nog open: wat eerder stoppen kost bij "Winkel en SEO", waar het portaal niet in zit.]
 
 ### Het Shopify-abonnement staat apart
 
@@ -87,7 +88,7 @@ Wat je aan advertenties uitgeeft, zit niet in het maandbedrag. Je betaalt het re
 
 Omdat er nu geen vast advertentiebudget is, stellen we voor te beginnen met minimaal 600 euro per maand voor Google, vanaf "Met Google Ads". Bij "Met social" komt daar minimaal 400 euro per maand voor Meta bij, samen 1.000 euro. Daarna stellen we het bij op basis van de resultaten in je accounts. [Aanname: deze bedragen.]
 
-De campagnes en social media starten zodra het portaal werkt, in de tweede maand. Eerder zouden advertenties mensen naar het huidige formulier sturen en zou je betalen voor klikken die onderweg blijven hangen. Tot dat moment betaal je 480 euro per maand, welk pakket je ook kiest. [Aanname: dit geldt voor elk pakket, ook "Met portaal".]
+De campagnes en social media starten zodra het portaal werkt, in de tweede maand. Eerder zouden advertenties mensen naar het huidige formulier sturen en zou je betalen voor klikken die onderweg blijven hangen. Tot dat moment betaal je 540 euro per maand, welk pakket je ook kiest. [Aanname: dit geldt voor elk pakket, ook "Met portaal".]
 
 ## We hebben dit al gedaan voor Skin Complete
 
@@ -130,8 +131,7 @@ Denis
 - Advertentiebudget: minimaal 600 euro voor Google vanaf "Met Google Ads", plus minimaal 400 euro voor Meta bij "Met social" (samen 1.000 euro). Het oude voorstel noemde 1.000 euro voor iedereen, maar het aanbevolen pakket heeft geen Meta.
 - Wie de campagnes beheert (eigen team of uitbesteed) en wat "wij beheren het portaal" inhoudt.
 - Btw: prijzen exclusief. Looptijd: geen vaste looptijd, opzegtermijn een maand, terugbetaling naar rato vóór 12 maanden (2.000 / 12 per resterende maand; in de tekst alleen het voorbeeld van 1.333 euro na vier maanden).
-- Wat eerder stoppen kost bij "Winkel en SEO" (alleen winkel, geen portaal).
-- 480 euro tot het portaal live is (maand twee), voor elk pakket, ook "Met portaal".
+- 540 euro (het basisbedrag) tot het portaal live is in maand twee, voor elk pakket.
 - Maandrapport vanaf de eerste maand (besluit van Claude: het zit in elk pakket; het oude voorstel noemde de vierde maand).
 - Shopify: zijn Basic 21 en Grow 59 euro (jaarbetaling) ook de prijzen in Spanje?
 - Prijs per product voor de 3D-optie (toevoeging aan de opdracht van 21-11; staat nog niet in het voorstel).

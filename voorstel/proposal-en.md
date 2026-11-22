@@ -58,20 +58,21 @@ You mentioned that the manufacturer has no strict requirements for design or str
 
 We'll move the products, orders and customers across. Passwords can't be carried over to Shopify, so existing customers will get an email to activate their new account. Professionals sign in to the portal with a one-time code sent to their email, so there's no password to remember. The portal will have everything described in the previous section, and salons will also find their invoices and order history in their account.
 
-## Four packages, each building on the last
+## Three packages, each building on the last
 
 All prices exclude VAT.
 
-- Shop and SEO, €480 a month: the new shop on Shopify, search optimisation for Google and AI assistants, copywriting, maintenance and a monthly report.
-- Plus Portal, €680 a month: all of the above, plus the portal for professionals, which we run for you.
-- Plus Google Ads, €1,140 a month: all of the above, plus Google Ads campaigns, which we set up and manage.
-- Plus Social, €1,480 a month: all of the above, plus social media management and ads on Instagram and Facebook.
+- Shop and Portal, €540 a month: the new shop and the portal for professionals on Shopify, which we run for you, plus search optimisation for Google and AI assistants, copywriting, maintenance and a monthly report.
+- Plus Google Ads, €1,020 a month: all of the above, plus Google Ads campaigns, which we set up and manage.
+- Plus Social, €1,560 a month: all of the above, plus social media management and ads on Instagram and Facebook.
+
+Including Shopify Basic and the minimum advertising budget, your total monthly cost comes to €561, €1,641 or €2,581, depending on the package.
 
 We recommend Plus Google Ads. SEO takes months to pay off, while Google Ads reach people straight away, at the moment they search for your products. And once the portal is live, the sign-up no longer puts anyone off.
 
 ### The shop and portal at no cost if we work together for 12 months
 
-The shop and the portal are worth €2,000 together. With Shop and SEO, we build the shop only; the portal comes with Plus Portal and above. If we work together for 12 months, you pay nothing for them. If you stop earlier, you pay the remaining share pro rata. For example, if you stop after four months, eight months are left and you pay €1,333.
+The shop and the portal are worth €2,000 together. If we work together for 12 months, you pay nothing for them. If you stop earlier, you pay the remaining share pro rata. For example, if you stop after four months, eight months are left and you pay €1,333.
 
 ### The Shopify plan is separate
 
@@ -83,7 +84,7 @@ Ad spend isn't part of the monthly fee. You pay it directly to Google and Meta, 
 
 As you don't have a fixed advertising budget yet, we suggest starting with at least €600 a month on Google. With Plus Social, add at least €400 a month on Meta, so €1,000 in total. We'll then adjust it based on the results in your accounts.
 
-The campaigns and social media start once the portal is live, in month two. Before that, ads would send people to the current form, and you'd be paying for clicks that go nowhere. You pay €480 a month until the portal is live, whichever package you choose.
+The campaigns and social media start once the portal is live, in month two. Before that, ads would send people to the current form, and you'd be paying for clicks that go nowhere. You pay €540 a month until the portal is live, whichever package you choose.
 
 ## We've done this before with Skin Complete
 

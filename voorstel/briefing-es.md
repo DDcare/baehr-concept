@@ -73,32 +73,32 @@ Portaal voor professionals: een salon vraagt in twee minuten een account aan; pr
 - Feit (algemeen, Shopify-community en migratietools): wachtwoorden van een andere winkel kunnen niet naar Shopify mee. Bestaande klanten krijgen een mail om hun account te activeren.
 - Valeria beheert producten, bestellingen, klanten en prijzen zelf in één beheeromgeving van Shopify.
 - Besluit D (22-11): Valeria betaalt het Shopify-abonnement zelf, rechtstreeks aan Shopify, los van ons maandbedrag. We bieden één van twee abonnementen aan. Prijzen volgens de Shopify-prijspagina die D liet zien (Nederlandse pagina, bij jaarbetaling): Basic 21 euro per maand ("voor solo-ondernemers"), Grow 59 euro per maand ("voor kleine teams", tot 5 medewerkersaccounts). Formulering: Basic om mee te beginnen; Grow als er meerdere mensen in de winkel werken. Daarbij komen de betaalkosten van Shopify per transactie; noem die zonder percentage. Prijs in Spanje kan iets afwijken: D controleert.
-- Gevolg voor pakket 1: "hosting" vervalt, want hosting zit in het Shopify-abonnement. Pakket 1 wordt: de nieuwe winkel op Shopify, vindbaarheid in Google en AI-antwoorden, teksten, onderhoud en maandrapport.
+- Gevolg voor pakket 1: "hosting" vervalt, want hosting zit in het Shopify-abonnement.
 - Eigen ontwerp: een eigen Shopify-thema, gemaakt voor BAEHR España, geen gekocht sjabloon.
 - Noem het huidige platform van baehr.com.es niet: dat is niet geverifieerd.
 
-## Pakketten (vast, besloten door D)
+## Pakketten (besluit D, 22-11: drie pakketten)
 
-Elk pakket bevat het vorige. Prijzen per maand, exclusief btw (IVA).
+Elk pakket bevat het vorige. Prijzen per maand, exclusief btw (IVA). Het portaal zit nu in de basis; er is geen pakket zonder portaal meer.
 
-- Pakket 1, 480 euro per maand: nieuwe winkel op Shopify, vindbaarheid in Google en in AI-antwoorden, teksten, onderhoud, maandrapport.
-- Pakket 2, 680 euro per maand: plus het portaal voor professionals, en wij beheren het portaal.
-- Pakket 3, 1.140 euro per maand: plus opzet en beheer van Google Ads-campagnes. Dit is ons advies.
-- Pakket 4, 1.480 euro per maand: plus social media en advertenties op Instagram en Facebook.
+- Pakket 1, 540 euro per maand: nieuwe winkel en portaal voor professionals op Shopify (wij beheren het portaal), vindbaarheid in Google en in AI-antwoorden, teksten, onderhoud, maandrapport.
+- Pakket 2, 1.020 euro per maand: plus opzet en beheer van Google Ads-campagnes. Dit is ons advies.
+- Pakket 3, 1.560 euro per maand: plus social media en advertenties op Instagram en Facebook.
 
-Pakketnamen: kies korte Spaanse namen die laten zien dat er telkens iets bij komt. Eerder gebruikt en bruikbaar: Web y Google, Con portal, Con campañas, Con redes. Beter mag.
+Totaal per maand voor Valeria (oordeel Claude, rekenvoorbeeld met Shopify Basic 21 euro en het minimale advertentiebudget): pakket 1 = 540 + 21 = 561 euro; pakket 2 = 1.020 + 21 + 600 = 1.641 euro; pakket 3 = 1.560 + 21 + 600 + 400 = 2.581 euro. Noem dit als één korte zin na de pakketten.
+
+Pakketnamen: kies korte Spaanse namen die laten zien dat er telkens iets bij komt. De vorige namen waren Tienda y SEO, Con portal, Con Google Ads, Con redes; de basis heeft nu ook het portaal.
 
 Gratis bouw:
 
 - Webwinkel en portaal hebben samen een waarde van 2.000 euro (besluit D, 22-11). Bij een samenwerking van 12 maanden betaalt ze daar niets voor.
 - Stopt ze eerder, dan betaalt ze het resterende deel naar rato: een twaalfde van 2.000 euro per resterende maand. Geen maandbedrag noemen (166,67 is onhandig); wel een voorbeeld: stoppen na vier maanden betekent acht resterende maanden, 1.333 euro.
-- Bij pakket 1 bouwen we alleen de webwinkel; het portaal zit vanaf pakket 2 in het pakket.
 
 Advertentiebudget:
 
 - Staat los van het maandbedrag. Ze betaalt het rechtstreeks aan Google en Meta. De advertentieaccounts blijven van haar.
-- Voorstel om te beginnen: minimaal 600 euro per maand voor Google (vanaf pakket 3). Bij pakket 4 komt daar minimaal 400 euro per maand voor Meta bij, samen 1.000 euro. Pakket 3 heeft geen Meta. Bijstellen op basis van de cijfers in haar eigen accounts.
-- De campagnes en social media starten pas als het portaal live is (tweede maand). Eerder zouden advertenties mensen naar het huidige formulier sturen, dat weinig oplevert. Tot het portaal live is, betaalt ze 480 euro per maand, welk pakket ze ook kiest.
+- Voorstel om te beginnen: minimaal 600 euro per maand voor Google (vanaf pakket 2). Bij pakket 3 komt daar minimaal 400 euro per maand voor Meta bij, samen 1.000 euro. Pakket 2 heeft geen Meta. Bijstellen op basis van de cijfers in haar eigen accounts.
+- De campagnes en social media starten pas als het portaal live is (tweede maand). Eerder zouden advertenties mensen naar het huidige formulier sturen, dat weinig oplevert. Tot het portaal live is (maand twee), betaalt ze het basisbedrag van 540 euro per maand, welk pakket ze ook kiest.
 
 ## Bewijs
 
