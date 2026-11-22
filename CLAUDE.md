@@ -5,7 +5,7 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 ## Afspraken
 
 - Met D in het Nederlands, kort en kritisch. Feit, aanname en oordeel apart.
-- Niets publiceren, versturen of openbaar zetten zonder akkoord van D. De openbare link baehr-concept.vercel.app toont `main` (openbaar met akkoord van D, 21-11; nieuwe versie erop met akkoord, 22-11). Werk op de tak `ontwerp` (preview achter de Vercel-login) en zet het pas op `main` met akkoord van D per keer.
+- Niets publiceren, versturen of openbaar zetten zonder akkoord van D. De openbare link baehr-concept.vercel.app toont `main` (openbaar met akkoord van D, 21-11; nieuwe versie erop met akkoord, 22-11; de derde ronde erop met akkoord, 22-11 avond). Werk op de tak `ontwerp` (preview achter de Vercel-login) en zet het pas op `main` met akkoord van D per keer.
 - Niets ophalen van baehr.com.es: de site zit achter een botfilter. Werk met schermafbeeldingen van D.
 - Na elk afgerond onderdeel committen. Geen node_modules of buildmappen in git.
 
@@ -63,5 +63,5 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 ## Derde ronde (22 november 2026, avond), akkoord van D op het voorstel
 
 - Letterlijk van D: "Het moet allemaal uniek strak elite zijn, eigen identiteit speels maar professioneel geen vierkante blokken", "Ze moeten morgen flabbergasted zijn van de site". Kopen tijdens de film moet kunnen; de productpagina op telefoon moest gefixt.
-- Gebouwd op `ontwerp` (D heeft het nog niet beoordeeld, niet op `main`): studiobeelden door de hele site, tubevormige blokken, productpagina met galerij en een koopbalk die op telefoon meteen zichtbaar is en bij de voet verdwijnt, film van 520vh met een vaste knop "Añadir a la cesta" die het product van de getoonde stap in de cesta legt.
+- Gebouwd op `ontwerp` en met akkoord van D op 22-11 's avonds ook op `main` gezet (de openbare link): studiobeelden door de hele site, tubevormige blokken, productpagina met galerij en een koopbalk die op telefoon meteen zichtbaar is en bij de voet verdwijnt, film van 520vh met een vaste knop "Añadir a la cesta" die het product van de getoonde stap in de cesta legt.
 - Onderzoek en voorstel: `docs/onderzoek-sites.md`. Overdracht voor het vervolg op een ander model: `docs/OVERDRACHT.md`.
