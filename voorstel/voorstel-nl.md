@@ -73,7 +73,7 @@ We raden "Met Google Ads" aan. Vindbaarheid kost maanden voordat ze resultaat ge
 
 ### Winkel en portaal zonder kosten als we 12 maanden samenwerken
 
-Winkel en portaal hebben samen een waarde van 1.500 euro. Bij "Winkel en SEO" bouwen we alleen de winkel; het portaal zit erin vanaf "Met portaal". Bij 12 maanden samenwerking betaal je daar niets voor. Stop je eerder, dan betaal je 125 euro voor elke maand die nog over is tot 12. Voorbeeld: stoppen na vier maanden kost 8 x 125 = 1.000 euro. [Aanname: wat eerder stoppen kost bij "Winkel en SEO", waar het portaal niet in zit. De tekst noemt alleen de 1.500 euro voor beide samen.]
+Winkel en portaal hebben samen een waarde van 2.000 euro. Bij "Winkel en SEO" bouwen we alleen de winkel; het portaal zit erin vanaf "Met portaal". Bij 12 maanden samenwerking betaal je daar niets voor. Stop je eerder, dan betaal je het resterende deel naar rato. Voorbeeld: stop je na vier maanden, dan blijven er acht over en betaal je 1.333 euro. [Aanname: naar rato in plaats van een maandbedrag (2.000 / 12 = 166,67). En nog open: wat eerder stoppen kost bij "Winkel en SEO", waar het portaal niet in zit.]
 
 ### Het advertentiebudget staat apart
 
@@ -81,7 +81,7 @@ Wat je aan advertenties uitgeeft, zit niet in het maandbedrag. Je betaalt het re
 
 Omdat er nu geen vast advertentiebudget is, stellen we voor te beginnen met minimaal 600 euro per maand voor Google, vanaf "Met Google Ads". Bij "Met social" komt daar minimaal 400 euro per maand voor Meta bij, samen 1.000 euro. Daarna stellen we het bij op basis van de resultaten in je accounts. [Aanname: deze bedragen.]
 
-De campagnes en social media starten zodra het portaal werkt, in de tweede of derde maand. Eerder zouden advertenties mensen naar het huidige formulier sturen en zou je betalen voor klikken die onderweg blijven hangen. Tot dat moment betaal je 480 euro per maand, welk pakket je ook kiest. [Aanname: dit geldt voor elk pakket, ook "Met portaal".]
+De campagnes en social media starten zodra het portaal werkt, in de tweede maand. Eerder zouden advertenties mensen naar het huidige formulier sturen en zou je betalen voor klikken die onderweg blijven hangen. Tot dat moment betaal je 480 euro per maand, welk pakket je ook kiest. [Aanname: dit geldt voor elk pakket, ook "Met portaal".]
 
 ## We hebben dit al gedaan voor Skin Complete
 
@@ -91,16 +91,15 @@ Met de site en het portaal kregen ze er 80 nieuwe zakelijke klanten bij, kliniek
 
 ## Hoe de eerste maanden eruitzien
 
-In de eerste maand zetten we de metingen op, openen we de site voor zoekmachines en AI-bots en ontwerpen we de nieuwe winkel. Het maandrapport begint diezelfde maand.
+In de eerste twee weken zetten we de metingen op, openen we de site voor zoekmachines en AI-bots en ontwerpen we de nieuwe winkel. In week drie en vier gaat de winkel live, met de herziene catalogus en de seminarpagina's. Het maandrapport begint in de eerste maand.
 
-In de tweede en derde maand gaan de winkel en het portaal live, met de herziene catalogus en de seminarpagina's. Zodra het portaal werkt, starten, afhankelijk van je pakket, de advertenties en social media.
+In de tweede maand gaat het portaal live en publiceren we de pagina's per dienst. Vanaf dan starten, afhankelijk van je pakket, de advertenties en social media. (Planning: besluit D, 22-11.)
 
-Vanaf de vierde maand publiceren we de pagina's per dienst. [Aanname: planning uit het oude voorstel, aangepast door Claude zodat campagnes starten zodra het portaal live is.]
 
 ## Voorwaarden en wat we van je nodig hebben
 
 - Prijzen exclusief btw.
-- Je kunt opzeggen wanneer je wilt, met een maand opzegtermijn. Stop je vóór 12 maanden, dan betaal je alleen het resterende deel van winkel en portaal: 125 euro voor elke maand die nog over is. [Aanname: geen vaste looptijd en een maand opzegtermijn; besluit van Claude op basis van de afspraak "125 euro per resterende maand bij eerder opzeggen".]
+- Je kunt opzeggen wanneer je wilt, met een maand opzegtermijn. Stop je vóór 12 maanden, dan betaal je alleen het resterende deel van winkel en portaal, naar rato. [Aanname: geen vaste looptijd en een maand opzegtermijn; besluit van Claude op basis van de afspraak "125 euro per resterende maand bij eerder opzeggen".]
 - Het maandrapport bevat deze cijfers: aanmeldingen, eerste bestellingen, herhaalbestellingen en kosten per nieuwe klant.
 - We garanderen geen posities in Google en geen bepaald aantal bezoekers.
 
@@ -121,13 +120,14 @@ Denis
 ## Te bevestigen door D vóór verzending
 
 - Naam van het bureau als afzender.
-- Hoe Valeria het prototype kan openen (de preview zit achter de Vercel-login).
+- De link naar het prototype in de tekst zetten: baehr-concept.vercel.app staat sinds 22-11 openbaar met jouw akkoord. Nu staat er alleen "we sturen je de link".
 - Advertentiebudget: minimaal 600 euro voor Google vanaf "Met Google Ads", plus minimaal 400 euro voor Meta bij "Met social" (samen 1.000 euro). Het oude voorstel noemde 1.000 euro voor iedereen, maar het aanbevolen pakket heeft geen Meta.
 - Wie de campagnes beheert (eigen team of uitbesteed) en wat "wij beheren het portaal" inhoudt.
-- Btw: prijzen exclusief. Looptijd: geen vaste looptijd, opzegtermijn een maand, terugbetaling 125 euro per resterende maand vóór 12 maanden.
+- Btw: prijzen exclusief. Looptijd: geen vaste looptijd, opzegtermijn een maand, terugbetaling naar rato vóór 12 maanden (2.000 / 12 per resterende maand; in de tekst alleen het voorbeeld van 1.333 euro na vier maanden).
 - Wat eerder stoppen kost bij "Winkel en SEO" (alleen winkel, geen portaal).
-- 480 euro tot het portaal live is (maand twee of drie), voor elk pakket, ook "Met portaal". Campagnes en social media starten op dat moment, niet in maand vier zoals het oude voorstel zei.
+- 480 euro tot het portaal live is (maand twee), voor elk pakket, ook "Met portaal".
 - Maandrapport vanaf de eerste maand (besluit van Claude: het zit in elk pakket; het oude voorstel noemde de vierde maand).
+- Prijs per product voor de 3D-optie (toevoeging aan de opdracht van 21-11; staat nog niet in het voorstel).
 - Periode van de 80 nieuwe afnemers bij Skin Complete (staat er nu bewust niet in).
 - De bevindingen over de huidige site (Duitse winkels in Google, AI-samenvatting, geblokkeerde bots, vertaalfouten, drie verzenddrempels, 43 scripts en 44 stylesheets, 14 velden): uit het oude voorstel en jouw schermafbeeldingen, niet opnieuw gecontroleerd. Klopt er één niet meer, dan schaadt dat het hele stuk.
 - "Distribuidor oficial": Valeria laten bevestigen dat ze dat mag voeren.

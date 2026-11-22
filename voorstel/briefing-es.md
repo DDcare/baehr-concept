@@ -78,15 +78,15 @@ Pakketnamen: kies korte Spaanse namen die laten zien dat er telkens iets bij kom
 
 Gratis bouw:
 
-- Webwinkel en portaal hebben samen een waarde van 1.500 euro. Bij een samenwerking van 12 maanden betaalt ze daar niets voor.
-- Stopt ze eerder, dan betaalt ze 125 euro per resterende maand. Voorbeeld: stoppen na 4 maanden betekent 8 x 125 = 1.000 euro.
+- Webwinkel en portaal hebben samen een waarde van 2.000 euro (besluit D, 22-11). Bij een samenwerking van 12 maanden betaalt ze daar niets voor.
+- Stopt ze eerder, dan betaalt ze het resterende deel naar rato: een twaalfde van 2.000 euro per resterende maand. Geen maandbedrag noemen (166,67 is onhandig); wel een voorbeeld: stoppen na vier maanden betekent acht resterende maanden, 1.333 euro.
 - Bij pakket 1 bouwen we alleen de webwinkel; het portaal zit vanaf pakket 2 in het pakket.
 
 Advertentiebudget:
 
 - Staat los van het maandbedrag. Ze betaalt het rechtstreeks aan Google en Meta. De advertentieaccounts blijven van haar.
 - Voorstel om te beginnen: minimaal 600 euro per maand voor Google (vanaf pakket 3). Bij pakket 4 komt daar minimaal 400 euro per maand voor Meta bij, samen 1.000 euro. Pakket 3 heeft geen Meta. Bijstellen op basis van de cijfers in haar eigen accounts.
-- De campagnes en social media starten pas als het portaal live is (tweede of derde maand). Eerder zouden advertenties mensen naar het huidige formulier sturen, dat weinig oplevert. Tot het portaal live is, betaalt ze 480 euro per maand, welk pakket ze ook kiest.
+- De campagnes en social media starten pas als het portaal live is (tweede maand). Eerder zouden advertenties mensen naar het huidige formulier sturen, dat weinig oplevert. Tot het portaal live is, betaalt ze 480 euro per maand, welk pakket ze ook kiest.
 
 ## Bewijs
 
@@ -94,14 +94,13 @@ Skin Complete (Nederland, skincomplete.eu): merk van ledmaskers en huidverzorgin
 
 ## Planning
 
-- Eerste maand: metingen opzetten, toegang voor zoek- en AI-robots, ontwerp van de nieuwe winkel. Het maandrapport begint deze maand (het zit in elk pakket).
-- Tweede en derde maand: winkel en portaal live, catalogus, seminarpagina's. Zodra het portaal live is, starten campagnes en social media (afhankelijk van het pakket).
-- Vanaf de vierde maand: pagina's per dienst.
+- Eerste maand, eerste twee weken: metingen opzetten, toegang voor zoek- en AI-robots, ontwerp van de nieuwe winkel. Eerste maand, laatste twee weken: de winkel gaat live. Het maandrapport begint deze maand (het zit in elk pakket). (Besluit D, 22-11.)
+- Tweede maand: het portaal gaat live en de pagina's per dienst worden gepubliceerd. Vanaf dan starten campagnes en social media (afhankelijk van het pakket). (Besluit D, 22-11.) Catalogus en seminarpagina's horen bij de lancering van de winkel.
 
 ## Voorwaarden
 
 - Prijzen exclusief IVA.
-- Geen vaste looptijd. Gebruik NIET "sin permanencia": in Spanje betekent permanencia juist een minimale looptijd met een vergoeding bij eerder stoppen. Altijd opzegbaar met een maand opzegtermijn. De enige voorwaarde is de terugbetaling hierboven: winkel en portaal zijn gratis na 12 maanden samenwerking; wie eerder stopt, betaalt 125 euro per resterende maand.
+- Geen vaste looptijd. Gebruik NIET "sin permanencia": in Spanje betekent permanencia juist een minimale looptijd met een vergoeding bij eerder stoppen. Altijd opzegbaar met een maand opzegtermijn. De enige voorwaarde is de terugbetaling hierboven: winkel en portaal zijn gratis na 12 maanden samenwerking; wie eerder stopt, betaalt het resterende deel naar rato.
 - Maandrapport in cijfers: aanmeldingen van professionals, eerste bestellingen, herhaalbestellingen, kosten per nieuwe klant.
 - Wat we van haar nodig hebben: drie cijfers (hoeveel professionals zich per maand aanmelden, hoeveel daarvan bestellen, gemiddeld orderbedrag); leestoegang tot Google Search Console en haar statistieken; bij een pakket met campagnes beheertoegang tot haar advertentieaccounts. Accounts en inloggegevens blijven van haar.
 - Geen garantie op posities of bezoekers.

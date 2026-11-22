@@ -69,7 +69,7 @@ We recommend Plus Google Ads. SEO takes months to pay off, while Google Ads reac
 
 ### The shop and portal at no cost if we work together for 12 months
 
-The shop and the portal are worth €1,500 together. With Shop and SEO, we build the shop only; the portal comes with Plus Portal and above. If we work together for 12 months, you pay nothing for them. If you stop earlier, you pay €125 for each month left until month 12. For example, if you stop after four months, you pay for the eight months left: 8 × €125 = €1,000.
+The shop and the portal are worth €2,000 together. With Shop and SEO, we build the shop only; the portal comes with Plus Portal and above. If we work together for 12 months, you pay nothing for them. If you stop earlier, you pay the remaining share pro rata. For example, if you stop after four months, eight months are left and you pay €1,333.
 
 ### The advertising budget is separate
 
@@ -77,7 +77,7 @@ Ad spend isn't part of the monthly fee. You pay it directly to Google and Meta, 
 
 As you don't have a fixed advertising budget yet, we suggest starting with at least €600 a month on Google. With Plus Social, add at least €400 a month on Meta, so €1,000 in total. We'll then adjust it based on the results in your accounts.
 
-The campaigns and social media start once the portal is live, in month two or three. Before that, ads would send people to the current form, and you'd be paying for clicks that go nowhere. You pay €480 a month until the portal is live, whichever package you choose.
+The campaigns and social media start once the portal is live, in month two. Before that, ads would send people to the current form, and you'd be paying for clicks that go nowhere. You pay €480 a month until the portal is live, whichever package you choose.
 
 ## We've done this before with Skin Complete
 
@@ -85,18 +85,16 @@ Skin Complete (skincomplete.eu) is a Dutch brand of LED masks and skincare that 
 
 With the new site and portal, they've gained 80 new trade customers (clinics and beauty salons). The brand now works with businesses in the Netherlands, Belgium and Curaçao. It's essentially the model we're proposing for BAEHR España.
 
-## The first few months
+## The first two months
 
-In month one, we'll set up analytics, open the site to search engines and AI bots, and design the new shop. Your monthly report starts that month.
+In the first two weeks, we'll set up analytics, open the site to search engines and AI bots, and design the new shop. In weeks three and four, the shop goes live, with the revised catalogue and the seminar pages. Your monthly report starts in month one.
 
-In months two and three, we'll launch the shop and the portal, with the revised catalogue and the seminar pages. Once the portal is live, the campaigns and social media start, depending on your package.
-
-From month four, we'll publish the service pages.
+In month two, the portal goes live and we publish the service pages. From then on, the campaigns and social media start, depending on your package.
 
 ## Terms and what we need from you
 
 - All prices exclude VAT.
-- You can stop at any time with one month's notice. If you stop before 12 months, you only pay off the rest of the shop and portal: €125 for each month left.
+- You can stop at any time with one month's notice. If you stop before 12 months, you only pay the remaining share of the shop and portal, pro rata.
 - The monthly report covers sign-ups, first orders, repeat orders and the cost per new customer.
 - We don't guarantee Google rankings or a specific number of visits.
 
