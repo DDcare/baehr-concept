@@ -1,19 +1,13 @@
 ---
 // Página "La marca". Tekst: redactor-es (21-11). Feiten alleen uit docs/merk-en-woordenlijst.md, deel A.
 import Base from '../layouts/Base.astro';
+import { MARCAS } from '../data/marcas';
 
 const title = 'BAEHR, empresa familiar alemana desde 1949 | BAEHR España';
 const description =
   'BAEHR, empresa familiar alemana fundada en 1949 en Waiblingen: su historia, sus seis marcas y su distribución oficial en España.';
 
-const worlds = [
-  { n: 'PEDIBAEHR', t: 'El cuidado de los pies: cremas, espumas, exfoliantes, baños y mascarillas.' },
-  { n: 'BAEHR BEAUTY CONCEPT', t: 'Un sistema de cuidado para el salón de belleza, con series como Aloe Vera, Detox o Time Expert.' },
-  { n: 'BAEHR BEAUTY CONCEPT NAILS', t: 'Para el diseño de uñas.' },
-  { n: 'BAEHR Instrumental y Fresas', t: 'Instrumental de las líneas PODOLINE y ECO, además de fresas.' },
-  { n: 'BAEHR Equipamiento y Tecnología', t: 'Aparatos con aspiración o con spray para el cuidado de los pies, como BAEHR TEC A2000 y BAEHR PUR.' },
-  { n: 'BAEHR Higiene', t: 'Productos de higiene, también de marca propia.' }
-];
+const worlds = MARCAS;
 // La historia en cuatro fechas: las mismas frases de siempre, partidas por año
 const era = [
   { y: '1949', t: 'Gustav Baehr, comerciante de Hamburgo, fundó en 1949 en Waiblingen la empresa Technik Baehr. Sus primeros clientes fueron orfebres y dentistas; los profesionales de la pedicura y la estética llegaron después.' },

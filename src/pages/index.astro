@@ -6,6 +6,7 @@ import { PRODUCTOS, enlace } from '../data/productos';
 const title = 'BAEHR España | Cosmética profesional para pies, manos y uñas';
 const description =
   'Cosmética profesional para pies, manos y uñas de la marca alemana BAEHR. Distribuidor oficial en España para salones, podólogos y particulares.';
+import { MARCAS } from '../data/marcas';
 ---
 
 <Base title={title} description={description} page="home">
@@ -128,11 +129,20 @@ const description =
         </div>
       </section>
 
-      <section class="shop" id="tienda" aria-labelledby="tienda-h">
-        <div class="seal" aria-hidden="true"></div>
+      <div class="cinta" aria-hidden="true">
+        <div class="cinta__track">
+          {[0, 1].map(() => MARCAS.map((m) => <span>{m.n}</span>))}
+        </div>
+      </div>
+
+      <section class="shop shop--bloque" id="tienda" aria-labelledby="tienda-h">
         <div class="shop__head">
           <h2 class="h2 rv" id="tienda-h">Los cinco, de un&nbsp;vistazo</h2>
-          <p class="lead rv">Por orden de uso, del baño de pies a la crema en espuma.</p>
+          <div class="shop__side">
+            <p class="lead rv">Por orden de uso, del baño de pies a la crema en espuma.</p>
+            <a class="pill pill--white rv" href="/profesionales/#pedido-rapido" data-when="pro">Pedir los cinco productos</a>
+            <a class="pill pill--white rv" href="/tienda/" data-when="home">Comprar los cinco productos</a>
+          </div>
         </div>
         <ul class="shop__row">
           <li class="card rv">
@@ -180,6 +190,23 @@ const description =
               <span class="card__go">Ver la ficha</span>
             </a>
           </li>
+        </ul>
+      </section>
+
+      <section class="casas casas--home" aria-labelledby="casas-h">
+        <div class="casas__head">
+          <h2 class="h2 rv" id="casas-h">Seis marcas de la&nbsp;casa</h2>
+          <p class="lead rv">Todo lo que BAEHR firma con su nombre se reparte en seis marcas.</p>
+        </div>
+        <ul class="casas__grid">
+          {
+            MARCAS.map((w) => (
+              <li class="casa rv">
+                <span class="casa__n">{w.n}</span>
+                <span class="casa__t">{w.t}</span>
+              </li>
+            ))
+          }
         </ul>
       </section>
 
