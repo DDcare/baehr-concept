@@ -22,7 +22,7 @@ while i < len(lines):
         items=[]
         while i < len(lines) and lines[i].startswith('- '):
             items.append(lines[i][2:]); i+=1
-        if section.startswith('Four packages'):
+        if 'packages, each building' in section:
             cards=[]
             for it in items:
                 m = re.match(r'([^,]+), (€[\d,]+) a month: (.*)', it)

@@ -18,7 +18,7 @@ p{margin:0 0 3mm;orphans:3;widows:3}
 ul{list-style:none;padding:0;margin:0 0 4mm}
 li{position:relative;padding:0 0 0 7mm;margin:0 0 2.6mm;break-inside:avoid}
 li::before{content:"";position:absolute;left:0;top:.55em;width:3.6mm;height:1.6mm;border-radius:.8mm;background:var(--red)}
-.pkgs{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin:4mm 0 5mm;break-inside:avoid}
+.pkgs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:3mm;margin:4mm 0 5mm;break-inside:avoid}
 .pkg{background:var(--white);border-radius:5mm;padding:5mm 4mm 5mm;display:flex;flex-direction:column;border:1pt solid var(--line)}
 .pkg.rec{background:var(--red);color:var(--white);border-color:var(--red)}
 .pkg .tag{font-family:"Newsreader",serif;font-style:italic;font-size:9.5pt;height:5mm;line-height:5mm;margin:0 0 1.5mm;white-space:nowrap}
