@@ -56,7 +56,7 @@ Daarvoor kan elke salon snel bestellen vanaf een productlijst, een eerdere beste
 
 ## De winkel en het portaal
 
-De nieuwe winkel en het portaal komen allebei op Shopify. Je beheert producten, bestellingen, klanten en prijzen zelf, vanuit één beheeromgeving. De functies die professionals nodig hebben, zoals bedrijfsaccounts, professionele prijslijsten, nabestellen en betaaltermijnen, zitten standaard in elk betaald Shopify-abonnement, ook het goedkoopste. (Feit: help.shopify.com/en/manual/b2b en de B2B-pagina van Shopify, bijgewerkt 14-10-2026. Buiten Plus maximaal drie prijscatalogi.)
+De nieuwe winkel en het portaal komen allebei op Shopify. Je beheert producten, bestellingen, klanten en prijzen zelf, vanuit één beheeromgeving. De basis van zo'n portaal, zoals bedrijfsaccounts, professionele prijslijsten, nabestellen en betaaltermijnen, zit standaard in Shopify vanaf het Basic-abonnement. (Het nog goedkopere Starter-abonnement heeft geen B2B.) (Feit: help.shopify.com/en/manual/b2b en de B2B-pagina van Shopify, bijgewerkt 14-10-2026. Buiten Plus maximaal drie prijscatalogi.)
 
 Omdat je ons vertelde dat de fabrikant geen strenge eisen stelt aan ontwerp en opbouw, maken we een eigen Shopify-thema voor BAEHR España in plaats van een gekocht sjabloon. De catalogus komt in correct Spaans, met de woorden uit de branche, en de winkel laadt snel op de telefoon. Er komt één minimumbedrag voor gratis verzending en duidelijke levertijden.
 
@@ -79,7 +79,7 @@ Winkel en portaal hebben samen een waarde van 2.000 euro. Bij "Winkel en SEO" bo
 
 ### Het Shopify-abonnement staat apart
 
-Het abonnement van Shopify betaal je rechtstreeks aan Shopify, los van ons maandbedrag. Abonnementen beginnen bij ongeveer 30 euro per maand; we kiezen samen het juiste. Shopify rekent daarnaast betaalkosten per kaartbetaling. [Aanname: Valeria betaalt het abonnement zelf. Prijs: de Spaanse prijspagina van Shopify toonde vanaf hier dollars (Basic 39 per maand, 29 bij jaarbetaling); externe bronnen noemen 24 tot 36 euro. Controleer het bedrag op shopify.com/es/precios vanuit Spanje.]
+Het abonnement van Shopify betaal je rechtstreeks aan Shopify, los van ons maandbedrag. Het Basic-abonnement, het eerste met deze functies voor professionals, kost ongeveer 30 euro per maand; we kiezen samen het juiste. Shopify rekent daarnaast betaalkosten per kaartbetaling. [Aanname: Valeria betaalt het abonnement zelf. Prijs: de Spaanse prijspagina van Shopify toonde vanaf hier dollars (Basic 39 per maand, 29 bij jaarbetaling); externe bronnen noemen 24 tot 36 euro. Controleer het bedrag op shopify.com/es/precios vanuit Spanje.]
 
 ### Het advertentiebudget staat apart
 

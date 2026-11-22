@@ -54,7 +54,7 @@ Para eso, cada centro podrá hacer un pedido rápido desde una lista de producto
 
 Montaremos la tienda y el portal en Shopify. La tienda nueva sustituirá a la web actual, y a ella migraremos los productos, los pedidos y los clientes. Desde un único panel podrás gestionar directamente los productos, los pedidos, los clientes y los precios. Como nos contaste que el fabricante no impone requisitos estrictos de diseño ni de estructura, haremos un tema de Shopify propio, pensado para BAEHR España, y no una plantilla comprada. El catálogo estará en un español correcto, con el vocabulario del sector, y la tienda cargará rápido en el móvil. Habrá un solo importe mínimo para el envío gratuito y plazos de entrega claros.
 
-El portal será la zona privada para profesionales, con todo lo que hemos contado en el apartado anterior. Cada centro tendrá también en su cuenta las facturas y el historial de pedidos. Lo que necesita un portal así (cuentas de empresa, precios profesionales, repetición de pedidos y condiciones de pago) viene de serie en todos los planes de pago de Shopify, también en el más económico.
+El portal será la zona privada para profesionales, con todo lo que hemos contado en el apartado anterior. Cada centro tendrá también en su cuenta las facturas y el historial de pedidos. La base de un portal así (cuentas de empresa, precios profesionales, repetición de pedidos y condiciones de pago) viene de serie en Shopify a partir del plan Basic.
 
 Con el cambio hay algo que conviene saber: las contraseñas de la web actual no se pueden pasar a Shopify. Por eso, los clientes que ya tienen cuenta recibirán un correo para activarla en la tienda nueva. Los profesionales entrarán con un código de un solo uso que les llega por correo, sin contraseña.
 
@@ -75,7 +75,7 @@ La tienda y el portal suman un valor de 2.000 €. En «Tienda y SEO» construi
 
 ### Lo que pagas directamente a Shopify
 
-El plan de Shopify lo pagas directamente a Shopify, fuera de nuestra cuota. Cuesta desde unos 30 € al mes, y elegiremos juntos el que mejor encaje. A eso se suman las comisiones que cobra Shopify por cada pago.
+El plan de Shopify lo pagas directamente a Shopify, fuera de nuestra cuota. El plan Basic, el primero que incluye estas funciones para profesionales, cuesta unos 30 € al mes, y elegiremos juntos el que mejor encaje. A eso se suman las comisiones que cobra Shopify por cada pago.
 
 ### El presupuesto de anuncios va aparte
 

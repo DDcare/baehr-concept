@@ -52,7 +52,7 @@ To help, each salon can order quickly from a product list, repeat a previous ord
 
 ## The shop and the portal
 
-The new shop and the portal will both run on Shopify. You'll manage products, orders, customers and prices yourself, from one dashboard. The features professionals need, such as company accounts, trade price lists, reordering and payment terms, come as standard with every paid Shopify plan, including the cheapest.
+The new shop and the portal will both run on Shopify. You'll manage products, orders, customers and prices yourself, from one dashboard. The basics a trade portal needs, such as company accounts, trade price lists, reordering and payment terms, come as standard with Shopify from the Basic plan upwards.
 
 You mentioned that the manufacturer has no strict requirements for design or structure, so we'll build a Shopify theme of its own for BAEHR España instead of using an off-the-shelf template. The catalogue will be in proper Spanish, in the terms professionals use, and the shop will load quickly on phones. Free delivery will start at one amount, the same everywhere, and delivery times will be clear.
 
@@ -75,7 +75,7 @@ The shop and the portal are worth €2,000 together. With Shop and SEO, we build
 
 ### The Shopify plan is separate
 
-You pay the Shopify subscription directly to Shopify, separately from our monthly fee. Plans start at around €30 a month, and we'll choose the right one with you. Shopify also charges a processing fee on each card payment.
+You pay the Shopify subscription directly to Shopify, separately from our monthly fee. The Basic plan, the first one that includes these trade features, costs around €30 a month, and we'll choose the right plan with you. Shopify also charges a processing fee on each card payment.
 
 ### The advertising budget is separate
 
