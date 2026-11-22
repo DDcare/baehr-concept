@@ -15,6 +15,7 @@ const chapters = sticky ? Array.from(sticky.querySelectorAll('.chap')) : [];
 const finale = sticky?.querySelector('.fin');
 const stepper = sticky?.querySelector('.stepper');
 const stepButtons = stepper ? Array.from(stepper.querySelectorAll('button')) : [];
+const skip = sticky?.querySelector('.film__skip');
 
 const clamp01 = (v) => Math.min(1, Math.max(0, v));
 const seg = (p, a, b) => clamp01((p - a) / (b - a));
@@ -131,6 +132,15 @@ function shotAt(p, keys) {
 
 function staticFallback() {
   html.classList.add('film-static');
+  // sin película, los enlaces al protocolo llevan al panel de cada paso
+  document.querySelectorAll('[data-go-step]').forEach((a) =>
+    a.addEventListener('click', (e) => {
+      const panel = chapters[Number(a.dataset.goStep) || 0];
+      if (!panel) return;
+      e.preventDefault();
+      panel.scrollIntoView({ block: 'start' });
+    })
+  );
 }
 
 function init() {
@@ -151,8 +161,7 @@ function init() {
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.NeutralToneMapping;
   renderer.toneMappingExposure = 0.96;
-  renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = THREE.PCFShadowMap;
+  // Sin mapa de sombras: las sombras de contacto bajo cada envase dan el apoyo, y se ahorra una pasada entera por imagen
 
   const scene = new THREE.Scene();
   scene.fog = new THREE.Fog(STUDIO, 14, 40);
@@ -189,27 +198,9 @@ function init() {
 
   scene.add(new THREE.HemisphereLight(0xffffff, 0x8c1622, 0.3));
   const key = new THREE.DirectionalLight(0xffffff, 1.9);
-  key.castShadow = true;
-  key.shadow.mapSize.set(LIGHT ? 768 : 1024, LIGHT ? 768 : 1024);
-  key.shadow.camera.near = 1;
-  key.shadow.camera.far = 60;
-  key.shadow.radius = 3;
-  key.shadow.bias = -0.0006;
-  key.shadow.normalBias = 0.03;
   scene.add(key, key.target);
   const rim = new THREE.DirectionalLight(0xfff1ea, 2.4);
   scene.add(rim, rim.target);
-  let shadowHalf = 0;
-  function shadowArea(half) {
-    if (Math.abs(half - shadowHalf) < 0.05) return;
-    shadowHalf = half;
-    const c = key.shadow.camera;
-    c.left = -half;
-    c.right = half;
-    c.top = half;
-    c.bottom = -half;
-    c.updateProjectionMatrix();
-  }
 
   // ---------- Envases ----------
   let loaded = false;
@@ -230,48 +221,86 @@ function init() {
 
   // ---------- Estudio ----------
   // El fondo y la niebla tienen exactamente el mismo color, así el suelo se funde con el fondo sin línea de horizonte
-  const dome = new THREE.Mesh(
-    new THREE.SphereGeometry(180, 32, 16),
-    new THREE.MeshBasicMaterial({ color: STUDIO, side: THREE.BackSide, fog: false, depthWrite: false, toneMapped: false })
-  );
+  // El resplandor del fondo va dentro del propio fondo, y la mancha de luz dentro del propio suelo:
+  // dos capas a pantalla completa en lugar de cuatro (lo que más pesaba en equipos modestos).
+  const uGlow = { value: new THREE.Vector3(0, 6.5, -14) }; // centro del resplandor, en un plano vertical al fondo
+  const uGlowSize = { value: new THREE.Vector2(20, 9) }; // medio ancho y medio alto
+  const domeMat = new THREE.MeshBasicMaterial({ color: STUDIO, side: THREE.BackSide, fog: false, depthWrite: false, toneMapped: false });
+  domeMat.onBeforeCompile = (sh) => {
+    sh.uniforms.uGlow = uGlow;
+    sh.uniforms.uGlowSize = uGlowSize;
+    sh.vertexShader =
+      'varying vec3 vDomeW;\n' + sh.vertexShader.replace('#include <begin_vertex>', '#include <begin_vertex>\n  vDomeW = (modelMatrix * vec4(position, 1.0)).xyz;');
+    sh.fragmentShader =
+      'uniform vec3 uGlow;\nuniform vec2 uGlowSize;\nvarying vec3 vDomeW;\n' +
+      sh.fragmentShader.replace(
+        '#include <colorspace_fragment>',
+        `#include <colorspace_fragment>
+        {
+          vec3 gd = normalize(vDomeW - cameraPosition);
+          if (gd.z < -0.0001) {
+            float gt = (uGlow.z - cameraPosition.z) / gd.z;
+            vec2 gp = cameraPosition.xy + gd.xy * gt;
+            float gr = length((gp - uGlow.xy) / uGlowSize);
+            vec3 gc;
+            float ga;
+            if (gr < 0.4) {
+              float k = gr / 0.4;
+              gc = mix(vec3(0.690, 0.071, 0.141), vec3(0.549, 0.051, 0.110), k);
+              ga = mix(0.7, 0.36, k);
+            } else if (gr < 0.8) {
+              float k = (gr - 0.4) / 0.4;
+              gc = mix(vec3(0.549, 0.051, 0.110), vec3(0.408, 0.035, 0.078), k);
+              ga = mix(0.36, 0.07, k);
+            } else {
+              float k = clamp((gr - 0.8) / 0.2, 0.0, 1.0);
+              gc = mix(vec3(0.408, 0.035, 0.078), vec3(0.353, 0.027, 0.063), k);
+              ga = mix(0.07, 0.0, k);
+            }
+            gl_FragColor.rgb = mix(gl_FragColor.rgb, gc, ga);
+          }
+        }`
+      );
+  };
+  const dome = new THREE.Mesh(new THREE.SphereGeometry(180, 32, 16), domeMat);
   dome.renderOrder = -10;
   scene.add(dome);
 
-  const glow = new THREE.Mesh(
-    new THREE.PlaneGeometry(1, 1),
-    new THREE.MeshBasicMaterial({
-      map: canvasTex(radial([[0, 'rgba(176,18,36,0.7)'], [0.4, 'rgba(140,13,28,0.36)'], [0.8, 'rgba(104,9,20,0.07)'], [1, 'rgba(90,7,16,0)']])),
-      transparent: true,
-      depthWrite: false,
-      fog: false,
-      toneMapped: false,
-    })
-  );
-  glow.renderOrder = 3;
-  scene.add(glow);
-
-  const floor = new THREE.Mesh(
-    new THREE.PlaneGeometry(700, 320),
-    new THREE.MeshLambertMaterial({ color: 0x8e0b1c, transparent: true, opacity: 0.8 })
-  );
+  const uPool = { value: new THREE.Vector4(0, 0, 7.5, 5) }; // centro (x, z) y medio tamaño (x, z) de la mancha de luz
+  // El suelo es plano y los focos son direccionales: la luz es la misma en todo el suelo.
+  // Se calcula una vez por imagen (floorLight) en lugar de píxel a píxel.
+  const FLOOR = new THREE.Color(0x8e0b1c);
+  const floorMat = new THREE.MeshBasicMaterial({ color: FLOOR, transparent: true, opacity: 0.8 });
+  floorMat.onBeforeCompile = (sh) => {
+    sh.uniforms.uPool = uPool;
+    sh.vertexShader =
+      'varying vec2 vFloorW;\n' + sh.vertexShader.replace('#include <begin_vertex>', '#include <begin_vertex>\n  vFloorW = (modelMatrix * vec4(position, 1.0)).xz;');
+    sh.fragmentShader =
+      'uniform vec4 uPool;\nvarying vec2 vFloorW;\n' +
+      sh.fragmentShader.replace(
+        '#include <opaque_fragment>',
+        `{
+          float pr = clamp(length((vFloorW - uPool.xy) / uPool.zw), 0.0, 1.0);
+          outgoingLight += vec3(0.62, 0.018, 0.036) * pow(1.0 - pr, 2.2);
+        }
+        #include <opaque_fragment>`
+      );
+  };
+  const up = new THREE.Vector3(0, 1, 0);
+  const lightDir = new THREE.Vector3();
+  function floorLight() {
+    // la misma cuenta que haría un material mate: luz ambiente desde arriba más los dos focos según su inclinación
+    let e = 0.3;
+    for (const lamp of [key, rim]) {
+      lightDir.subVectors(lamp.position, lamp.target.position).normalize();
+      e += lamp.intensity * Math.max(0, lightDir.dot(up));
+    }
+    floorMat.color.copy(FLOOR).multiplyScalar(e / Math.PI);
+  }
+  const floor = new THREE.Mesh(new THREE.PlaneGeometry(700, 320), floorMat);
   floor.rotation.x = -Math.PI / 2;
-  floor.receiveShadow = true;
   floor.renderOrder = 2;
   scene.add(floor);
-
-  const pool = new THREE.Mesh(
-    new THREE.PlaneGeometry(1, 1),
-    new THREE.MeshBasicMaterial({
-      map: canvasTex(radial([[0, 'rgba(255,44,66,0.5)'], [0.35, 'rgba(230,28,50,0.24)'], [0.75, 'rgba(180,14,34,0.05)'], [1, 'rgba(160,10,30,0)']])),
-      transparent: true,
-      depthWrite: false,
-      blending: THREE.AdditiveBlending,
-    })
-  );
-  pool.rotation.x = -Math.PI / 2;
-  pool.position.y = 0.003;
-  pool.renderOrder = 3;
-  scene.add(pool);
 
   const shadowTex = canvasTex(radial([[0, 'rgba(24,0,3,0.62)'], [0.4, 'rgba(24,0,3,0.27)'], [1, 'rgba(24,0,3,0)']]));
   function contactShadow(parent, size) {
@@ -292,12 +321,29 @@ function init() {
   mirror.scale.y = -1;
   scene.add(mirror);
   const pairs = [];
+  // El reflejo se ve a través del suelo, muy atenuado: basta una copia sin iluminación de cada material
+  const twins = new Map();
+  function twinOf(m) {
+    if (m.isMeshBasicMaterial) return m;
+    let t = twins.get(m);
+    if (!t) {
+      t = new THREE.MeshBasicMaterial({
+        map: m.map || null,
+        color: m.color ? m.color.clone().multiplyScalar(0.8) : new THREE.Color(0xcccccc),
+        transparent: m.transparent,
+        opacity: m.opacity,
+        side: m.side,
+        alphaTest: m.alphaTest,
+      });
+      twins.set(m, t);
+    }
+    return t;
+  }
   function reflect(root, cheap = null) {
     const copy = root.clone();
     copy.traverse((o) => {
       if (!o.isMesh) return;
-      o.castShadow = false;
-      if (cheap) o.material = cheap;
+      o.material = cheap || (Array.isArray(o.material) ? o.material.map(twinOf) : twinOf(o.material));
     });
     // las piezas con instancias comparten su posición con el original
     const src = [];
@@ -352,14 +398,25 @@ function init() {
     geo.translate((-glyph.adv * LS) / 2, 0, -(LETTER_DEPTH + bevel));
     return geo;
   }
-  const letterMat = new THREE.MeshStandardMaterial({
-    color: 0x7c0817,
-    roughness: 0.5,
-    metalness: 0,
-    envMapIntensity: 0.24,
+  // Las letras ocupan media pantalla: se iluminan solo con los focos (sin consultar el entorno), con un brillo suave en el bisel
+  const letterMat = new THREE.MeshPhongMaterial({
+    color: 0x86091a,
+    specular: 0x40161b,
+    shininess: 20,
     emissive: 0xb00f22,
     emissiveIntensity: 0,
   });
+  // un degradado de luz cenital (más claras arriba), como el que daba la caja de luz
+  letterMat.onBeforeCompile = (sh) => {
+    sh.vertexShader =
+      'varying float vLetterY;\n' + sh.vertexShader.replace('#include <begin_vertex>', '#include <begin_vertex>\n  vLetterY = (modelMatrix * vec4(position, 1.0)).y;');
+    sh.fragmentShader =
+      'varying float vLetterY;\n' +
+      sh.fragmentShader.replace(
+        '#include <emissivemap_fragment>',
+        '#include <emissivemap_fragment>\n  totalEmissiveRadiance += diffuseColor.rgb * (0.05 + 0.34 * smoothstep(0.0, 5.6, vLetterY));'
+      );
+  };
   const letters = new THREE.Group();
   WORD.split('').forEach((ch, i) => {
     const m = new THREE.Mesh(letterGeometry(ch), letterMat);
@@ -411,13 +468,13 @@ function init() {
   const limeTex = canvasTex(sliceTexture('#6FA82A', '#EAF5C8', ['#D6EE8E', '#93C63A'], 'rgba(255,255,255,0.4)'));
   const sliceGeo = new THREE.CylinderGeometry(1, 1, 0.16, 64);
   const dropGeo = new THREE.SphereGeometry(1, 20, 14);
-  const dropMat = new THREE.MeshPhysicalMaterial({ color: 0xffffff, roughness: 0.03, metalness: 0, clearcoat: 1, transparent: true, opacity: 0.55, envMapIntensity: 2 });
+  const dropMat = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.03, metalness: 0, transparent: true, opacity: 0.55, envMapIntensity: 2 });
 
   function fruit(drops = LIGHT ? 8 : 14) {
     const g = new THREE.Group();
     const slice = (tex, peel) => {
-      const face = new THREE.MeshPhysicalMaterial({ map: tex, roughness: 0.35, clearcoat: 0.9, clearcoatRoughness: 0.15 });
-      const rindM = new THREE.MeshPhysicalMaterial({ color: peel, roughness: 0.5, clearcoat: 0.4 });
+      const face = new THREE.MeshStandardMaterial({ map: tex, roughness: 0.24 });
+      const rindM = new THREE.MeshStandardMaterial({ color: peel, roughness: 0.42 });
       const m = new THREE.Mesh(sliceGeo, [rindM, face, face]);
       g.add(m);
       return m;
@@ -543,9 +600,8 @@ function init() {
       [V2(0.001, 0.0), V2(1.15, 0.0), V2(1.3, 0.04), V2(1.76, 0.72), V2(1.8, 0.79), V2(1.79, 0.83), V2(1.75, 0.85), V2(1.71, 0.83), V2(1.69, 0.78), V2(1.22, 0.14), V2(0.001, 0.12)],
       128
     ),
-    new THREE.MeshPhysicalMaterial({ color: 0xfaf9f6, roughness: 0.14, clearcoat: 1, clearcoatRoughness: 0.06, side: THREE.DoubleSide })
+    new THREE.MeshStandardMaterial({ color: 0xfaf9f6, roughness: 0.09, envMapIntensity: 1.15, side: THREE.DoubleSide })
   );
-  bowl.castShadow = true;
   const bowlGroup = new THREE.Group();
   bowlGroup.position.copy(BOWL);
   bowlGroup.add(bowl);
@@ -553,7 +609,7 @@ function init() {
   s0.add(bowlGroup);
 
   // Gotas que saltan cuando el producto cae al agua
-  const liquidMat = new THREE.MeshPhysicalMaterial({ color: 0xf2fdfc, roughness: 0.04, clearcoat: 1, transparent: true, opacity: 0.86, envMapIntensity: 2 });
+  const liquidMat = new THREE.MeshStandardMaterial({ color: 0xf2fdfc, roughness: 0.04, transparent: true, opacity: 0.86, envMapIntensity: 2 });
   const PRESS = [0.1, 0.36, 0.62];
   const SPLASH = LIGHT ? 6 : 9;
   const splash = new THREE.InstancedMesh(dropGeo, liquidMat, PRESS.length * SPLASH);
@@ -571,12 +627,10 @@ function init() {
   const waterGeo = new THREE.RingGeometry(0.001, 1.62, 96, LIGHT ? 28 : 44);
   waterGeo.rotateX(-Math.PI / 2);
   // más profunda en el centro, casi transparente en el borde
-  const waterMat = new THREE.MeshPhysicalMaterial({
+  const waterMat = new THREE.MeshStandardMaterial({
     map: canvasTex(radial([[0, '#6fc3cb'], [0.55, '#9ad8dc'], [0.9, '#d2f0ef'], [1, '#e6f8f6']])),
     roughness: 0.02,
     metalness: 0,
-    clearcoat: 1,
-    clearcoatRoughness: 0.02,
     transparent: true,
     opacity: 0.88,
     envMapIntensity: 2.6,
@@ -662,14 +716,10 @@ function init() {
   jar.paste.material.bumpMap = grain;
   jar.paste.material.bumpScale = 1.4;
   const CRYSTALS = LIGHT ? 160 : 360;
-  const crystalMat = new THREE.MeshPhysicalMaterial({
+  const crystalMat = new THREE.MeshStandardMaterial({
     color: 0xffffff,
-    roughness: 0.1,
+    roughness: 0.07,
     metalness: 0,
-    clearcoat: 1,
-    clearcoatRoughness: 0.04,
-    transparent: true,
-    opacity: 0.92,
     envMapIntensity: 2.4,
     flatShading: true,
   });
@@ -715,7 +765,6 @@ function init() {
   const flapMesh = new THREE.Mesh(new THREE.PlaneGeometry(box.width, box.depth), plastic({ roughness: 0.55, clearcoat: 0.15, side: THREE.DoubleSide }));
   flapMesh.rotation.x = -Math.PI / 2;
   flapMesh.position.z = box.depth / 2;
-  flapMesh.castShadow = true;
   flap.add(flapMesh);
   box.group.add(flap);
   // los cinco sobres del pack
@@ -742,7 +791,7 @@ function init() {
   tube.group.position.set(0.35, 0, 0);
   const tubeShadow = contactShadow(s3, 1.7);
   s3.add(tube.group);
-  const creamMat = new THREE.MeshPhysicalMaterial({ color: 0xfff4e2, roughness: 0.36, sheen: 0.6, sheenRoughness: 0.5, sheenColor: 0xffffff, clearcoat: 0.3, clearcoatRoughness: 0.45 });
+  const creamMat = new THREE.MeshStandardMaterial({ color: 0xfff4e2, roughness: 0.33 });
   const CREAM_X = 0.35 + 0.6;
   const coilPts = [];
   const TURNS = 3.6;
@@ -757,7 +806,6 @@ function init() {
   const COIL_RAD = 12;
   const coilGeo = new THREE.TubeGeometry(coilCurve, COIL_SEG, 0.09, COIL_RAD);
   const coil = new THREE.Mesh(coilGeo, creamMat);
-  coil.castShadow = true;
   coil.frustumCulled = false;
   s3.add(coil);
   const coilShadow = contactShadow(s3, 1.6);
@@ -816,7 +864,6 @@ function init() {
       m.scale.setScalar(radius);
       m.position.set(x, y, z);
       m.rotation.set(seed, seed * 2.3, seed * 0.7);
-      m.castShadow = true;
       foam.add(m);
     };
     lump(0.84, 0, -0.18, 0, 1);
@@ -937,6 +984,7 @@ function init() {
     el.style.setProperty(name, value);
   }
 
+  let stepsOn = false;
   let activeStep = -2;
   function setStep(i) {
     if (i === activeStep) return;
@@ -967,7 +1015,12 @@ function init() {
     setVar(sticky, '--hero-out', heroOut.toFixed(3));
     setVar(sticky, '--wdth', lerp(wdthBase, 64, ease(seg(p, 0, 0.07))).toFixed(0));
     setVar(sticky, '--flash', ease(seg(p, 0.99, 1)).toFixed(3));
-    setVar(sticky, '--steps-o', Math.min(seg(p, RANGE[0][0] - 0.02, RANGE[0][0] + 0.005), 1 - seg(p, FIN[0] - 0.025, FIN[0] - 0.005)).toFixed(3));
+    const stepsO = Math.min(seg(p, RANGE[0][0] - 0.02, RANGE[0][0] + 0.005), 1 - seg(p, FIN[0] - 0.025, FIN[0] - 0.005));
+    setVar(sticky, '--steps-o', stepsO.toFixed(3));
+    if (stepsOn !== stepsO > 0.4) {
+      stepsOn = stepsO > 0.4;
+      sticky.classList.toggle('has-steps', stepsOn);
+    }
     hero?.classList.toggle('is-gone', heroOut > 0.6);
 
     let current = -1;
@@ -1004,14 +1057,13 @@ function init() {
     key.target.position.set(s.t[0], 0.6, 0);
     rim.position.set(s.t[0] - 6, 4.5, -6);
     rim.target.position.set(s.t[0], 1.2, 0);
-    shadowArea(lerp(9, 26, wide));
+    floorLight();
     // en el plano final las letras se encienden: la marca aparece
     letterMat.emissiveIntensity = 0.5 * wide;
     scene.environmentRotation.y = Math.sin(time * 0.22) * 0.4 + p * 6 + pointer.sx * 0.25;
-    glow.position.set(s.t[0], 6.5, -14);
-    glow.scale.set(lerp(40, 110, wide), lerp(18, 40, wide), 1);
-    pool.position.x = s.t[0];
-    pool.scale.set(lerp(15, 60, wide), lerp(10, 22, wide), 1);
+    uGlow.value.set(s.t[0], 6.5, -14);
+    uGlowSize.value.set(lerp(20, 55, wide), lerp(9, 20, wide));
+    uPool.value.set(s.t[0], 0, lerp(7.5, 30, wide), lerp(5, 11, wide));
     uTime.value = time;
 
     // ----- Conjunto del principio -----
@@ -1285,7 +1337,7 @@ function init() {
     if (forced === null) {
       readScroll();
       // seguimiento del scroll independiente de la velocidad del equipo
-      p += (target - p) * (1 - Math.exp(-dt * 10));
+      p += (target - p) * (1 - Math.exp(-dt * 13));
       if (Math.abs(target - p) < 0.0002) p = target;
     } else {
       p = forced;
@@ -1300,7 +1352,7 @@ function init() {
       }
     }
     // Si el equipo va lento mientras se mueve, se rebaja la calidad paso a paso:
-    // primero la resolución (nunca por debajo de 0,75), después los reflejos del suelo, por último las sombras
+    // resolución hasta 1, reflejos del suelo y, por último, resolución 0,75
     if (!idle && !dprFixed && introT >= 1) {
       if (perf.skip > 0) perf.skip--;
       else {
@@ -1310,17 +1362,19 @@ function init() {
           const sorted = perf.win.slice().sort((x, y) => x - y);
           const avg = sorted[sorted.length >> 1] * 1000;
           perf.win.length = 0;
-          if (avg > 24 && dpr > 0.75) {
-            dpr = Math.max(0.75, dpr - 0.25);
-            resize();
-            perf.skip = 30;
-          } else if (avg > 28 && mirror.visible) {
-            mirror.visible = false;
-            perf.skip = 30;
-          } else if (avg > 32 && key.castShadow) {
-            key.castShadow = false;
-            renderer.shadowMap.enabled = false;
-            perf.skip = 60;
+          if (avg > 21) {
+            if (dpr > 1) {
+              dpr = Math.max(1, dpr - 0.25);
+              resize();
+              perf.skip = 30;
+            } else if (avg > 26 && mirror.visible) {
+              mirror.visible = false;
+              perf.skip = 30;
+            } else if (avg > 26 && dpr > 0.75) {
+              dpr = 0.75;
+              resize();
+              perf.skip = 30;
+            }
           }
         }
       }
@@ -1403,14 +1457,61 @@ function init() {
       introT = 1;
     }
   }
+  // Reproducir: un clic recorre toda la película sin tener que desplazarse. Cualquier gesto la detiene.
+  const PLAY_END = 0.965;
+  const PLAY_SECONDS = 27; // duración de la película entera
+  let playing = null;
+  function stopPlay() {
+    if (playing) playing.stop = true;
+    playing = null;
+  }
+  function play() {
+    stopPlay();
+    const total = film.offsetHeight - window.innerHeight;
+    readScroll();
+    // desde donde está el visitante si ya está en la película; si no, desde el principio
+    const inFilm = film.getBoundingClientRect().bottom > window.innerHeight * 0.5 && target < 0.9;
+    const from = inFilm ? target : 0;
+    if (!inFilm) {
+      window.scrollTo({ top: film.offsetTop, behavior: 'auto' });
+      p = 0;
+      introT = 1;
+    }
+    const me = { stop: false };
+    playing = me;
+    const dur = (PLAY_END - from) * PLAY_SECONDS * 1000;
+    let t0 = 0;
+    function tick(now) {
+      if (me.stop) return;
+      if (!loaded) return requestAnimationFrame(tick); // espera a que estén las texturas
+      if (!t0) t0 = now;
+      const k = Math.min(1, (now - t0) / dur);
+      // velocidad constante, con arranque y parada suaves
+      const e = k < 0.05 ? (k * k) / 0.1 : k > 0.95 ? 1 - ((1 - k) * (1 - k)) / 0.1 : k;
+      window.scrollTo(0, film.offsetTop + total * lerp(from, PLAY_END, e));
+      if (k < 1) requestAnimationFrame(tick);
+      else playing = null;
+    }
+    requestAnimationFrame(tick);
+  }
+  ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach((ev) => window.addEventListener(ev, stopPlay, { passive: true }));
+  document.addEventListener('visibilitychange', () => document.hidden && stopPlay());
+
   const deep = location.hash.match(/^#(?:protocolo|paso-([1-5]))$/);
-  if (deep) setTimeout(() => goStep(deep[1] ? Number(deep[1]) - 1 : 0, true), 60);
+  if (deep) setTimeout(() => (deep[1] ? goStep(Number(deep[1]) - 1, true) : play()), 60);
   stepButtons.forEach((b, i) => b.addEventListener('click', () => goStep(i)));
   document.querySelectorAll('[data-go-step]').forEach((a) => {
     a.addEventListener('click', (e) => {
       e.preventDefault();
-      goStep(Number(a.dataset.goStep) || 0);
+      if (a.hasAttribute('data-play')) play();
+      else goStep(Number(a.dataset.goStep) || 0);
     });
+  });
+  // Saltar la película: directo a lo que viene después
+  skip?.addEventListener('click', (e) => {
+    e.preventDefault();
+    stopPlay();
+    window.scrollTo({ top: film.offsetTop + film.offsetHeight - (header ? header.offsetHeight : 0), behavior: 'auto' });
   });
 
   // Para pruebas y capturas
@@ -1422,7 +1523,7 @@ function init() {
       dpr = v;
       resize();
     },
-    quality: () => ({ dpr, reflections: mirror.visible, shadows: key.castShadow }),
+    quality: () => ({ dpr, reflections: mirror.visible }),
     dpr: () => dpr,
     range: RANGE,
     set(v) {

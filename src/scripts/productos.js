@@ -27,21 +27,21 @@ export function createProducts({ maxAniso, onLoad }) {
     return t;
   }
 
-  const plastic = (extra = {}) =>
-    new THREE.MeshPhysicalMaterial({ color: WHITE, roughness: 0.3, metalness: 0, clearcoat: 0.8, clearcoatRoughness: 0.2, ...extra });
+  // Sin capa de barniz (clearcoat): un plástico un poco más pulido da casi el mismo brillo con mucho menos cálculo por píxel.
+  // Los parámetros de barniz o de brillo sedoso que lleguen se traducen a una rugosidad algo menor.
+  const std = ({ clearcoat = 0, clearcoatRoughness, sheen, sheenRoughness, sheenColor, ...rest }) => {
+    if (clearcoat > 0 && rest.roughness !== undefined) rest.roughness = Math.max(0.06, rest.roughness * (1 - 0.32 * clearcoat));
+    return new THREE.MeshStandardMaterial(rest);
+  };
+
+  const plastic = (extra = {}) => std({ color: WHITE, roughness: 0.3, metalness: 0, clearcoat: 0.8, envMapIntensity: 1.1, ...extra });
 
   const labelled = (map, extra = {}) =>
-    new THREE.MeshPhysicalMaterial({ map, roughness: 0.32, metalness: 0, clearcoat: 0.75, clearcoatRoughness: 0.2, envMapIntensity: 1.1, ...extra });
+    std({ map, roughness: 0.32, metalness: 0, clearcoat: 0.75, envMapIntensity: 1.15, ...extra });
 
-  function shadows(group) {
-    group.traverse((o) => {
-      if (o.isMesh) o.castShadow = true;
-    });
-    return group;
-  }
 
   // Un cuerpo de revolución a partir de un tramo del perfil (t0 arriba, t1 abajo).
-  function lathe(profile, height, t0, t1, { vFrom = 0, close = 'both', segs = 128 } = {}) {
+  function lathe(profile, height, t0, t1, { vFrom = 0, close = 'both', segs = 80 } = {}) {
     const n = profile.length;
     const i0 = Math.round(t0 * (n - 1));
     const i1 = Math.round(t1 * (n - 1));
@@ -79,7 +79,7 @@ export function createProducts({ maxAniso, onLoad }) {
   function tubeGeometry(height) {
     const prof = SHAPES.tube;
     const n = prof.length;
-    const segs = 128;
+    const segs = 80;
     const tCrimp = 0.026;
     const tCap = 0.838;
     const aRef = prof[Math.round(tCap * (n - 1)) - 2] * height;
@@ -133,7 +133,6 @@ export function createProducts({ maxAniso, onLoad }) {
     pivot.add(inner);
     group.add(pivot);
     const extra = build(inner) || {};
-    shadows(group);
     return { group, pivot, inner, height, ...extra };
   }
 
@@ -265,14 +264,14 @@ export function createProducts({ maxAniso, onLoad }) {
             V(RB - 0.115, bodyH + 0.2),
             V(RB - 0.115, bodyH + 0.1),
           ],
-          128
+          80
         ),
         plastic({ side: THREE.DoubleSide })
       );
       inner.add(body);
       // etiqueta: la banda real, desenrollada de la foto
       const band = new THREE.Mesh(
-        new THREE.CylinderGeometry(RB + 0.003, RB + 0.003, 0.5026, 128, 1, true),
+        new THREE.CylinderGeometry(RB + 0.003, RB + 0.003, 0.5026, 80, 1, true),
         labelled(photo('/tex/tarro.webp'), { clearcoat: 0.45, roughness: 0.42 })
       );
       band.rotation.y = Math.PI;
@@ -282,7 +281,7 @@ export function createProducts({ maxAniso, onLoad }) {
       const pasteGeo = new THREE.CircleGeometry(RB - 0.115, 96, 0, Math.PI * 2);
       const paste = new THREE.Mesh(
         pasteGeo,
-        new THREE.MeshPhysicalMaterial({ color: 0xf7f5ee, roughness: 0.78, sheen: 0.5, sheenRoughness: 0.6, sheenColor: 0xffffff })
+        std({ color: 0xf7f5ee, roughness: 0.78 })
       );
       paste.rotation.x = -Math.PI / 2;
       paste.position.y = bodyH + 0.13;
@@ -304,7 +303,7 @@ export function createProducts({ maxAniso, onLoad }) {
             V(RL - 0.155, 0.311),
             V(0.0005, 0.311),
           ],
-          128
+          80
         ),
         plastic({ side: THREE.DoubleSide })
       );
@@ -312,7 +311,7 @@ export function createProducts({ maxAniso, onLoad }) {
       const ribTex = ribs(8);
       ribTex.repeat.set(26, 1);
       const grip = new THREE.Mesh(
-        new THREE.CylinderGeometry(RL + 0.0025, RL + 0.0025, 0.115, 128, 1, true),
+        new THREE.CylinderGeometry(RL + 0.0025, RL + 0.0025, 0.115, 80, 1, true),
         plastic({ bumpMap: ribTex, bumpScale: 0.9, roughness: 0.42, clearcoat: 0.4 })
       );
       grip.position.y = 0.135;
@@ -330,7 +329,7 @@ export function createProducts({ maxAniso, onLoad }) {
     const Dp = 0.34;
     return wrap(H, (inner) => {
       const side = plastic({ roughness: 0.55, clearcoat: 0.15 });
-      const front = new THREE.MeshPhysicalMaterial({ map: photo('/tex/caja.webp'), roughness: 0.5, clearcoat: 0.3, clearcoatRoughness: 0.4 });
+      const front = std({ map: photo('/tex/caja.webp'), roughness: 0.5, clearcoat: 0.3 });
       const slot = new THREE.MeshStandardMaterial({ color: 0x8f8f8c, roughness: 0.9 });
       const mesh = new THREE.Mesh(new THREE.BoxGeometry(W, H, Dp), [side, side, slot, side, front, side]);
       mesh.position.y = H / 2;
@@ -366,15 +365,14 @@ export function createProducts({ maxAniso, onLoad }) {
     else bg.rect(1, 1, 190, 246);
     bg.fill();
     const foil = { roughness: 0.3, metalness: 0.12, clearcoat: 0.9, clearcoatRoughness: 0.18, alphaTest: 0.5, envMapIntensity: 1.25 };
-    const front = new THREE.MeshPhysicalMaterial({ map: photo('/tex/sobre.webp'), ...foil });
-    const back = new THREE.MeshPhysicalMaterial({ map: canvasTex(blank), side: THREE.BackSide, ...foil });
+    const front = std({ map: photo('/tex/sobre.webp'), ...foil });
+    const back = std({ map: canvasTex(blank), side: THREE.BackSide, ...foil });
     const group = new THREE.Group();
     const a = new THREE.Mesh(pillow(1), front);
     const b = new THREE.Mesh(pillow(-1), back);
     a.position.y = H / 2;
     b.position.y = H / 2;
     group.add(a, b);
-    shadows(group);
     return { group, width: W, height: H };
   }
 

@@ -386,7 +386,7 @@ html[data-mode='home'] .mode::before {
 /* Película de producto */
 .film {
   position: relative;
-  height: 820vh;
+  height: 660vh;
 }
 .film__sticky {
   position: sticky;
@@ -395,7 +395,7 @@ html[data-mode='home'] .mode::before {
   height: 100svh;
   overflow: hidden;
   --n-top: 14vh;
-  --n-right: 4vw;
+  --n-right: var(--pad);
   --n-bottom: 8vh;
   --n-left: 56vw;
   /* mayor que la mitad del ancho: el navegador lo reduce y queda una cápsula exacta */
@@ -688,6 +688,33 @@ h1 {
   border-radius: 999px;
   background: rgba(70, 4, 12, 0.42);
   opacity: var(--steps-o, 0);
+}
+/* el indicador y el enlace para saltar solo responden mientras se ven */
+.stepper,
+.film__skip {
+  visibility: hidden;
+}
+.has-steps .stepper,
+.has-steps .film__skip {
+  visibility: visible;
+}
+.film__skip {
+  position: absolute;
+  z-index: 4;
+  right: var(--pad);
+  bottom: calc(3vh + 0.45rem);
+  padding: 0.3rem 0;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  opacity: calc(var(--steps-o, 0) * 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.film__skip:hover {
+  border-bottom-color: #fff;
+}
+.skip__short {
+  display: none;
 }
 .stepper::before {
   content: '';
@@ -1095,7 +1122,18 @@ h1 {
   .fin {
     top: clamp(5.2rem, 11svh, 8rem);
   }
+  .film__skip {
+    bottom: calc(2.2svh + 0.2rem);
+  }
+  .skip__long {
+    display: none;
+  }
+  .skip__short {
+    display: inline;
+  }
   .stepper {
+    left: var(--pad);
+    transform: none;
     bottom: 2.2svh;
     display: flex;
     gap: 0.35rem;
@@ -3477,6 +3515,7 @@ html.has-drawer {
   height: 100%;
   object-fit: cover;
 }
+.film-static .film__skip,
 .film-static .stagebg,
 .film-static .stage-poster,
 .film-static .grain,
@@ -3486,6 +3525,9 @@ html.has-drawer {
 .film-static .cue,
 .film-static .flash {
   display: none;
+}
+.film-static .chap {
+  scroll-margin-top: 4.5rem;
 }
 .film-static .chap,
 .film-static .fin {
