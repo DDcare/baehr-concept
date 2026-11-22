@@ -40,3 +40,9 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 - Verdeling van D: ontwerp en 3D in principe op Fable. Op 21-11 's avonds liet D Opus wel aan de site werken (snelheid, mobiel, nieuwe pagina's, merkelementen); de laatste ontwerpronde doet Fable. Het voorstel in het Spaans en Engels volgt op 22-11.
 - Voorstel van Claude, nog niet bevestigd door D: de volgende ontwerpronde begint met twee of drie stijlbeelden van één stap waaruit D kiest, daarna pas de hele film ombouwen.
 - Lat voor "elite" volgens D (21-11): skincomplete.eu, een eigen site van het bureau. De nieuwe site mag daar niet op lijken. Bekijk die site aan het begin van de volgende ontwerpronde om het niveau te begrijpen, en kies bewust een andere vormtaal.
+
+## Oordeel van D over de tweede versie (22 november 2026)
+
+- Letterlijk: "ik vind dit te groot" (de lijst Activos clave op de productpagina), "meerdere dingen op site zijn nog beetje lomp", "3d is nog steeds een klein beetje langzaam ziet er wel geweldig uit op de homepage", "In footer hoe baehr komt is niet verkeerd maar oogt ook zo groot lomp".
+- Twijfel van D: haakt een klant af als hij door de hele film moet scrollen, of is dat juist het wow-effect?
+- Opdracht: kritisch naar het ontwerp kijken en het echt passend bij het merk maken. De 3D op de home blijft.
