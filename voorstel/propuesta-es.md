@@ -72,6 +72,7 @@ Fuera de nuestra cuota quedan dos costes: lo que pagas a Shopify y el presupuest
 - GEO (respuestas de IA): los mismos datos en la web, el perfil de Google y la lista del fabricante.
 - Páginas de seminarios: una por ciudad, con inscripción.
 - Textos, mantenimiento e informe: escribimos los textos y mantenemos la tienda, con informe mensual.
+- Email marketing: boletines y campañas por correo para tus clientes.
 
 ### Portal y publicidad, 1.020 € al mes, hasta 16 horas de trabajo al mes
 
@@ -86,9 +87,8 @@ Todo lo de «Tienda y SEO», más:
 
 Todo lo de «Portal y publicidad», más:
 
-- Email marketing: boletines y campañas por correo para tus clientes.
 - Gestión de redes sociales: planificamos y publicamos el contenido en tus canales.
-- Contenido para redes sociales: creamos las publicaciones y las imágenes.
+- Contenido para redes sociales: creamos las publicaciones y las imágenes; los vídeos los aportas tú.
 - Animaciones 3D: vídeos cortos de tus productos para redes sociales y anuncios.
 
 ### Nuestra recomendación

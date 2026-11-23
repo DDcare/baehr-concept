@@ -78,6 +78,7 @@ Buiten onze maandprijs vallen twee kosten: wat je aan Shopify betaalt en het adv
 - GEO (AI-antwoorden): dezelfde bedrijfsgegevens op de site, in het Google-profiel en in de lijst van de fabrikant.
 - Seminarpagina's: een pagina met inschrijving voor elke stad.
 - Teksten, onderhoud en rapport: teksten geschreven, winkel bijgehouden, elke maand een rapport.
+- E-mailmarketing: nieuwsbrieven en campagnes per e-mail voor je klanten. [Besluit D, 23-11: e-mailmarketing zit in pakket één.]
 
 ### Portaal en advertenties, 1.020 euro per maand, tot 16 uur werk per maand
 
@@ -92,9 +93,8 @@ Alles van "Winkel en SEO", plus:
 
 Alles van "Portaal en advertenties", plus:
 
-- E-mailmarketing: nieuwsbrieven en campagnes per e-mail voor je klanten.
 - Beheer van social media: wij plannen en plaatsen de berichten op je kanalen.
-- Content voor social media: wij maken de berichten en de beelden.
+- Content voor social media: wij maken de berichten en de beelden; bewegend beeld lever jij aan. [Besluit D, 23-11: voor de visuals in pakket drie levert de klant de bewegende beelden aan.]
 - 3D-animaties: korte video's van je producten voor social media en advertenties.
 
 ### Ons advies

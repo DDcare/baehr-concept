@@ -72,6 +72,7 @@ Two costs sit outside our fee: what you pay to Shopify and your advertising budg
 - GEO (AI answers): the same company details on your site, Google profile and the manufacturer's list.
 - Seminar pages: a booking page for each seminar city.
 - Copy, maintenance and reporting: texts written, shop kept up to date, a report every month.
+- Email marketing: newsletters and email campaigns for your customers.
 
 ### Portal and Ads, €1,020 a month, up to 16 hours of work a month
 
@@ -86,9 +87,8 @@ Everything in Shop and SEO, plus:
 
 Everything in Portal and Ads, plus:
 
-- Email marketing: newsletters and email campaigns for your customers.
 - Social media management: we plan and publish the posts on your channels.
-- Content for social media: we create the posts and the visuals.
+- Content for social media: we create the posts and the visuals; you supply the video footage.
 - 3D animations: short films of your products for social media and ads.
 
 ### Our recommendation
