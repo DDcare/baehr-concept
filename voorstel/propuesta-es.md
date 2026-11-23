@@ -86,12 +86,6 @@ Como ahora no hay un presupuesto fijo de publicidad, proponemos empezar con un m
 
 Las campañas y las redes arrancarán cuando el portal funcione, en el segundo mes. Antes, los anuncios llevarían a la gente al formulario actual y estarías pagando clics que se quedan por el camino. Hasta ese momento pagas 540 € al mes, sea cual sea el paquete que elijas.
 
-### El 3D en las fichas de producto, como opción
-
-La animación 3D de productos de la página de inicio está incluida en todos los paquetes. Un modelo 3D que gira en la ficha de un producto es una opción aparte: 150 € por producto, en un pago único y sin IVA. Los cinco productos de la animación lo tendrán sin coste extra en cuanto tengamos los archivos de etiqueta del fabricante. En el prototipo hay un ejemplo en la ficha de la Crema en espuma Orange-Lemongras.
-
-Conviene saber lo que implica. Cada modelo lleva bastante trabajo (la forma del envase, la etiqueta completa alrededor y la revisión), y la ficha tarda más en cargar. Para que el modelo sea fiel por todos los lados hacen falta fotos del producto desde todos los ángulos o los archivos de la etiqueta; en el prototipo, de momento, solo la parte delantera reproduce el envase real.
-
 ## Ya lo hemos hecho con Skin Complete
 
 Skin Complete (skincomplete.eu) es una marca neerlandesa de mascarillas LED y cuidado de la piel que vende a través de clínicas y centros de estética. Les hicimos la web y el portal B2B. Quien solicita una cuenta pasa a tener su propia tienda B2B, con precios de centro asociado, protocolos y formación.

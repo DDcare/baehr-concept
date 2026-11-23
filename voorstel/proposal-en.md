@@ -86,12 +86,6 @@ As you don't have a fixed advertising budget yet, we suggest starting with at le
 
 The campaigns and social media start once the portal is live, in month two. Before that, ads would send people to the current form, and you'd be paying for clicks that go nowhere. You pay €540 a month until the portal is live, whichever package you choose.
 
-### Optional: your products in 3D
-
-The 3D film on the home page is included in every package. A rotating 3D model on a product page is optional, at €150 per product as a one-off fee, excluding VAT. The five products in the home page film get theirs at no extra cost once we have the label files from the manufacturer. You can see an example on the prototype's product page for the Crema en espuma Orange-Lemongras.
-
-To be honest about it: each model takes real work (the shape, the label all the way round, and checking it), and it makes that page slower to load. For a model that's accurate from every side, we need photos from all sides or the manufacturer's label files. In the prototype, only the front is real so far.
-
 ## We've done this before with Skin Complete
 
 Skin Complete (skincomplete.eu) is a Dutch brand of LED masks and skincare that sells through clinics and beauty salons. We built their website and B2B portal. Anyone who applies for an account gets their own B2B shop, with partner prices, protocols and training.

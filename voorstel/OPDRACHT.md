@@ -21,28 +21,32 @@ Alleen tekst in Markdown. De vormgeving (pdf in de huisstijl van de conceptsite)
 
 ## Vaste inhoud (besloten door D)
 
-Vier pakketten die op elkaar stapelen: elk pakket bevat het vorige. Prijzen per maand.
+Stand van 22 november 2026. Dit vervangt de vier pakketten van 480, 680, 1.140 en 1.480 euro uit de eerste overdracht (18 en 21 november): die gelden niet meer.
+
+Drie pakketten die op elkaar stapelen: elk pakket bevat het vorige. Prijzen per maand. D op 22-11, letterlijk: "zeg dan 540, 1020 en 1560?"
 
 | Pakket | Per maand |
 |---|---|
-| Site en Google | 480 euro |
-| Plus portal | 680 euro |
-| Plus campagnes (ons advies) | 1.140 euro |
-| Plus social | 1.480 euro |
+| Winkel en portaal (met vindbaarheid, teksten, onderhoud en maandrapport) | 540 euro |
+| Met Google Ads (ons advies) | 1.020 euro |
+| Met social | 1.560 euro |
 
-- Webwinkel en B2B-portaal samen hebben een waarde van 1.500 euro. Ze zijn gratis bij 12 maanden samenwerking. Bij eerder opzeggen betaalt de klant 125 euro per resterende maand.
+- Winkel en B2B-portaal komen op Shopify en hebben samen een waarde van 2.000 euro. Ze zijn gratis bij 12 maanden samenwerking. Bij eerder opzeggen betaalt de klant het resterende deel naar rato.
+- Het Shopify-abonnement (Basic of Grow) betaalt de klant zelf, rechtstreeks aan Shopify.
 - Het advertentiebudget staat los van het maandbedrag en gaat rechtstreeks naar Google en Meta.
-- Bewijs: voor Skin Complete (skincomplete.eu) heeft het bureau 80 nieuwe afnemers gerealiseerd. D heeft Valeria zelf al naar skincomplete.eu verwezen.
+- Planning: in de eerste twee weken metingen, toegang voor zoekmachines en ontwerp; in week drie en vier gaat de winkel live; in maand twee het portaal en de pagina's per dienst.
+- Afzender: Denis, Meneer Marketing. De link baehr-concept.vercel.app staat in de tekst.
+- Bewijs: voor Skin Complete (skincomplete.eu) heeft het bureau 80 nieuwe afnemers gerealiseerd, zonder periode erbij. D heeft Valeria zelf al naar skincomplete.eu verwezen.
+- Geen 3D op productpagina's, ook niet als optie (zie het besluit onderaan).
+
+De tekst is op 22-11 bijgewerkt in een aparte sessie op de tak `voorstel`. Die tak is op 23-11 samengevoegd met `ontwerp`. Werk voortaan alleen op `ontwerp`, anders bouwt de pdf op een oude tekst.
 
 Aannames van Claude, nog niet bevestigd door D:
 
-- Advertentiebudget vanaf 1.000 euro per maand: 600 euro Google en 400 euro Meta.
-- Inhoud per pakket, gereconstrueerd uit het eerdere gesprek:
-  - Site en Google: nieuwe site met webwinkel, vindbaarheid in Google en in AI-antwoorden, onderhoud en een maandrapport.
-  - Plus portal: daarbij het B2B-portaal waar salons en professionals zich aanmelden en direct bestellen tegen professionele prijzen.
-  - Plus campagnes: daarbij het beheer van Google-advertenties.
-  - Plus social: daarbij social media en Meta-advertenties.
-- Of de prijzen exclusief btw zijn, en wat de opzegtermijn is.
+- Advertentiebudget: minimaal 600 euro per maand voor Google vanaf "Met Google Ads", plus minimaal 400 euro voor Meta bij "Met social".
+- Shopify-prijzen voor Spanje (Basic 24 euro, Grow 69 euro per maand bij jaarbetaling, zonder btw): uit Spaanse bronnen van 2026, niet van de officiële prijspagina.
+- Prijzen exclusief btw, geen vaste looptijd, een maand opzegtermijn.
+- Tot het portaal live is (maand twee) betaalt de klant 540 euro, welk pakket ze ook kiest.
 
 Het oude Russische voorstel staat in `voorstel/archief/voorstel-ru-oud.html`. Gebruik het als bron voor de uitwerking per onderdeel. De pakketnamen en prijzen hierboven gaan voor: het oude bestand kan andere bedragen noemen.
 

@@ -90,12 +90,6 @@ Omdat er nu geen vast advertentiebudget is, stellen we voor te beginnen met mini
 
 De campagnes en social media starten zodra het portaal werkt, in de tweede maand. Eerder zouden advertenties mensen naar het huidige formulier sturen en zou je betalen voor klikken die onderweg blijven hangen. Tot dat moment betaal je 540 euro per maand, welk pakket je ook kiest. [Aanname: dit geldt voor elk pakket.]
 
-### Optie: je producten in 3D
-
-De 3D-film op de homepage zit in elk pakket. Een draaiend 3D-model op een productpagina is een optie: 150 euro per product, eenmalig, zonder btw. De vijf producten uit de film op de homepage krijgen het zonder extra kosten, zodra we de etiketbestanden van de fabrikant hebben. Een voorbeeld staat in het prototype, op de productpagina van de Crema en espuma Orange-Lemongras.
-
-Eerlijk gezegd: elk model is veel werk (de vorm, het etiket rondom en de controle), en het maakt die pagina trager. Voor een model dat van alle kanten klopt, hebben we foto's van alle kanten of de etiketbestanden van de fabrikant nodig. In het prototype is nu alleen de voorkant echt. [Prijs: advies van Claude op 22-11, op basis van marktprijzen voor eenvoudige productmodellen (ongeveer 40 tot 1.000 dollar per model, verpakkingen aan de onderkant). D kan het bedrag aanpassen.]
-
 ## We hebben dit al gedaan voor Skin Complete
 
 Skin Complete (skincomplete.eu) is een Nederlands merk van ledmaskers en huidverzorging dat via klinieken en schoonheidssalons verkoopt. We maakten hun site en hun B2B-portaal. Wie een account aanvraagt, krijgt een eigen B2B-winkel met partnerprijzen, protocollen en training.
@@ -136,11 +130,10 @@ Meneer Marketing
 - Btw: onze prijzen exclusief. Looptijd: geen vaste looptijd, opzegtermijn een maand, terugbetaling naar rato vóór 12 maanden (2.000 / 12 per resterende maand; in de tekst alleen het voorbeeld van 1.333 euro na vier maanden).
 - 540 euro (het basisbedrag) tot het portaal live is in maand twee, voor elk pakket.
 - Maandrapport vanaf de eerste maand (besluit van Claude: het zit in elk pakket).
-- 3D-optie: 150 euro per product, de vijf producten uit de film gratis (advies van Claude).
 - De bevindingen over de huidige site (Duitse winkels in Google, AI-samenvatting, geblokkeerde bots, vertaalfouten, drie verzenddrempels, 43 scripts en 44 stylesheets, 14 velden): uit het oude voorstel en jouw schermafbeeldingen, niet opnieuw gecontroleerd. Klopt er één niet meer, dan schaadt dat het hele stuk.
 - "Distribuidor oficial": Valeria laten bevestigen dat ze dat mag voeren.
 - Russischtalige klanten: staat als vraag in de tekst, niet als feit.
 
-Besloten door D op 22-11: afzender Meneer Marketing, link baehr-concept.vercel.app in de tekst, Shopify Basic of Grow betaald door Valeria, drie pakketten van 540, 1.020 en 1.560 euro, geen periode bij Skin Complete.
+Besloten door D op 22-11: afzender Meneer Marketing, link baehr-concept.vercel.app in de tekst, Shopify Basic of Grow betaald door Valeria, drie pakketten van 540, 1.020 en 1.560 euro, geen periode bij Skin Complete. Later op 22-11 besloten: geen 3D op productpagina's, ook niet als optie; dat deel is op 23-11 uit de drie talen gehaald.
 
 Bewust weggelaten: "exclusieve distributeur" en "Duitse productie" (beide niet geverifieerd), en elke termijn voor de merkzoekopdrachten.
