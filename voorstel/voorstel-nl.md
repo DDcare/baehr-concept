@@ -67,12 +67,12 @@ We zetten de producten, bestellingen en klanten over. Wachtwoorden kunnen niet m
 Prijzen per maand, exclusief btw. [Aanname: exclusief btw.]
 
 - Winkel en portaal, 540 euro per maand. De nieuwe winkel en het portaal voor professionals op Shopify, dat wij beheren, plus vindbaarheid in Google en in AI-antwoorden, teksten, onderhoud en een maandrapport. (Hosting zit in het Shopify-abonnement.) [Besluit D, 22-11: drie pakketten, 540, 1.020 en 1.560 euro. Aanname: wat "wij beheren het portaal" inhoudt.]
-- Met Google Ads, 1.020 euro per maand. Het vorige plus de Google Ads-campagnes, die wij opzetten en beheren. [Aanname: het eigen team beheert de campagnes.]
-- Met social, 1.560 euro per maand. Het vorige plus het beheer van social media en de advertenties op Instagram en Facebook.
+- Met advertenties, 1.020 euro per maand. Het vorige plus campagnes op elk advertentiekanaal dat bij BAEHR España past, te beginnen met Google en Meta (Instagram en Facebook). Wij zetten ze op, beheren ze en maken de beelden voor de advertenties. [Besluit D, 23-11: alle advertentiekanalen en de beelden daarvoor horen bij pakket twee. Aanname: het eigen team beheert de campagnes.]
+- Met social, 1.560 euro per maand. Het vorige plus het beheer van de social media. [Aanname van Claude: de advertenties op Instagram en Facebook zitten nu in pakket twee, dus hier blijft het beheer over. Prijs ongewijzigd.]
 
-Met Shopify Basic en het minimale advertentiebudget erbij ben je per maand in totaal 564, 1.644 of 2.584 euro kwijt zonder btw, afhankelijk van het pakket. De betaalkosten van Shopify per betaling komen erbij. [Rekenvoorbeeld van Claude: 540 + 24; 1.020 + 24 + 600; 1.560 + 24 + 600 + 400.]
+Met Shopify Basic en het minimale advertentiebudget erbij ben je per maand in totaal 564, 2.044 of 2.584 euro kwijt zonder btw, afhankelijk van het pakket. De betaalkosten van Shopify per betaling komen erbij. [Rekenvoorbeeld van Claude: 540 + 24; 1.020 + 24 + 1.000; 1.560 + 24 + 1.000.]
 
-We raden "Met Google Ads" aan. Vindbaarheid kost maanden voordat ze resultaat geeft; advertenties in Google bereiken mensen die al naar producten zoeken veel sneller, en met het portaal live is de aanmelding geen rem meer.
+We raden "Met advertenties" aan. Vindbaarheid kost maanden voordat ze resultaat geeft; advertenties werken meteen: in Google bereiken ze mensen op het moment dat ze naar producten zoeken, en met het portaal live is de aanmelding geen rem meer.
 
 ### Winkel en portaal zonder kosten als we 12 maanden samenwerken
 
@@ -86,7 +86,7 @@ Het abonnement van Shopify betaal je rechtstreeks aan Shopify, los van ons maand
 
 Wat je aan advertenties uitgeeft, zit niet in het maandbedrag. Je betaalt het rechtstreeks aan Google en Meta, en de advertentieaccounts zijn van jou.
 
-Omdat er nu geen vast advertentiebudget is, stellen we voor te beginnen met minimaal 600 euro per maand voor Google, vanaf "Met Google Ads". Bij "Met social" komt daar minimaal 400 euro per maand voor Meta bij, samen 1.000 euro. Daarna stellen we het bij op basis van de resultaten in je accounts. [Aanname: deze bedragen.]
+Omdat er nu geen vast advertentiebudget is, stellen we voor te beginnen met minimaal 1.000 euro per maand vanaf "Met advertenties": 600 euro voor Google en 400 euro voor Meta. Daarna stellen we het bij op basis van de resultaten in je accounts. [Aanname van Claude: omdat Meta nu in pakket twee zit, geldt het hele minimum vanaf pakket twee. Eerder was het 600 euro bij pakket twee en 400 euro erbij bij pakket drie.]
 
 De campagnes en social media starten zodra het portaal werkt, in de tweede maand. Eerder zouden advertenties mensen naar het huidige formulier sturen en zou je betalen voor klikken die onderweg blijven hangen. Tot dat moment betaal je 540 euro per maand, welk pakket je ook kiest. [Aanname: dit geldt voor elk pakket.]
 
@@ -133,6 +133,8 @@ Meneer Marketing
 - De bevindingen over de huidige site (Duitse winkels in Google, AI-samenvatting, geblokkeerde bots, vertaalfouten, drie verzenddrempels, 43 scripts en 44 stylesheets, 14 velden): uit het oude voorstel en jouw schermafbeeldingen, niet opnieuw gecontroleerd. Klopt er één niet meer, dan schaadt dat het hele stuk.
 - "Distribuidor oficial": Valeria laten bevestigen dat ze dat mag voeren.
 - Russischtalige klanten: staat als vraag in de tekst, niet als feit.
+
+Besloten door D op 23-11: pakket twee is adverteren op alle advertentiekanalen (Google, Meta en verder), inclusief het maken van de beelden; niet alleen Google Ads. Nog te bevestigen: het minimale advertentiebudget van 1.000 euro vanaf pakket twee, en dat pakket drie alleen het beheer van de social media is.
 
 Besloten door D op 22-11: afzender Meneer Marketing, link baehr-concept.vercel.app in de tekst, Shopify Basic of Grow betaald door Valeria, drie pakketten van 540, 1.020 en 1.560 euro, geen periode bij Skin Complete. Later op 22-11 besloten: geen 3D op productpagina's, ook niet als optie; dat deel is op 23-11 uit de drie talen gehaald.
 
