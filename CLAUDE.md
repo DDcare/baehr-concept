@@ -5,7 +5,7 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 ## Afspraken
 
 - Met D in het Nederlands, kort en kritisch. Feit, aanname en oordeel apart.
-- Niets publiceren, versturen of openbaar zetten zonder akkoord van D. De openbare link baehr-concept.vercel.app toont `main` (openbaar met akkoord van D, 21-11; nieuwe versie erop met akkoord, 22-11; de derde ronde erop met akkoord, 22-11 avond; de vierde ronde met productpagina's, protocolpagina en nieuwe merkpagina erop met akkoord, 22-11 laat; de telefoonfix en de vollere home erop met akkoord, 22-11 laat). Werk op de tak `ontwerp` (preview achter de Vercel-login) en zet het pas op `main` met akkoord van D per keer.
+- Niets publiceren, versturen of openbaar zetten zonder akkoord van D. De openbare link baehr-concept.vercel.app toont `main` (openbaar met akkoord van D, 21-11; nieuwe versie erop met akkoord, 22-11; de derde ronde erop met akkoord, 22-11 avond; de vierde ronde met productpagina's, protocolpagina en nieuwe merkpagina erop met akkoord, 22-11 laat; de telefoonfix en de vollere home erop met akkoord, 22-11 laat; de vloeiende film en de telefoonlijst erop met akkoord, 23-11). Werk op de tak `ontwerp` (preview achter de Vercel-login) en zet het pas op `main` met akkoord van D per keer.
 - Niets ophalen van baehr.com.es: de site zit achter een botfilter. Werk met schermafbeeldingen van D.
 - Na elk afgerond onderdeel committen. Geen node_modules of buildmappen in git.
 
