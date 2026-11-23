@@ -62,13 +62,13 @@ Con el cambio hay algo que conviene saber: las contraseñas de la web actual no 
 
 Los precios son mensuales y sin IVA.
 
-- Tienda y portal, 540 € al mes. La tienda nueva y el portal para profesionales en Shopify, la gestión del portal, el posicionamiento en Google y en las respuestas de IA, los textos, el mantenimiento y un informe mensual.
-- Con Google Ads, 1.020 € al mes. Lo anterior más las campañas de Google Ads, que montamos y llevamos nosotros.
-- Con redes, 1.560 € al mes. Lo anterior más la gestión de redes sociales y los anuncios en Instagram y Facebook.
+- Tienda y portal, 580 € al mes. La tienda nueva y el portal para profesionales en Shopify, la gestión del portal, el posicionamiento en Google y en las respuestas de IA, los textos, el mantenimiento y un informe mensual.
+- Con publicidad, 1.020 € al mes. Lo anterior más las campañas en los canales que encajan con BAEHR España, empezando por Google y Meta (Instagram y Facebook). Las montamos y las llevamos nosotros, y hacemos las imágenes de los anuncios.
+- Con redes, 1.560 € al mes. Lo anterior más la gestión de redes sociales.
 
-Con el plan Basic de Shopify y el presupuesto mínimo de anuncios que explicamos más abajo, el total al mes sería de 564 €, 1.644 € o 2.584 €, según el paquete. Son importes sin IVA y no incluyen las comisiones de Shopify por cada pago.
+Fuera de nuestra cuota quedan dos costes: el plan de Shopify y el presupuesto de anuncios. Los explicamos más abajo.
 
-Te recomendamos «Con Google Ads». El posicionamiento tarda meses en dar resultados; los anuncios en Google, en cambio, llegan antes a quien ya está buscando producto y, con el portal en marcha, el alta deja de ser un freno.
+Te recomendamos «Con publicidad». El posicionamiento tarda meses en dar resultados; los anuncios en Google, en cambio, llegan antes a quien ya está buscando producto y, con el portal en marcha, el alta deja de ser un freno.
 
 ### La tienda y el portal, sin coste si trabajamos 12 meses juntos
 
@@ -76,15 +76,15 @@ La tienda y el portal suman un valor de 2.000 €. Con 12 meses de colaboració
 
 ### Lo que pagas directamente a Shopify
 
-El plan de Shopify lo pagas directamente a Shopify, fuera de nuestra cuota. Para empezar basta con el plan Basic, de 24 € al mes. Si varias personas van a trabajar en la tienda, conviene el plan Grow, de 69 € al mes, que admite hasta cinco cuentas de personal. Ambos precios son con pago anual y sin IVA. A eso se suman las comisiones que cobra Shopify por cada pago.
+El plan de Shopify lo pagas directamente a Shopify, fuera de nuestra cuota. Para empezar basta con el plan Basic: calcula entre 25 y 35 € al mes. Si varias personas van a trabajar en la tienda, conviene el plan Grow, que admite hasta cinco cuentas de personal y cuesta entre 60 y 90 € al mes. Son precios orientativos: los fija Shopify y dependen de si el pago es mensual o anual, así que consulta el precio actual en shopify.com. A eso se suman las comisiones que cobra Shopify por cada pago.
 
 ### El presupuesto de anuncios va aparte
 
 Lo que se invierte en anuncios no forma parte de la cuota mensual. Lo pagas directamente a Google y a Meta, y las cuentas publicitarias son tuyas.
 
-Como ahora no hay un presupuesto fijo de publicidad, proponemos empezar con un mínimo de 600 € al mes para Google, a partir de «Con Google Ads». En «Con redes» se añaden como mínimo 400 € al mes para Meta, con lo que el total llega a 1.000 €. Luego lo ajustaremos según los resultados de tus cuentas.
+Como ahora no hay un presupuesto fijo de publicidad, te recomendamos empezar con unos 1.000 € al mes: 600 € para Google y 400 € para Meta. Es una recomendación, no una condición: el presupuesto lo decides tú, y lo ajustaremos juntos según los resultados de tus cuentas.
 
-Las campañas y las redes arrancarán cuando el portal funcione, en el segundo mes. Antes, los anuncios llevarían a la gente al formulario actual y estarías pagando clics que se quedan por el camino. Hasta ese momento pagas 540 € al mes, sea cual sea el paquete que elijas.
+Las campañas y las redes arrancarán cuando el portal funcione, en el segundo mes. Antes, los anuncios llevarían a la gente al formulario actual y estarías pagando clics que se quedan por el camino. Hasta ese momento pagas 580 € al mes, sea cual sea el paquete que elijas.
 
 ## Ya lo hemos hecho con Skin Complete
 
