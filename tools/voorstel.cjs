@@ -1,6 +1,9 @@
 // Maakt van de voorsteltekst (Markdown) een vormgegeven pdf in de huisstijl van de conceptsite.
 // Gebruik: node tools/voorstel.cjs <es|en> <uitvoermap> [naam van het bureau]
 // De pdf en de html komen in de uitvoermap; zet die buiten git. De tekst wordt letterlijk overgenomen uit voorstel/*.md.
+// Indeling: omslag en tekst op de eerste drie pagina's, de prijzen op één eigen pagina, daarna bewijs, planning en
+// voorwaarden, en een slotpagina met beeld en uitnodiging. De lettergrootte per taal (fs, lh) is zo afgesteld dat de
+// tekst precies drie pagina's vult; controleer na een tekstwijziging het aantal pagina's (zes) en stel bij met FS= en LH=.
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
@@ -9,14 +12,16 @@ const [lang = 'es', outDir = '.', agency = ''] = process.argv.slice(2);
 const ROOT = path.resolve(__dirname, '..');
 const SRC = { es: 'voorstel/propuesta-es.md', en: 'voorstel/proposal-en.md' }[lang];
 const T = {
-  es: { date: '23 de noviembre de 2026', file: 'Propuesta-BAEHR-Espana', month: 'al mes', docLang: 'es' },
-  en: { date: '23 November 2026', file: 'Proposal-BAEHR-Espana', month: 'a month', docLang: 'en' },
+  es: { date: '23 de noviembre de 2026', file: 'Propuesta-BAEHR-Espana', month: 'al mes', docLang: 'es', fs: 10, lh: 1.47 },
+  en: { date: '23 November 2026', file: 'Proposal-BAEHR-Espana', month: 'a month', docLang: 'en', fs: 10.2, lh: 1.5 },
 }[lang];
+if (process.env.FS) T.fs = Number(process.env.FS); // alleen om af te stellen
+if (process.env.LH) T.lh = Number(process.env.LH);
 const PROTO = 'baehr-concept.vercel.app';
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 // harde spatie voor het euroteken en het procentteken, en tussen getal en "meses"/"months" niet nodig
-const nb = (s) => esc(s).replace(/ €/g, ' €').replace(/ %/g, ' %');
+const nb = (s) => esc(s).replace(/ €/g, ' €').replace(/ %/g, ' %').replace(/[A-Za-zÀ-ÿ0-9]+(?:-[A-Za-zÀ-ÿ0-9]+)+/g, (w) => (w.length <= 22 ? `<span class="nw">${w}</span>` : w));
 const link = (s) => nb(s).replace(/skincomplete\.eu/g, '<a href="https://skincomplete.eu">skincomplete.eu</a>');
 
 // ---------- Markdown naar blokken ----------
@@ -73,7 +78,7 @@ function pack(item) {
   const name = item.slice(0, i);
   const rest = item.slice(i + 2);
   const m = rest.match(/^(€[\d.,]+|[\d.,]+\s€)\s+(.*?)[.:]\s+(.*)$/);
-  return { name, price: m[1], unit: m[2], text: m[3] };
+  return { name, price: m[1], unit: m[2], text: m[3].charAt(0).toUpperCase() + m[3].slice(1) };
 }
 
 const [t1, t2] = splitTitle(title);
@@ -124,12 +129,12 @@ secs.forEach((s, k) => {
   if (k === secs.length - 1) {
     const ps = s.body.filter((b) => b.t === 'p').map((b) => b.text).filter((x) => !/^\[.*\]$/.test(x));
     const sign = ps.slice(1);
-    html.push(`<div class="fin"><section class="cta"><h2>${nb(s.h)}</h2><p>${link(ps[0])}</p><a class="chip chip--white" href="https://${PROTO}">${PROTO}</a></section>
+    html.push(`<div class="fin"><img class="fin__img" src="file://${ROOT}/public/img/estudio/baehr-lado.webp" alt="" /><section class="cta"><h2>${nb(s.h)}</h2><p>${link(ps[0])}</p><a class="chip chip--white" href="https://${PROTO}">${PROTO}</a></section>
     <section class="sign"><p>${esc(sign[0] || '')}</p><p class="sign__n">${esc(sign[1] || '')}</p>${agency ? `<p class="sign__a">${esc(agency)}</p>` : ''}</section></div>`);
     return;
   }
   // korte delen blijven bij elkaar: geen kop onderaan de ene pagina en de tekst op de volgende
-  const keep = k === 2 || k === 6;
+  const keep = k === 6;
   html.push(`<section class="sec${keep ? ' sec--keep' : ''}"><h2>${nb(s.h)}</h2><div class="sec__body">${body(s.body)}${s.subs
     .map((u) => `<div class="sub"><h3>${nb(u.h)}</h3>${body(u.body)}</div>`)
     .join('')}</div></section>`);
@@ -145,8 +150,11 @@ const css = `
   --ribs: repeating-linear-gradient(90deg, currentColor 0 0.5mm, transparent 0.5mm 1.8mm); --pad: 17mm; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-body { font-family: 'Archivo Variable', sans-serif; font-size: 10.4pt; line-height: 1.5; color: var(--ink); }
+body { font-family: 'Archivo Variable', sans-serif; font-size: ${T.fs}pt; line-height: ${T.lh}; color: var(--ink); }
 a { color: inherit; text-decoration: none; }
+p, li { text-wrap: pretty; }
+.nw { white-space: nowrap; }
+p { break-inside: avoid; }
 p + p, p + ul, ul + p { margin-top: 3mm; }
 h1, h2, h3, .pk__n { font-weight: 800; font-variation-settings: 'wdth' 118; text-transform: uppercase; }
 h2 { font-size: 15.5pt; line-height: 1.04; letter-spacing: -0.01em; text-wrap: balance; }
@@ -163,41 +171,43 @@ ul.ribs li::before { content: ''; position: absolute; left: 0; top: 4.1mm; width
 h1 { margin-top: 11mm; font-size: 33pt; line-height: 0.9; letter-spacing: -0.025em; }
 h1 span { display: block; }
 h1 span:first-child { color: var(--red); }
-.letter { display: grid; grid-template-columns: 44mm 1fr; gap: 0 10mm; margin-top: 11mm; }
-.hola { font-family: 'Newsreader Variable', serif; font-style: italic; font-size: 17pt; line-height: 1.1; color: var(--red); }
-.letter__body { font-size: 10.8pt; }
+.letter { display: grid; grid-template-columns: 34mm 1fr; gap: 0 10mm; margin-top: 11mm; }
+.hola { font-family: 'Newsreader Variable', serif; font-style: italic; font-size: 17pt; line-height: 1.1; color: var(--red); white-space: nowrap; }
+.letter__body { font-size: 1.04em; }
 
-.sec { display: grid; grid-template-columns: 44mm 1fr; gap: 0 10mm; padding: 10mm var(--pad) 0; }
+.sec { padding: 11mm var(--pad) 0; }
+.sec > h2 { font-size: 16pt; break-after: avoid; }
+.sec__body { margin: 5mm 0 0 44mm; }
 
 .sec--keep { break-inside: avoid; }
 .sub { position: relative; margin-top: 6.4mm; padding-top: 5.2mm; }
 .sub::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 2.6mm; color: var(--red); background: var(--ribs); }
-.sub h3 { font-size: 11.4pt; margin-bottom: 2.6mm; }
+.sub h3 { font-size: 11.4pt; margin-bottom: 2.6mm; break-after: avoid; }
 
-.packs { padding: 12mm var(--pad) 0; }
+.packs { padding: 3mm var(--pad) 0; break-before: page; }
 .packs__main { break-inside: avoid; }
-.packs__head { display: grid; grid-template-columns: 1fr 52mm; gap: 10mm; align-items: end; }
+.packs__head { display: grid; grid-template-columns: 1fr auto; gap: 10mm; align-items: end; }
 .packs__head h2 { font-size: 21pt; line-height: 0.98; }
-.packs__head div { font-size: 9.6pt; color: var(--muted); text-align: right; }
+.packs__head div { font-size: 9.6pt; color: var(--muted); text-align: right; white-space: nowrap; }
 .pk { list-style: none; margin-top: 7mm; display: grid; gap: 2.6mm; }
-.pk__row { display: grid; grid-template-columns: 43mm 1fr 33mm; gap: 6mm; align-items: center; min-height: 21mm; padding: 3.6mm 9mm 3.6mm 10mm; border-radius: 99mm; break-inside: avoid; }
+.pk__row { display: grid; grid-template-columns: 47mm 1fr 30mm; gap: 6mm; align-items: center; min-height: 19.5mm; padding: 3.2mm 9mm 3.2mm 10mm; border-radius: 99mm; break-inside: avoid; }
 .pk__row--1 { background: var(--paper); box-shadow: inset 0 0 0 0.25mm var(--line); }
 .pk__row--2 { background: var(--silver); box-shadow: inset 0 0.3mm 0 rgba(255,255,255,0.9), inset 0 -0.3mm 0 rgba(0,0,0,0.08); }
 .pk__row--3 { background: var(--red); color: #fff; }
 .pk__row--4 { background: var(--ink); color: #fff; }
-.pk__n { font-size: 11.6pt; line-height: 1.05; }
+.pk__n { font-size: 11.2pt; line-height: 1.05; }
 .pk__d { font-size: 9.2pt; line-height: 1.38; }
 .pk__p { text-align: right; line-height: 1; white-space: nowrap; }
 .pk__p b { display: block; font-weight: 800; font-variation-settings: 'wdth' 118; font-size: 19pt; letter-spacing: -0.02em; }
 .pk__p i { display: block; margin-top: 1.2mm; font-style: normal; font-size: 8.4pt; opacity: 0.8; }
-.packs__after { margin-top: 6mm; padding-left: 10mm; max-width: 150mm; font-size: 10.8pt; }
-.duo { display: grid; gap: 3mm; margin-top: 7mm; font-size: 9.8pt; line-height: 1.45; }
-.duo > div { display: grid; grid-template-columns: 50mm 1fr; gap: 0 8mm; padding: 7mm 11mm 7mm 10mm; border-radius: 13mm; break-inside: avoid; }
+.packs__after { margin-top: 6mm; padding-left: 10mm; max-width: 150mm; font-size: 1.04em; }
+.duo { display: grid; gap: 3mm; margin-top: 7mm; font-size: 9.4pt; line-height: 1.45; }
+.duo > div { display: grid; grid-template-columns: 48mm 1fr; gap: 0 8mm; padding: 6.4mm 11mm 6.4mm 10mm; border-radius: 13mm; break-inside: avoid; }
 .duo > div > h3 { grid-row: 1 / span 9; }
 .duo > div > p { grid-column: 2; }
 .duo__a { background: var(--silver); box-shadow: inset 0 0.3mm 0 rgba(255,255,255,0.9), inset 0 -0.3mm 0 rgba(0,0,0,0.08); }
 .duo__b { background: var(--paper); box-shadow: inset 0 0 0 0.25mm var(--line); }
-.duo h3 { font-size: 10.4pt; margin-bottom: 0; }
+.duo h3 { font-size: 9.6pt; margin-bottom: 0; }
 
 .proof { margin: 11mm var(--pad) 0; padding: 12mm 20mm 12mm; border-radius: 22mm; background: var(--red); color: #fff; break-inside: avoid; }
 .proof h2 { font-size: 17pt; }
@@ -209,10 +219,11 @@ h1 span:first-child { color: var(--red); }
 .time li { position: relative; padding-top: 5.4mm; font-size: 9.8pt; break-inside: avoid; }
 .time li::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 2.6mm; color: var(--red); background: var(--ribs); }
 
-.cta { margin: 12mm var(--pad) 0; padding: 12mm 22mm; border-radius: 99mm; background: var(--ink); color: #fff; text-align: center; break-inside: avoid; }
+.cta { margin: 5mm var(--pad) 0; padding: 12mm 22mm; border-radius: 99mm; background: var(--ink); color: #fff; text-align: center; break-inside: avoid; }
 .cta h2 { font-size: 19pt; }
 .cta p { max-width: 118mm; margin: 4mm auto 5mm; font-size: 10.6pt; }
-.fin { break-inside: avoid; }
+.fin { break-before: page; break-inside: avoid; }
+.fin__img { display: block; width: calc(100% - 2 * var(--pad)); height: 74mm; margin: 3mm var(--pad) 0; object-fit: cover; border-radius: 99mm; background: #5a0710; }
 .sign { padding: 8mm var(--pad) 0; }
 .sign__n { margin-top: 1mm; font-family: 'Newsreader Variable', serif; font-style: italic; font-size: 17pt; color: var(--red); }
 .sign__a { margin-top: 0.5mm; font-weight: 700; }
