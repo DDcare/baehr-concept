@@ -115,23 +115,51 @@ function shots(tall) {
   ];
 }
 
-function blendShot(A, B, t) {
-  return {
-    t: [lerp(A.t[0], B.t[0], t), lerp(A.t[1], B.t[1], t), lerp(A.t[2], B.t[2], t)],
-    az: lerp(A.az, B.az, t),
-    el: lerp(A.el, B.el, t),
-    hf: 1 / lerp(1 / A.hf, 1 / B.hf, t),
-    sx: lerp(A.sx, B.sx, t),
-    sy: lerp(A.sy, B.sy, t),
-  };
-}
-
-function shotAt(p, keys) {
-  if (p <= keys[0][0]) return keys[0][1];
-  for (let i = 1; i < keys.length; i++) {
-    if (p <= keys[i][0]) return blendShot(keys[i - 1][1], keys[i][1], ease(seg(p, keys[i - 1][0], keys[i][0])));
+// La cámara pasa por cada encuadre sin pararse ni rebotar: interpolación cúbica monótona (velocidad continua,
+// sin pasarse de largo). Antes cada tramo arrancaba y frenaba por separado y el movimiento iba a tirones.
+const paths = new WeakMap();
+const FIELDS = [(s) => s.t[0], (s) => s.t[1], (s) => s.az, (s) => s.el, (s) => 1 / s.hf, (s) => s.sx, (s) => s.sy];
+function slopes(x, y) {
+  const n = x.length;
+  const d = [];
+  for (let i = 0; i < n - 1; i++) d.push((y[i + 1] - y[i]) / (x[i + 1] - x[i]));
+  const m = new Array(n).fill(0); // en los extremos, velocidad cero: sale del reposo y llega al reposo
+  for (let i = 1; i < n - 1; i++) {
+    if (d[i - 1] * d[i] <= 0) continue;
+    const a = x[i] - x[i - 1];
+    const b = x[i + 1] - x[i];
+    const w1 = 2 * b + a;
+    const w2 = b + 2 * a;
+    m[i] = (w1 + w2) / (w1 / d[i - 1] + w2 / d[i]);
   }
-  return keys[keys.length - 1][1];
+  return m;
+}
+function pathOf(keys) {
+  let path = paths.get(keys);
+  if (!path) {
+    const xs = keys.map((k) => k[0]);
+    const ys = FIELDS.map((f) => keys.map((k) => f(k[1])));
+    path = { xs, ys, ms: ys.map((y) => slopes(xs, y)) };
+    paths.set(keys, path);
+  }
+  return path;
+}
+function shotAt(p, keys) {
+  const { xs, ys, ms } = pathOf(keys);
+  const n = xs.length;
+  const x = Math.min(xs[n - 1], Math.max(xs[0], p));
+  let i = 0;
+  while (i < n - 2 && x > xs[i + 1]) i++;
+  const h = xs[i + 1] - xs[i];
+  const t = (x - xs[i]) / h;
+  const t2 = t * t;
+  const t3 = t2 * t;
+  const h00 = 2 * t3 - 3 * t2 + 1;
+  const h10 = t3 - 2 * t2 + t;
+  const h01 = -2 * t3 + 3 * t2;
+  const h11 = t3 - t2;
+  const v = ys.map((y, k) => h00 * y[i] + h10 * h * ms[k][i] + h01 * y[i + 1] + h11 * h * ms[k][i + 1]);
+  return { t: [v[0], v[1], 0], az: v[2], el: v[3], hf: 1 / v[4], sx: v[5], sy: v[6] };
 }
 
 function staticFallback() {
@@ -898,7 +926,10 @@ function init() {
   const FOAM_SIZE = 0.62;
 
   // Velocidad máxima de la película, en fracción del recorrido por segundo: un paso tarda al menos 0,7 s
+  const PIXELS_MAX = 2.3e6;
   const MAX_SPEED = 0.22;
+  // Rigidez del muelle que sigue al scroll (1/s): más alto, más pegado al dedo; más bajo, más suave
+  const SPRING = 10.5;
 
   // ---------- Encuadre ----------
   let W = 1;
@@ -935,6 +966,7 @@ function init() {
     keys[0][1].sy = centre - 0.5;
     // y si la cápsula queda más baja de lo previsto (44 % del alto), los productos se encogen con ella
     keys[0][1].hf = 0.25 * Math.min(1, (H * 0.97 - top) / (H * 0.44));
+    paths.delete(keys);
   }
 
   // Resolución: como mucho 1,5 píxeles por punto; si el equipo no llega, baja sola (ver el bucle)
@@ -952,7 +984,8 @@ function init() {
     sized.w = w;
     sized.h = h;
     sized.dpr = dpr;
-    renderer.setPixelRatio(dpr);
+    // tope de píxeles: en una pantalla grande de alta densidad no se dibuja más de lo que cabe en 1920 x 1200
+    renderer.setPixelRatio(Math.min(dpr, Math.sqrt(PIXELS_MAX / Math.max(1, w * h))));
     renderer.setSize(w, h, false);
     layout(w, h);
     wdthBase = parseFloat(getComputedStyle(sticky).getPropertyValue('--wdth-base')) || 125;
@@ -1360,6 +1393,7 @@ function init() {
   // ---------- Bucle ----------
   let target = 0;
   let p = 0;
+  let vel = 0;
   let running = false;
   let forced = null;
   let introT = 0;
@@ -1391,12 +1425,28 @@ function init() {
     last = now;
     if (forced === null) {
       readScroll();
-      // seguimiento del scroll independiente de la velocidad del equipo, con velocidad máxima: un gesto rápido
-      // (el impulso del dedo en el móvil) ya no salta de un paso a otro, la cámara recorre el camino
-      const want = (target - p) * (1 - Math.exp(-dt * 13));
+      // Seguimiento del scroll con un muelle de amortiguación crítica: la cámara acelera y frena sin saltos aunque
+      // el scroll llegue a golpes (rueda del ratón, impulso del dedo). Solución exacta: no depende de la velocidad del equipo.
+      const x0 = p - target;
+      const c2 = vel + SPRING * x0;
+      const e = Math.exp(-SPRING * dt);
+      let next = target + (x0 + c2 * dt) * e;
+      vel = (c2 - SPRING * (x0 + c2 * dt)) * e;
+      // velocidad máxima: un gesto rápido no salta de un paso a otro, la cámara recorre el camino
       const cap = MAX_SPEED * dt;
-      p += Math.max(-cap, Math.min(cap, want));
-      if (Math.abs(target - p) < 0.0002) p = target;
+      if (next - p > cap) {
+        next = p + cap;
+        vel = MAX_SPEED;
+      } else if (p - next > cap) {
+        next = p - cap;
+        vel = -MAX_SPEED;
+      }
+      p = next;
+      if (Math.abs(target - p) < 0.00004 && Math.abs(vel) < 0.0004) {
+        p = target;
+        vel = 0;
+        vel = 0;
+      }
     } else {
       p = forced;
     }
@@ -1447,6 +1497,8 @@ function init() {
       // con imagen fija en la cápsula, el 3D aparece encima sin animación de entrada
       if (introT < 1) introT = hasPoster ? 1 : Math.min(1, (now - introStart) / 1800);
     }
+    if (loaded && introT >= 1) startupProbe(dt);
+    if (dead) return;
     const a0 = performance.now();
     apply(p, (now - t0) / 1000, introT);
     stat.apply += performance.now() - a0;
@@ -1476,15 +1528,60 @@ function init() {
   }
 
   function start() {
-    if (running) return;
+    if (running || dead) return;
     running = true;
+    last = 0;
     requestAnimationFrame(frame);
+  }
+
+  // Red de seguridad: si el equipo no llega ni a 25 imágenes por segundo con la calidad más baja, se queda con
+  // la versión de imágenes fijas (la misma que con "menos movimiento"). Nadie ve la película a tirones.
+  let dead = false;
+  function goStatic() {
+    dead = true;
+    running = false;
+    sticky.classList.remove('is-open', 'has-steps');
+    sticky.style.removeProperty('--n-top');
+    html.classList.remove('film-ready');
+    staticFallback();
+  }
+  // Prueba de arranque: se mide con el primer plano (los cinco productos juntos, el más pesado) mientras
+  // el visitante aún está arriba. Solo cuenta si la página está a la vista.
+  const probe = { win: [], skip: 24, lowered: false, done: false };
+  function startupProbe(dt) {
+    if (probe.done || dprFixed || document.hidden) return;
+    if (target > 0.02) {
+      probe.done = true; // ya se está desplazando: decide el ajuste normal
+      return;
+    }
+    if (probe.skip > 0) {
+      probe.skip--;
+      return;
+    }
+    probe.win.push(dt);
+    if (probe.win.length < 36) return;
+    const sorted = probe.win.slice().sort((x, y) => x - y);
+    const med = sorted[sorted.length >> 1] * 1000;
+    probe.win.length = 0;
+    if (med <= 40) {
+      probe.done = true;
+    } else if (!probe.lowered) {
+      probe.lowered = true;
+      probe.skip = 24;
+      dpr = Math.min(dpr, 0.75);
+      mirror.visible = false;
+      resize();
+    } else {
+      probe.done = true;
+      goStatic();
+    }
   }
 
   if (MODEST) mirror.visible = false;
   resize();
   readScroll();
   p = target;
+  vel = 0;
   if (p > 0.01) introT = 1;
   apply(p, 0, introT);
   renderer.render(scene, camera);
@@ -1499,6 +1596,7 @@ function init() {
       if (forced === null) {
         readScroll();
         p = target;
+        vel = 0;
       }
       apply(p, (performance.now() - t0) / 1000, 1);
     },
@@ -1518,6 +1616,7 @@ function init() {
     if (jump) {
       readScroll();
       p = target;
+      vel = 0;
       introT = 1;
     }
   }
@@ -1609,7 +1708,14 @@ function init() {
       dpr = v;
       resize();
     },
-    quality: () => ({ dpr, reflections: mirror.visible }),
+    quality: () => ({ dpr, reflections: mirror.visible, static: dead }),
+    // para pruebas: fuerza la red de seguridad
+    goStatic,
+    pos: () => p,
+    shot: (v) => {
+      const s = shotAt(v, keys);
+      return [s.t[0], s.t[1], s.az, s.el, 1 / s.hf, s.sx, s.sy];
+    },
     info: () => {
       const r = { calls: renderer.info.render.calls, tris: renderer.info.render.triangles, applyMs: stat.n ? +(stat.apply / stat.n).toFixed(2) : 0, frames: stat.n };
       stat.apply = 0;
