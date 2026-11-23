@@ -4,7 +4,7 @@ Hi Valeria,
 
 As promised, here's our proposal. You asked how we'd make BAEHR España easier to find, on Google and in the answers that ChatGPT and other AI assistants give. You also asked how we'd reach your three goals: making the brand better known, winning new professional customers and getting more orders. And you asked for priced packages and a call to go through it all. We've written it with your partners in mind too.
 
-Here's a link to a prototype we've built for BAEHR España. It isn't the finished site, but it shows the direction we'd take. Open it on your phone and look at the version for professionals, especially the sign-up.
+Here's the prototype we've built for BAEHR España: baehr-concept.vercel.app. It isn't the finished site, but it shows the direction we'd take. Open it on your phone and look at the version for professionals, especially the sign-up.
 
 ## What we found
 
@@ -52,24 +52,31 @@ To help, each salon can order quickly from a product list, repeat a previous ord
 
 ## The shop and the portal
 
-The new shop will replace your current site, and we'll move the products, orders and customers across. You mentioned that the manufacturer has no strict requirements for design or structure, so the shop will have a look of its own instead of an off-the-shelf template. The catalogue will be in proper Spanish, in the terms professionals use, and the shop will load quickly on phones. Free delivery will start at one amount, the same everywhere, and delivery times will be clear.
+The new shop and the portal will both run on Shopify. You'll manage products, orders, customers and prices yourself, from one dashboard. The basics a trade portal needs, such as company accounts, trade price lists, reordering and payment terms, come as standard with Shopify from the Basic plan upwards.
 
-The portal will be the private area for professionals, with everything described in the previous section. Salons will also find their invoices and order history in their account.
+You mentioned that the manufacturer has no strict requirements for design or structure, so we'll build a Shopify theme of its own for BAEHR España instead of using an off-the-shelf template. The catalogue will be in proper Spanish, in the terms professionals use, and the shop will load quickly on phones. Free delivery will start at one amount, the same everywhere, and delivery times will be clear.
 
-## Four packages, each building on the last
+We'll move the products, orders and customers across. Passwords can't be carried over to Shopify, so existing customers will get an email to activate their new account. Professionals sign in to the portal with a one-time code sent to their email, so there's no password to remember. The portal will have everything described in the previous section, and salons will also find their invoices and order history in their account.
+
+## Three packages, each building on the last
 
 All prices exclude VAT.
 
-- Shop and SEO, €480 a month: the new site and shop, search optimisation for Google and AI assistants, copywriting, hosting, maintenance and a monthly report.
-- Plus Portal, €680 a month: all of the above, plus the portal for professionals, which we run for you.
-- Plus Google Ads, €1,140 a month: all of the above, plus Google Ads campaigns, which we set up and manage.
-- Plus Social, €1,480 a month: all of the above, plus social media management and ads on Instagram and Facebook.
+- Shop and Portal, €540 a month: the new shop and the portal for professionals on Shopify, which we run for you, plus search optimisation for Google and AI assistants, copywriting, maintenance and a monthly report.
+- Plus Google Ads, €1,020 a month: all of the above, plus Google Ads campaigns, which we set up and manage.
+- Plus Social, €1,560 a month: all of the above, plus social media management and ads on Instagram and Facebook.
+
+Including Shopify Basic and the minimum advertising budget, your total monthly cost comes to €564, €1,644 or €2,584 excluding VAT, depending on the package. Shopify's fees on each payment come on top.
 
 We recommend Plus Google Ads. SEO takes months to pay off, while Google Ads reach people straight away, at the moment they search for your products. And once the portal is live, the sign-up no longer puts anyone off.
 
 ### The shop and portal at no cost if we work together for 12 months
 
-The shop and the portal are worth €1,500 together. With Shop and SEO, we build the shop only; the portal comes with Plus Portal and above. If we work together for 12 months, you pay nothing for them. If you stop earlier, you pay €125 for each month left until month 12. For example, if you stop after four months, you pay for the eight months left: 8 × €125 = €1,000.
+The shop and the portal are worth €2,000 together. If we work together for 12 months, you pay nothing for them. If you stop earlier, you pay the remaining share pro rata. For example, if you stop after four months, eight months are left and you pay €1,333.
+
+### The Shopify plan is separate
+
+You pay the Shopify subscription directly to Shopify, separately from our monthly fee. Basic, at €24 a month on annual billing, is enough to start with. If several people will work in the shop, Grow costs €69 a month on annual billing and allows up to five staff accounts. Both prices exclude VAT. Shopify also charges a processing fee on each card payment.
 
 ### The advertising budget is separate
 
@@ -77,7 +84,13 @@ Ad spend isn't part of the monthly fee. You pay it directly to Google and Meta, 
 
 As you don't have a fixed advertising budget yet, we suggest starting with at least €600 a month on Google. With Plus Social, add at least €400 a month on Meta, so €1,000 in total. We'll then adjust it based on the results in your accounts.
 
-The campaigns and social media start once the portal is live, in month two or three. Before that, ads would send people to the current form, and you'd be paying for clicks that go nowhere. You pay €480 a month until the portal is live, whichever package you choose.
+The campaigns and social media start once the portal is live, in month two. Before that, ads would send people to the current form, and you'd be paying for clicks that go nowhere. You pay €540 a month until the portal is live, whichever package you choose.
+
+### Optional: your products in 3D
+
+The 3D film on the home page is included in every package. A rotating 3D model on a product page is optional, at €150 per product as a one-off fee, excluding VAT. The five products in the home page film get theirs at no extra cost once we have the label files from the manufacturer. You can see an example on the prototype's product page for the Crema en espuma Orange-Lemongras.
+
+To be honest about it: each model takes real work (the shape, the label all the way round, and checking it), and it makes that page slower to load. For a model that's accurate from every side, we need photos from all sides or the manufacturer's label files. In the prototype, only the front is real so far.
 
 ## We've done this before with Skin Complete
 
@@ -85,18 +98,16 @@ Skin Complete (skincomplete.eu) is a Dutch brand of LED masks and skincare that 
 
 With the new site and portal, they've gained 80 new trade customers (clinics and beauty salons). The brand now works with businesses in the Netherlands, Belgium and Curaçao. It's essentially the model we're proposing for BAEHR España.
 
-## The first few months
+## The first two months
 
-In month one, we'll set up analytics, open the site to search engines and AI bots, and design the new shop. Your monthly report starts that month.
+In the first two weeks, we'll set up analytics, open the site to search engines and AI bots, and design the new shop. In weeks three and four, the shop goes live, with the revised catalogue and the seminar pages. Your monthly report starts in month one.
 
-In months two and three, we'll launch the shop and the portal, with the revised catalogue and the seminar pages. Once the portal is live, the campaigns and social media start, depending on your package.
-
-From month four, we'll publish the service pages.
+In month two, the portal goes live and we publish the service pages. From then on, the campaigns and social media start, depending on your package.
 
 ## Terms and what we need from you
 
 - All prices exclude VAT.
-- You can stop at any time with one month's notice. If you stop before 12 months, you only pay off the rest of the shop and portal: €125 for each month left.
+- You can stop at any time with one month's notice. If you stop before 12 months, you only pay the remaining share of the shop and portal, pro rata.
 - The monthly report covers sign-ups, first orders, repeat orders and the cost per new customer.
 - We don't guarantee Google rankings or a specific number of visits.
 
@@ -110,4 +121,4 @@ Best wishes,
 
 Denis
 
-[agency name]
+Meneer Marketing

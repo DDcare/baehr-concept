@@ -1,0 +1,38 @@
+@font-face{font-family:"Archivo";src:url("file://FONTDIR/archivo/files/archivo-latin-wdth-normal.woff2") format("woff2");font-weight:100 900;font-stretch:62% 125%;}
+@font-face{font-family:"Newsreader";src:url("file://FONTDIR/newsreader/files/newsreader-latin-wght-italic.woff2") format("woff2");font-weight:200 800;font-style:italic;}
+:root{--red:#A60D1C;--ink:#18181A;--paper:#F2EEE7;--white:#fff;--line:rgba(24,24,26,.14)}
+@page{size:A4;margin:22mm 20mm 22mm 20mm;background:var(--paper)}
+html{background:var(--paper)}
+body{margin:0;font-family:"Archivo",sans-serif;font-stretch:100%;font-weight:400;font-size:10.4pt;line-height:1.55;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+main{max-width:100%}
+.nw{white-space:nowrap}
+.cover{border-bottom:1.6pt solid var(--ink);padding-bottom:7mm;margin-bottom:7mm}
+.cover .for{font-family:"Newsreader",serif;font-style:italic;font-size:13pt;margin:0 0 3mm;color:var(--red)}
+.cover h1{font-stretch:125%;font-weight:850;font-size:38pt;line-height:.98;letter-spacing:-.01em;margin:0 0 5mm;text-wrap:balance}
+.cover .date{margin:0;font-stretch:112%;font-weight:600;font-size:9pt;letter-spacing:.06em;text-transform:uppercase}
+h2{font-stretch:125%;font-weight:800;font-size:17pt;line-height:1.08;margin:9mm 0 3.5mm;text-wrap:balance;break-after:avoid;color:var(--ink)}
+h2::before{content:"";display:block;break-after:avoid;width:16mm;height:4.2mm;border-radius:2.1mm;background:var(--red);margin-bottom:4mm}
+h3{font-stretch:115%;font-weight:750;font-size:12pt;line-height:1.2;margin:7mm 0 2.5mm;text-wrap:balance;break-after:avoid}
+p{margin:0 0 3mm;orphans:3;widows:3}
+.greet{font-family:"Newsreader",serif;font-style:italic;font-size:15pt;margin-bottom:4mm}
+ul{list-style:none;padding:0;margin:0 0 4mm}
+li{position:relative;padding:0 0 0 7mm;margin:0 0 2.6mm;break-inside:avoid}
+li::before{content:"";position:absolute;left:0;top:.55em;width:3.6mm;height:1.6mm;border-radius:.8mm;background:var(--red)}
+.pkgs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:3mm;margin:4mm 0 5mm;break-inside:avoid}
+.pkg{background:var(--white);border-radius:5mm;padding:5mm 4mm 5mm;display:flex;flex-direction:column;border:1pt solid var(--line)}
+.pkg.rec{background:var(--red);color:var(--white);border-color:var(--red)}
+.pkg .tag{font-family:"Newsreader",serif;font-style:italic;font-size:9.5pt;height:5mm;line-height:5mm;margin:0 0 1.5mm;white-space:nowrap}
+.pkg .name{font-stretch:100%;font-weight:800;font-size:10.5pt;line-height:5mm;height:5mm;margin:0 0 3mm;white-space:nowrap}
+.pkg .price{font-stretch:125%;font-weight:850;font-size:18pt;line-height:1;margin:0 0 3.5mm}
+.pkg .per{display:block;font-stretch:100%;font-weight:500;font-size:8.5pt;margin-top:1.5mm}
+.pkg .desc{font-size:8.6pt;line-height:1.45;margin:0}
+.sign{margin-top:8mm;font-family:"Newsreader",serif;font-style:italic;font-size:13pt}
+.name-sign{font-stretch:118%;font-weight:800;font-size:13pt;margin:0}
+.agency{color:var(--red)}
+
+h2.newpage{break-before:page;margin-top:0}
+.cover{margin-top:30mm}
+h2,h3{break-inside:avoid}
+.closing{break-inside:avoid}
+a{color:var(--red);text-decoration:underline;text-underline-offset:.15em;text-decoration-thickness:.6pt}
+.pkg.rec a{color:var(--white)}

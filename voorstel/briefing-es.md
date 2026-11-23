@@ -65,28 +65,40 @@ Nieuwe webwinkel: vervangt de huidige site, producten, bestellingen en klanten g
 
 Portaal voor professionals: een salon vraagt in twee minuten een account aan; professionele prijzen na goedkeuring; snel bestellen vanaf een lijst en eerdere bestellingen herhalen; facturen en bestelgeschiedenis in het eigen account.
 
-## Pakketten (vast, besloten door D)
+## Platform: Shopify (besluit D, 22-11)
 
-Elk pakket bevat het vorige. Prijzen per maand, exclusief btw (IVA).
+- Winkel en B2B-portaal komen op Shopify.
+- Feit (help.shopify.com/en/manual/b2b): "Shopify B2B is available on the Basic, Grow, Advanced, and Shopify Plus plans." Volgens de B2B-pagina van Shopify (shopify.com/enterprise/blog/b2b-on-shopify, bijgewerkt 14-10-2026) zitten bedrijfsaccounts, betaaltermijnen, nabestellen en staffelprijzen in alle vier de abonnementen. Buiten Plus maximaal drie prijscatalogi (genoeg voor een professionele prijslijst).
+- Feit (zelfde B2B-pagina): "Buyers sign in with a one-time code sent to their email address." Professionals loggen dus in met een code per mail, zonder wachtwoord.
+- Feit (algemeen, Shopify-community en migratietools): wachtwoorden van een andere winkel kunnen niet naar Shopify mee. Bestaande klanten krijgen een mail om hun account te activeren.
+- Valeria beheert producten, bestellingen, klanten en prijzen zelf in één beheeromgeving van Shopify.
+- Besluit D (22-11): Valeria betaalt het Shopify-abonnement zelf, rechtstreeks aan Shopify, los van ons maandbedrag. We bieden Basic of Grow. Prijzen voor Spanje (de officiële pagina toont vanaf de server alleen dollars; de meeste Spaanse bronnen van 2026, zoals ecommerce.acc.com.es, pangostudio.com en m8d.io, noemen): Basic 24 euro per maand bij jaarbetaling, Grow 69 euro per maand bij jaarbetaling, beide zonder IVA. Feit (officiële prijspagina, vergelijkingstabel): Basic heeft geen extra medewerkersaccounts, Grow tot 5. Formulering: Basic om mee te beginnen; Grow als er meerdere mensen in de winkel werken. Daarbij komen de betaalkosten van Shopify per transactie; noem die zonder percentage.
+- Gevolg voor pakket 1: "hosting" vervalt, want hosting zit in het Shopify-abonnement.
+- Eigen ontwerp: een eigen Shopify-thema, gemaakt voor BAEHR España, geen gekocht sjabloon.
+- Noem het huidige platform van baehr.com.es niet: dat is niet geverifieerd.
 
-- Pakket 1, 480 euro per maand: nieuwe site met webwinkel, vindbaarheid in Google en in AI-antwoorden, teksten, hosting, onderhoud, maandrapport.
-- Pakket 2, 680 euro per maand: plus het portaal voor professionals, en wij beheren het portaal.
-- Pakket 3, 1.140 euro per maand: plus opzet en beheer van Google Ads-campagnes. Dit is ons advies.
-- Pakket 4, 1.480 euro per maand: plus social media en advertenties op Instagram en Facebook.
+## Pakketten (besluit D, 22-11: drie pakketten)
 
-Pakketnamen: kies korte Spaanse namen die laten zien dat er telkens iets bij komt. Eerder gebruikt en bruikbaar: Web y Google, Con portal, Con campañas, Con redes. Beter mag.
+Elk pakket bevat het vorige. Prijzen per maand, exclusief btw (IVA). Het portaal zit nu in de basis; er is geen pakket zonder portaal meer.
+
+- Pakket 1, 540 euro per maand: nieuwe winkel en portaal voor professionals op Shopify (wij beheren het portaal), vindbaarheid in Google en in AI-antwoorden, teksten, onderhoud, maandrapport.
+- Pakket 2, 1.020 euro per maand: plus opzet en beheer van Google Ads-campagnes. Dit is ons advies.
+- Pakket 3, 1.560 euro per maand: plus social media en advertenties op Instagram en Facebook.
+
+Totaal per maand voor Valeria (rekenvoorbeeld met Shopify Basic 24 euro en het minimale advertentiebudget, alles zonder IVA): pakket 1 = 540 + 24 = 564 euro; pakket 2 = 1.020 + 24 + 600 = 1.644 euro; pakket 3 = 1.560 + 24 + 600 + 400 = 2.584 euro. Eén korte zin na de pakketten, met "sin IVA" en zonder de betaalkosten van Shopify per betaling (dat erbij zeggen).
+
+Pakketnamen: kies korte Spaanse namen die laten zien dat er telkens iets bij komt. De vorige namen waren Tienda y SEO, Con portal, Con Google Ads, Con redes; de basis heeft nu ook het portaal.
 
 Gratis bouw:
 
-- Webwinkel en portaal hebben samen een waarde van 1.500 euro. Bij een samenwerking van 12 maanden betaalt ze daar niets voor.
-- Stopt ze eerder, dan betaalt ze 125 euro per resterende maand. Voorbeeld: stoppen na 4 maanden betekent 8 x 125 = 1.000 euro.
-- Bij pakket 1 bouwen we alleen de webwinkel; het portaal zit vanaf pakket 2 in het pakket.
+- Webwinkel en portaal hebben samen een waarde van 2.000 euro (besluit D, 22-11). Bij een samenwerking van 12 maanden betaalt ze daar niets voor.
+- Stopt ze eerder, dan betaalt ze het resterende deel naar rato: een twaalfde van 2.000 euro per resterende maand. Geen maandbedrag noemen (166,67 is onhandig); wel een voorbeeld: stoppen na vier maanden betekent acht resterende maanden, 1.333 euro.
 
 Advertentiebudget:
 
 - Staat los van het maandbedrag. Ze betaalt het rechtstreeks aan Google en Meta. De advertentieaccounts blijven van haar.
-- Voorstel om te beginnen: minimaal 600 euro per maand voor Google (vanaf pakket 3). Bij pakket 4 komt daar minimaal 400 euro per maand voor Meta bij, samen 1.000 euro. Pakket 3 heeft geen Meta. Bijstellen op basis van de cijfers in haar eigen accounts.
-- De campagnes en social media starten pas als het portaal live is (tweede of derde maand). Eerder zouden advertenties mensen naar het huidige formulier sturen, dat weinig oplevert. Tot het portaal live is, betaalt ze 480 euro per maand, welk pakket ze ook kiest.
+- Voorstel om te beginnen: minimaal 600 euro per maand voor Google (vanaf pakket 2). Bij pakket 3 komt daar minimaal 400 euro per maand voor Meta bij, samen 1.000 euro. Pakket 2 heeft geen Meta. Bijstellen op basis van de cijfers in haar eigen accounts.
+- De campagnes en social media starten pas als het portaal live is (tweede maand). Eerder zouden advertenties mensen naar het huidige formulier sturen, dat weinig oplevert. Tot het portaal live is (maand twee), betaalt ze het basisbedrag van 540 euro per maand, welk pakket ze ook kiest.
 
 ## Bewijs
 
@@ -94,14 +106,13 @@ Skin Complete (Nederland, skincomplete.eu): merk van ledmaskers en huidverzorgin
 
 ## Planning
 
-- Eerste maand: metingen opzetten, toegang voor zoek- en AI-robots, ontwerp van de nieuwe winkel. Het maandrapport begint deze maand (het zit in elk pakket).
-- Tweede en derde maand: winkel en portaal live, catalogus, seminarpagina's. Zodra het portaal live is, starten campagnes en social media (afhankelijk van het pakket).
-- Vanaf de vierde maand: pagina's per dienst.
+- Eerste maand, eerste twee weken: metingen opzetten, toegang voor zoek- en AI-robots, ontwerp van de nieuwe winkel. Eerste maand, laatste twee weken: de winkel gaat live. Het maandrapport begint deze maand (het zit in elk pakket). (Besluit D, 22-11.)
+- Tweede maand: het portaal gaat live en de pagina's per dienst worden gepubliceerd. Vanaf dan starten campagnes en social media (afhankelijk van het pakket). (Besluit D, 22-11.) Catalogus en seminarpagina's horen bij de lancering van de winkel.
 
 ## Voorwaarden
 
 - Prijzen exclusief IVA.
-- Geen vaste looptijd. Gebruik NIET "sin permanencia": in Spanje betekent permanencia juist een minimale looptijd met een vergoeding bij eerder stoppen. Altijd opzegbaar met een maand opzegtermijn. De enige voorwaarde is de terugbetaling hierboven: winkel en portaal zijn gratis na 12 maanden samenwerking; wie eerder stopt, betaalt 125 euro per resterende maand.
+- Geen vaste looptijd. Gebruik NIET "sin permanencia": in Spanje betekent permanencia juist een minimale looptijd met een vergoeding bij eerder stoppen. Altijd opzegbaar met een maand opzegtermijn. De enige voorwaarde is de terugbetaling hierboven: winkel en portaal zijn gratis na 12 maanden samenwerking; wie eerder stopt, betaalt het resterende deel naar rato.
 - Maandrapport in cijfers: aanmeldingen van professionals, eerste bestellingen, herhaalbestellingen, kosten per nieuwe klant.
 - Wat we van haar nodig hebben: drie cijfers (hoeveel professionals zich per maand aanmelden, hoeveel daarvan bestellen, gemiddeld orderbedrag); leestoegang tot Google Search Console en haar statistieken; bij een pakket met campagnes beheertoegang tot haar advertentieaccounts. Accounts en inloggegevens blijven van haar.
 - Geen garantie op posities of bezoekers.
@@ -115,3 +126,16 @@ Een gesprek van 30 minuten met haar en haar partners: het plan doorlopen, vragen
 - Niet "exclusivo", niet "fabricado en Alemania", geen andere merkfeiten dan hierboven of in deel A van `docs/merk-en-woordenlijst.md`.
 - Geen medische of therapeutische woorden (deel C van dezelfde lijst). "Tratamiento" alleen in de zin "nunca como tratamiento de una afección"; elders "servicio" of "cuidado".
 - Geen garanties, geen "resultados garantizados".
+
+## Afzender en link (besluit D, 22-11)
+
+- Het bureau heet Meneer Marketing. Ondertekening: Denis, Meneer Marketing.
+- De link naar het prototype mag letterlijk in de tekst: baehr-concept.vercel.app
+- De periode van de 80 klanten van Skin Complete komt er niet in.
+
+## Optie: 3D per product (opdracht D 21-11, prijs besluit D 22-11 op advies van Claude)
+
+- De 3D-productfilm op de home zit in elk pakket.
+- Een ronddraaiend 3D-model op een productpagina is een optie: 150 euro per product, eenmalig (zonder IVA). De vijf producten uit de film op de home krijgen hun 3D-model op de productpagina zonder extra kosten, zodra we de etiketbestanden van de fabrikant hebben.
+- Eerlijk uitleggen: het is veel werk per product (vorm, het etiket rondom, controle) en het maakt die pagina trager om te laden. Voor een echt 3D-model van alle kanten zijn foto's van alle kanten of de etiketbestanden van de fabrikant nodig; in het prototype is nu alleen de voorkant echt.
+- In het prototype staat één voorbeeld: de productpagina van de Crema en espuma Orange-Lemongras (baehr-concept.vercel.app/productos/crema-en-espuma-orange-lemongras/).

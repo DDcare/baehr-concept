@@ -4,7 +4,7 @@ Hola, Valeria:
 
 Como quedamos por correo, aquí tienes la propuesta. Querías saber cómo mejoraríamos el posicionamiento, tanto en Google como en las respuestas de ChatGPT y otros asistentes de IA, y cómo abordaríamos tres objetivos: que BAEHR España se conozca más, que lleguen profesionales nuevos y que entren más pedidos. También nos pediste paquetes con sus precios y una reunión para comentarlo. Lo hemos redactado pensando en ti y en tus socios.
 
-Con la propuesta te pasamos el enlace a un prototipo que hemos preparado para BAEHR España. No es la web definitiva, pero enseña por dónde iríamos. Ábrelo en el móvil y, en la versión para profesionales, fíjate sobre todo en el alta.
+Con la propuesta te pasamos el enlace a un prototipo que hemos preparado para BAEHR España: baehr-concept.vercel.app. No es la web definitiva, pero enseña por dónde iríamos. Ábrelo en el móvil y, en la versión para profesionales, fíjate sobre todo en el alta.
 
 ## Lo que hemos visto
 
@@ -52,24 +52,31 @@ Para eso, cada centro podrá hacer un pedido rápido desde una lista de producto
 
 ## La tienda y el portal
 
-La tienda nueva sustituirá a la web actual, y a ella migraremos los productos, los pedidos y los clientes. Como nos contaste que el fabricante no impone requisitos estrictos de diseño ni de estructura, la tienda tendrá una imagen propia, sin plantilla. El catálogo estará en un español correcto, con el vocabulario del sector, y la tienda cargará rápido en el móvil. Habrá un solo importe mínimo para el envío gratuito y plazos de entrega claros.
+Montaremos la tienda y el portal en Shopify. La tienda nueva sustituirá a la web actual, y a ella migraremos los productos, los pedidos y los clientes. Desde un único panel podrás gestionar directamente los productos, los pedidos, los clientes y los precios. Como nos contaste que el fabricante no impone requisitos estrictos de diseño ni de estructura, haremos un tema de Shopify propio, pensado para BAEHR España, y no una plantilla comprada. El catálogo estará en un español correcto, con el vocabulario del sector, y la tienda cargará rápido en el móvil. Habrá un solo importe mínimo para el envío gratuito y plazos de entrega claros.
 
-El portal será la zona privada para profesionales, con todo lo que hemos contado en el apartado anterior. Cada centro tendrá también en su cuenta las facturas y el historial de pedidos.
+El portal será la zona privada para profesionales, con todo lo que hemos contado en el apartado anterior. Cada centro tendrá también en su cuenta las facturas y el historial de pedidos. La base de un portal así (cuentas de empresa, precios profesionales, repetición de pedidos y condiciones de pago) viene de serie en Shopify a partir del plan Basic.
 
-## Cuatro paquetes que van sumando
+Con el cambio hay algo que conviene saber: las contraseñas de la web actual no se pueden pasar a Shopify. Por eso, los clientes que ya tienen cuenta recibirán un correo para activarla en la tienda nueva. Los profesionales entrarán con un código de un solo uso que les llega por correo, sin contraseña.
+
+## Tres paquetes que van sumando
 
 Los precios son mensuales y sin IVA.
 
-- Tienda y SEO, 480 € al mes. La web nueva con la tienda, el posicionamiento en Google y en las respuestas de IA, los textos, el hosting, el mantenimiento y un informe mensual.
-- Con portal, 680 € al mes. Lo anterior más el portal para profesionales, que gestionamos nosotros.
-- Con Google Ads, 1.140 € al mes. Lo anterior más las campañas de Google Ads, que montamos y llevamos nosotros.
-- Con redes, 1.480 € al mes. Lo anterior más la gestión de redes sociales y los anuncios en Instagram y Facebook.
+- Tienda y portal, 540 € al mes. La tienda nueva y el portal para profesionales en Shopify, la gestión del portal, el posicionamiento en Google y en las respuestas de IA, los textos, el mantenimiento y un informe mensual.
+- Con Google Ads, 1.020 € al mes. Lo anterior más las campañas de Google Ads, que montamos y llevamos nosotros.
+- Con redes, 1.560 € al mes. Lo anterior más la gestión de redes sociales y los anuncios en Instagram y Facebook.
+
+Con el plan Basic de Shopify y el presupuesto mínimo de anuncios que explicamos más abajo, el total al mes sería de 564 €, 1.644 € o 2.584 €, según el paquete. Son importes sin IVA y no incluyen las comisiones de Shopify por cada pago.
 
 Te recomendamos «Con Google Ads». El posicionamiento tarda meses en dar resultados; los anuncios en Google, en cambio, llegan antes a quien ya está buscando producto y, con el portal en marcha, el alta deja de ser un freno.
 
 ### La tienda y el portal, sin coste si trabajamos 12 meses juntos
 
-La tienda y el portal suman un valor de 1.500 €. En «Tienda y SEO» construiremos solo la tienda; el portal se incluye a partir de «Con portal». Con 12 meses de colaboración, no pagas nada por ellos. Si decides terminar antes, pagas 125 € por cada mes que falte hasta los 12. Por ejemplo, dejarlo a los cuatro meses supone 8 × 125 € = 1.000 €.
+La tienda y el portal suman un valor de 2.000 €. Con 12 meses de colaboración, no pagas nada por ellos. Si decides terminar antes, pagas la parte proporcional a los meses que falten hasta los 12. Por ejemplo, dejarlo a los cuatro meses supone ocho meses pendientes, es decir, 1.333 €.
+
+### Lo que pagas directamente a Shopify
+
+El plan de Shopify lo pagas directamente a Shopify, fuera de nuestra cuota. Para empezar basta con el plan Basic, de 24 € al mes. Si varias personas van a trabajar en la tienda, conviene el plan Grow, de 69 € al mes, que admite hasta cinco cuentas de personal. Ambos precios son con pago anual y sin IVA. A eso se suman las comisiones que cobra Shopify por cada pago.
 
 ### El presupuesto de anuncios va aparte
 
@@ -77,7 +84,13 @@ Lo que se invierte en anuncios no forma parte de la cuota mensual. Lo pagas dire
 
 Como ahora no hay un presupuesto fijo de publicidad, proponemos empezar con un mínimo de 600 € al mes para Google, a partir de «Con Google Ads». En «Con redes» se añaden como mínimo 400 € al mes para Meta, con lo que el total llega a 1.000 €. Luego lo ajustaremos según los resultados de tus cuentas.
 
-Las campañas y las redes arrancarán cuando el portal funcione, en el segundo o el tercer mes. Antes, los anuncios llevarían a la gente al formulario actual y estarías pagando clics que se quedan por el camino. Hasta ese momento pagas 480 € al mes, sea cual sea el paquete que elijas.
+Las campañas y las redes arrancarán cuando el portal funcione, en el segundo mes. Antes, los anuncios llevarían a la gente al formulario actual y estarías pagando clics que se quedan por el camino. Hasta ese momento pagas 540 € al mes, sea cual sea el paquete que elijas.
+
+### El 3D en las fichas de producto, como opción
+
+La animación 3D de productos de la página de inicio está incluida en todos los paquetes. Un modelo 3D que gira en la ficha de un producto es una opción aparte: 150 € por producto, en un pago único y sin IVA. Los cinco productos de la animación lo tendrán sin coste extra en cuanto tengamos los archivos de etiqueta del fabricante. En el prototipo hay un ejemplo en la ficha de la Crema en espuma Orange-Lemongras.
+
+Conviene saber lo que implica. Cada modelo lleva bastante trabajo (la forma del envase, la etiqueta completa alrededor y la revisión), y la ficha tarda más en cargar. Para que el modelo sea fiel por todos los lados hacen falta fotos del producto desde todos los ángulos o los archivos de la etiqueta; en el prototipo, de momento, solo la parte delantera reproduce el envase real.
 
 ## Ya lo hemos hecho con Skin Complete
 
@@ -87,16 +100,14 @@ Con la web y el portal han sumado 80 clientes nuevos, entre clínicas y centros 
 
 ## Cómo serán los primeros meses
 
-El primer mes dejaremos montada la analítica, abriremos la web a los buscadores y a los bots de IA y diseñaremos la tienda nueva. El informe mensual empezará ese mismo mes.
+En las dos primeras semanas dejaremos montada la analítica, abriremos la web a los buscadores y a los bots de IA y diseñaremos la tienda nueva. En las dos siguientes la lanzaremos, con el catálogo revisado y las páginas de los seminarios. El informe mensual empezará ya el primer mes.
 
-Entre el segundo y el tercer mes pondremos en marcha la tienda y el portal, con el catálogo revisado y las páginas de los seminarios. En cuanto el portal funcione, y según el paquete que elijas, empezarán los anuncios y las redes.
-
-A partir del cuarto mes publicaremos las páginas por servicio.
+El segundo mes pondremos en marcha el portal y publicaremos las páginas por servicio. Desde ese momento, y según el paquete que elijas, empezarán los anuncios y las redes.
 
 ## Condiciones y lo que necesitamos de ti
 
 - Precios sin IVA.
-- Puedes darte de baja cuando quieras, con un mes de preaviso. Si lo haces antes de los 12 meses, solo pagas la parte pendiente de la tienda y el portal: 125 € por cada mes que falte.
+- Puedes darte de baja cuando quieras, con un mes de preaviso. Si lo haces antes de los 12 meses, solo pagas la parte pendiente de la tienda y el portal, en proporción a los meses que falten.
 - El informe mensual recoge estas cifras: altas, primeros pedidos, recompras y coste por cliente nuevo.
 - No garantizamos posiciones en Google ni un número concreto de visitas.
 
@@ -110,4 +121,4 @@ Un saludo,
 
 Denis
 
-[nombre de la agencia]
+Meneer Marketing
