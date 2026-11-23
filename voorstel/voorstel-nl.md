@@ -70,9 +70,9 @@ Prijzen per maand, exclusief btw. [Aanname: exclusief btw.]
 - Met advertenties, 1.020 euro per maand. Het vorige plus campagnes op elk advertentiekanaal dat bij BAEHR España past, te beginnen met Google en Meta (Instagram en Facebook). Wij zetten ze op, beheren ze en maken de beelden voor de advertenties. [Besluit D, 23-11: alle advertentiekanalen en de beelden daarvoor horen bij pakket twee. Aanname: het eigen team beheert de campagnes.]
 - Met social, 1.560 euro per maand. Het vorige plus het beheer van de social media. [Aanname van Claude: de advertenties op Instagram en Facebook zitten nu in pakket twee, dus hier blijft het beheer over. Prijs ongewijzigd.]
 
-Buiten onze maandprijs vallen twee kosten: je Shopify-abonnement en je advertentiebudget. Beide lichten we hieronder toe. [Het rekenvoorbeeld met een totaal per maand is op 23-11 vervallen: de Shopify-prijs is een richtprijs en het advertentiebudget een advies.]
+Buiten onze maandprijs vallen twee kosten: wat je aan Shopify betaalt en het advertentiebudget. We leggen ze verderop uit. [Het rekenvoorbeeld met een totaal per maand is op 23-11 vervallen: de Shopify-prijs is een richtprijs en het advertentiebudget een advies.]
 
-We raden "Met advertenties" aan. Vindbaarheid kost maanden voordat ze resultaat geeft; advertenties werken meteen: in Google bereiken ze mensen op het moment dat ze naar producten zoeken, en met het portaal live is de aanmelding geen rem meer.
+We raden het pakket "Met advertenties" aan. Vindbaarheid kost maanden voordat ze resultaat geeft; advertenties in Google bereiken daarentegen eerder wie al naar producten zoekt, en met het portaal live is de aanmelding geen rem meer.
 
 ### Winkel en portaal zonder kosten als we 12 maanden samenwerken
 
@@ -80,7 +80,7 @@ Winkel en portaal hebben samen een waarde van 2.000 euro. Bij 12 maanden samenwe
 
 ### Het Shopify-abonnement staat apart
 
-Het abonnement van Shopify betaal je rechtstreeks aan Shopify, los van ons maandbedrag. Om te beginnen is het Basic-abonnement genoeg: reken als richtprijs op ongeveer 25 tot 35 euro per maand. Werken er meerdere mensen in de winkel, dan past het Grow-abonnement beter. Dat laat tot vijf medewerkersaccounts toe en kost ongeveer 60 tot 90 euro per maand. Het zijn richtprijzen: Shopify bepaalt ze, en ze hangen af van maand- of jaarbetaling, dus kijk voor de actuele prijs op shopify.com. Shopify rekent daarnaast betaalkosten per kaartbetaling. [Besluit D, 23-11: geen exacte Shopify-prijzen, wel een richtprijs. De bandbreedtes komen uit Spaanse bronnen van 2026: Basic 22 tot 27 euro bij jaarbetaling en 32 tot 36 per maand, Grow 62 tot 69 bij jaarbetaling en 92 per maand.] [Bron prijzen: de officiële prijspagina toont vanaf de server alleen dollars; de meeste Spaanse bronnen van 2026 noemen voor Spanje 24 en 69 euro bij jaarbetaling, zonder IVA. Jouw Nederlandse pagina toonde 21 en 59 euro: Shopify rekent per land anders. Feit van de officiële pagina: Basic heeft geen extra medewerkersaccounts, Grow tot vijf.]
+Het abonnement van Shopify betaal je rechtstreeks aan Shopify, los van ons maandbedrag. Om te beginnen is het Basic-abonnement genoeg: reken op 20 tot 40 euro per maand. Werken er meerdere mensen in de winkel, dan past het Grow-abonnement beter. Dat laat tot vijf accounts voor medewerkers toe en kost 60 tot 95 euro per maand. Het zijn richtprijzen: Shopify bepaalt ze, en ze hangen af van maand- of jaarbetaling, dus kijk voor de actuele prijs op shopify.com. Shopify rekent daarnaast betaalkosten per kaartbetaling. [Besluit D, 23-11: geen exacte Shopify-prijzen, wel een richtprijs. De bandbreedtes komen uit Spaanse bronnen van 2026: Basic 22 tot 27 euro bij jaarbetaling en 32 tot 36 per maand, Grow 62 tot 69 bij jaarbetaling en 92 per maand.] [Bron prijzen: de officiële prijspagina toont vanaf de server alleen dollars; de meeste Spaanse bronnen van 2026 noemen voor Spanje 24 en 69 euro bij jaarbetaling, zonder IVA. Jouw Nederlandse pagina toonde 21 en 59 euro: Shopify rekent per land anders. Feit van de officiële pagina: Basic heeft geen extra medewerkersaccounts, Grow tot vijf.]
 
 ### Het advertentiebudget staat apart
 

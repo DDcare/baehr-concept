@@ -66,9 +66,9 @@ Los precios son mensuales y sin IVA.
 - Con publicidad, 1.020 € al mes. Lo anterior más las campañas en los canales que encajan con BAEHR España, empezando por Google y Meta (Instagram y Facebook). Las montamos y las llevamos nosotros, y hacemos las imágenes de los anuncios.
 - Con redes, 1.560 € al mes. Lo anterior más la gestión de redes sociales.
 
-Fuera de nuestra cuota quedan dos costes: el plan de Shopify y el presupuesto de anuncios. Los explicamos más abajo.
+Fuera de nuestra cuota quedan dos costes: lo que pagas a Shopify y el presupuesto de anuncios. Los explicamos más abajo.
 
-Te recomendamos «Con publicidad». El posicionamiento tarda meses en dar resultados; los anuncios en Google, en cambio, llegan antes a quien ya está buscando producto y, con el portal en marcha, el alta deja de ser un freno.
+Te recomendamos el paquete «Con publicidad». El posicionamiento tarda meses en dar resultados; los anuncios en Google, en cambio, llegan antes a quien ya está buscando producto y, con el portal en marcha, el alta deja de ser un freno.
 
 ### La tienda y el portal, sin coste si trabajamos 12 meses juntos
 
@@ -76,7 +76,7 @@ La tienda y el portal suman un valor de 2.000 €. Con 12 meses de colaboració
 
 ### Lo que pagas directamente a Shopify
 
-El plan de Shopify lo pagas directamente a Shopify, fuera de nuestra cuota. Para empezar basta con el plan Basic: calcula entre 25 y 35 € al mes. Si varias personas van a trabajar en la tienda, conviene el plan Grow, que admite hasta cinco cuentas de personal y cuesta entre 60 y 90 € al mes. Son precios orientativos: los fija Shopify y dependen de si el pago es mensual o anual, así que consulta el precio actual en shopify.com. A eso se suman las comisiones que cobra Shopify por cada pago.
+El plan de Shopify lo pagas directamente a Shopify, fuera de nuestra cuota. Para empezar basta con el plan Basic: calcula entre 20 y 40 € al mes. Si varias personas van a trabajar en la tienda, conviene el plan Grow, que admite hasta cinco cuentas para empleados y cuesta entre 60 y 95 € al mes. Son precios orientativos: los fija Shopify y dependen de si el pago es mensual o anual, así que consulta el precio actual en shopify.com. A eso se suman las comisiones que cobra Shopify por cada pago.
 
 ### El presupuesto de anuncios va aparte
 

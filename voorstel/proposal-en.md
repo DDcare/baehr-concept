@@ -66,9 +66,9 @@ All prices exclude VAT.
 - Plus Ads, €1,020 a month: all of the above, plus campaigns on every advertising channel that suits BAEHR España, starting with Google and Meta (Instagram and Facebook). We set them up, manage them and create the visuals for the ads.
 - Plus Social, €1,560 a month: all of the above, plus social media management.
 
-Two costs sit outside our fee: your Shopify plan and your advertising budget. Both are explained below.
+Two costs sit outside our fee: what you pay to Shopify and your advertising budget. Both are explained below.
 
-We recommend Plus Ads. SEO takes months to pay off, while ads work straight away: on Google, they reach people at the moment they search for your products. And once the portal is live, the sign-up no longer puts anyone off.
+We recommend Plus Ads. SEO takes months to pay off, while ads on Google reach people straight away, at the moment they search for your products. And once the portal is live, the sign-up no longer puts anyone off.
 
 ### The shop and portal at no cost if we work together for 12 months
 
@@ -76,7 +76,7 @@ The shop and the portal are worth €2,000 together. If we work together for 12 
 
 ### The Shopify plan is separate
 
-You pay the Shopify subscription directly to Shopify, separately from our monthly fee. The Basic plan is enough to start with: as a guide, allow around €25 to €35 a month. If several people will work in the shop, the Grow plan is the better fit. It allows up to five staff accounts and costs around €60 to €90 a month. These are guide prices: Shopify sets them, and they depend on whether you pay monthly or yearly, so check the current price on shopify.com. Shopify also charges a processing fee on each card payment.
+You pay the Shopify subscription directly to Shopify, separately from our monthly fee. The Basic plan is enough to start with: as a guide, allow around €20 to €40 a month. If several people will work in the shop, the Grow plan is the better fit. It allows up to five staff accounts and costs around €60 to €95 a month. These are guide prices: Shopify sets them, and they depend on whether you pay monthly or yearly, so check the current price on shopify.com. Shopify also charges a processing fee on each card payment.
 
 ### The advertising budget is separate
 

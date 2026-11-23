@@ -1,5 +1,7 @@
 # Briefing voor de Spaanse tekst van het voorstel
 
+Let op, stand van 23 november 2026: deze briefing is van 22 november en op vijf punten achterhaald. De geldende inhoud staat in `OPDRACHT.md`. Het eerste pakket kost 580 euro (niet 540). Pakket twee heet «Con publicidad» en is adverteren op alle passende kanalen inclusief de beelden (niet «Con Google Ads»). Shopify-prijzen staan er alleen als richtprijs in. Het advertentiebudget van ongeveer 1.000 euro is een advies, geen minimum. De optie 3D per product is vervallen.
+
 Dit is geen tekst om te vertalen. Het is een lijst met feiten, besluiten en grenzen. De schrijver maakt er een voorstel van zoals een klein Spaans bureau in Barcelona of Madrid het zelf zou schrijven.
 
 ## Afzender en lezer
