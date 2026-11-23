@@ -1,6 +1,6 @@
 # Briefing voor de Spaanse tekst van het voorstel
 
-Let op, stand van 23 november 2026: deze briefing is van 22 november en op vijf punten achterhaald. De geldende inhoud staat in `OPDRACHT.md`. Het eerste pakket kost 580 euro (niet 540). Pakket twee heet «Con publicidad» en is adverteren op alle passende kanalen inclusief de beelden (niet «Con Google Ads»). Shopify-prijzen staan er alleen als richtprijs in. Het advertentiebudget van ongeveer 1.000 euro is een advies, geen minimum. De optie 3D per product is vervallen.
+Let op, stand van 23 november 2026 (laat): deze briefing is van 22 november en achterhaald. De geldende inhoud staat in `OPDRACHT.md` en in `propuesta-es.md`. Drie pakketten: «Tienda y SEO» (580 euro, 12 uur per maand, zonder portaal), «Portal y publicidad» (1.020 euro, 16 uur, met het portaal en campagnes op elk passend kanaal) en «Marketing completo» (1.560 euro, 24 uur). Shopify-prijzen staan er alleen als richtprijs in, het advertentiebudget van ongeveer 1.000 euro is een advies, en de optie 3D per product is vervallen.
 
 Dit is geen tekst om te vertalen. Het is een lijst met feiten, besluiten en grenzen. De schrijver maakt er een voorstel van zoals een klein Spaans bureau in Barcelona of Madrid het zelf zou schrijven.
 

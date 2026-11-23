@@ -80,7 +80,7 @@ Todo lo de «Tienda y SEO», más:
 - Portal gestionado por nosotros: alta en dos minutos, precios profesionales, facturas e historial.
 - Recompra fácil: pedido rápido, repetición de pedidos, aviso para reponer y calculadora de costes.
 - Publicidad: montamos y llevamos las campañas en los canales adecuados, empezando por Google y Meta.
-- Imágenes y contenido de campaña: hacemos las imágenes y escribimos los textos de los anuncios.
+- Imágenes y contenido de campaña: creamos las imágenes y escribimos los textos de los anuncios.
 
 ### Marketing completo, 1.560 € al mes, 24 horas de trabajo al mes
 
@@ -89,7 +89,7 @@ Todo lo de «Portal y publicidad», más:
 - Email marketing: boletines y campañas por correo para tus clientes.
 - Gestión de redes sociales: planificamos y publicamos el contenido en tus canales.
 - Contenido para redes sociales: creamos las publicaciones y las imágenes.
-- Animaciones 3D: vídeos cortos de tus productos, como la animación del prototipo.
+- Animaciones 3D: vídeos cortos de tus productos para redes sociales y anuncios.
 
 ### Nuestra recomendación
 
@@ -97,7 +97,7 @@ Nosotros elegiríamos el paquete «Portal y publicidad». El posicionamiento tar
 
 ### La tienda y el portal, sin coste si trabajamos 12 meses juntos
 
-La tienda y el portal suman un valor de 2.000 €. En el paquete «Tienda y SEO» montamos solo la tienda; el portal se incluye a partir de «Portal y publicidad». Con 12 meses de colaboración, no pagas nada por ellos. Si decides terminar antes, pagas la parte proporcional a los meses que falten hasta los 12. Por ejemplo, dejarlo a los cuatro meses supone ocho meses pendientes, es decir, 1.333 €.
+La tienda y el portal suman un valor de 2.000 €. En el paquete «Tienda y SEO» montamos solo la tienda; el portal se incluye a partir de «Portal y publicidad». Con 12 meses de colaboración, no pagas nada por ellos. Si decides terminar antes, pagas la parte proporcional a los meses que falten hasta los 12. Por ejemplo, con la tienda y el portal, dejarlo a los cuatro meses supone ocho meses pendientes, es decir, 1.333 €.
 
 ### Lo que pagas directamente a Shopify
 
@@ -121,7 +121,7 @@ Con la web y el portal han sumado 80 clientes nuevos, entre clínicas y centros 
 
 En las dos primeras semanas dejaremos montada la analítica, abriremos la web a los buscadores y a los bots de IA y diseñaremos la tienda nueva. En las dos siguientes la lanzaremos, con el catálogo revisado y las páginas de los seminarios. El informe mensual empezará ya el primer mes.
 
-El segundo mes publicaremos las páginas por servicio y, a partir del paquete «Portal y publicidad», pondremos en marcha el portal. Desde ese momento, y según el paquete que elijas, empezarán los anuncios y las redes.
+El segundo mes publicaremos las páginas por servicio y, si tu paquete incluye el portal, lo pondremos en marcha. Desde ese momento, y según el paquete que elijas, empezarán los anuncios y las redes.
 
 ## Condiciones y lo que necesitamos de ti
 

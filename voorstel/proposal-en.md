@@ -89,7 +89,7 @@ Everything in Portal and Ads, plus:
 - Email marketing: newsletters and email campaigns for your customers.
 - Social media management: we plan and publish the posts on your channels.
 - Content for social media: we create the posts and the visuals.
-- 3D animations: short films of your products, like the one in the prototype.
+- 3D animations: short films of your products for social media and ads.
 
 ### Our recommendation
 
@@ -97,7 +97,7 @@ We'd choose Portal and Ads. SEO takes months to pay off, while ads on Google rea
 
 ### The shop and portal at no cost if we work together for 12 months
 
-The shop and the portal are worth €2,000 together. With Shop and SEO, we build the shop only; the portal comes with Portal and Ads and above. If we work together for 12 months, you pay nothing for them. If you stop earlier, you pay the remaining share pro rata. For example, if you stop after four months, eight months are left and you pay €1,333.
+The shop and the portal are worth €2,000 together. With Shop and SEO, we build the shop only; the portal comes with Portal and Ads and above. If we work together for 12 months, you pay nothing for them. If you stop earlier, you pay the remaining share pro rata. For example, with the shop and the portal, if you stop after four months, eight months are left and you pay €1,333.
 
 ### The Shopify plan is separate
 
@@ -121,7 +121,7 @@ With the new site and portal, they've gained 80 new trade customers (clinics and
 
 In the first two weeks, we'll set up analytics, open the site to search engines and AI bots, and design the new shop. In weeks three and four, the shop goes live, with the revised catalogue and the seminar pages. Your monthly report starts in month one.
 
-In month two, we publish the service pages and, from Portal and Ads upwards, the portal goes live. From then on, the campaigns and social media start, depending on your package.
+In month two, we publish the service pages and, if your package includes the portal, it goes live. From then on, the campaigns and social media start, depending on your package.
 
 ## Terms and what we need from you
 

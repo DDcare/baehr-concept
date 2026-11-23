@@ -95,7 +95,7 @@ Alles van "Portaal en advertenties", plus:
 - E-mailmarketing: nieuwsbrieven en campagnes per e-mail voor je klanten.
 - Beheer van social media: wij plannen en plaatsen de berichten op je kanalen.
 - Content voor social media: wij maken de berichten en de beelden.
-- 3D-animaties: korte films van je producten, zoals die in het prototype.
+- 3D-animaties: korte video's van je producten voor social media en advertenties.
 
 ### Ons advies
 
@@ -103,7 +103,7 @@ Wij zouden "Portaal en advertenties" kiezen. Vindbaarheid kost maanden voordat z
 
 ### Winkel en portaal zonder kosten als we 12 maanden samenwerken
 
-Winkel en portaal hebben samen een waarde van 2.000 euro. Bij "Winkel en SEO" bouwen we alleen de winkel; het portaal zit erin vanaf "Portaal en advertenties". Bij 12 maanden samenwerking betaal je daar niets voor. [Aanname: wat eerder stoppen kost bij "Winkel en SEO", waar het portaal niet in zit. De tekst noemt alleen de 2.000 euro voor beide samen.] Stop je eerder, dan betaal je het resterende deel naar rato. Voorbeeld: stop je na vier maanden, dan blijven er acht over en betaal je 1.333 euro. [Aanname: naar rato in plaats van een maandbedrag (2.000 / 12 = 166,67).]
+Winkel en portaal hebben samen een waarde van 2.000 euro. Bij "Winkel en SEO" bouwen we alleen de winkel; het portaal zit erin vanaf "Portaal en advertenties". Bij 12 maanden samenwerking betaal je daar niets voor. [Aanname: wat eerder stoppen kost bij "Winkel en SEO", waar het portaal niet in zit. De tekst noemt alleen de 2.000 euro voor beide samen.] Stop je eerder, dan betaal je het resterende deel naar rato. Voorbeeld: met de winkel en het portaal blijven er, als je na vier maanden stopt, acht over en betaal je 1.333 euro. [Aanname: naar rato in plaats van een maandbedrag (2.000 / 12 = 166,67).]
 
 ### Het Shopify-abonnement staat apart
 
@@ -127,7 +127,7 @@ Met de site en het portaal kregen ze er 80 nieuwe zakelijke klanten bij, kliniek
 
 In de eerste twee weken zetten we de metingen op, openen we de site voor zoekmachines en AI-bots en ontwerpen we de nieuwe winkel. In week drie en vier gaat de winkel live, met de herziene catalogus en de seminarpagina's. Het maandrapport begint in de eerste maand.
 
-In de tweede maand publiceren we de pagina's per dienst en gaat, vanaf "Portaal en advertenties", het portaal live. Vanaf dan starten, afhankelijk van je pakket, de advertenties en social media. (Planning: besluit D, 22-11.)
+In de tweede maand publiceren we de pagina's per dienst en, als je pakket het portaal bevat, nemen we het in gebruik. Vanaf dan starten, afhankelijk van je pakket, de advertenties en social media. (Planning: besluit D, 22-11.)
 
 
 ## Voorwaarden en wat we van je nodig hebben
