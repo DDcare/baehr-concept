@@ -2,7 +2,7 @@
 // Gebruik: node tools/voorstel.cjs <es|en> <uitvoermap>
 // De pdf en de html komen in de uitvoermap; zet die buiten git. De tekst wordt letterlijk overgenomen uit voorstel/*.md.
 //
-// Opbouw: zeven pagina's die elk een afgerond geheel zijn. Geen deel, lijst of alinea loopt door naar een volgende
+// Opbouw: acht pagina's die elk een afgerond geheel zijn (omslag en slot in de rode studio). Geen deel, lijst of alinea loopt door naar een volgende
 // pagina. De lettergrootte van de lopende tekst wordt per taal zo groot gekozen als op alle pagina's past; de ruimte
 // die op een pagina overblijft, gaat naar de tussenruimtes van die pagina. Past de tekst ook op de kleinste maat niet,
 // dan stopt het script met een foutmelding in plaats van een afgekapte pagina te maken. Vaste maat proberen: FS=10.2.
@@ -75,7 +75,7 @@ for (const b of blocks.slice(firstH2)) {
 }
 // De pagina-indeling hieronder rekent op deze opbouw van de tekst.
 const [sFound, sGoals, sShop, sPacks, sProof, sTime, sTerms, sEnd] = secs;
-if (secs.length !== 8 || sGoals.subs.length !== 3 || sPacks.subs.length !== 3) {
+if (secs.length !== 8 || sGoals.subs.length !== 3 || sPacks.subs.length !== 7) {
   throw new Error(`Onverwachte opbouw van ${SRC}: ${secs.length} delen, ${sGoals && sGoals.subs.length} doelen, ${sPacks && sPacks.subs.length} blokken bij de pakketten. Pas de pagina-indeling in tools/voorstel.cjs aan.`);
 }
 
@@ -84,14 +84,23 @@ const body = (bs) =>
     .map((b) => (b.t === 'p' ? `<p>${rich(b.text)}</p>` : `<ul class="ribs">${b.items.map((i) => `<li>${rich(i)}</li>`).join('')}</ul>`))
     .join('\n');
 
-// Pakketregel: "Naam, 540 € al mes. Tekst" of "Name, €540 a month: text"
-function pack(item) {
-  const i = item.indexOf(', ');
-  const m = item.slice(i + 2).match(/^(€[\d.,]+|[\d.,]+\s€)\s+(.*?)[.:]\s+(.*)$/);
-  if (i < 0 || !m) throw new Error(`Pakketregel niet herkend: ${item}`);
-  return { name: item.slice(0, i), price: m[1], unit: m[2], text: m[3].charAt(0).toUpperCase() + m[3].slice(1) };
+// Pakket: een kop "Naam, 580 € al mes, 12 horas de trabajo al mes" met daaronder regels "Titel: omschrijving."
+// Een alinea onder de kop ("Todo lo de «…», más:") hoort bij de leestekst; de tabel laat het stapelen zelf zien.
+function pkg(u) {
+  const parts = u.h.split(', ');
+  const pm = parts.length === 3 && parts[1].match(/^(€[\d.,]+|[\d.,]+\s€)\s+(.*)$/);
+  const hm = parts.length === 3 && parts[2].match(/^(\d+)\s+(.*)$/);
+  if (!pm || !hm) throw new Error(`Pakketkop niet herkend: ${u.h}`);
+  const items = u.body
+    .filter((x) => x.t === 'ul')
+    .flatMap((x) => x.items)
+    .map((it) => {
+      const i = it.indexOf(': ');
+      if (i < 0) throw new Error(`Pakketregel zonder "Titel: omschrijving": ${it}`);
+      return { title: it.slice(0, i), text: it.slice(i + 2) };
+    });
+  return { name: parts[0], price: pm[1], unit: pm[2], hours: Number(hm[1]), hoursText: parts[2], items };
 }
-
 const words = title.split(' ');
 const [t1, t2] = [words[0], words.slice(1).join(' ')]; // "Propuesta" / "Proposal" op de eerste regel
 const greeting = intro[0].text;
@@ -105,14 +114,16 @@ const sec = (s) => `<section class="sec"><h2>${rich(s.h)}</h2><div class="body">
 const goal = (u) => `<div class="goal"><h3>${rich(u.h)}</h3><div class="body">${body(u.body)}</div></div>`;
 const block = (u, kind) => `<div class="duo__${kind}"><h3>${rich(u.h)}</h3>${body(u.body)}</div>`;
 
-const packsUl = sPacks.body.find((b) => b.t === 'ul');
-const packsBefore = sPacks.body.slice(0, sPacks.body.indexOf(packsUl));
-const packsAfter = sPacks.body.slice(sPacks.body.indexOf(packsUl) + 1);
-const packs = packsUl.items.map(pack);
+// Onder de pakkettenkop: drie pakketten, de aanbeveling en drie blokken met voorwaarden
+const packs = sPacks.subs.slice(0, 3).map(pkg);
+const sRec = sPacks.subs[3];
+const sBlocks = sPacks.subs.slice(4);
+const [packsNote, packsCosts] = sPacks.body.filter((x) => x.t === 'p');
 // het pakket dat de tekst aanraadt, krijgt de rode capsule
-const advised = packs.findIndex((p) => packsAfter.some((b) => b.t === 'p' && b.text.includes(p.name)));
+const advised = packs.findIndex((q) => sRec.body.some((x) => x.t === 'p' && x.text.includes(q.name)));
 const tone = (i) => (i === advised ? 'red' : i > advised && advised >= 0 ? 'ink' : 'silver');
-
+// elke regel van een pakket is een rij; een pakket bevat ook alle rijen van de pakketten ervoor
+const rows = packs.flatMap((q, k) => q.items.map((it) => ({ ...it, from: k })));
 const html = [];
 
 // 1. Omslag: de rode studio van de film, zonder kader
@@ -145,33 +156,45 @@ html.push(pg([
   `<a class="strip" href="https://${PROTO}">${['bano', 'exfoliante', 'mascarilla', 'crema', 'espuma'].map((n) => `<span style="background-image:url('${IMG(n)}')"></span>`).join('')}</a>`,
 ]));
 
-// 5. De pakketten met wat erbij hoort
+// 5. De pakketten: drie staande capsules die zich vullen met wat elk pakket bevat
 html.push(pg([
-  `<section class="packs">
-    <div class="packs__head"><h2>${rich(sPacks.h)}</h2><div>${body(packsBefore)}</div></div>
-    <ol class="pk">${packs
-      .map((p, i) => `<li class="pk__row pk__row--${tone(i)}"><span class="pk__n">${rich(p.name)}</span><span class="pk__d">${rich(p.text)}</span><span class="pk__p"><b>${rich(p.price)}</b><i>${rich(p.unit)}</i></span></li>`)
-      .join('')}</ol>
-    <div class="packs__after">${body(packsAfter)}</div>
+  `<section class="mx" style="--rows:${rows.length + 2}">
+    <div class="mx__lead"><h2>${rich(sPacks.h)}</h2><p class="mx__note">${rich(packsNote.text)}</p>
+      <div class="mx__rec"><h3>${rich(sRec.h)}</h3>${body(sRec.body)}</div></div>
+    ${packs.map((q, k) => `<i class="mx__tube mx__tube--${tone(k)}" style="grid-column:${k + 2}"></i>`).join('')}
+    ${packs
+      .map((q, k) => `<div class="mx__head mx__head--${tone(k)}" style="grid-column:${k + 2}"><span class="mx__name">${rich(q.name)}</span><b class="mx__price">${rich(q.price)}</b><span class="mx__unit">${rich(q.unit)}</span><i class="mx__meter" style="--n:${q.hours}"></i><span class="mx__hours">${rich(q.hoursText)}</span></div>`)
+      .join('')}
+    ${rows
+      .map((r, i) => `<div class="mx__row" style="grid-row:${i + 2}"><b>${rich(r.title)}:</b> ${rich(r.text)}</div>` + packs.map((q, k) => `<span class="mx__cell mx__cell--${tone(k)}" style="grid-row:${i + 2};grid-column:${k + 2}">${k >= r.from ? '<i class="mx__mark"></i>' : ''}</span>`).join(''))
+      .join('\n    ')}
+    <div class="mx__end" style="grid-row:${rows.length + 2}"></div>
   </section>`,
-  `<div class="duo">${block(sPacks.subs[0], 'a')}${block(sPacks.subs[1], 'b')}</div>`,
 ]));
 
-// 6. Advertentiebudget, bewijs en planning
+// 6. Wat buiten de maandprijs valt, de voorwaarde van twaalf maanden en de planning
 html.push(pg([
-  `<div class="duo">${block(sPacks.subs[2], 'b')}</div>`,
+  `<div class="extra"><p class="extra__lead">${rich(packsCosts.text)}</p><div class="duo">${block(sBlocks[0], 'a')}${block(sBlocks[1], 'b')}${block(sBlocks[2], 'b')}</div></div>`,
+  `<section class="sec sec--time"><h2>${rich(sTime.h)}</h2><ol class="time" style="--n:${sTime.body.length}">${sTime.body.map((x) => `<li>${rich(x.text)}</li>`).join('')}</ol></section>`,
+]));
+
+// 7. Bewijs en voorwaarden
+html.push(pg([
   `<section class="proof"><h2>${rich(sProof.h)}</h2><div class="proof__body">${body(sProof.body)}</div></section>`,
-  `<section class="sec sec--time"><h2>${rich(sTime.h)}</h2><ol class="time" style="--n:${sTime.body.length}">${sTime.body.map((b) => `<li>${rich(b.text)}</li>`).join('')}</ol></section>`,
-]));
-
-// 7. Voorwaarden en het gesprek
-html.push(pg([
   sec(sTerms),
-  `<a class="shot" href="https://${PROTO}" style="background-image:url('${IMG('baehr-lado')}')"></a>`,
-  `<div class="fin"><section class="cta"><h2>${rich(sEnd.h)}</h2><p>${rich(ctaText)}</p><a class="chip chip--white" href="https://${PROTO}">${PROTO}</a></section>
-    <section class="sign"><p>${esc(signOff)}</p><p class="sign__n">${esc(signName)}</p><p class="sign__a">${esc(agency)}</p></section></div>`,
 ]));
 
+// 8. Slot: dezelfde rode studio als de omslag, met de uitnodiging en de ondertekening
+html.push(`<section class="pg cover cover--end">
+  <img class="cover__img" src="${IMG('baehr-lado')}" alt="" />
+  <div class="end">
+    <h2>${rich(sEnd.h)}</h2>
+    <p>${rich(ctaText)}</p>
+    <a class="chip chip--white" href="https://${PROTO}">${PROTO}</a>
+    <div class="end__sign"><p>${esc(signOff)}</p><p class="sign__n">${esc(signName)}</p><p class="sign__a">${esc(agency)}</p></div>
+  </div>
+  <i class="cover__ribs"></i>
+</section>`);
 const css = `
 @font-face { font-family: 'Archivo Variable'; font-weight: 400 900; font-stretch: 62% 125%; src: url('file://${ROOT}/src/fonts/archivo-baehr.woff2') format('woff2-variations'); }
 @font-face { font-family: 'Newsreader Variable'; font-style: italic; font-weight: 400; src: url('file://${ROOT}/src/fonts/newsreader-italica-baehr.woff2') format('woff2'); }
@@ -232,21 +255,32 @@ h1 span { display: block; }
 .strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5mm; }
 .strip span { aspect-ratio: 2 / 3; border-radius: 11mm; background: #5a0710 center / cover no-repeat; }
 
-/* Pakketten */
-.packs__head { display: grid; grid-template-columns: 1fr auto; gap: 10mm; align-items: end; }
-.packs__head h2 { font-size: 22pt; line-height: 0.98; }
-.packs__head div { font-size: 9.6pt; color: var(--muted); text-align: right; white-space: nowrap; }
-.pk { list-style: none; margin-top: 7mm; display: grid; grid-auto-rows: 1fr; gap: 2.8mm; }
-.pk__row { display: grid; grid-template-columns: 48mm 1fr 30mm; gap: 5mm; align-items: center; min-height: 23mm; padding: 3.6mm 10mm 3.6mm 11mm; border-radius: 99mm; }
-.pk__row--silver { background: var(--silver); box-shadow: inset 0 0.3mm 0 rgba(255,255,255,0.9), inset 0 -0.3mm 0 rgba(0,0,0,0.08); }
-.pk__row--red { background: var(--red); color: #fff; }
-.pk__row--ink { background: var(--ink); color: #fff; }
-.pk__n { font-size: 11.2pt; line-height: 1.05; white-space: nowrap; }
-.pk__d { font-size: 0.9em; line-height: 1.4; }
-.pk__p { text-align: right; line-height: 1; white-space: nowrap; }
-.pk__p b { display: block; font-weight: 800; font-variation-settings: 'wdth' 118; font-size: 21pt; letter-spacing: -0.02em; }
-.pk__p i { display: block; margin-top: 1.3mm; font-style: normal; font-size: 8.4pt; opacity: 0.8; }
-.packs__after { margin-top: 6.5mm; padding: 0 10mm 0 11mm; font-size: 1.03em; }
+/* Pakketten: links de inhoud per rij, rechts drie staande capsules met een ribbel waar het pakket die rij bevat */
+.mx { display: grid; grid-template-columns: 1fr 27mm 27mm 27mm; column-gap: 3mm; }
+.mx__lead { grid-column: 1; grid-row: 1; padding: 0 7mm 6mm 0; }
+.mx__lead h2 { font-size: 18pt; line-height: 1; }
+.mx__note { margin-top: 3mm; font-size: 9.2pt; color: var(--muted); }
+.mx__rec { margin-top: 6mm; }
+.mx__rec h3 { font-size: 9.6pt; margin-bottom: 1.6mm; }
+.mx__rec p { font-size: 0.96em; }
+.mx__tube { grid-row: 1 / span var(--rows); border-radius: 99mm; }
+.mx__tube--silver { background: linear-gradient(90deg, #cfd0d3 0%, #f6f6f6 36%, #ececed 62%, #cdced1 100%); }
+.mx__tube--red { background: var(--red); }
+.mx__tube--ink { background: var(--ink); }
+.mx__head { grid-row: 1; position: relative; align-self: center; display: grid; justify-items: center; padding: 6mm 2mm 3mm; text-align: center; }
+.mx__head--red, .mx__head--ink, .mx__cell--red, .mx__cell--ink { color: #fff; }
+.mx__head--silver .mx__meter, .mx__cell--silver { color: var(--red); }
+.mx__name { font-weight: 800; font-variation-settings: 'wdth' 118; text-transform: uppercase; font-size: 7.4pt; line-height: 1.12; text-wrap: balance; }
+.mx__price { margin-top: 3.2mm; font-weight: 800; font-variation-settings: 'wdth' 118; font-size: 12.6pt; line-height: 1; letter-spacing: -0.02em; white-space: nowrap; }
+.mx__unit { margin-top: 1mm; font-size: 6.6pt; opacity: 0.8; }
+.mx__meter { margin-top: 3.6mm; height: 2.6mm; width: calc(var(--n) * 0.85mm - 0.5mm); background: repeating-linear-gradient(90deg, currentColor 0 0.35mm, transparent 0.35mm 0.85mm); }
+.mx__hours { margin-top: 1.5mm; font-size: 6.6pt; font-weight: 600; line-height: 1.2; text-wrap: balance; }
+.mx__row { grid-column: 1; padding: 1.7mm 6mm 1.7mm 0; border-top: 0.25mm solid var(--line); font-size: 0.9em; line-height: 1.4; }
+.mx__row b { font-weight: 700; }
+.mx__cell { position: relative; display: grid; place-items: center; }
+.mx__mark { width: 4.6mm; height: 2.6mm; background: var(--ribs); }
+.mx__end { grid-column: 1; height: 8mm; border-top: 0.25mm solid var(--line); }
+.extra__lead { margin-bottom: 5mm; max-width: 150mm; font-size: 1.03em; }
 .duo { display: grid; gap: 3mm; font-size: 0.92em; line-height: 1.46; }
 .duo > div { display: grid; grid-template-columns: 48mm 1fr; gap: 0 8mm; padding: 6.4mm 11mm 6.4mm 11mm; border-radius: 13mm; }
 .duo > div > h3 { grid-row: 1 / span 9; font-size: 9.6pt; }
@@ -255,20 +289,23 @@ h1 span { display: block; }
 .duo__b { background: var(--paper); box-shadow: inset 0 0 0 0.25mm var(--line); }
 
 /* Bewijs en planning */
-.proof { padding: 11mm 20mm; border-radius: 22mm; background: var(--red); color: #fff; }
-.proof__body { margin-top: 4.6mm; font-size: 1.02em; }
+.proof { padding: 14mm 22mm; border-radius: 26mm; background: var(--red); color: #fff; }
+.proof h2 { font-size: 21pt; line-height: 1; }
+.proof__body { margin-top: 6mm; font-size: 1.12em; }
 .proof a { text-decoration: underline; text-underline-offset: 0.8mm; }
 .time { list-style: none; display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 9mm; margin-top: 6mm; }
 .time li { position: relative; padding-top: 5.6mm; font-size: 0.97em; }
 .time li::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 2.6mm; color: var(--red); background: var(--ribs); }
 
 /* Slot */
-.cta { padding: 11mm 22mm; border-radius: 99mm; background: var(--ink); color: #fff; text-align: center; }
-.cta h2 { font-size: 19pt; }
-.cta p { max-width: 118mm; margin: 4mm auto 5mm; font-size: 1.02em; }
-.sign { padding-top: 7mm; }
-.sign__n { margin-top: 0.6mm; font-family: 'Newsreader Variable', serif; font-style: italic; font-size: 17pt; line-height: 1.15; color: var(--red); }
-.sign__a { margin-top: 0.4mm; font-weight: 700; }
+.cover--end .cover__img { top: 34mm; }
+.end { position: absolute; left: var(--pad); right: var(--pad); top: 142mm; }
+.end h2 { font-size: 30pt; line-height: 0.95; letter-spacing: -0.02em; }
+.end > p { max-width: 122mm; margin-top: 6mm; font-size: 11.5pt; line-height: 1.5; }
+.end .chip { margin-top: 8mm; }
+.end__sign { margin-top: 17mm; font-size: 10.6pt; }
+.sign__n { margin-top: 0.6mm; font-family: 'Newsreader Variable', serif; font-style: italic; font-size: 19pt; line-height: 1.15; }
+.sign__a { margin-top: 0.6mm; font-weight: 700; }
 `;
 
 const doc = `<!doctype html><html lang="${T.docLang}"><head><meta charset="utf-8"><title>${esc(title)}</title><style>${css}</style></head><body>${html.join('\n')}</body></html>`;

@@ -66,17 +66,44 @@ We zetten de producten, bestellingen en klanten over. Wachtwoorden kunnen niet m
 
 Prijzen per maand, exclusief btw. [Aanname: exclusief btw.]
 
-- Winkel en portaal, 580 euro per maand. De nieuwe winkel en het portaal voor professionals op Shopify, dat wij beheren, plus vindbaarheid in Google en in AI-antwoorden, teksten, onderhoud en een maandrapport. (Hosting zit in het Shopify-abonnement.) [Besluit D, 22-11: drie pakketten. Besluit D, 23-11: het eerste pakket kost 580 euro; pakket twee en drie blijven 1.020 en 1.560 euro. Aanname: wat "wij beheren het portaal" inhoudt.]
-- Met advertenties, 1.020 euro per maand. Het vorige plus campagnes op elk advertentiekanaal dat bij BAEHR España past, te beginnen met Google en Meta (Instagram en Facebook). Wij zetten ze op, beheren ze en maken de beelden voor de advertenties. [Besluit D, 23-11: alle advertentiekanalen en de beelden daarvoor horen bij pakket twee. Aanname: het eigen team beheert de campagnes.]
-- Met social, 1.560 euro per maand. Het vorige plus het beheer van de social media. [Aanname van Claude: de advertenties op Instagram en Facebook zitten nu in pakket twee, dus hier blijft het beheer over. Prijs ongewijzigd.]
+Buiten onze maandprijs vallen twee kosten: wat je aan Shopify betaalt en het advertentiebudget. We leggen ze verderop uit.
 
-Buiten onze maandprijs vallen twee kosten: wat je aan Shopify betaalt en het advertentiebudget. We leggen ze verderop uit. [Het rekenvoorbeeld met een totaal per maand is op 23-11 vervallen: de Shopify-prijs is een richtprijs en het advertentiebudget een advies.]
+[Besluit D en partner, 23-11: het portaal verhuist naar pakket twee; pakket drie is het volledige pakket; bij elk pakket staan de uren werk per maand (12, 16 en 24); de pakketnamen veranderen mee. De prijzen 580, 1.020 en 1.560 euro heeft D op 23-11 niet gewijzigd. De regels hieronder zijn door Claude ingevuld met wat elders in het voorstel al wordt toegezegd; aantallen staan er bewust niet in.]
 
-We raden het pakket "Met advertenties" aan. Vindbaarheid kost maanden voordat ze resultaat geeft; advertenties in Google bereiken daarentegen eerder wie al naar producten zoekt, en met het portaal live is de aanmelding geen rem meer.
+### Winkel en SEO, 580 euro per maand, 12 uur werk per maand
+
+- Nieuwe winkel op Shopify: een eigen thema, twee ingangen, en producten, bestellingen en klanten overgezet.
+- Technische basis: snel op de telefoon, gestructureerde gegevens, en zoekmachines en AI-bots toegelaten.
+- SEO: de catalogus in correct Spaans, en pagina's per dienst en per behoefte van de huid.
+- GEO (AI-antwoorden): dezelfde bedrijfsgegevens op de site, in het Google-profiel en in de lijst van de fabrikant.
+- Seminarpagina's: een pagina met inschrijving voor elke stad.
+- Teksten, onderhoud en rapport: teksten geschreven, winkel bijgehouden, elke maand een rapport.
+
+### Portaal en advertenties, 1.020 euro per maand, 16 uur werk per maand
+
+Alles van "Winkel en SEO", plus:
+
+- Portaal voor professionals, door ons beheerd: aanmelden in twee minuten, professionele prijzen, facturen, bestelgeschiedenis.
+- Makkelijk nabestellen: snel en opnieuw bestellen, een melding om bij te bestellen, en een rekenhulp voor kostprijs en verkoopprijs.
+- Advertentiecampagnes: op elk kanaal dat bij je past, te beginnen met Google en Meta. Opgezet en beheerd door ons.
+- Beelden en content voor de campagnes: wij maken de beelden en de teksten van de advertenties.
+
+### Volledig pakket, 1.560 euro per maand, 24 uur werk per maand
+
+Alles van "Portaal en advertenties", plus:
+
+- E-mailmarketing: nieuwsbrieven en campagnes per e-mail voor je klanten.
+- Beheer van social media: wij plannen en plaatsen de berichten op je kanalen.
+- Content voor social media: wij maken de berichten en de beelden.
+- 3D-animaties: korte films van je producten, zoals die in het prototype.
+
+### Ons advies
+
+Wij zouden "Portaal en advertenties" kiezen. Vindbaarheid kost maanden voordat ze resultaat geeft; advertenties in Google bereiken daarentegen eerder wie al naar producten zoekt, en met het portaal live is de aanmelding geen rem meer.
 
 ### Winkel en portaal zonder kosten als we 12 maanden samenwerken
 
-Winkel en portaal hebben samen een waarde van 2.000 euro. Bij 12 maanden samenwerking betaal je daar niets voor. Stop je eerder, dan betaal je het resterende deel naar rato. Voorbeeld: stop je na vier maanden, dan blijven er acht over en betaal je 1.333 euro. [Aanname: naar rato in plaats van een maandbedrag (2.000 / 12 = 166,67).]
+Winkel en portaal hebben samen een waarde van 2.000 euro. Bij "Winkel en SEO" bouwen we alleen de winkel; het portaal zit erin vanaf "Portaal en advertenties". Bij 12 maanden samenwerking betaal je daar niets voor. [Aanname: wat eerder stoppen kost bij "Winkel en SEO", waar het portaal niet in zit. De tekst noemt alleen de 2.000 euro voor beide samen.] Stop je eerder, dan betaal je het resterende deel naar rato. Voorbeeld: stop je na vier maanden, dan blijven er acht over en betaal je 1.333 euro. [Aanname: naar rato in plaats van een maandbedrag (2.000 / 12 = 166,67).]
 
 ### Het Shopify-abonnement staat apart
 
@@ -100,7 +127,7 @@ Met de site en het portaal kregen ze er 80 nieuwe zakelijke klanten bij, kliniek
 
 In de eerste twee weken zetten we de metingen op, openen we de site voor zoekmachines en AI-bots en ontwerpen we de nieuwe winkel. In week drie en vier gaat de winkel live, met de herziene catalogus en de seminarpagina's. Het maandrapport begint in de eerste maand.
 
-In de tweede maand gaat het portaal live en publiceren we de pagina's per dienst. Vanaf dan starten, afhankelijk van je pakket, de advertenties en social media. (Planning: besluit D, 22-11.)
+In de tweede maand publiceren we de pagina's per dienst en gaat, vanaf "Portaal en advertenties", het portaal live. Vanaf dan starten, afhankelijk van je pakket, de advertenties en social media. (Planning: besluit D, 22-11.)
 
 
 ## Voorwaarden en wat we van je nodig hebben

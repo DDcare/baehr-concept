@@ -62,17 +62,42 @@ We'll move the products, orders and customers across. Passwords can't be carried
 
 All prices exclude VAT.
 
-- Shop and Portal, €580 a month: the new shop and the portal for professionals on Shopify, which we run for you, plus search optimisation for Google and AI assistants, copywriting, maintenance and a monthly report.
-- Plus Ads, €1,020 a month: all of the above, plus campaigns on every advertising channel that suits BAEHR España, starting with Google and Meta (Instagram and Facebook). We set them up, manage them and create the visuals for the ads.
-- Plus Social, €1,560 a month: all of the above, plus social media management.
-
 Two costs sit outside our fee: what you pay to Shopify and your advertising budget. Both are explained below.
 
-We recommend Plus Ads. SEO takes months to pay off, while ads on Google reach people straight away, at the moment they search for your products. And once the portal is live, the sign-up no longer puts anyone off.
+### Shop and SEO, €580 a month, 12 hours of work a month
+
+- New shop on Shopify: your own theme, two ways in, and products, orders and customers moved across.
+- Technical foundation: fast on phones, structured data, and search engines and AI bots let in.
+- SEO: the catalogue in proper Spanish, plus pages for each service and skin concern.
+- GEO (AI answers): the same company details on your site, Google profile and the manufacturer's list.
+- Seminar pages: a booking page for each seminar city.
+- Copy, maintenance and reporting: texts written, shop kept up to date, a report every month.
+
+### Portal and Ads, €1,020 a month, 16 hours of work a month
+
+Everything in Shop and SEO, plus:
+
+- Portal for professionals, run by us: sign-up in two minutes, trade prices, invoices, order history.
+- Easy reordering: quick and repeat orders, restock reminders, and a cost and price calculator.
+- Ad campaigns: on every channel that suits you, starting with Google and Meta. Set up and run by us.
+- Visuals and content for campaigns: we create the images and texts for the ads.
+
+### Full Service, €1,560 a month, 24 hours of work a month
+
+Everything in Portal and Ads, plus:
+
+- Email marketing: newsletters and email campaigns for your customers.
+- Social media management: we plan and publish the posts on your channels.
+- Content for social media: we create the posts and the visuals.
+- 3D animations: short films of your products, like the one in the prototype.
+
+### Our recommendation
+
+We'd choose Portal and Ads. SEO takes months to pay off, while ads on Google reach people straight away, at the moment they search for your products. And once the portal is live, the sign-up no longer puts anyone off.
 
 ### The shop and portal at no cost if we work together for 12 months
 
-The shop and the portal are worth €2,000 together. If we work together for 12 months, you pay nothing for them. If you stop earlier, you pay the remaining share pro rata. For example, if you stop after four months, eight months are left and you pay €1,333.
+The shop and the portal are worth €2,000 together. With Shop and SEO, we build the shop only; the portal comes with Portal and Ads and above. If we work together for 12 months, you pay nothing for them. If you stop earlier, you pay the remaining share pro rata. For example, if you stop after four months, eight months are left and you pay €1,333.
 
 ### The Shopify plan is separate
 
@@ -96,7 +121,7 @@ With the new site and portal, they've gained 80 new trade customers (clinics and
 
 In the first two weeks, we'll set up analytics, open the site to search engines and AI bots, and design the new shop. In weeks three and four, the shop goes live, with the revised catalogue and the seminar pages. Your monthly report starts in month one.
 
-In month two, the portal goes live and we publish the service pages. From then on, the campaigns and social media start, depending on your package.
+In month two, we publish the service pages and, from Portal and Ads upwards, the portal goes live. From then on, the campaigns and social media start, depending on your package.
 
 ## Terms and what we need from you
 

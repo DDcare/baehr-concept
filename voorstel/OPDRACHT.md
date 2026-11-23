@@ -25,11 +25,13 @@ Stand van 22 november 2026. Dit vervangt de vier pakketten van 480, 680, 1.140 e
 
 Drie pakketten die op elkaar stapelen: elk pakket bevat het vorige. Prijzen per maand. D op 22-11, letterlijk: "zeg dan 540, 1020 en 1560?" D op 23-11: het eerste pakket wordt 580 euro.
 
-| Pakket | Per maand |
-|---|---|
-| Winkel en portaal (met vindbaarheid, teksten, onderhoud en maandrapport) | 580 euro |
-| Met advertenties op alle kanalen, inclusief de beelden (ons advies) | 1.020 euro |
-| Met social (beheer van de social media) | 1.560 euro |
+| Pakket | Per maand | Uren werk per maand |
+|---|---|---|
+| Winkel en SEO: nieuwe winkel, SEO, GEO en technische basis | 580 euro | 12 |
+| Portaal en advertenties: daarbij het B2B-portaal, campagnes op elk kanaal en de beelden en content daarvoor (ons advies) | 1.020 euro | 16 |
+| Volledig pakket: daarbij e-mailmarketing, beheer van social media, content voor social media en 3D-animaties | 1.560 euro | 24 |
+
+Besluit van D en zijn partner op 23-11 (WhatsApp van de partner, door D doorgestuurd): het portaal verhuist van pakket één naar pakket twee, de pakketnamen veranderen, alles wordt uitgebreid beschreven en bij elk pakket staan de uren. "Het moet voelen alsof je heel veel krijgt als je grotere pakket kiest." De prijzen zijn op 23-11 niet gewijzigd. Oordeel van Claude, aan D gemeld: de uren zijn krap voor wat pakket twee en drie toevoegen; advies is één zin dat de uren het vaste werkbudget per maand zijn.
 
 - Winkel en B2B-portaal komen op Shopify en hebben samen een waarde van 2.000 euro. Ze zijn gratis bij 12 maanden samenwerking. Bij eerder opzeggen betaalt de klant het resterende deel naar rato.
 - Het Shopify-abonnement (Basic of Grow) betaalt de klant zelf, rechtstreeks aan Shopify. Geen exacte prijzen in het voorstel, alleen een richtprijs (D, 23-11).
