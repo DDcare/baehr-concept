@@ -276,6 +276,38 @@ const nb = (s: string) => s.replace(/ (ml|pares|%)/g, '\u00a0$1');
         <a class="textlink rv" href="#seminarios">Ver todos los seminarios</a>
       </section>
 
+      <section class="brand" id="marca">
+        <div class="seal" aria-hidden="true"></div>
+        <h2 class="h2 rv">Una marca alemana con&nbsp;oficio</h2>
+        <picture class="brand__pic rv">
+          {/* en pantallas anchas la vitrina ya muestra la palabra de frente: aquí se ve en perspectiva */}
+          <source media="(min-width: 721px)" srcset="/img/estudio/baehr-lado.webp" />
+          <img class="brand__img" src="/img/estudio/baehr.webp" width="1800" height="760" alt="" loading="lazy" decoding="async" />
+        </picture>
+        <div class="brand__grid">
+          <p class="lead rv">
+            BAEHR nació en 1949 en Waiblingen, cerca de Stuttgart, y sigue siendo una empresa familiar. BAEHR
+            España lleva sus productos a salones, profesionales de manicura y pedicura, podólogos y
+            particulares.
+          </p>
+          <dl class="stats">
+            <div class="stat rv">
+              <dt>1949</dt>
+              <dd>año de fundación</dd>
+            </div>
+            <div class="stat rv">
+              <dt>+40</dt>
+              <dd>países con distribuidor oficial</dd>
+            </div>
+            <div class="stat rv">
+              <dt>7</dt>
+              <dd>tipos de piel en el sistema PEDIBAEHR</dd>
+            </div>
+          </dl>
+        </div>
+        <a class="textlink rv" href="/la-marca/">Conocer la marca</a>
+      </section>
+
 </Base>
 
 <script>

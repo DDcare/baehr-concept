@@ -4599,3 +4599,12 @@ html.has-drawer {
     transition: none;
   }
 }
+.brand__pic {
+  display: block;
+}
+@media (max-width: 720px) {
+  /* en el móvil la lista de los cinco va sin imagen encima, tal como D la dio por buena el 23-11 */
+  .vitrina__stage {
+    display: none;
+  }
+}
