@@ -84,12 +84,12 @@ const body = (bs) =>
     .map((b) => (b.t === 'p' ? `<p>${rich(b.text)}</p>` : `<ul class="ribs">${b.items.map((i) => `<li>${rich(i)}</li>`).join('')}</ul>`))
     .join('\n');
 
-// Pakket: een kop "Naam, 580 € al mes, 12 horas de trabajo al mes" met daaronder regels "Titel: omschrijving."
+// Pakket: een kop "Naam, 580 € al mes, hasta 8 horas de trabajo al mes" met daaronder regels "Titel: omschrijving."
 // Een alinea onder de kop ("Todo lo de «…», más:") hoort bij de leestekst; de tabel laat het stapelen zelf zien.
 function pkg(u) {
   const parts = u.h.split(', ');
   const pm = parts.length === 3 && parts[1].match(/^(€[\d.,]+|[\d.,]+\s€)\s+(.*)$/);
-  const hm = parts.length === 3 && parts[2].match(/^(\d+)\s+(.*)$/);
+  const hm = parts.length === 3 && parts[2].match(/(\d+)/); // "hasta 8 horas de trabajo al mes": het getal bepaalt de maatstreep
   if (!pm || !hm) throw new Error(`Pakketkop niet herkend: ${u.h}`);
   const items = u.body
     .filter((x) => x.t === 'ul')

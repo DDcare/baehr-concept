@@ -64,16 +64,16 @@ All prices exclude VAT.
 
 Two costs sit outside our fee: what you pay to Shopify and your advertising budget. Both are explained below.
 
-### Shop and SEO, €580 a month, 12 hours of work a month
+### Shop and SEO, €580 a month, up to 8 hours of work a month
 
-- New shop on Shopify: your own theme, two ways in, and products, orders and customers moved across.
+- Shop on Shopify in several languages: built and run by us, with its own theme and two ways in.
 - Technical foundation: fast on phones, structured data, and search engines and AI bots let in.
 - SEO: the catalogue in proper Spanish, plus pages for each service and skin concern.
 - GEO (AI answers): the same company details on your site, Google profile and the manufacturer's list.
 - Seminar pages: a booking page for each seminar city.
 - Copy, maintenance and reporting: texts written, shop kept up to date, a report every month.
 
-### Portal and Ads, €1,020 a month, 16 hours of work a month
+### Portal and Ads, €1,020 a month, up to 16 hours of work a month
 
 Everything in Shop and SEO, plus:
 
@@ -82,7 +82,7 @@ Everything in Shop and SEO, plus:
 - Ad campaigns: on every channel that suits you, starting with Google and Meta. Set up and run by us.
 - Visuals and content for campaigns: we create the images and texts for the ads.
 
-### Full Service, €1,560 a month, 24 hours of work a month
+### Full Service, €1,560 a month, up to 24 hours of work a month
 
 Everything in Portal and Ads, plus:
 
@@ -128,6 +128,7 @@ In month two, we publish the service pages and, if your package includes the por
 - All prices exclude VAT.
 - You can stop at any time with one month's notice. If you stop before 12 months, you only pay the remaining share of the shop and, where it applies, the portal, pro rata.
 - The monthly report covers sign-ups, first orders, repeat orders and the cost per new customer.
+- The hours in each package are a monthly maximum: the working time we set aside for you.
 - We don't guarantee Google rankings or a specific number of visits.
 
 To measure results properly, we need three figures from you: how many sign-ups you get a month, how many of those accounts go on to order, and your average order value. We'll also need read-only access to Google Search Console and your site analytics and, if you choose a package with campaigns, admin access to your ad accounts. The accounts and passwords remain yours.

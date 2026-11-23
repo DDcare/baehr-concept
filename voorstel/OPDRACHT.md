@@ -27,11 +27,11 @@ Drie pakketten die op elkaar stapelen: elk pakket bevat het vorige. Prijzen per 
 
 | Pakket | Per maand | Uren werk per maand |
 |---|---|---|
-| Winkel en SEO: nieuwe winkel, SEO, GEO en technische basis | 580 euro | 12 |
-| Portaal en advertenties: daarbij het B2B-portaal, campagnes op elk kanaal en de beelden en content daarvoor (ons advies) | 1.020 euro | 16 |
-| Volledig pakket: daarbij e-mailmarketing, beheer van social media, content voor social media en 3D-animaties | 1.560 euro | 24 |
+| Winkel en SEO: winkel op Shopify in meerdere talen, gebouwd en beheerd, met SEO, GEO en technische basis | 580 euro | tot 8 |
+| Portaal en advertenties: daarbij het B2B-portaal, campagnes op elk kanaal en de beelden en content daarvoor (ons advies) | 1.020 euro | tot 16 |
+| Volledig pakket: daarbij e-mailmarketing, beheer van social media, content voor social media en 3D-animaties | 1.560 euro | tot 24 |
 
-Besluit van D en zijn partner op 23-11 (WhatsApp van de partner, door D doorgestuurd): het portaal verhuist van pakket één naar pakket twee, de pakketnamen veranderen, alles wordt uitgebreid beschreven en bij elk pakket staan de uren. "Het moet voelen alsof je heel veel krijgt als je grotere pakket kiest." De prijzen zijn op 23-11 niet gewijzigd. Oordeel van Claude, aan D gemeld: de uren zijn krap voor wat pakket twee en drie toevoegen; advies is één zin dat de uren het vaste werkbudget per maand zijn.
+Besluit van D en zijn partner op 23-11 (WhatsApp van de partner, door D doorgestuurd): het portaal verhuist van pakket één naar pakket twee, de pakketnamen veranderen, alles wordt uitgebreid beschreven en bij elk pakket staan de uren. "Het moet voelen alsof je heel veel krijgt als je grotere pakket kiest." De prijzen zijn op 23-11 niet gewijzigd. De uren zijn een maximum per maand (D, 23-11: "die uren kan je cappen"); het eerste pakket krijgt ongeveer 8 uur (bericht van de partner, 23-11, 17:01: "Shopify webshop bouwen en beheren in meerdere talen, seo geo fundament en maandelijks 8 uur werk ofzo").
 
 - Winkel en B2B-portaal komen op Shopify en hebben samen een waarde van 2.000 euro. Ze zijn gratis bij 12 maanden samenwerking. Bij eerder opzeggen betaalt de klant het resterende deel naar rato.
 - Het Shopify-abonnement (Basic of Grow) betaalt de klant zelf, rechtstreeks aan Shopify. Geen exacte prijzen in het voorstel, alleen een richtprijs (D, 23-11).

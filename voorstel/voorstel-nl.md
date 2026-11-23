@@ -70,16 +70,16 @@ Buiten onze maandprijs vallen twee kosten: wat je aan Shopify betaalt en het adv
 
 [Besluit D en partner, 23-11: het portaal verhuist naar pakket twee; pakket drie is het volledige pakket; bij elk pakket staan de uren werk per maand (12, 16 en 24); de pakketnamen veranderen mee. De prijzen 580, 1.020 en 1.560 euro heeft D op 23-11 niet gewijzigd. De regels hieronder zijn door Claude ingevuld met wat elders in het voorstel al wordt toegezegd; aantallen staan er bewust niet in.]
 
-### Winkel en SEO, 580 euro per maand, 12 uur werk per maand
+### Winkel en SEO, 580 euro per maand, tot 8 uur werk per maand
 
-- Nieuwe winkel op Shopify: een eigen thema, twee ingangen, en producten, bestellingen en klanten overgezet.
+- Winkel op Shopify in meerdere talen: door ons gebouwd en beheerd, met een eigen thema en twee ingangen. [Besluit partner, 23-11: "Shopify webshop bouwen en beheren in meerdere talen". Welke talen staat niet vast.]
 - Technische basis: snel op de telefoon, gestructureerde gegevens, en zoekmachines en AI-bots toegelaten.
 - SEO: de catalogus in correct Spaans, en pagina's per dienst en per behoefte van de huid.
 - GEO (AI-antwoorden): dezelfde bedrijfsgegevens op de site, in het Google-profiel en in de lijst van de fabrikant.
 - Seminarpagina's: een pagina met inschrijving voor elke stad.
 - Teksten, onderhoud en rapport: teksten geschreven, winkel bijgehouden, elke maand een rapport.
 
-### Portaal en advertenties, 1.020 euro per maand, 16 uur werk per maand
+### Portaal en advertenties, 1.020 euro per maand, tot 16 uur werk per maand
 
 Alles van "Winkel en SEO", plus:
 
@@ -88,7 +88,7 @@ Alles van "Winkel en SEO", plus:
 - Advertentiecampagnes: op elk kanaal dat bij je past, te beginnen met Google en Meta. Opgezet en beheerd door ons.
 - Beelden en content voor de campagnes: wij maken de beelden en de teksten van de advertenties.
 
-### Volledige marketing, 1.560 euro per maand, 24 uur werk per maand
+### Volledige marketing, 1.560 euro per maand, tot 24 uur werk per maand
 
 Alles van "Portaal en advertenties", plus:
 
@@ -135,6 +135,7 @@ In de tweede maand publiceren we de pagina's per dienst en, als je pakket het po
 - Prijzen exclusief btw.
 - Je kunt opzeggen wanneer je wilt, met een maand opzegtermijn. Stop je vóór 12 maanden, dan betaal je alleen het resterende deel van de winkel en, als je dat hebt, van het portaal, naar rato. [Aanname: geen vaste looptijd en een maand opzegtermijn; besluit van Claude op basis van de afspraak "125 euro per resterende maand bij eerder opzeggen".]
 - Het maandrapport bevat deze cijfers: aanmeldingen, eerste bestellingen, herhaalbestellingen en kosten per nieuwe klant.
+- De uren per pakket zijn een maximum per maand: de werktijd die we voor je reserveren. [Besluit D, 23-11: "die uren kan je cappen". Pakket één krijgt ongeveer 8 uur (bericht van de partner, 23-11), pakket twee en drie blijven 16 en 24.]
 - We garanderen geen posities in Google en geen bepaald aantal bezoekers.
 
 Om goed te meten hebben we drie cijfers nodig: hoeveel aanmeldingen je per maand krijgt, hoeveel van die accounts uiteindelijk bestellen en wat het gemiddelde orderbedrag is. We hebben ook leestoegang nodig tot Google Search Console en de statistieken van de site en, als je een pakket met campagnes kiest, beheerderstoegang tot de advertentieaccounts. De accounts en wachtwoorden blijven van jou.
