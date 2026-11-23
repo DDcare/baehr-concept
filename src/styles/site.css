@@ -4608,3 +4608,69 @@ html.has-drawer {
     display: none;
   }
 }
+
+/* ===== Móvil (23-11): el seminario y las seis marcas eran demasiado grandes y toscos ===== */
+@media (max-width: 720px) {
+  /* seminario: la fecha en una cápsula pequeña a la izquierda, el texto a la derecha y el botón de su tamaño */
+  .seminars {
+    padding-block: clamp(2.6rem, 7vh, 4rem);
+    gap: 1.4rem;
+  }
+  .seminar {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    gap: 0.9rem 1rem;
+    padding: 1.2rem 1.2rem 1.3rem;
+    border-radius: 2rem;
+  }
+  .seminar__date {
+    min-width: 0;
+    width: 4.4rem;
+    padding: 0.75rem 0.3rem 0.7rem;
+    font-size: 0.78rem;
+  }
+  .seminar__date b {
+    font-size: 2em;
+  }
+  .seminar h3 {
+    font-size: 1.02rem;
+  }
+  .seminar__body p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .seminar .pill {
+    grid-column: 2;
+    justify-self: start;
+    width: auto;
+    min-height: 2.5rem;
+    padding-inline: 1.2rem;
+  }
+  /* las seis marcas: una lista limpia en lugar de seis cápsulas apiladas */
+  .casas__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--ink);
+  }
+  .casa,
+  .casa:nth-child(n) {
+    min-height: 0;
+    padding: 0.95rem 0 0.9rem;
+    border-radius: 0;
+    border-bottom: 1px solid var(--line);
+    background: none;
+    box-shadow: none;
+    color: var(--ink);
+    gap: 0.25rem;
+  }
+  .casa:hover {
+    transform: none;
+  }
+  .casa:nth-child(1) .casa__n {
+    color: var(--red);
+  }
+  .casa__t {
+    opacity: 1;
+    color: var(--muted);
+  }
+}
