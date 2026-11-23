@@ -171,7 +171,7 @@ const nb = (s: string) => s.replace(/ (ml|pares|%)/g, '\u00a0$1');
                 <div class="vitrina__what">
                   <p class="vitrina__paso">{PASOS[k]}</p>
                   <p class="vitrina__name" lang="de">{f.nombre}</p>
-                  <p class="vitrina__tipo" set:html={nb(`${f.h1}, ${f.tamanos.join(', ')}`)} />
+                  <p class="vitrina__tipo" set:html={nb(`${f.h1}, ${f.tamanos.map((t) => t.charAt(0).toLowerCase() + t.slice(1)).join(', ')}`)} />
                 </div>
                 <div class="vitrina__go">
                   <button class="pill pill--red" type="button" data-add={f.id} data-done="Añadido">Añadir a la cesta</button>

@@ -163,3 +163,55 @@ Bronnen van de zoekopdrachten (alleen samenvattingen van zoekresultaten gezien, 
 - De drie optionele wijzigingen zijn overgenomen: het rekenvoorbeeld noemt nu winkel en portaal, de planning zegt `si tu paquete incluye el portal, lo pondremos en marcha`, en `hacemos` is `creamos` geworden.
 - De regel over 3D-animaties verwijst niet meer naar het prototype maar zegt waarvoor ze zijn: `para redes sociales y anuncios`. Die formulering is van Claude en niet opnieuw nagelezen.
 
+## Uren als maximum (23-11, laat)
+
+Onafhankelijke eindredactie van drie kleine wijzigingen van 23 november laat: de urenformule in de drie pakketkoppen (r. 67, 76 en 85), de eerste lijstregel van «Tienda y SEO» (r. 69) en het nieuwe punt in de voorwaarden (r. 131). De rest van het stuk is niet opnieuw beoordeeld; ik heb het alleen gelezen om te zien of deze regels erbij passen. Het voorstel is niet gewijzigd en van baehr.com.es is niets opgehaald. In deze regels staat geen productbewering.
+
+Oordeel in het kort: alle drie goed, niets wijzigen. Geen fouten en geen taalkundige voorkeuren: het Spaans is correct, leest als Spaans van Spanje, staat in de tú-vorm en zegt wat bedoeld is. Er zijn wel drie inhoudelijke punten voor D; één daarvan raad ik aan vóór verzending te beslissen.
+
+Nageteld in het bestand met zoekpatronen (het pdf-script kon ik niet draaien):
+
+- De drie koppen hebben de vorm "Naam, bedrag al mes, hasta N horas de trabajo al mes", met een harde spatie voor het euroteken. Het script haalt het getal uit het derde deel van de kop, dus het woord "hasta" stoort daar niet.
+- Regel 69 telt 98 tekens zonder het lijststreepje, heeft precies één dubbele punt met een spatie erachter en eindigt op een punt. Alle veertien pakketregels hebben nog één dubbele punt en geen ervan is langer dan 100 tekens.
+- In het hele voorstel staan geen dubbele spaties, geen spaties aan een regeleinde, geen rechte aanhalingstekens en geen euroteken zonder harde spatie.
+
+| Regel | Spaans | Nederlands (terugvertaling) | Oordeel | Uitleg |
+|---|---|---|---|---|
+| r. 67, kop | hasta 8 horas de trabajo al mes | tot 8 uur werk per maand | goed | "Hasta" met een aantal is de gewone Spaanse vorm voor een bovengrens. Het stuk gebruikt hem ook in r. 104 ("hasta cinco cuentas para empleados"). |
+| r. 76, kop | hasta 16 horas de trabajo al mes | tot 16 uur werk per maand | goed | Zelfde formule. |
+| r. 85, kop | hasta 24 horas de trabajo al mes | tot 24 uur werk per maand | goed | Zelfde formule. |
+| r. 69 | Tienda en Shopify en varios idiomas: la montamos y la gestionamos, con tema propio y dos entradas. | Winkel op Shopify in meerdere talen: we bouwen hem en we beheren hem, met eigen thema en twee ingangen. | goed | 98 tekens. "Vender en varios idiomas" is ook de formulering van Shopify zelf, en "montar" sluit aan op r. 55 en r. 100. Zie de punten voor D over "gestionamos" en over de talen. |
+| r. 131 | Las horas de cada paquete son un máximo mensual: el tiempo de trabajo que reservamos para ti. | De uren van elk pakket zijn een maandelijks maximum: de werktijd die we voor jou reserveren. | goed | Past in toon en lengte bij de punten eromheen. De tweede helft vangt op dat "hasta" alleen een bovengrens noemt. Zie het punt voor D over de bouw. |
+
+Noodzakelijk (fout): geen.
+
+Optioneel (kan beter): geen. De drie regels kunnen blijven zoals ze zijn.
+
+Punten voor D (inhoud, geen taal):
+
+- De bouw en het maximum. Aanbevolen om vóór verzending te beslissen. De koppen en r. 131 zeggen nu zonder uitzondering dat het bureau hooguit 8, 16 of 24 uur per maand werkt. De planning zegt dat de winkel in de eerste vier weken wordt ontworpen en gelanceerd (r. 122) en dat het portaal in de tweede maand komt (r. 124). Een kritische lezer legt die twee naast elkaar. R. 100 geeft winkel en portaal een eigen waarde van 2.000 €, wat doet vermoeden dat de bouw buiten de maanduren valt, maar dat staat nergens. Dit is het vervolg op het punt "De uren" hierboven.
+- Wie de winkel beheert. R. 55 zegt "podrás gestionar directamente los productos, los pedidos, los clientes y los precios" (je kunt producten, bestellingen, klanten en prijzen zelf beheren) en r. 69 zegt "la gestionamos" (wij beheren hem). Dat spreekt elkaar niet tegen, want "podrás" is kunnen en niet moeten. Maar "gestionar una tienda" omvat in het Spaans ook het dagelijkse werk, zoals producten invoeren, prijzen bijwerken en bestellingen afhandelen. Het woord zegt wat bedoeld is (beheren), dus laten staan. Valeria kan wel vragen wat het bureau daarvan doet binnen 8 uur. Hetzelfde punt stond hierboven bij het portaal.
+- Welke talen. Het Spaans noemt geen talen, zoals bedoeld. "En varios idiomas" staat alleen in r. 69; de rest van het stuk spreekt alleen over "un español correcto" (r. 55 en r. 71). "Varios" is "verscheidene": bij precies twee talen zou een Spanjaard "en dos idiomas" schrijven. Valeria zal vragen welke talen het worden en wie vertaalt.
+
+Alleen als D bevestigt dat de bouw buiten de uren valt, kan deze zin in r. 131 achter de bestaande zin:
+Spaans: El montaje de la tienda y, en su caso, del portal no se descuenta de esas horas.
+Nederlands: De bouw van de winkel en, indien van toepassing, van het portaal gaat niet van die uren af.
+Waarom: dan staat het maximum niet meer haaks op de planning van de eerste twee maanden. "En su caso" staat er omdat pakket één geen portaal heeft, net als in r. 129.
+Praktisch: de zin is van mij en door niemand anders nagelezen. De lijst wordt langer, dus draai daarna het pdf-script. De Nederlandse en de Engelse versie moeten dan mee.
+
+Ook gezien, buiten de drie punten: voorstel/voorstel-nl.md noemt in de noot tussen rechte haken onder de pakkettenkop nog "(12, 16 en 24)" uur, terwijl de koppen eronder "tot 8", "tot 16" en "tot 24" zeggen. Dat is de versie die D leest.
+
+Wat ik niet zeker weet:
+
+- Ik ben een taalmodel en geen menselijke moedertaalspreker van het Spaans. Mijn oordeel over wat natuurlijk klinkt, is een inschatting.
+- Het pdf-script heb ik niet kunnen draaien. Door "hasta" is de urenregel in elke capsule een woord langer; of dat past, blijkt pas als het script draait.
+- Een Spaanse prijspagina met letterlijk "hasta N horas de trabajo al mes" heb ik met zoeken niet gevonden. Mijn oordeel steunt op de grammatica en op het gewone gebruik van "hasta" met een aantal.
+- "Tiempo de trabajo" in r. 131 is correct, maar ligt dicht bij het Nederlandse "werktijd". Een Spanjaard zou misschien korter "el tiempo que reservamos para ti" schrijven. Ik reken het niet als verbeterpunt, omdat het aansluit op "horas de trabajo" in de koppen.
+- "Tema" en "entradas" zijn in WordPress ook de woorden voor thema en blogberichten. Wie alleen de prijspagina leest, kan "con tema propio y dos entradas" even als twee berichten lezen. De uitleg staat in r. 47 en een betere vorm binnen 100 tekens heb ik niet gevonden. Dit stond al in het rapport hierboven.
+- Dat Shopify verkopen in meerdere talen toelaat vanaf het Basic-abonnement, met een thema dat daarvoor geschikt is, weet ik alleen uit een samenvatting van zoekresultaten.
+
+Bronnen van de zoekopdrachten (alleen samenvattingen van zoekresultaten gezien, niet de pagina's zelf):
+
+- [help.shopify.com](https://help.shopify.com/es/manual/markets/languages): "vender en varios idiomas", vanaf het Basic-abonnement en met een geschikt thema.
+- [infinigate.com](https://www.infinigate.com/es/wp-content/uploads/sites/16/2025/03/Condiciones-Servicio-Soporte-8x5-Por-Horas.pdf): Spaanse servicevoorwaarden met een urentegoed; volgens de samenvatting wordt werk daar van het tegoed afgetrokken ("se descuentan de esa bolsa").
+- [thestacc.com](https://thestacc.com/es/blog/agency-pricing-models/): "hasta 10 horas al mes" als voorbeeld van een bureaupakket in een Spaanstalig artikel.
