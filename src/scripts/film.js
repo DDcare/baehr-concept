@@ -6,6 +6,9 @@ import { createProducts, SIZE } from './productos.js';
 import { LETRAS } from './letras.js';
 
 const html = document.documentElement;
+// Teléfonos modestos (Android con poca memoria o pocos núcleos): empiezan ya con la calidad baja,
+// sin suavizado de bordes ni reflejos, en lugar de rebajarla a mitad de película
+const MODEST = /Android/i.test(navigator.userAgent) && ((navigator.deviceMemory || 8) <= 4 || (navigator.hardwareConcurrency || 8) <= 6);
 const film = document.querySelector('.film');
 const sticky = film?.querySelector('.film__sticky');
 const canvas = document.getElementById('stage');
@@ -150,7 +153,7 @@ function init() {
 
   let renderer;
   try {
-    renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false, powerPreference: 'high-performance' });
+    renderer = new THREE.WebGLRenderer({ canvas, antialias: !MODEST, alpha: false, powerPreference: 'high-performance' });
   } catch (e) {
     return staticFallback();
   }
@@ -935,12 +938,20 @@ function init() {
   }
 
   // Resolución: como mucho 1,5 píxeles por punto; si el equipo no llega, baja sola (ver el bucle)
-  const DPR_MAX = Math.min(window.devicePixelRatio || 1, 1.5);
+  const DPR_MAX = Math.min(window.devicePixelRatio || 1, MODEST ? 1 : 1.5);
   let dpr = DPR_MAX;
   let dprFixed = false;
-  function resize() {
+  // Solo se rehace el lienzo si su tamaño cambia de verdad. En el móvil la barra de Safari sube y baja al
+  // desplazarse y cada vez llegaba un aviso de cambio de tamaño: rehacer el lienzo ahí era un tirón seguro.
+  const sized = { w: 0, h: 0, dpr: 0 };
+  function resize(force = false) {
     const w = sticky.clientWidth;
     const h = sticky.clientHeight;
+    measure();
+    if (!force && w === sized.w && h === sized.h && dpr === sized.dpr) return;
+    sized.w = w;
+    sized.h = h;
+    sized.dpr = dpr;
     renderer.setPixelRatio(dpr);
     renderer.setSize(w, h, false);
     layout(w, h);
@@ -1012,6 +1023,7 @@ function init() {
   }
 
   let stepsOn = false;
+  let wasOpen = false;
   let activeStep = -2;
   function setStep(i) {
     if (i === activeStep) return;
@@ -1039,8 +1051,15 @@ function init() {
     const open = ease(seg(p, 0.012, 0.075));
     const heroOut = seg(p, 0.016, 0.062);
     setVar(sticky, '--k', (1 - open).toFixed(3));
+    // a pantalla completa el recorte sobra: sobre un lienzo 3D obliga al navegador a componer cada imagen por el camino lento
+    const isOpen = open >= 1;
+    if (isOpen !== wasOpen) {
+      wasOpen = isOpen;
+      sticky.classList.toggle('is-open', isOpen);
+    }
     setVar(sticky, '--hero-out', heroOut.toFixed(3));
-    setVar(sticky, '--wdth', lerp(wdthBase, 64, ease(seg(p, 0, 0.07))).toFixed(0));
+    // en vertical el título no se estrecha al abrir: recolocar el texto en cada imagen cuesta fluidez en el móvil
+    setVar(sticky, '--wdth', (tall ? wdthBase : lerp(wdthBase, 64, ease(seg(p, 0, 0.07)))).toFixed(0));
     setVar(sticky, '--flash', ease(seg(p, 0.99, 1)).toFixed(3));
     const stepsO = Math.min(seg(p, RANGE[0][0] - 0.02, RANGE[0][0] + 0.005), 1 - seg(p, FIN[0] - 0.025, FIN[0] - 0.005));
     setVar(sticky, '--steps-o', stepsO.toFixed(3));
@@ -1347,16 +1366,25 @@ function init() {
   let introStart = 0;
   const t0 = performance.now();
 
-  function readScroll() {
+  // Medidas de la película, tomadas solo al cambiar el tamaño: leerlas en cada imagen obligaba al navegador
+  // a recalcular la página 60 veces por segundo
+  const filmBox = { top: 0, total: 1 };
+  function measure() {
     const r = film.getBoundingClientRect();
-    const total = r.height - window.innerHeight;
-    target = total > 0 ? clamp01(-r.top / total) : 0;
+    filmBox.top = r.top + window.scrollY;
+    filmBox.total = r.height - sticky.offsetHeight;
+  }
+  function readScroll() {
+    target = filmBox.total > 0 ? clamp01((window.scrollY - filmBox.top) / filmBox.total) : 0;
   }
 
   const hasPoster = !!sticky.querySelector('.stage-poster');
   let last = 0;
   let idleFlip = false;
   const perf = { win: [], skip: 20 };
+  let lastDrop = null;
+  // para pruebas: coste del cálculo por imagen (sin contar el dibujo)
+  const stat = { apply: 0, n: 0 };
   function frame(now) {
     if (!running) return;
     const dt = last ? Math.min(0.1, (now - last) / 1000) : 1 / 60;
@@ -1372,15 +1400,8 @@ function init() {
     } else {
       p = forced;
     }
-    // Quieto: basta con 30 imágenes por segundo para el agua y la fruta
+    // Quieto o en movimiento, siempre todas las imágenes: a media velocidad el agua y la fruta se veían a tirones
     const idle = forced === null && p === target && !drag.on && introT >= 1;
-    if (idle) {
-      idleFlip = !idleFlip;
-      if (idleFlip) {
-        requestAnimationFrame(frame);
-        return;
-      }
-    }
     // Si el equipo va lento mientras se mueve, se rebaja la calidad paso a paso:
     // resolución hasta 1, reflejos del suelo y, por último, resolución 0,75
     if (!idle && !dprFixed && introT >= 1) {
@@ -1392,7 +1413,15 @@ function init() {
           const sorted = perf.win.slice().sort((x, y) => x - y);
           const avg = sorted[sorted.length >> 1] * 1000;
           perf.win.length = 0;
-          if (avg > 21) {
+          if (avg > 21 && lastDrop && avg > lastDrop.avg * 0.88) {
+            // rebajar no ha servido: el límite no es el dibujo (por ejemplo, el modo de ahorro del móvil
+            // limita a 30 imágenes por segundo). Se deshace y no se toca más.
+            dpr = lastDrop.dpr;
+            mirror.visible = lastDrop.mirror;
+            dprFixed = true;
+            resize();
+          } else if (avg > 21) {
+            lastDrop = { avg, dpr, mirror: mirror.visible };
             if (dpr > 1) {
               dpr = Math.max(1, dpr - 0.25);
               resize();
@@ -1418,7 +1447,10 @@ function init() {
       // con imagen fija en la cápsula, el 3D aparece encima sin animación de entrada
       if (introT < 1) introT = hasPoster ? 1 : Math.min(1, (now - introStart) / 1800);
     }
+    const a0 = performance.now();
     apply(p, (now - t0) / 1000, introT);
+    stat.apply += performance.now() - a0;
+    stat.n++;
     renderer.render(scene, camera);
     requestAnimationFrame(frame);
   }
@@ -1449,6 +1481,7 @@ function init() {
     requestAnimationFrame(frame);
   }
 
+  if (MODEST) mirror.visible = false;
   resize();
   readScroll();
   p = target;
@@ -1456,8 +1489,9 @@ function init() {
   apply(p, 0, introT);
   renderer.render(scene, camera);
 
-  window.addEventListener('resize', resize);
-  new ResizeObserver(resize).observe(sticky);
+  window.addEventListener('resize', () => resize());
+  new ResizeObserver(() => resize()).observe(sticky);
+  new ResizeObserver(() => measure()).observe(film);
   new IntersectionObserver(
     (entries) => {
       if (entries[0].isIntersecting) return start();
@@ -1477,7 +1511,7 @@ function init() {
 
   // Ir a un paso desde el indicador, o desde otra página con /#protocolo o /#paso-3
   function goStep(i, jump = false) {
-    const total = film.offsetHeight - window.innerHeight;
+    const total = filmBox.total;
     const at = RANGE[i][0] + (RANGE[i][1] - RANGE[i][0]) * 0.55;
     window.scrollTo({ top: film.offsetTop + total * at, behavior: jump ? 'auto' : 'smooth' });
     // al llegar desde otra página, la cámara salta directamente al paso en vez de recorrer el camino
@@ -1497,7 +1531,7 @@ function init() {
   }
   function play() {
     stopPlay();
-    const total = film.offsetHeight - window.innerHeight;
+    const total = filmBox.total;
     readScroll();
     // desde donde está el visitante si ya está en la película; si no, desde el principio
     const inFilm = film.getBoundingClientRect().bottom > window.innerHeight * 0.5 && target < 0.9;
@@ -1576,6 +1610,12 @@ function init() {
       resize();
     },
     quality: () => ({ dpr, reflections: mirror.visible }),
+    info: () => {
+      const r = { calls: renderer.info.render.calls, tris: renderer.info.render.triangles, applyMs: stat.n ? +(stat.apply / stat.n).toFixed(2) : 0, frames: stat.n };
+      stat.apply = 0;
+      stat.n = 0;
+      return r;
+    },
     dpr: () => dpr,
     range: RANGE,
     set(v) {
@@ -1593,7 +1633,7 @@ function init() {
       if (shot) frameCamera({ ...shotAt(v, keys), ...shot }, 0, ease(seg(v, REVEAL, FIN[0] + 0.03)));
       renderer.render(scene, camera);
       const url = renderer.domElement.toDataURL('image/webp', 0.82);
-      resize();
+      resize(true);
       return url;
     },
   };

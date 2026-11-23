@@ -4403,3 +4403,74 @@ html.has-drawer {
     --lap: clamp(6rem, 30vw, 11rem);
   }
 }
+
+/* ===== Fluidez de la película (ronda 6) ===== */
+/* A pantalla completa el recorte sobra, y sobre un lienzo 3D hace que el navegador componga cada imagen por el camino lento */
+.film__sticky.is-open .stagebg,
+.film__sticky.is-open #stage,
+.film__sticky.is-open .grain,
+.film__sticky.is-open .vig {
+  clip-path: none;
+}
+/* los textos de cada paso van en su propia capa: aparecer y desaparecer no obliga a repintar */
+.chap,
+.fin {
+  will-change: opacity, transform;
+}
+/* si la ventana del móvil es más alta que el escenario (barra del navegador recogida), el hueco es del color del estudio */
+.film:has(.film__sticky.is-open) {
+  background: #5a0710;
+}
+
+/* ===== Móvil: los cinco productos en una lista dentro del bloque oscuro (sin carrusel cortado) ===== */
+@media (max-width: 720px) {
+  .shop--bloque {
+    --lap: 0px;
+    margin: clamp(2rem, 6vh, 3rem) var(--pad) 0;
+    padding: clamp(2.4rem, 10vw, 3.4rem) 1.4rem 2.6rem;
+  }
+  .shop--bloque .shop__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+  .shop--bloque .card + .card {
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+  }
+  .shop--bloque .card__link {
+    display: grid;
+    grid-template-columns: 4.6rem minmax(0, 1fr);
+    column-gap: 1.1rem;
+    align-items: center;
+    height: auto;
+    padding: 0.95rem 0;
+  }
+  .shop--bloque .card__img {
+    grid-row: 1 / span 4;
+    width: 4.6rem;
+    box-shadow: none;
+  }
+  .shop--bloque .card__name {
+    margin-top: 0;
+  }
+  .shop--bloque .card__go {
+    margin-top: 0.35rem;
+  }
+  .shop--bloque .shop__head {
+    margin-top: 1.2rem;
+  }
+}
+@media (max-aspect-ratio: 85/100) {
+  /* "Saltar" sobre un producto blanco no se leía: lleva su propia cápsula oscura */
+  .film__skip {
+    padding: 0.35rem 0.75rem;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(24, 24, 26, 0.42);
+  }
+}
