@@ -68,7 +68,7 @@ Prijzen per maand, exclusief btw. [Aanname: exclusief btw.]
 
 Buiten onze maandprijs vallen twee kosten: wat je aan Shopify betaalt en het advertentiebudget. We leggen ze verderop uit.
 
-[Besluit D en partner, 23-11: het portaal verhuist naar pakket twee; pakket drie is het volledige pakket; bij elk pakket staan de uren werk per maand (12, 16 en 24); de pakketnamen veranderen mee. De prijzen 580, 1.020 en 1.560 euro heeft D op 23-11 niet gewijzigd. De regels hieronder zijn door Claude ingevuld met wat elders in het voorstel al wordt toegezegd; aantallen staan er bewust niet in.]
+[Besluit D en partner, 23-11: het portaal verhuist naar pakket twee; pakket drie is het volledige pakket; bij elk pakket staan de uren werk per maand (sinds 23-11 laat: tot 8, 16 en 24, als maximum); de pakketnamen veranderen mee. De prijzen 580, 1.020 en 1.560 euro heeft D op 23-11 niet gewijzigd. De regels hieronder zijn door Claude ingevuld met wat elders in het voorstel al wordt toegezegd; aantallen staan er bewust niet in.]
 
 ### Winkel en SEO, 580 euro per maand, tot 8 uur werk per maand
 
