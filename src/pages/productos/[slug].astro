@@ -54,7 +54,7 @@ const jsonld = [
   </nav>
 
   <section class="pdp">
-    <div class="pdp__stage" data-galeria>
+    <div class="pdp__stage" data-galeria style={`view-transition-name: prod-${p.id}`}>
       {
         fotos.map((f, k) => (
           <img
@@ -223,7 +223,7 @@ const jsonld = [
         otros.map((o) => (
           <li class="card rv">
             <a class="card__link" href={`/productos/${o.slug}/`}>
-              <span class="card__img card__img--studio">
+              <span class="card__img card__img--studio" style={`view-transition-name: prod-${o.id}`}>
                 <img src={`/img/estudio/${o.id}.webp`} width="800" height="1200" alt="" loading="lazy" decoding="async" />
               </span>
               <span class="card__name" lang="de">{o.nombre}</span>

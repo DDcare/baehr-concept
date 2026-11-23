@@ -45,7 +45,7 @@ const jsonld = [
     {
       fichas.productos.map((p, i) => (
         <li class="ruta__paso rv">
-          <a class="ruta__img" href={`/productos/${p.slug}/`} tabindex="-1" aria-hidden="true">
+          <a class="ruta__img" href={`/productos/${p.slug}/`} tabindex="-1" aria-hidden="true" style={`view-transition-name: prod-${p.id}`}>
             <img src={`/img/estudio/${p.id}.webp`} width="800" height="1200" alt="" loading={i === 0 ? undefined : 'lazy'} decoding="async" />
           </a>
           <div class="ruta__body">

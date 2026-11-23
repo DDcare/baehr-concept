@@ -59,6 +59,12 @@
 ::view-transition-new(root) {
   animation-duration: 0.35s;
 }
+/* El producto que se toca crece hasta ser la imagen de su ficha, y vuelve: es la misma cápsula en las dos páginas.
+   Lo mismo con la imagen de la marca. Cada producto lleva su nombre de transición (prod-...) en el marcado. */
+::view-transition-group(*) {
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
