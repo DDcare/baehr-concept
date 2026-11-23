@@ -37,7 +37,7 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 ## Voorstel (pdf)
 
 - De tekst staat in `voorstel/` (Spaans, Engels en de Nederlandse controleversie), de vaste inhoud in `voorstel/OPDRACHT.md`. Werk alleen op `ontwerp`: op 23-11 bleek de tekst van 22-11 (drie pakketten, Shopify, afzender Meneer Marketing) alleen op een aparte tak `voorstel` te staan, waardoor de pdf op de oude tekst met vier pakketten was gebouwd. Die tak is samengevoegd.
-- Pakketten volgens D op 22-11: 540, 1.020 en 1.560 euro per maand, met het portaal in het eerste pakket. Op 23-11 noemde D 580 voor het eerste pakket; dat bedrag staat nergens vast, dus eerst navragen.
+- Pakketten: drie, met het portaal in het eerste pakket. D op 22-11: 540, 1.020 en 1.560 euro per maand. D op 23-11: het eerste pakket wordt 580 euro; pakket twee is adverteren op alle kanalen inclusief de beelden (niet alleen Google Ads); 1.000 euro advertentiebudget is een advies, geen verplichting; geen exacte Shopify-prijzen maar een richtprijs.
 - De pdf maak je met `node tools/voorstel.cjs <es|en> <map buiten git>`. Oordeel van D op 23-11: "wil geen afgebroken shit". Daarom is elke pagina een afgerond geheel: geen deel, lijst of alinea loopt door naar de volgende pagina, koppen staan op één regel, en het script stopt met een fout als de tekst niet past.
 - De pdf's komen niet in git zolang de repo openbaar is.
 

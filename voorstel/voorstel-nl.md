@@ -66,11 +66,11 @@ We zetten de producten, bestellingen en klanten over. Wachtwoorden kunnen niet m
 
 Prijzen per maand, exclusief btw. [Aanname: exclusief btw.]
 
-- Winkel en portaal, 540 euro per maand. De nieuwe winkel en het portaal voor professionals op Shopify, dat wij beheren, plus vindbaarheid in Google en in AI-antwoorden, teksten, onderhoud en een maandrapport. (Hosting zit in het Shopify-abonnement.) [Besluit D, 22-11: drie pakketten, 540, 1.020 en 1.560 euro. Aanname: wat "wij beheren het portaal" inhoudt.]
+- Winkel en portaal, 580 euro per maand. De nieuwe winkel en het portaal voor professionals op Shopify, dat wij beheren, plus vindbaarheid in Google en in AI-antwoorden, teksten, onderhoud en een maandrapport. (Hosting zit in het Shopify-abonnement.) [Besluit D, 22-11: drie pakketten. Besluit D, 23-11: het eerste pakket kost 580 euro; pakket twee en drie blijven 1.020 en 1.560 euro. Aanname: wat "wij beheren het portaal" inhoudt.]
 - Met advertenties, 1.020 euro per maand. Het vorige plus campagnes op elk advertentiekanaal dat bij BAEHR España past, te beginnen met Google en Meta (Instagram en Facebook). Wij zetten ze op, beheren ze en maken de beelden voor de advertenties. [Besluit D, 23-11: alle advertentiekanalen en de beelden daarvoor horen bij pakket twee. Aanname: het eigen team beheert de campagnes.]
 - Met social, 1.560 euro per maand. Het vorige plus het beheer van de social media. [Aanname van Claude: de advertenties op Instagram en Facebook zitten nu in pakket twee, dus hier blijft het beheer over. Prijs ongewijzigd.]
 
-Met Shopify Basic en het minimale advertentiebudget erbij ben je per maand in totaal 564, 2.044 of 2.584 euro kwijt zonder btw, afhankelijk van het pakket. De betaalkosten van Shopify per betaling komen erbij. [Rekenvoorbeeld van Claude: 540 + 24; 1.020 + 24 + 1.000; 1.560 + 24 + 1.000.]
+Buiten onze maandprijs vallen twee kosten: je Shopify-abonnement en je advertentiebudget. Beide lichten we hieronder toe. [Het rekenvoorbeeld met een totaal per maand is op 23-11 vervallen: de Shopify-prijs is een richtprijs en het advertentiebudget een advies.]
 
 We raden "Met advertenties" aan. Vindbaarheid kost maanden voordat ze resultaat geeft; advertenties werken meteen: in Google bereiken ze mensen op het moment dat ze naar producten zoeken, en met het portaal live is de aanmelding geen rem meer.
 
@@ -80,15 +80,15 @@ Winkel en portaal hebben samen een waarde van 2.000 euro. Bij 12 maanden samenwe
 
 ### Het Shopify-abonnement staat apart
 
-Het abonnement van Shopify betaal je rechtstreeks aan Shopify, los van ons maandbedrag. Basic, 24 euro per maand bij jaarbetaling, is genoeg om mee te beginnen. Werken er meerdere mensen in de winkel, dan kost Grow 69 euro per maand bij jaarbetaling, met tot vijf medewerkersaccounts. Beide prijzen zonder btw. Shopify rekent daarnaast betaalkosten per kaartbetaling. [Bron prijzen: de officiële prijspagina toont vanaf de server alleen dollars; de meeste Spaanse bronnen van 2026 noemen voor Spanje 24 en 69 euro bij jaarbetaling, zonder IVA. Jouw Nederlandse pagina toonde 21 en 59 euro: Shopify rekent per land anders. Feit van de officiële pagina: Basic heeft geen extra medewerkersaccounts, Grow tot vijf.]
+Het abonnement van Shopify betaal je rechtstreeks aan Shopify, los van ons maandbedrag. Om te beginnen is het Basic-abonnement genoeg: reken als richtprijs op ongeveer 25 tot 35 euro per maand. Werken er meerdere mensen in de winkel, dan past het Grow-abonnement beter. Dat laat tot vijf medewerkersaccounts toe en kost ongeveer 60 tot 90 euro per maand. Het zijn richtprijzen: Shopify bepaalt ze, en ze hangen af van maand- of jaarbetaling, dus kijk voor de actuele prijs op shopify.com. Shopify rekent daarnaast betaalkosten per kaartbetaling. [Besluit D, 23-11: geen exacte Shopify-prijzen, wel een richtprijs. De bandbreedtes komen uit Spaanse bronnen van 2026: Basic 22 tot 27 euro bij jaarbetaling en 32 tot 36 per maand, Grow 62 tot 69 bij jaarbetaling en 92 per maand.] [Bron prijzen: de officiële prijspagina toont vanaf de server alleen dollars; de meeste Spaanse bronnen van 2026 noemen voor Spanje 24 en 69 euro bij jaarbetaling, zonder IVA. Jouw Nederlandse pagina toonde 21 en 59 euro: Shopify rekent per land anders. Feit van de officiële pagina: Basic heeft geen extra medewerkersaccounts, Grow tot vijf.]
 
 ### Het advertentiebudget staat apart
 
 Wat je aan advertenties uitgeeft, zit niet in het maandbedrag. Je betaalt het rechtstreeks aan Google en Meta, en de advertentieaccounts zijn van jou.
 
-Omdat er nu geen vast advertentiebudget is, stellen we voor te beginnen met minimaal 1.000 euro per maand vanaf "Met advertenties": 600 euro voor Google en 400 euro voor Meta. Daarna stellen we het bij op basis van de resultaten in je accounts. [Aanname van Claude: omdat Meta nu in pakket twee zit, geldt het hele minimum vanaf pakket twee. Eerder was het 600 euro bij pakket twee en 400 euro erbij bij pakket drie.]
+Omdat er nu geen vast advertentiebudget is, is ons advies te beginnen met ongeveer 1.000 euro per maand: 600 euro voor Google en 400 euro voor Meta. Dat is een advies, geen voorwaarde: jij bepaalt het budget, en we stellen het samen bij op basis van de resultaten in je accounts. [Besluit D, 23-11: 1.000 euro is ons advies, ze zitten er niet aan vast.]
 
-De campagnes en social media starten zodra het portaal werkt, in de tweede maand. Eerder zouden advertenties mensen naar het huidige formulier sturen en zou je betalen voor klikken die onderweg blijven hangen. Tot dat moment betaal je 540 euro per maand, welk pakket je ook kiest. [Aanname: dit geldt voor elk pakket.]
+De campagnes en social media starten zodra het portaal werkt, in de tweede maand. Eerder zouden advertenties mensen naar het huidige formulier sturen en zou je betalen voor klikken die onderweg blijven hangen. Tot dat moment betaal je 580 euro per maand, welk pakket je ook kiest. [Aanname: dit geldt voor elk pakket.]
 
 ## We hebben dit al gedaan voor Skin Complete
 
@@ -128,13 +128,13 @@ Meneer Marketing
 
 - Wie de campagnes beheert (eigen team of uitbesteed) en wat "wij beheren het portaal" inhoudt.
 - Btw: onze prijzen exclusief. Looptijd: geen vaste looptijd, opzegtermijn een maand, terugbetaling naar rato vóór 12 maanden (2.000 / 12 per resterende maand; in de tekst alleen het voorbeeld van 1.333 euro na vier maanden).
-- 540 euro (het basisbedrag) tot het portaal live is in maand twee, voor elk pakket.
+- 580 euro (het basisbedrag) tot het portaal live is in maand twee, voor elk pakket.
 - Maandrapport vanaf de eerste maand (besluit van Claude: het zit in elk pakket).
 - De bevindingen over de huidige site (Duitse winkels in Google, AI-samenvatting, geblokkeerde bots, vertaalfouten, drie verzenddrempels, 43 scripts en 44 stylesheets, 14 velden): uit het oude voorstel en jouw schermafbeeldingen, niet opnieuw gecontroleerd. Klopt er één niet meer, dan schaadt dat het hele stuk.
 - "Distribuidor oficial": Valeria laten bevestigen dat ze dat mag voeren.
 - Russischtalige klanten: staat als vraag in de tekst, niet als feit.
 
-Besloten door D op 23-11: pakket twee is adverteren op alle advertentiekanalen (Google, Meta en verder), inclusief het maken van de beelden; niet alleen Google Ads. Nog te bevestigen: het minimale advertentiebudget van 1.000 euro vanaf pakket twee, en dat pakket drie alleen het beheer van de social media is.
+Besloten door D op 23-11: het eerste pakket kost 580 euro; pakket twee is adverteren op alle advertentiekanalen (Google, Meta en verder), inclusief het maken van de beelden, niet alleen Google Ads; 1.000 euro advertentiebudget is een advies, geen verplichting; geen exacte Shopify-prijzen maar een richtprijs. Nog te bevestigen: dat pakket twee en drie 1.020 en 1.560 euro blijven, en dat pakket drie alleen het beheer van de social media is.
 
 Besloten door D op 22-11: afzender Meneer Marketing, link baehr-concept.vercel.app in de tekst, Shopify Basic of Grow betaald door Valeria, drie pakketten van 540, 1.020 en 1.560 euro, geen periode bij Skin Complete. Later op 22-11 besloten: geen 3D op productpagina's, ook niet als optie; dat deel is op 23-11 uit de drie talen gehaald.
 

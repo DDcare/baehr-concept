@@ -62,11 +62,11 @@ We'll move the products, orders and customers across. Passwords can't be carried
 
 All prices exclude VAT.
 
-- Shop and Portal, €540 a month: the new shop and the portal for professionals on Shopify, which we run for you, plus search optimisation for Google and AI assistants, copywriting, maintenance and a monthly report.
+- Shop and Portal, €580 a month: the new shop and the portal for professionals on Shopify, which we run for you, plus search optimisation for Google and AI assistants, copywriting, maintenance and a monthly report.
 - Plus Ads, €1,020 a month: all of the above, plus campaigns on every advertising channel that suits BAEHR España, starting with Google and Meta (Instagram and Facebook). We set them up, manage them and create the visuals for the ads.
 - Plus Social, €1,560 a month: all of the above, plus social media management.
 
-Including Shopify Basic and the minimum advertising budget, your total monthly cost comes to €564, €2,044 or €2,584 excluding VAT, depending on the package. Shopify's fees on each payment come on top.
+Two costs sit outside our fee: your Shopify plan and your advertising budget. Both are explained below.
 
 We recommend Plus Ads. SEO takes months to pay off, while ads work straight away: on Google, they reach people at the moment they search for your products. And once the portal is live, the sign-up no longer puts anyone off.
 
@@ -76,15 +76,15 @@ The shop and the portal are worth €2,000 together. If we work together for 12 
 
 ### The Shopify plan is separate
 
-You pay the Shopify subscription directly to Shopify, separately from our monthly fee. Basic, at €24 a month on annual billing, is enough to start with. If several people will work in the shop, Grow costs €69 a month on annual billing and allows up to five staff accounts. Both prices exclude VAT. Shopify also charges a processing fee on each card payment.
+You pay the Shopify subscription directly to Shopify, separately from our monthly fee. The Basic plan is enough to start with: as a guide, allow around €25 to €35 a month. If several people will work in the shop, the Grow plan is the better fit. It allows up to five staff accounts and costs around €60 to €90 a month. These are guide prices: Shopify sets them, and they depend on whether you pay monthly or yearly, so check the current price on shopify.com. Shopify also charges a processing fee on each card payment.
 
 ### The advertising budget is separate
 
 Ad spend isn't part of the monthly fee. You pay it directly to Google and Meta, and the ad accounts are yours.
 
-As you don't have a fixed advertising budget yet, we suggest starting with at least €1,000 a month from Plus Ads upwards: €600 on Google and €400 on Meta. We'll then adjust it based on the results in your accounts.
+As you don't have a fixed advertising budget yet, our advice is to start with around €1,000 a month: €600 on Google and €400 on Meta. That's a recommendation, not a condition: you set the budget, and we'll adjust it with you based on the results in your accounts.
 
-The campaigns and social media start once the portal is live, in month two. Before that, ads would send people to the current form, and you'd be paying for clicks that go nowhere. You pay €540 a month until the portal is live, whichever package you choose.
+The campaigns and social media start once the portal is live, in month two. Before that, ads would send people to the current form, and you'd be paying for clicks that go nowhere. You pay €580 a month until the portal is live, whichever package you choose.
 
 ## We've done this before with Skin Complete
 
