@@ -6,7 +6,17 @@ import { PRODUCTOS, enlace } from '../data/productos';
 const title = 'BAEHR España | Cosmética profesional para pies, manos y uñas';
 const description =
   'Cosmética profesional para pies, manos y uñas de la marca alemana BAEHR. Distribuidor oficial en España para salones, podólogos y particulares.';
-import { MARCAS } from '../data/marcas';
+import fichas from '../data/fichas.json';
+// La vitrina: dónde está cada producto en la imagen del estudio (porcentaje del ancho y del alto)
+const PUNTOS = [
+  [17.4, 58],
+  [33.2, 60],
+  [46.1, 56],
+  [68.5, 55],
+  [83.2, 56],
+];
+const PASOS = ['Baño de pies', 'Exfoliación', 'Mascarilla', 'Crema', 'Crema en espuma'];
+const nb = (s: string) => s.replace(/ (ml|pares|%)/g, '\u00a0$1');
 ---
 
 <Base title={title} description={description} page="home">
@@ -129,21 +139,51 @@ import { MARCAS } from '../data/marcas';
         </div>
       </section>
 
-      <div class="cinta" aria-hidden="true">
-        <div class="cinta__track">
-          {[0, 1].map(() => MARCAS.map((m) => <span>{m.n}</span>))}
-        </div>
-      </div>
-
-      <section class="shop shop--bloque" id="tienda" aria-labelledby="tienda-h">
-        <div class="shop__head">
+      <section class="vitrina" id="tienda" aria-labelledby="tienda-h">
+        <div class="vitrina__head">
           <h2 class="h2 rv" id="tienda-h">Los cinco, de un&nbsp;vistazo</h2>
           <div class="shop__side">
             <p class="lead rv">Por orden de uso, del baño de pies a la crema en espuma.</p>
-            <a class="pill pill--white rv" href="/profesionales/#pedido-rapido" data-when="pro">Pedir los cinco productos</a>
-            <a class="pill pill--white rv" href="/tienda/" data-when="home">Comprar los cinco productos</a>
+            <a class="pill pill--red rv" href="/profesionales/#pedido-rapido" data-when="pro">Pedir los cinco productos</a>
+            <a class="pill pill--red rv" href="/tienda/" data-when="home">Comprar los cinco productos</a>
           </div>
         </div>
+        <div class="vitrina__stage rv" data-vitrina>
+          <div class="vitrina__scene">
+            <img src="/img/estudio/baehr.webp" width="1800" height="760" alt="" loading="lazy" decoding="async" />
+            {
+              fichas.productos.map((f, k) => (
+                <button
+                  class="vitrina__dot"
+                  type="button"
+                  style={`--x:${PUNTOS[k][0]}%;--y:${PUNTOS[k][1]}%`}
+                  aria-pressed={k === 0 ? 'true' : 'false'}
+                  aria-label={`${PASOS[k]}: ${f.nombre}`}
+                />
+              ))
+            }
+          </div>
+        </div>
+        <div class="vitrina__band">
+          {
+            fichas.productos.map((f, k) => (
+              <div class="vitrina__item" hidden={k !== 0}>
+                <div class="vitrina__what">
+                  <p class="vitrina__paso">{PASOS[k]}</p>
+                  <p class="vitrina__name" lang="de">{f.nombre}</p>
+                  <p class="vitrina__tipo" set:html={nb(`${f.h1}, ${f.tamanos.join(', ')}`)} />
+                </div>
+                <div class="vitrina__go">
+                  <button class="pill pill--red" type="button" data-add={f.id} data-done="Añadido">Añadir a la cesta</button>
+                  <a class="pill pill--line" href={`/productos/${f.slug}/`}>Ver la ficha</a>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="shop shop--bloque" aria-label="Los cinco productos">
         <ul class="shop__row">
           <li class="card rv">
             <a class="card__link" href="/productos/bano-de-pies-spa-wellness/">
@@ -193,23 +233,6 @@ import { MARCAS } from '../data/marcas';
         </ul>
       </section>
 
-      <section class="casas casas--home" aria-labelledby="casas-h">
-        <div class="casas__head">
-          <h2 class="h2 rv" id="casas-h">Seis marcas de la&nbsp;casa</h2>
-          <p class="lead rv">Todo lo que BAEHR firma con su nombre se reparte en seis marcas.</p>
-        </div>
-        <ul class="casas__grid">
-          {
-            MARCAS.map((w) => (
-              <li class="casa rv">
-                <span class="casa__n">{w.n}</span>
-                <span class="casa__t">{w.t}</span>
-              </li>
-            ))
-          }
-        </ul>
-      </section>
-
       <section class="dark" id="profesionales">
         <div class="dark__text" data-when="pro">
           <h2 class="h2 rv">Solicita tu alta profesional en dos&nbsp;minutos</h2>
@@ -253,35 +276,40 @@ import { MARCAS } from '../data/marcas';
         <a class="textlink rv" href="#seminarios">Ver todos los seminarios</a>
       </section>
 
-      <section class="brand" id="marca">
-        <div class="seal" aria-hidden="true"></div>
-        <h2 class="h2 rv">Una marca alemana con&nbsp;oficio</h2>
-        <img class="brand__img rv" src="/img/estudio/baehr.webp" width="1800" height="760" alt="" loading="lazy" decoding="async" />
-        <div class="brand__grid">
-          <p class="lead rv">
-            BAEHR nació en 1949 en Waiblingen, cerca de Stuttgart, y sigue siendo una empresa familiar. BAEHR
-            España lleva sus productos a salones, profesionales de manicura y pedicura, podólogos y
-            particulares.
-          </p>
-          <dl class="stats">
-            <div class="stat rv">
-              <dt>1949</dt>
-              <dd>año de fundación</dd>
-            </div>
-            <div class="stat rv">
-              <dt>+40</dt>
-              <dd>países con distribuidor oficial</dd>
-            </div>
-            <div class="stat rv">
-              <dt>7</dt>
-              <dd>tipos de piel en el sistema PEDIBAEHR</dd>
-            </div>
-          </dl>
-        </div>
-        <a class="textlink rv" href="/la-marca/">Conocer la marca</a>
-      </section>
 </Base>
 
 <script>
   import '../scripts/film.js';
+
+  // La vitrina: al señalar un producto en la imagen, la banda de abajo muestra ese producto y la imagen se acerca a él
+  const vit = document.querySelector<HTMLElement>('[data-vitrina]');
+  if (vit) {
+    const scene = vit.querySelector<HTMLElement>('.vitrina__scene')!;
+    const dots = [...vit.querySelectorAll<HTMLElement>('.vitrina__dot')];
+    const items = [...document.querySelectorAll<HTMLElement>('.vitrina__item')];
+    const pick = (i: number, zoom = true) => {
+      dots.forEach((d, k) => d.setAttribute('aria-pressed', String(k === i)));
+      items.forEach((it, k) => (it.hidden = k !== i));
+      scene.style.setProperty('--ox', dots[i].style.getPropertyValue('--x'));
+      scene.style.setProperty('--oy', dots[i].style.getPropertyValue('--y'));
+      vit.classList.toggle('is-zoom', zoom);
+    };
+    dots.forEach((d, i) => {
+      d.addEventListener('click', () => pick(i));
+      d.addEventListener('pointerenter', (e) => e.pointerType === 'mouse' && pick(i));
+      d.addEventListener('focus', () => pick(i));
+    });
+    vit.addEventListener('pointerleave', () => vit.classList.remove('is-zoom'));
+  }
+  // Añadir a la cesta desde la vitrina: demostración, no envía nada
+  document.querySelectorAll<HTMLButtonElement>('.vitrina [data-add]').forEach((b) => {
+    const label = b.textContent;
+    let back = 0;
+    b.addEventListener('click', () => {
+      (window as any).baehrCesta?.add(b.dataset.add, 1);
+      b.textContent = b.dataset.done || label;
+      clearTimeout(back);
+      back = window.setTimeout(() => (b.textContent = label), 1500);
+    });
+  });
 </script>

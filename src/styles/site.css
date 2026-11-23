@@ -4282,56 +4282,7 @@ html.has-drawer {
   }
 }
 
-/* ===== Home más llena (ronda 5): la cinta plateada, los cinco en un bloque oscuro, las seis marcas ===== */
-.cinta {
-  margin: clamp(2rem, 6vh, 4rem) var(--pad) 0;
-  padding: 0.75rem 0;
-  border-radius: 999px;
-  overflow: hidden;
-  background: var(--silver);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(0, 0, 0, 0.08);
-}
-.cinta__track {
-  display: flex;
-  gap: 0;
-  width: max-content;
-  font-weight: 800;
-  font-variation-settings: 'wdth' 118;
-  font-size: 0.92rem;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  animation: cinta 46s linear infinite;
-}
-.cinta__track span {
-  display: inline-flex;
-  align-items: center;
-  gap: 2.2rem;
-  padding-left: 2.2rem;
-}
-/* entre marca y marca, tres estrías rojas */
-.cinta__track span::after {
-  content: '';
-  width: 16px;
-  height: 0.8em;
-  color: var(--red);
-  background: var(--ribs);
-  background-size: 6px 100%;
-}
-.cinta:hover .cinta__track {
-  animation-play-state: paused;
-}
-@keyframes cinta {
-  to {
-    transform: translateX(-50%);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .cinta__track {
-    animation: none;
-  }
-}
-
+/* ===== Home (ronda 5): los cinco en un bloque oscuro (solo en el móvil), seminario sobre plata ===== */
 /* Los cinco productos: un bloque oscuro con las cápsulas asomando por arriba */
 .shop--bloque {
   --lap: clamp(4.5rem, 10.5vw, 9.5rem);
@@ -4472,5 +4423,179 @@ html.has-drawer {
     border: 0;
     border-radius: 999px;
     background: rgba(24, 24, 26, 0.42);
+  }
+}
+
+
+/* ===== La vitrina (ronda 7): la imagen final de la película es el escaparate. Se señala un producto y se pide ahí mismo ===== */
+.vitrina {
+  padding: clamp(4rem, 10vh, 7rem) var(--pad) clamp(2rem, 5vh, 3.5rem);
+}
+.vitrina__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem 3rem;
+  margin-bottom: clamp(1.6rem, 4vh, 2.8rem);
+}
+.vitrina__stage {
+  position: relative;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #5a0710;
+}
+.vitrina__scene {
+  position: relative;
+  transform-origin: var(--ox, 50%) var(--oy, 56%);
+  transition: transform 1.1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.vitrina__stage.is-zoom .vitrina__scene {
+  transform: scale(1.16);
+}
+.vitrina__scene img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* el punto: un anillo blanco sobre cada producto */
+.vitrina__dot {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: 2.6rem;
+  height: 2.6rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+.vitrina__dot::before,
+.vitrina__dot::after {
+  content: '';
+  position: absolute;
+  inset: 50%;
+  border-radius: 50%;
+  translate: -50% -50%;
+}
+.vitrina__dot::before {
+  width: 0.7rem;
+  height: 0.7rem;
+  background: #fff;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.28);
+  transition: box-shadow 0.3s, width 0.3s, height 0.3s;
+}
+.vitrina__dot::after {
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  animation: vitrina-pulso 2.6s ease-out infinite;
+}
+.vitrina__dot[aria-pressed='true']::before {
+  width: 1rem;
+  height: 1rem;
+  box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.4);
+}
+.vitrina__dot[aria-pressed='true']::after {
+  animation: none;
+  opacity: 0;
+}
+.vitrina__dot:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+@keyframes vitrina-pulso {
+  0% {
+    scale: 0.5;
+    opacity: 0.9;
+  }
+  100% {
+    scale: 1.25;
+    opacity: 0;
+  }
+}
+/* la banda plateada: la etiqueta del producto elegido */
+.vitrina__band {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 2rem, 62rem);
+  margin: -2.1rem auto 0;
+  border-radius: 999px;
+  background: var(--silver);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(0, 0, 0, 0.08), 0 18px 40px -22px rgba(24, 24, 26, 0.45);
+}
+.vitrina__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding: 0.9rem 0.9rem 0.9rem clamp(1.6rem, 3vw, 2.6rem);
+  animation: vitrina-entra 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@keyframes vitrina-entra {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+}
+.vitrina__what {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15rem 1.1rem;
+  min-width: 0;
+}
+.vitrina__paso {
+  font-weight: 800;
+  font-variation-settings: 'wdth' 116;
+  font-size: var(--fs-h3);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.vitrina__name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--red);
+}
+.vitrina__tipo {
+  flex-basis: 100%;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.vitrina__go {
+  display: flex;
+  flex: none;
+  gap: 0.5rem;
+}
+/* en ordenador y tableta la vitrina sustituye a la lista; en el móvil la imagen encabeza la lista */
+@media (min-width: 721px) {
+  .shop--bloque {
+    display: none;
+  }
+}
+@media (max-width: 720px) {
+  .vitrina {
+    padding-bottom: 0;
+  }
+  .vitrina__dot,
+  .vitrina__band {
+    display: none;
+  }
+  .vitrina__stage.is-zoom .vitrina__scene {
+    transform: none;
+  }
+  .shop--bloque {
+    margin-top: 1.2rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vitrina__dot::after {
+    animation: none;
+  }
+  .vitrina__scene {
+    transition: none;
   }
 }
