@@ -60,7 +60,7 @@ De nieuwe winkel en het portaal komen allebei op Shopify. Je beheert producten, 
 
 Omdat je ons vertelde dat de fabrikant geen strenge eisen stelt aan ontwerp en opbouw, maken we een eigen Shopify-thema voor BAEHR España in plaats van een gekocht sjabloon. De catalogus komt in correct Spaans, met de woorden uit de branche, en de winkel laadt snel op de telefoon. Er komt één minimumbedrag voor gratis verzending en duidelijke levertijden.
 
-We zetten de producten, bestellingen en klanten over. Wachtwoorden kunnen niet mee naar Shopify, dus bestaande klanten krijgen een mail om hun nieuwe account te activeren. Professionals loggen in op het portaal met een eenmalige code per mail, zonder wachtwoord. Het portaal heeft alles wat in het vorige deel staat, en salons vinden er ook hun facturen en bestelgeschiedenis.
+We zetten de producten, bestellingen en klanten over. Wachtwoorden kunnen niet mee naar Shopify, dus bestaande klanten krijgen een mail om hun nieuwe account te activeren. Professionals loggen in op het portaal met een eenmalige code per mail, zonder wachtwoord. Het portaal heeft alles wat in het vorige deel staat, en salons vinden er ook hun facturen en bestelgeschiedenis. Het zit erin vanaf het pakket "Portaal en advertenties", dat je verderop ziet.
 
 ## Drie pakketten die op elkaar stapelen
 
@@ -88,7 +88,7 @@ Alles van "Winkel en SEO", plus:
 - Advertentiecampagnes: op elk kanaal dat bij je past, te beginnen met Google en Meta. Opgezet en beheerd door ons.
 - Beelden en content voor de campagnes: wij maken de beelden en de teksten van de advertenties.
 
-### Volledig pakket, 1.560 euro per maand, 24 uur werk per maand
+### Volledige marketing, 1.560 euro per maand, 24 uur werk per maand
 
 Alles van "Portaal en advertenties", plus:
 
@@ -111,7 +111,7 @@ Het abonnement van Shopify betaal je rechtstreeks aan Shopify, los van ons maand
 
 ### Het advertentiebudget staat apart
 
-Wat je aan advertenties uitgeeft, zit niet in het maandbedrag. Je betaalt het rechtstreeks aan Google en Meta, en de advertentieaccounts zijn van jou.
+Wat je aan advertenties uitgeeft, zit niet in het maandbedrag. Je betaalt het rechtstreeks aan Google en Meta (Instagram en Facebook), en de advertentieaccounts zijn van jou.
 
 Omdat er nu geen vast advertentiebudget is, is ons advies te beginnen met ongeveer 1.000 euro per maand: 600 euro voor Google en 400 euro voor Meta. Dat is een advies, geen voorwaarde: jij bepaalt het budget, en we stellen het samen bij op basis van de resultaten in je accounts. [Besluit D, 23-11: 1.000 euro is ons advies, ze zitten er niet aan vast.]
 
@@ -133,7 +133,7 @@ In de tweede maand publiceren we de pagina's per dienst en gaat, vanaf "Portaal 
 ## Voorwaarden en wat we van je nodig hebben
 
 - Prijzen exclusief btw.
-- Je kunt opzeggen wanneer je wilt, met een maand opzegtermijn. Stop je vóór 12 maanden, dan betaal je alleen het resterende deel van winkel en portaal, naar rato. [Aanname: geen vaste looptijd en een maand opzegtermijn; besluit van Claude op basis van de afspraak "125 euro per resterende maand bij eerder opzeggen".]
+- Je kunt opzeggen wanneer je wilt, met een maand opzegtermijn. Stop je vóór 12 maanden, dan betaal je alleen het resterende deel van de winkel en, als je dat hebt, van het portaal, naar rato. [Aanname: geen vaste looptijd en een maand opzegtermijn; besluit van Claude op basis van de afspraak "125 euro per resterende maand bij eerder opzeggen".]
 - Het maandrapport bevat deze cijfers: aanmeldingen, eerste bestellingen, herhaalbestellingen en kosten per nieuwe klant.
 - We garanderen geen posities in Google en geen bepaald aantal bezoekers.
 

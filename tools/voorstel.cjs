@@ -325,7 +325,7 @@ const doc = `<!doctype html><html lang="${T.docLang}"><head><meta charset="utf-8
     ({ max, min, fixed }) => {
       const mm = 96 / 25.4;
       const MIN_GAP = 9 * mm;
-      const MAX_GAP = 26 * mm;
+      const MAX_GAP = 40 * mm; // ruimte die overblijft, wordt gelijk verdeeld in plaats van onderaan te blijven staan
       const root = document.documentElement;
       const sheets = [...document.querySelectorAll('.pg__in')];
       // Ruimte boven de voetregel bij de kleinste tussenruimte. Een beeld dat meegroeit (.shot) vult die ruimte zelf:

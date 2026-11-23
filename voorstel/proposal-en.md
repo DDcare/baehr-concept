@@ -56,7 +56,7 @@ The new shop and the portal will both run on Shopify. You'll manage products, or
 
 You mentioned that the manufacturer has no strict requirements for design or structure, so we'll build a Shopify theme of its own for BAEHR España instead of using an off-the-shelf template. The catalogue will be in proper Spanish, in the terms professionals use, and the shop will load quickly on phones. Free delivery will start at one amount, the same everywhere, and delivery times will be clear.
 
-We'll move the products, orders and customers across. Passwords can't be carried over to Shopify, so existing customers will get an email to activate their new account. Professionals sign in to the portal with a one-time code sent to their email, so there's no password to remember. The portal will have everything described in the previous section, and salons will also find their invoices and order history in their account.
+We'll move the products, orders and customers across. Passwords can't be carried over to Shopify, so existing customers will get an email to activate their new account. Professionals sign in to the portal with a one-time code sent to their email, so there's no password to remember. The portal will have everything described in the previous section, and salons will also find their invoices and order history in their account. It's included from the Portal and Ads package upwards, which you'll find below.
 
 ## Three packages, each building on the last
 
@@ -105,7 +105,7 @@ You pay the Shopify subscription directly to Shopify, separately from our monthl
 
 ### The advertising budget is separate
 
-Ad spend isn't part of the monthly fee. You pay it directly to Google and Meta, and the ad accounts are yours.
+Ad spend isn't part of the monthly fee. You pay it directly to Google and Meta (Instagram and Facebook), and the ad accounts are yours.
 
 As you don't have a fixed advertising budget yet, our advice is to start with around €1,000 a month: €600 on Google and €400 on Meta. That's a recommendation, not a condition: you set the budget, and we'll adjust it with you based on the results in your accounts.
 
@@ -126,7 +126,7 @@ In month two, we publish the service pages and, from Portal and Ads upwards, the
 ## Terms and what we need from you
 
 - All prices exclude VAT.
-- You can stop at any time with one month's notice. If you stop before 12 months, you only pay the remaining share of the shop and portal, pro rata.
+- You can stop at any time with one month's notice. If you stop before 12 months, you only pay the remaining share of the shop and, where it applies, the portal, pro rata.
 - The monthly report covers sign-ups, first orders, repeat orders and the cost per new customer.
 - We don't guarantee Google rankings or a specific number of visits.
 
