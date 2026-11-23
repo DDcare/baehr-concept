@@ -34,6 +34,13 @@ Ontwerpconcept voor de nieuwe winkel van BAEHR España. Techniek, commando's en 
 - Titels breken niet midden in een woord af en eindigen niet op één los woord.
 - Controleer elke wijziging op desktop, tablet en telefoon, en ook de versie met "minder beweging".
 
+## Voorstel (pdf)
+
+- De tekst staat in `voorstel/` (Spaans, Engels en de Nederlandse controleversie), de vaste inhoud in `voorstel/OPDRACHT.md`. Werk alleen op `ontwerp`: op 23-11 bleek de tekst van 22-11 (drie pakketten, Shopify, afzender Meneer Marketing) alleen op een aparte tak `voorstel` te staan, waardoor de pdf op de oude tekst met vier pakketten was gebouwd. Die tak is samengevoegd.
+- Pakketten volgens D op 22-11: 540, 1.020 en 1.560 euro per maand, met het portaal in het eerste pakket. Op 23-11 noemde D 580 voor het eerste pakket; dat bedrag staat nergens vast, dus eerst navragen.
+- De pdf maak je met `node tools/voorstel.cjs <es|en> <map buiten git>`. Oordeel van D op 23-11: "wil geen afgebroken shit". Daarom is elke pagina een afgerond geheel: geen deel, lijst of alinea loopt door naar de volgende pagina, koppen staan op één regel, en het script stopt met een fout als de tekst niet past.
+- De pdf's komen niet in git zolang de repo openbaar is.
+
 ## Besluiten van D over snelheid en 3D (22 november 2026, avond)
 
 - 3D alleen op de home. Geen 3D op productpagina's, ook niet als betaalde optie, en het komt niet in het voorstel (elke 3D-pagina kost ongeveer 200 kB aan three.js plus model en etiket).
