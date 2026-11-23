@@ -64,16 +64,16 @@ Los precios son mensuales y sin IVA.
 
 Fuera de nuestra cuota quedan dos costes: lo que pagas a Shopify y el presupuesto de anuncios. Los explicamos más abajo.
 
-### Tienda y SEO, 580 € al mes, 12 horas de trabajo al mes
+### Tienda y SEO, 580 € al mes, hasta 8 horas de trabajo al mes
 
-- Tienda nueva en Shopify: tema propio, dos entradas y migración de productos, pedidos y clientes.
+- Tienda en Shopify en varios idiomas: la montamos y la gestionamos, con tema propio y dos entradas.
 - Base técnica: carga rápida en el móvil, datos estructurados y acceso para buscadores y bots de IA.
 - SEO: catálogo en un español correcto y páginas por servicio y por necesidad de la piel.
 - GEO (respuestas de IA): los mismos datos en la web, el perfil de Google y la lista del fabricante.
 - Páginas de seminarios: una por ciudad, con inscripción.
 - Textos, mantenimiento e informe: escribimos los textos y mantenemos la tienda, con informe mensual.
 
-### Portal y publicidad, 1.020 € al mes, 16 horas de trabajo al mes
+### Portal y publicidad, 1.020 € al mes, hasta 16 horas de trabajo al mes
 
 Todo lo de «Tienda y SEO», más:
 
@@ -82,7 +82,7 @@ Todo lo de «Tienda y SEO», más:
 - Publicidad: montamos y llevamos las campañas en los canales adecuados, empezando por Google y Meta.
 - Imágenes y contenido de campaña: creamos las imágenes y escribimos los textos de los anuncios.
 
-### Marketing completo, 1.560 € al mes, 24 horas de trabajo al mes
+### Marketing completo, 1.560 € al mes, hasta 24 horas de trabajo al mes
 
 Todo lo de «Portal y publicidad», más:
 
@@ -128,6 +128,7 @@ El segundo mes publicaremos las páginas por servicio y, si tu paquete incluye e
 - Precios sin IVA.
 - Puedes darte de baja cuando quieras, con un mes de preaviso. Si lo haces antes de los 12 meses, solo pagas la parte pendiente de la tienda y, en su caso, del portal, en proporción a los meses que falten.
 - El informe mensual recoge estas cifras: altas, primeros pedidos, recompras y coste por cliente nuevo.
+- Las horas de cada paquete son un máximo mensual: el tiempo de trabajo que reservamos para ti.
 - No garantizamos posiciones en Google ni un número concreto de visitas.
 
 Para medir bien necesitamos tres cifras: cuántas altas recibes al mes, cuántas de esas cuentas acaban haciendo un pedido y cuál es el importe medio por pedido. También nos hará falta acceso de lectura a Google Search Console y a las estadísticas de la web y, si eliges un paquete con campañas, acceso de administrador a las cuentas publicitarias. Las cuentas y las contraseñas siguen siendo tuyas.
