@@ -6,7 +6,7 @@ Deze versie volgt het definitieve Spaans (`propuesta-es.md`) alinea voor alinea,
 
 Hoi Valeria,
 
-Zoals afgesproken per mail, hier is het voorstel. Je wilde weten hoe we je vindbaarheid zouden verbeteren, in Google en in de antwoorden van ChatGPT en andere AI-assistenten, en hoe we drie doelen zouden aanpakken: dat BAEHR España bekender wordt, dat er nieuwe professionals bijkomen en dat er meer bestellingen binnenkomen. Je vroeg ook om pakketten met prijzen en een gesprek om het te bespreken. We hebben het geschreven met jou en je partners in gedachten.
+Zoals afgesproken, hier is het voorstel. Je wilde weten hoe we je vindbaarheid zouden verbeteren, in Google en in de antwoorden van ChatGPT en andere AI-assistenten, en hoe we drie doelen zouden aanpakken: dat BAEHR España bekender wordt, dat er nieuwe professionals bijkomen en dat er meer bestellingen binnenkomen. Je vroeg ook om pakketten met prijzen en een gesprek om het te bespreken. We hebben het geschreven met jou en je partners in gedachten.
 
 Hier is het prototype dat we voor BAEHR España hebben gemaakt: baehr-concept.vercel.app. Het is niet de definitieve site, maar het laat zien welke kant we op zouden gaan. Open het op je telefoon en let in de versie voor professionals vooral op de aanmelding.
 

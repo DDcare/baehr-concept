@@ -6,6 +6,8 @@
 // pagina. De lettergrootte van de lopende tekst wordt per taal zo groot gekozen als op alle pagina's past; de ruimte
 // die op een pagina overblijft, gaat naar de tussenruimtes van die pagina. Past de tekst ook op de kleinste maat niet,
 // dan stopt het script met een foutmelding in plaats van een afgekapte pagina te maken. Vaste maat proberen: FS=10.2.
+// De pdf bestaat uit paginabeelden van 300 dpi met klikbare links, zodat hij op elke telefoon gelijk oogt (D, 23-11:
+// de eerdere pdf haperde op zijn iPhone). Met VECTOR=1 krijg je de versie met selecteerbare tekst.
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
@@ -315,7 +317,8 @@ const doc = `<!doctype html><html lang="${T.docLang}"><head><meta charset="utf-8
   const htmlPath = path.join(outDir, `${T.file}.html`);
   fs.writeFileSync(htmlPath, doc);
   const browser = await chromium.launch();
-  const page = await browser.newPage({ viewport: { width: 794, height: 1123 } });
+  // schaal 3,125 maakt van de A4-breedte van 794 px een beeld van 2.481 px (300 dpi)
+  const page = await browser.newPage({ viewport: { width: 794, height: 1123 }, deviceScaleFactor: 3.125 });
   await page.emulateMedia({ media: 'print' });
   await page.goto('file://' + path.resolve(htmlPath), { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
@@ -370,8 +373,45 @@ const doc = `<!doctype html><html lang="${T.docLang}"><head><meta charset="utf-8
   }
 
   const pdf = path.join(outDir, `${T.file}.pdf`);
-  await page.pdf({ path: pdf, format: 'A4', printBackground: true, preferCSSPageSize: true });
   const sheetsCount = await page.evaluate(() => document.querySelectorAll('.pg').length);
+  if (process.env.VECTOR) {
+    // Pdf met tekst als lettertype en vlakken als tekeninstructies. Scherp bij elke vergroting, maar de pdf-weergave
+    // van telefoons (iOS, WhatsApp) tekent het variabele lettertype, de maskers en de ribbels traag of verkeerd.
+    await page.pdf({ path: pdf, format: 'A4', printBackground: true, preferCSSPageSize: true });
+  } else {
+    // Standaard: elke pagina als beeld van 300 dpi, met de links er klikbaar overheen. Ziet er op elk toestel gelijk uit.
+    // De paginabeelden blijven als werkbestanden in de submap "paginas" van de uitvoermap staan.
+    const links = await page.evaluate(() =>
+      [...document.querySelectorAll('.pg')].map((pg) => {
+        const r = pg.getBoundingClientRect();
+        return [...pg.querySelectorAll('a[href]')].flatMap((a) =>
+          [...a.getClientRects()].map((b) => ({ href: a.href, x: (b.left - r.left) / r.width, y: (b.top - r.top) / r.height, w: b.width / r.width, h: b.height / r.height })),
+        );
+      }),
+    );
+    const workDir = path.resolve(outDir, 'paginas');
+    fs.mkdirSync(workDir, { recursive: true });
+    const sheets = await page.$$('.pg');
+    const shots = [];
+    for (let i = 0; i < sheets.length; i++) {
+      const file = path.join(workDir, `${T.file}-${i + 1}.jpg`);
+      await sheets[i].screenshot({ path: file, type: 'jpeg', quality: 93 });
+      shots.push(file);
+    }
+    const pct = (v) => (v * 100).toFixed(3) + '%';
+    const flat = `<!doctype html><html lang="${T.docLang}"><head><meta charset="utf-8"><title>${esc(title)}</title><style>
+@page { size: A4; margin: 0; } * { margin: 0; padding: 0; } html { background: #fff; }
+.p { position: relative; width: 210mm; height: 297mm; overflow: hidden; break-after: page; } .p:last-child { break-after: auto; }
+.p img { display: block; width: 210mm; height: 297mm; } .p a { position: absolute; display: block; }
+</style></head><body>${shots
+      .map((f, i) => `<div class="p"><img src="file://${f}" alt="">${links[i].map((l) => `<a href="${l.href}" style="left:${pct(l.x)};top:${pct(l.y)};width:${pct(l.w)};height:${pct(l.h)}"></a>`).join('')}</div>`)
+      .join('')}</body></html>`;
+    const flatPath = path.join(workDir, `${T.file}-plat.html`);
+    fs.writeFileSync(flatPath, flat);
+    const sheet = await browser.newPage();
+    await sheet.goto('file://' + flatPath, { waitUntil: 'networkidle' });
+    await sheet.pdf({ path: pdf, format: 'A4', printBackground: true, preferCSSPageSize: true });
+  }
   await browser.close();
   console.log(`${pdf}  ${Math.round(fs.statSync(pdf).size / 1024)} kB  ${sheetsCount} pagina's  tekst ${fit.size} pt`);
   console.log(`  ruimte over per pagina (mm): ${fit.left.join(', ')}  tussenruimte (mm): ${fit.gaps.join(', ')}`);

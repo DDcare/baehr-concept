@@ -2,7 +2,7 @@
 
 Hola, Valeria:
 
-Como quedamos por correo, aquí tienes la propuesta. Querías saber cómo mejoraríamos el posicionamiento, tanto en Google como en las respuestas de ChatGPT y otros asistentes de IA, y cómo abordaríamos tres objetivos: que BAEHR España se conozca más, que lleguen profesionales nuevos y que entren más pedidos. También nos pediste paquetes con sus precios y una reunión para comentarlo. Lo hemos redactado pensando en ti y en tus socios.
+Como quedamos, aquí tienes la propuesta. Querías saber cómo mejoraríamos el posicionamiento, tanto en Google como en las respuestas de ChatGPT y otros asistentes de IA, y cómo abordaríamos tres objetivos: que BAEHR España se conozca más, que lleguen profesionales nuevos y que entren más pedidos. También nos pediste paquetes con sus precios y una reunión para comentarlo. Lo hemos redactado pensando en ti y en tus socios.
 
 Con la propuesta te pasamos el enlace a un prototipo que hemos preparado para BAEHR España: baehr-concept.vercel.app. No es la web definitiva, pero enseña por dónde iríamos. Ábrelo en el móvil y, en la versión para profesionales, fíjate sobre todo en el alta.
 
@@ -25,7 +25,7 @@ La base es buena: BAEHR España tiene un nicho muy claro, un registro aparte par
 
 Para que Google y los asistentes de IA lo tengan claro, empezaremos por aquí.
 
-- Usar la misma descripción en todas partes (la web, el Perfil de Empresa en Google y las redes): «Proxy Beauty Spain, S.L., Barcelona, distribuidor oficial de BAEHR en España».
+- Usar la misma descripción en todas partes (la web, el Perfil de Empresa de Google y las redes): «Proxy Beauty Spain, S.L., Barcelona, distribuidor oficial de BAEHR en España».
 - Pedir al fabricante que su lista de distribuidores recoja los mismos datos. Ya aparece Proxy Beauty Spain con la web baehr.com.es, así que solo hay que unificarlos.
 - Dejar entrar a los buscadores y a los bots de IA, y describir la empresa y cada producto con datos estructurados, un formato que Google y esos asistentes saben leer.
 
@@ -36,7 +36,7 @@ Donde más rápido se puede ganar terreno es en búsquedas como «BAEHR» o «di
 - Páginas por servicio, como la pedicura o la manicura, y por necesidad de la piel, escritas con las palabras con las que buscan los profesionales: grietas, durezas, sudoración, piel muy seca. Siempre como cuidado cosmético, nunca como tratamiento de una afección.
 - El seminario como puerta de entrada. Cada ciudad tendrá su página con inscripción y, al terminar, los asistentes recibirán un correo con acceso al portal y una oferta de bienvenida.
 - Para el primer pedido, un kit de prueba por servicio. PEDIBAEHR tiene un formato de prueba de 35 ml que encaja bien con la idea.
-- Anuncios para cada perfil. En Google, ligados a las búsquedas del sector; en Instagram y Facebook, dirigidos a esteticistas, manicuras y pedicuros.
+- Anuncios para cada perfil. En Google, ligados a las búsquedas del sector; en Instagram y Facebook, dirigidos a esteticistas y a profesionales de manicura y pedicura.
 
 Sobre los plazos, mejor dejarlo claro desde el principio. En las búsquedas especializadas (pedicura, podología) es realista ganar visibilidad en un plazo de entre tres y seis meses. En búsquedas generales como «crema de pies», no lo es, y no te lo vamos a prometer.
 
@@ -66,7 +66,7 @@ Fuera de nuestra cuota quedan dos costes: lo que pagas a Shopify y el presupuest
 
 ### Tienda y SEO, 580 € al mes, hasta 8 horas de trabajo al mes
 
-- Tienda en Shopify en varios idiomas: la montamos y la gestionamos, con tema propio y dos entradas.
+- Tienda en varios idiomas: la montamos y la gestionamos en Shopify, con tema propio y dos entradas.
 - Base técnica: carga rápida en el móvil, datos estructurados y acceso para buscadores y bots de IA.
 - SEO: catálogo en un español correcto y páginas por servicio y por necesidad de la piel.
 - GEO (respuestas de IA): los mismos datos en la web, el perfil de Google y la lista del fabricante.
@@ -113,7 +113,7 @@ Las campañas y las redes arrancarán cuando el portal funcione, en el segundo m
 
 ## Ya lo hemos hecho con Skin Complete
 
-Skin Complete (skincomplete.eu) es una marca neerlandesa de mascarillas LED y cuidado de la piel que vende a través de clínicas y centros de estética. Les hicimos la web y el portal B2B. Quien solicita una cuenta pasa a tener su propia tienda B2B, con precios de centro asociado, protocolos y formación.
+Skin Complete (skincomplete.eu) es una marca neerlandesa de máscaras LED y cuidado de la piel que vende a través de clínicas y centros de estética. Les hicimos la web y el portal B2B. Quien solicita una cuenta pasa a tener su propia tienda B2B, con precios de centro asociado, protocolos y formación.
 
 Con la web y el portal han sumado 80 clientes nuevos, entre clínicas y centros de estética. Hoy la marca trabaja con centros de los Países Bajos, Bélgica y Curazao. Es un modelo muy parecido al que te proponemos.
 
